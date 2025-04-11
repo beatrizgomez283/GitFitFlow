@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Iterar sobre los días de cada workout
     workout.days.forEach((day, dayIndex) => {
       const dayItem = document.createElement('li');
-      dayItem.innerHTML = `<a href="history-list.html?workout=${workoutIndex}&day=${dayIndex}">${day.name}</a>`;
+      //dayItem.innerHTML = `<a href="day-list.html?workout=${workoutIndex}&day=${dayIndex}">${day.name}</a>`;
+      dayItem.innerHTML = `<a href="day-list.html?workoutIndex=${workoutIndex}</a>`;
       dayList.appendChild(dayItem);
     });
 
