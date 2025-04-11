@@ -86,25 +86,6 @@ function showWorkouts() {
 }
 
 
-// Mostrar la lista de entrenamientos
-function showWorkouts() {
-  workoutListDiv.innerHTML = "<h2>Selecciona un Workout</h2>";
-
-  // Itera sobre cada entrenamiento y crea un botón para cada uno
-  workouts.forEach((workout, i) => {
-    const div = document.createElement("div");
-    div.className = "card";
-    div.innerText = workout.name;
-    div.onclick = () => showDays(i);  // Al hacer clic, muestra los días del entrenamiento
-    workoutListDiv.appendChild(div);
-  });
-
-  // Oculta la lista de días y ejercicios
-  workoutListDiv.classList.remove("hidden");
-  dayListDiv.classList.add("hidden");
-  exerciseListDiv.classList.add("hidden");
-}
-
 // Mostrar los días del entrenamiento seleccionado
 // Show the days for a workout
 function showDays(workoutIndex) {
@@ -129,41 +110,6 @@ function showDays(workoutIndex) {
   dayListDiv.classList.remove("hidden");  // Show the day list
   workoutListDiv.classList.add("hidden"); // Hide workout list
   exerciseListDiv.classList.add("hidden"); // Hide exercise list (ensure it's hidden)
-}
-
-// Show exercises for a specific day
-function showExercises(workoutIndex, dayIndex) {
-  const day = workouts[workoutIndex].days[dayIndex];
-
-  // Clear previous content
-  exerciseListDiv.innerHTML = `<h2>${day.name}</h2><h3>Ejercicios</h3>`;
-
-  // Botón para ver el historial
-  const historyBtn = document.createElement("button");
-  historyBtn.innerText = "Ver Historial de Resultados";
-  historyBtn.onclick = () => showWorkoutHistory(workouts[workoutIndex].name, day.name);
-  exerciseListDiv.appendChild(historyBtn);
-
-  day.exercises.forEach(ex => {
-    const div = document.createElement("div");
-    div.className = "card";
-    div.innerHTML = `
-      <strong>${ex.name}</strong><br>
-      Sets: ${ex.sets} - Objetivo: ${ex.target} ${ex.type === "reps" ? "reps" : "segundos"}
-    `;
-    div.onclick = () => startWorkout(workoutIndex, dayIndex);
-
-    // Botón para volver a los días de entrenamiento
-    addBackButton("🏠 Volver a días de entrenamiento", () => showDays(workoutIndex));
-
-    // Show the exercise list, hide the other sections
-    exerciseListDiv.classList.remove("hidden");
-    dayListDiv.classList.add("hidden");  // Hide the day list
-  });
-
-  // Show the exercise list, hide the other sections
-  exerciseListDiv.classList.remove("hidden");
-  dayListDiv.classList.add("hidden");  // Hide the day list
 }
 
 // Empezar el entrenamiento y registrar los resultados
@@ -253,21 +199,6 @@ function saveWorkoutResult(workoutName, dayName, results) {
 }
 
 
-// Mostrar un resumen de los resultados guardados
-function showResultsSummary(workoutName, dayName, results) {
-  exerciseListDiv.innerHTML = `<h2>✅ Entrenamiento guardado</h2><p>${workoutName} - ${dayName}</p>`;
-  results.forEach(ex => {
-    const div = document.createElement("div");
-    div.className = "card";
-    div.innerHTML = `<strong>${ex.name}</strong><br>`;
-    ex.sets.forEach((set, i) => {
-      div.innerHTML += `Set ${i + 1}: ${set.reps || set.segundos} reps - ${set.weight} kg<br>`;
-    });
-    exerciseListDiv.appendChild(div);
-  });
-
-  addBackButton("🏠 Volver al inicio", showWorkouts);
-}
 
 function showWorkoutHistory(workoutName, dayName) {
   const historyKey = `history_${workoutName}_${dayName}`;
