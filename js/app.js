@@ -1,5 +1,7 @@
 function showExercises(workoutIndex, dayIndex) {
   const day = workouts[workoutIndex].days[dayIndex];
+  console.log(`Mostrando ejercicios para: ${day.name}`); // Depuración
+
   exerciseListDiv.innerHTML = `<h2>${day.name}</h2><h3>Ejercicios</h3>`;
   
   day.exercises.forEach(ex => {
@@ -14,6 +16,7 @@ function showExercises(workoutIndex, dayIndex) {
 
   // Crear el botón solo una vez, si no existe ya
   if (!document.getElementById("start-btn")) {
+    console.log("Creando el botón de inicio"); // Depuración
     const startBtn = document.createElement("button");
     startBtn.id = "start-btn";  // Asignamos un ID para no duplicar el botón
     startBtn.innerText = "🏁 Empezar entrenamiento";
@@ -28,6 +31,8 @@ function startWorkout(workoutIndex, dayIndex) {
   let currentExercise = 0;
   const results = [];
 
+  console.log(`Iniciando entrenamiento para: ${workout.name} - ${day.name}`); // Depuración
+
   // Ocultar el botón de inicio
   const startBtn = document.getElementById("start-btn");
   if (startBtn) {
@@ -36,6 +41,8 @@ function startWorkout(workoutIndex, dayIndex) {
 
   function showExercise() {
     const ex = day.exercises[currentExercise];
+    console.log(`Mostrando ejercicio: ${ex.name}`); // Depuración
+
     const div = document.createElement("div");
     div.className = "card";
     div.innerHTML = `<h2>${ex.name}</h2><p>Introduce tus resultados</p>`;
