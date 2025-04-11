@@ -1,42 +1,42 @@
-
-export const workouts = [
+[
+  {
+    "date": "2025-04-10",
+    "results": [
       {
-        name: "Workout 1",
-        days: [
-          {
-            name: "Day 1",
-            exercises: [
-              {
-                name: "Squat",
-                sets: 3,
-                target: 12,
-                type: "reps"
-              },
-              {
-                name: "Deadlift",
-                sets: 3,
-                target: 10,
-                type: "reps"
-              }
-            ]
-          },
-          {
-            name: "Day 2",
-            exercises: [
-              {
-                name: "Bench Press",
-                sets: 4,
-                target: 10,
-                type: "reps"
-              },
-              {
-                name: "Pull Up",
-                sets: 3,
-                target: 8,
-                type: "reps"
-              }
-            ]
-          }
+        "name": "Sentadilla",
+        "sets": [
+          { "reps": 10, "weight": 40 },
+          { "reps": 10, "weight": 40 },
+          { "reps": 8, "weight": 45 }
         ]
-      } 
-];
+      },
+      {
+        "name": "Plancha",
+        "sets": [
+          { "segundos": 30, "weight": 0 },
+          { "segundos": 30, "weight": 0 }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2025-04-08",
+    "results": [
+      {
+        "name": "Sentadilla",
+        "sets": [
+          { "reps": 10, "weight": 35 },
+          { "reps": 10, "weight": 35 },
+          { "reps": 10, "weight": 35 }
+        ]
+      },
+      {
+        "name": "Plancha",
+        "sets": [
+          { "segundos": 20, "weight": 0 },
+          { "segundos": 25, "weight": 0 }
+        ]
+      }
+    ]
+  }
+]

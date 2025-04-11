@@ -229,8 +229,8 @@ function saveWorkoutResult(workoutName, dayName, results) {
 
   // Guardar el resultado actual de manera individual
   localStorage.setItem(key, JSON.stringify(results));
-}
 
+}
 
 
 function showWorkoutHistory(workoutName, dayName, workoutIndex, dayIndex) {
@@ -250,7 +250,7 @@ function showWorkoutHistory(workoutName, dayName, workoutIndex, dayIndex) {
       item.results.forEach(ex => {
         div.innerHTML += `<strong>${ex.name}</strong><br>`;
         ex.sets.forEach((set, i) => {
-          div.innerHTML += `Set ${i + 1}: ${set.reps || set.segundos} reps - ${set.weight} kg<br>`;
+          div.innerHTML += `Set ${i + 1}: ${set.reps || set.segundos} ${set.reps ? "reps" : "segundos"} - ${set.weight} kg<br>`;
         });
       });
 
@@ -258,9 +258,10 @@ function showWorkoutHistory(workoutName, dayName, workoutIndex, dayIndex) {
     });
   }
 
-  addBackButton("🏠 Volver a días de entrenamiento", () => showExercises(workoutIndex, dayIndex));
-
+  // Botón para volver a los ejercicios del día
+  addBackButton("⬅️ Volver a ejercicios", () => showExercises(workoutIndex, dayIndex));
 }
+
 
 
 // Mostrar la lista de entrenamientos cuando la página carga
