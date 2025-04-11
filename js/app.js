@@ -17,7 +17,10 @@ function showWorkouts() {
 
 function showDays(workoutIndex) {
   const workout = workouts[workoutIndex];
+  
+  // Limpia el contenido antes de agregar nuevos elementos
   dayListDiv.innerHTML = `<h2>${workout.name}</h2><h3>Selecciona un día</h3>`;
+  
   workout.days.forEach((d, i) => {
     const div = document.createElement("div");
     div.className = "card";
@@ -25,10 +28,10 @@ function showDays(workoutIndex) {
     div.onclick = () => showExercises(workoutIndex, i);
     dayListDiv.appendChild(div);
   });
+
   dayListDiv.classList.remove("hidden");
   exerciseListDiv.classList.add("hidden");
 }
-
 function showExercises(workoutIndex, dayIndex) {
   const day = workouts[workoutIndex].days[dayIndex];
   exerciseListDiv.innerHTML = `<h2>${day.name}</h2><h3>Ejercicios</h3>`;
@@ -45,8 +48,7 @@ function showExercises(workoutIndex, dayIndex) {
  const startBtn = document.createElement("button");
 startBtn.innerText = "🏁 Empezar entrenamiento";
 startBtn.onclick = () => startWorkout(workoutIndex, dayIndex);
-dayListDiv.appendChild(startBtn);
-
+exerciseListDiv.appendChild(startBtn);
   
 }
 
