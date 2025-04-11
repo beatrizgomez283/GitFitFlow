@@ -25,6 +25,7 @@ function showWorkouts() {
   exerciseListDiv.classList.add("hidden");
 }
 
+// Mostrar los días del entrenamiento seleccionado
 // Show the days for a workout
 function showDays(workoutIndex) {
   const workout = workouts[workoutIndex];
@@ -67,7 +68,6 @@ function showExercises(workoutIndex, dayIndex) {
   exerciseListDiv.classList.remove("hidden");
   dayListDiv.classList.add("hidden");  // Hide the day list
 }
-
 // Empezar el entrenamiento y registrar los resultados
 function startWorkout(workoutIndex, dayIndex) {
   const workout = workouts[workoutIndex];
