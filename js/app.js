@@ -38,7 +38,7 @@ function showResultsSummary(workoutName, dayName, results) {
   });
 
   // Añadir botón de "Volver" al contenedor
-  addBackButton("🏠 Volver al inicio", showWorkouts);
+  addBackButton("🏠 Volver a días de entrenamiento", () => showDays(workoutIndex));
 }
 
 // Mostrar ejercicios de un día
