@@ -1,4 +1,4 @@
-[
+export const workouts = [
   {
     "date": "2025-04-10",
     "results": [
