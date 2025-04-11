@@ -1,27 +1,44 @@
-// data.js
+
 export const workouts = [
-  {
-    name: "Workout 1",
-    days: [
       {
-        name: "Day 1",
-        exercises: [
-          { name: "Push-ups", sets: 3, target: 10, type: "reps" },
-          { name: "Squats", sets: 3, target: 15, type: "reps" }
+        name: "Workout 1",
+        days: [
+          {
+            name: "Day 1",
+            exercises: [
+              {
+                name: "Squat",
+                sets: 3,
+                target: 12,
+                type: "reps"
+              },
+              {
+                name: "Deadlift",
+                sets: 3,
+                target: 10,
+                type: "reps"
+              }
+            ]
+          },
+          {
+            name: "Day 2",
+            exercises: [
+              {
+                name: "Bench Press",
+                sets: 4,
+                target: 10,
+                type: "reps"
+              },
+              {
+                name: "Pull Up",
+                sets: 3,
+                target: 8,
+                type: "reps"
+              }
+            ]
+          }
         ]
-      }
-    ]
-  },
-  {
-    name: "Workout 2",
-    days: [
-      {
-        name: "Day 1",
-        exercises: [
-          { name: "Pull-ups", sets: 4, target: 8, type: "reps" },
-          { name: "Lunges", sets: 3, target: 12, type: "reps" }
-        ]
-      }
-    ]
-  }
+      },
+      // You can add more workouts here...
+    ];    
 ];

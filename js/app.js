@@ -25,32 +25,34 @@ function showWorkouts() {
   exerciseListDiv.classList.add("hidden");
 }
 
-// Mostrar los días del entrenamiento seleccionado
+// Show the days for a workout
 function showDays(workoutIndex) {
   const workout = workouts[workoutIndex];
   
+  // Clear previous content
   dayListDiv.innerHTML = `<h2>${workout.name}</h2><h3>Selecciona un día</h3>`;
-
-  // Crea un botón para cada día
-  workout.days.forEach((day, i) => {
+  
+  workout.days.forEach((d, i) => {
     const div = document.createElement("div");
     div.className = "card";
-    div.innerText = day.name;
-    div.onclick = () => showExercises(workoutIndex, i);  // Al hacer clic, muestra los ejercicios del día
+    div.innerText = d.name;
+    div.onclick = () => showExercises(workoutIndex, i);
     dayListDiv.appendChild(div);
   });
 
-  dayListDiv.classList.remove("hidden");
-  exerciseListDiv.classList.add("hidden");
+  // Remove 'hidden' class from day list and hide workout list
+  dayListDiv.classList.remove("hidden");  // Show the day list
+  workoutListDiv.classList.add("hidden"); // Hide workout list
+  exerciseListDiv.classList.add("hidden"); // Hide exercise list (ensure it's hidden)
 }
 
-// Mostrar los ejercicios del día seleccionado
+// Show exercises for a specific day
 function showExercises(workoutIndex, dayIndex) {
   const day = workouts[workoutIndex].days[dayIndex];
-  
-  exerciseListDiv.innerHTML = `<h2>${day.name}</h2><h3>Ejercicios</h3>`;
 
-  // Crea un listado de los ejercicios
+  // Clear previous content
+  exerciseListDiv.innerHTML = `<h2>${day.name}</h2><h3>Ejercicios</h3>`;
+  
   day.exercises.forEach(ex => {
     const div = document.createElement("div");
     div.className = "card";
@@ -61,11 +63,9 @@ function showExercises(workoutIndex, dayIndex) {
     exerciseListDiv.appendChild(div);
   });
 
-  // Botón para empezar el entrenamiento
-  const startBtn = document.createElement("button");
-  startBtn.innerText = "🏁 Empezar entrenamiento";
-  startBtn.onclick = () => startWorkout(workoutIndex, dayIndex);
-  exerciseListDiv.appendChild(startBtn);
+  // Show the exercise list, hide the other sections
+  exerciseListDiv.classList.remove("hidden");
+  dayListDiv.classList.add("hidden");  // Hide the day list
 }
 
 // Empezar el entrenamiento y registrar los resultados
