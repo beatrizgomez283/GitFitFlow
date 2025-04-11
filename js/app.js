@@ -139,7 +139,12 @@ function startWorkout(workoutIndex, dayIndex) {
 
 
   const workout = workouts[workoutIndex];
+  console.log("workout: ", workout);  // Verificar los índices recibidos
+
   const day = workout.days[dayIndex];
+  console.log("day: ", day);  // Verificar los índices recibidos
+
+
   let currentExercise = 0;
   const results = [];
 
@@ -148,6 +153,8 @@ function startWorkout(workoutIndex, dayIndex) {
   // Función para mostrar los ejercicios uno a uno
   function showExercise() {
     const ex = day.exercises[currentExercise];
+    console.log("ex: ", ex);  // Verificar los índices recibidos
+
     const div = document.createElement("div");
     div.className = "card";
     div.innerHTML = `<h2>${ex.name}</h2><p>Introduce tus resultados</p>`;
