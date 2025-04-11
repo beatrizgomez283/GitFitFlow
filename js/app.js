@@ -43,11 +43,18 @@ function showResultsSummary(workoutName, dayName, results) {
 
 // Mostrar ejercicios de un día
 function showExercises(workoutIndex, dayIndex) {
+  
   const day = workouts[workoutIndex].days[dayIndex];
 
-  // Limpiar el contenido previo
+  // Clear previous content
   exerciseListDiv.innerHTML = `<h2>${day.name}</h2><h3>Ejercicios</h3>`;
 
+  // Botón para ver el historial
+  const historyBtn = document.createElement("button");
+  historyBtn.innerText = "Ver Historial de Resultados";
+  historyBtn.onclick = () => showWorkoutHistory(workouts[workoutIndex].name, day.name);
+  exerciseListDiv.appendChild(historyBtn);
+  
   day.exercises.forEach(ex => {
     const div = document.createElement("div");
     div.className = "card";
