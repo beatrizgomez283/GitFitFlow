@@ -1,21 +1,18 @@
+// data.js
 const workouts = [
   {
-    name: "Fuerza Base",
+    name: "Workout 1",
     days: [
       {
-        name: "Día 1 - Pierna",
+        name: "Day 1",
         exercises: [
-          { name: "Sentadillas", type: "reps", sets: 3, target: "12" },
-          { name: "Zancadas", type: "reps", sets: 3, target: "10" }
-        ]
-      },
-      {
-        name: "Día 2 - Tren superior",
-        exercises: [
-          { name: "Flexiones", type: "reps", sets: 3, target: "15" },
-          { name: "Remo con mancuerna", type: "reps", sets: 3, target: "12" }
+          { name: "Push-ups", sets: 3, target: 10, type: "reps" },
+          { name: "Squats", sets: 3, target: 15, type: "reps" }
         ]
       }
     ]
   }
 ];
+
+// Exporta los datos
+export { workouts };
