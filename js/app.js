@@ -13,12 +13,14 @@ function addBackButton(text, callback) {
 
   // Verificamos si ya existe un botón en el contenedor
   let existingBtn = container.querySelector('button');
-  if (!existingBtn) {
-    const backBtn = document.createElement("button");
+  if (existingBtn) {
+    existingBtn.remove();
+  }
+
+  const backBtn = document.createElement("button");
     backBtn.innerText = text;
     backBtn.onclick = callback;
     container.appendChild(backBtn);
-  }
 }
 
 // Mostrar la lista de resultados del entrenamiento con un botón de "Volver"
