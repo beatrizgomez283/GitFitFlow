@@ -68,11 +68,20 @@ function showExercises(workoutIndex, dayIndex) {
   // Añadir un botón de "Volver" para regresar a los días del entrenamiento
   addBackButton("🏠 Volver a días de entrenamiento", () => showDays(workoutIndex));
 
-  const startBtn = document.createElement("button");
-  startBtn.innerText = "🏁 Empezar entrenamiento";
-  startBtn.onclick = () => startWorkout(workoutIndex, dayIndex);
-  dayListDiv.appendChild(startBtn);
 
+  // Verificamos si ya existe un botón con el id "startWorkout"
+  let existingBtn = container.querySelector('#startWorkout');
+  if (existingBtn) {
+    existingBtn.remove(); // Si ya existe, lo eliminamos
+  }
+  // Ahora creamos el nuevo botón
+  const startWorkoutBtn = document.createElement("button");
+  startWorkoutBtn.id = "startWorkout";  // Le damos el id "startWorkout"
+  startWorkoutBtn.innerText = text;
+  startWorkoutBtn.onclick = callback;
+
+  // Añadimos el nuevo botón al contenedor
+  container.appendChild(startWorkoutBtn);
 }
 
 // Mostrar la lista de entrenamientos
