@@ -151,61 +151,61 @@ function startWorkout(workoutIndex, dayIndex) {
   exerciseListDiv.innerHTML = "";
 
   // Función para mostrar los ejercicios uno a uno
-  function showExercise() {
-    const ex = day.exercises[currentExercise];
-    console.log("ex: ", ex);  // Verificar los índices recibidos
+// Función para mostrar los ejercicios uno a uno
+function showExercise() {
+  const ex = day.exercises[currentExercise];
 
-    const div = document.createElement("div");
-    div.className = "card";
-    div.innerHTML = `<h2>${ex.name}</h2><p>Introduce tus resultados</p>`;
+  const div = document.createElement("div");
+  div.className = "card";
+  div.innerHTML = `<h2>${ex.name}</h2><p>Introduce tus resultados</p>`;
 
-    const form = document.createElement("form");
-    const setsInputs = [];
+  const form = document.createElement("form");
+  const setsInputs = [];
 
-    // Crea los campos para introducir los resultados de los sets
-    for (let i = 0; i < ex.sets; i++) {
-      const setDiv = document.createElement("div");
-      setDiv.innerHTML = `
-        <label>Set ${i + 1}: 
-          <input type="number" placeholder="${ex.type === 'reps' ? 'Reps' : 'Segundos'}" required /> 
-          <input type="number" placeholder="Peso (kg)" required />
-        </label>
-      `;
-      setsInputs.push(setDiv);
-      form.appendChild(setDiv);
-    }
-
-    // Botón para pasar al siguiente ejercicio o finalizar
-    const nextBtn = document.createElement("button");
-    nextBtn.type = "submit";
-    nextBtn.innerText = currentExercise < day.exercises.length - 1 ? "Siguiente" : "Finalizar";
-    form.appendChild(nextBtn);
-
-    // Al enviar el formulario, guarda los resultados y pasa al siguiente ejercicio
-    form.onsubmit = (e) => {
-      e.preventDefault();
-      const setResults = setsInputs.map(div => {
-        const inputs = div.querySelectorAll("input");
-        return {
-          [ex.type]: parseInt(inputs[0].value),
-          weight: parseFloat(inputs[1].value)
-        };
-      });
-      results.push({ name: ex.name, sets: setResults });
-
-      currentExercise++;
-      if (currentExercise < day.exercises.length) {
-        exerciseListDiv.innerHTML = "";
-        showExercise();
-      } else {
-        saveWorkoutResult(workout.name, day.name, results);
-        showResultsSummary(workout.name, day.name, results);
-      }
-    };
-
-    div.appendChild(form);
-    exerciseListDiv.appendChild(div);
+  // Crea los campos para introducir los resultados de los sets
+  for (let i = 0; i < ex.sets; i++) {  // ex.sets es un número ahora
+    const setDiv = document.createElement("div");
+    setDiv.innerHTML = `
+      <label>Set ${i + 1}: 
+        <input type="number" placeholder="${ex.type === 'reps' ? 'Reps' : 'Segundos'}" required /> 
+        <input type="number" placeholder="Peso (kg)" required />
+      </label>
+    `;
+    setsInputs.push(setDiv);
+    form.appendChild(setDiv);
   }
+
+  // Botón para pasar al siguiente ejercicio o finalizar
+  const nextBtn = document.createElement("button");
+  nextBtn.type = "submit";
+  nextBtn.innerText = currentExercise < day.exercises.length - 1 ? "Siguiente" : "Finalizar";
+  form.appendChild(nextBtn);
+
+  // Al enviar el formulario, guarda los resultados y pasa al siguiente ejercicio
+  form.onsubmit = (e) => {
+    e.preventDefault();
+    const setResults = setsInputs.map(div => {
+      const inputs = div.querySelectorAll("input");
+      return {
+        [ex.type]: parseInt(inputs[0].value),
+        weight: parseFloat(inputs[1].value)
+      };
+    });
+    results.push({ name: ex.name, sets: setResults });
+
+    currentExercise++;
+    if (currentExercise < day.exercises.length) {
+      exerciseListDiv.innerHTML = "";
+      showExercise();
+    } else {
+      saveWorkoutResult(workout.name, day.name, results);
+      showResultsSummary(workout.name, day.name, results);
+    }
+  };
+
+  div.appendChild(form);
+  exerciseListDiv.appendChild(div);
+}
 
   showExercise();
 }
