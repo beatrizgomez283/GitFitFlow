@@ -19,11 +19,6 @@ function showWorkouts() {
     div.onclick = () => showDays(i);  // Al hacer clic, muestra los días del entrenamiento
     workoutListDiv.appendChild(div);
   });
-   // Botón para volver al inicio (si estás en otra página)
-  const backBtn = document.createElement("button");
-  backBtn.innerText = "🏠 Volver al inicio";
-  backBtn.onclick = () => showWorkouts();
-  workoutListDiv.appendChild(backBtn);
 
   // Oculta la lista de días y ejercicios
   dayListDiv.classList.add("hidden");
@@ -227,6 +222,12 @@ function showWorkoutHistory(workoutName, dayName) {
       exerciseListDiv.appendChild(div);
     });
   }
+
+    // Botón para volver al inicio
+    const backBtn = document.createElement("button");
+    backBtn.innerText = "🏠 Volver al inicio";
+    backBtn.onclick = showWorkouts;
+    exerciseListDiv.appendChild(backBtn);
 }
 
 
