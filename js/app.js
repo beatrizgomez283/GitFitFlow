@@ -21,6 +21,7 @@ function showWorkouts() {
   });
 
   // Oculta la lista de días y ejercicios
+  workoutListDiv.classList.remove("hidden");
   dayListDiv.classList.add("hidden");
   exerciseListDiv.classList.add("hidden");
 }
