@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <title>Mi App de Entrenamiento</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>🏋️ Mi App de Entrenamiento</h1>
+    <div id="workout-list" class="hidden"></div>
+    <div id="day-list" class="hidden"></div>
+    <div id="exercise-list" class="hidden"></div>
+    <div id="back-button-container"></div>
 
-  <div id="workout-list"></div>
-  <div id="day-list" class="hidden"></div>
-  <div id="exercise-list" class="hidden"></div>
-  <!-- Contenedor para los botones de "Volver" -->
-  <div id="back-button-container"></div>
-
-
-  <!-- Asegúrate de usar "type='module'" para los scripts JS -->
-  <script type="module" src="js/app.js"></script>
+    <script type="module" src="render/render-index.js"></script>
 </body>
 </html>
