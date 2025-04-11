@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <title>Mi Web App</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Mi App de Entrenamientos</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 20px;
+      padding: 1rem;
+      background: #f4f4f4;
+      color: #333;
     }
-    button {
-      padding: 15px 30px;
-      font-size: 18px;
+
+    h1, h2, h3 {
+      text-align: center;
+    }
+
+    .card {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       cursor: pointer;
-      border: none;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    button {
+      padding: 10px 20px;
       background-color: #007BFF;
       color: white;
+      border: none;
       border-radius: 5px;
+      margin-top: 1rem;
     }
+
     button:hover {
       background-color: #0056b3;
     }
   </style>
 </head>
 <body>
-  <h1>Bienvenido a mi Web App</h1>
-  <p>Presiona el botón para ver un mensaje:</p>
-  <button onclick="showMessage()">¡Haz clic aquí!</button>
+  <h1>🏋️ Mi App de Entrenamiento</h1>
 
-  <script>
-    function showMessage() {
-      alert("¡Hola! Has hecho clic en el botón.");
-    }
-  </script>
-</body>
-</html>
+  <div id="workout-list"></div>
+  <
