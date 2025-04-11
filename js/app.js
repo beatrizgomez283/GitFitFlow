@@ -78,10 +78,12 @@ function showExercises(workoutIndex, dayIndex) {
   const startWorkoutBtn = document.createElement("button");
   startWorkoutBtn.id = "startWorkout";  // Le damos el id "startWorkout"
   startWorkoutBtn.innerText = "Empezar entreno";
-  startWorkoutBtn.onclick = () => startWorkout(workoutIndex, dayIndex);  // Llamamos a startWorkout al hacer clic
-
+  startWorkoutBtn.onclick = () => {
+    console.log("Botón de empezar entreno clickeado");
+    startWorkout(workoutIndex, dayIndex);  // Llamamos a startWorkout al hacer clic
+  };  // Esto se ejecuta cuando haces clic en el botón
   // Añadimos el nuevo botón al contenedor
-  document.body.appendChild(startWorkoutBtn);
+  exerciseListDiv.appendChild(startWorkoutBtn);
 }
 
 // Mostrar la lista de entrenamientos
