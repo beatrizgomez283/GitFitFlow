@@ -83,7 +83,7 @@ function showExercises(workoutIndex, dayIndex) {
     startWorkout(workoutIndex, dayIndex);  // Llamamos a startWorkout al hacer clic
   };  // Esto se ejecuta cuando haces clic en el botón
   // Añadimos el nuevo botón al contenedor
-  exerciseListDiv.appendChild(startWorkoutBtn);
+  dayListDiv.appendChild(startWorkoutBtn);
 }
 
 // Mostrar la lista de entrenamientos
