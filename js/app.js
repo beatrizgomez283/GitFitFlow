@@ -67,6 +67,8 @@ function showExercises(workoutIndex, dayIndex) {
       <strong>${ex.name}</strong><br>
       Sets: ${ex.sets} - Objetivo: ${ex.target} ${ex.type === "reps" ? "reps" : "segundos"}
     `;
+    div.onclick = () => startWorkout(workoutIndex, dayIndex);
+
     exerciseListDiv.appendChild(div);
   });
 
