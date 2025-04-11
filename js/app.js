@@ -48,19 +48,22 @@ function showDays(workoutIndex) {
 }
 
 // Show exercises for a specific day
+// Show exercises for a specific day
 function showExercises(workoutIndex, dayIndex) {
   const day = workouts[workoutIndex].days[dayIndex];
 
   // Clear previous content
   exerciseListDiv.innerHTML = `<h2>${day.name}</h2><h3>Ejercicios</h3>`;
-  
-  day.exercises.forEach(ex => {
+
+  day.exercises.forEach((ex, i) => {
     const div = document.createElement("div");
     div.className = "card";
     div.innerHTML = `
       <strong>${ex.name}</strong><br>
       Sets: ${ex.sets} - Objetivo: ${ex.target} ${ex.type === "reps" ? "reps" : "segundos"}
     `;
+    // Add click event to start workout on the selected exercise
+    div.onclick = () => startWorkout(workoutIndex, dayIndex);
     exerciseListDiv.appendChild(div);
   });
 
@@ -68,6 +71,7 @@ function showExercises(workoutIndex, dayIndex) {
   exerciseListDiv.classList.remove("hidden");
   dayListDiv.classList.add("hidden");  // Hide the day list
 }
+
 // Empezar el entrenamiento y registrar los resultados
 function startWorkout(workoutIndex, dayIndex) {
   const workout = workouts[workoutIndex];
