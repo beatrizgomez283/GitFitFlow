@@ -1,5 +1,6 @@
 // app.js
 
+import { workouts } from './data.js';  // Asegúrate de que el archivo data.js está en la misma carpeta
 
 // Referencias a los elementos del DOM
 const workoutListDiv = document.getElementById("workout-list");
