@@ -50,4 +50,67 @@ function showExercises(workoutIndex, dayIndex) {
   exerciseListDiv.classList.remove("hidden");
 }
 
+function startWorkout(workoutIndex, dayIndex) {
+  const workout = workouts[workoutIndex];
+  const day = workout.days[dayIndex];
+  let currentExercise = 0;
+  const results = [];
+
+  exerciseListDiv.innerHTML = "";
+
+  function showExercise() {
+    const ex = day.exercises[currentExercise];
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerHTML = `<h2>${ex.name}</h2><p>Introduce tus resultados</p>`;
+
+    const form = document.createElement("form");
+    const setsInputs = [];
+
+    for (let i = 0; i < ex.sets; i++) {
+      const setDiv = document.createElement("div");
+      setDiv.innerHTML = `
+        <label>Set ${i + 1}: 
+          <input type="number" placeholder="${ex.type === 'reps' ? 'Reps' : 'Segundos'}" required /> 
+          <input type="number" placeholder="Peso (kg)" required />
+        </label>
+      `;
+      setsInputs.push(setDiv);
+      form.appendChild(setDiv);
+    }
+
+    const nextBtn = document.createElement("button");
+    nextBtn.type = "submit";
+    nextBtn.innerText = currentExercise < day.exercises.length - 1 ? "Siguiente" : "Finalizar";
+    form.appendChild(nextBtn);
+
+    form.onsubmit = (e) => {
+      e.preventDefault();
+      const setResults = setsInputs.map(div => {
+        const inputs = div.querySelectorAll("input");
+        return {
+          [ex.type]: parseInt(inputs[0].value),
+          weight: parseFloat(inputs[1].value)
+        };
+      });
+      results.push({ name: ex.name, sets: setResults });
+
+      currentExercise++;
+      if (currentExercise < day.exercises.length) {
+        exerciseListDiv.innerHTML = "";
+        showExercise();
+      } else {
+        saveWorkoutResult(workout.name, day.name, results);
+        showResultsSummary(workout.name, day.name, results);
+      }
+    };
+
+    div.appendChild(form);
+    exerciseListDiv.appendChild(div);
+  }
+
+  showExercise();
+}
+
+
 showWorkouts();
