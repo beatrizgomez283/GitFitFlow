@@ -93,6 +93,39 @@ function startWorkout(workoutIndex, dayIndex) {
     div.appendChild(form);
     exerciseListDiv.appendChild(div);
   }
+  function showWorkouts() {
+    console.log(workouts);  // Verifica que workouts contiene los datos correctos
+    workoutListDiv.innerHTML = "<h2>Selecciona un Workout</h2>";
+    workouts.forEach((w, i) => {
+      const div = document.createElement("div");
+      div.className = "card";
+      div.innerText = w.name;
+      div.onclick = () => showDays(i);
+      workoutListDiv.appendChild(div);
+    });
+  
+    dayListDiv.classList.add("hidden");
+    exerciseListDiv.classList.add("hidden");
+  }
+
+  function showDays(workoutIndex) {
+    console.log(`Mostrando días para el workout: ${workouts[workoutIndex].name}`);
+    const workout = workouts[workoutIndex];
+    
+    dayListDiv.innerHTML = `<h2>${workout.name}</h2><h3>Selecciona un día</h3>`;
+    
+    workout.days.forEach((d, i) => {
+      const div = document.createElement("div");
+      div.className = "card";
+      div.innerText = d.name;
+      div.onclick = () => showExercises(workoutIndex, i);
+      dayListDiv.appendChild(div);
+    });
+  
+    // Asegúrate de que la lista de días sea visible
+    dayListDiv.classList.remove("hidden");
+    exerciseListDiv.classList.add("hidden");
+  }  
 
   showExercise();
 }
