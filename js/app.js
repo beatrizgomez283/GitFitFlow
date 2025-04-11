@@ -135,6 +135,8 @@ function showDays(workoutIndex) {
 
 // Empezar el entrenamiento y registrar los resultados
 function startWorkout(workoutIndex, dayIndex) {
+  console.log("startWorkout received:", workoutIndex, dayIndex);  // Verificar los índices recibidos
+
   const workout = workouts[workoutIndex];
   const day = workout.days[dayIndex];
   let currentExercise = 0;
