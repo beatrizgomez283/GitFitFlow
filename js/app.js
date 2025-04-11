@@ -20,12 +20,6 @@ function showWorkouts() {
     workoutListDiv.appendChild(div);
   });
 
-  // Botón para volver al inicio (si estás en otra página)
-  const backBtn = document.createElement("button");
-  backBtn.innerText = "🏠 Volver al inicio";
-  backBtn.onclick = () => showWorkouts();
-  workoutListDiv.appendChild(backBtn);
-
   // Oculta la lista de días y ejercicios
   dayListDiv.classList.add("hidden");
   exerciseListDiv.classList.add("hidden");
@@ -35,10 +29,10 @@ function showWorkouts() {
 // Show the days for a workout
 function showDays(workoutIndex) {
   const workout = workouts[workoutIndex];
-
+  
   // Clear previous content
   dayListDiv.innerHTML = `<h2>${workout.name}</h2><h3>Selecciona un día</h3>`;
-
+  
   workout.days.forEach((d, i) => {
     const div = document.createElement("div");
     div.className = "card";
@@ -46,12 +40,6 @@ function showDays(workoutIndex) {
     div.onclick = () => showExercises(workoutIndex, i);
     dayListDiv.appendChild(div);
   });
-
-  // Botón para volver a los entrenamientos
-  const backBtn = document.createElement("button");
-  backBtn.innerText = "🏠 Volver a entrenamientos";
-  backBtn.onclick = () => showWorkouts();
-  dayListDiv.appendChild(backBtn);
 
   // Remove 'hidden' class from day list and hide workout list
   dayListDiv.classList.remove("hidden");  // Show the day list
@@ -79,20 +67,15 @@ function showExercises(workoutIndex, dayIndex) {
       <strong>${ex.name}</strong><br>
       Sets: ${ex.sets} - Objetivo: ${ex.target} ${ex.type === "reps" ? "reps" : "segundos"}
     `;
+    div.onclick = () => startWorkout(workoutIndex, dayIndex);
+
     exerciseListDiv.appendChild(div);
   });
-
-  // Botón para volver a los días de entrenamiento
-  const backBtn = document.createElement("button");
-  backBtn.innerText = "🏠 Volver a días de entrenamiento";
-  backBtn.onclick = () => showDays(workoutIndex);
-  exerciseListDiv.appendChild(backBtn);
 
   // Show the exercise list, hide the other sections
   exerciseListDiv.classList.remove("hidden");
   dayListDiv.classList.add("hidden");  // Hide the day list
 }
-
 
 // Empezar el entrenamiento y registrar los resultados
 function startWorkout(workoutIndex, dayIndex) {
