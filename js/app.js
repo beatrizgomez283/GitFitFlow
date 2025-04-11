@@ -19,6 +19,11 @@ function showWorkouts() {
     div.onclick = () => showDays(i);  // Al hacer clic, muestra los días del entrenamiento
     workoutListDiv.appendChild(div);
   });
+   // Botón para volver al inicio (si estás en otra página)
+  const backBtn = document.createElement("button");
+  backBtn.innerText = "🏠 Volver al inicio";
+  backBtn.onclick = () => showWorkouts();
+  workoutListDiv.appendChild(backBtn);
 
   // Oculta la lista de días y ejercicios
   dayListDiv.classList.add("hidden");
@@ -40,6 +45,12 @@ function showDays(workoutIndex) {
     div.onclick = () => showExercises(workoutIndex, i);
     dayListDiv.appendChild(div);
   });
+
+   // Botón para volver a los entrenamientos
+   const backBtn = document.createElement("button");
+   backBtn.innerText = "🏠 Volver a entrenamientos";
+   backBtn.onclick = () => showWorkouts();
+   dayListDiv.appendChild(backBtn);
 
   // Remove 'hidden' class from day list and hide workout list
   dayListDiv.classList.remove("hidden");  // Show the day list
@@ -69,7 +80,15 @@ function showExercises(workoutIndex, dayIndex) {
     `;
     div.onclick = () => startWorkout(workoutIndex, dayIndex);
 
-    exerciseListDiv.appendChild(div);
+    // Botón para volver a los días de entrenamiento
+    const backBtn = document.createElement("button");
+    backBtn.innerText = "🏠 Volver a días de entrenamiento";
+    backBtn.onclick = () => showDays(workoutIndex);
+    exerciseListDiv.appendChild(backBtn);
+    
+    // Show the exercise list, hide the other sections
+    exerciseListDiv.classList.remove("hidden");
+    dayListDiv.classList.add("hidden");  // Hide the day list
   });
 
   // Show the exercise list, hide the other sections
