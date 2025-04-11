@@ -78,7 +78,6 @@ function showExercises(workoutIndex, dayIndex) {
   const startWorkoutBtn = document.createElement("button");
   startWorkoutBtn.id = "startWorkout";  // Le damos el id "startWorkout"
   startWorkoutBtn.innerText = "Empezar entreno";
-  startWorkoutBtn.onclick = callback;
   startWorkoutBtn.onclick = () => startWorkout(workoutIndex, dayIndex);  // Llamamos a startWorkout al hacer clic
 
   // Añadimos el nuevo botón al contenedor
