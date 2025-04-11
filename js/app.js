@@ -7,6 +7,85 @@ const workoutListDiv = document.getElementById("workout-list");
 const dayListDiv = document.getElementById("day-list");
 const exerciseListDiv = document.getElementById("exercise-list");
 
+// Función para añadir un botón "Volver" sin duplicados
+function addBackButton(text, callback) {
+  const container = document.getElementById("back-button-container");
+
+  // Verificamos si ya existe un botón en el contenedor
+  let existingBtn = container.querySelector('button');
+  if (!existingBtn) {
+    const backBtn = document.createElement("button");
+    backBtn.innerText = text;
+    backBtn.onclick = callback;
+    container.appendChild(backBtn);
+  }
+}
+
+// Mostrar la lista de resultados del entrenamiento con un botón de "Volver"
+function showResultsSummary(workoutName, dayName, results) {
+  exerciseListDiv.innerHTML = `<h2>✅ Entrenamiento guardado</h2><p>${workoutName} - ${dayName}</p>`;
+
+  results.forEach(ex => {
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerHTML = `<strong>${ex.name}</strong><br>`;
+    ex.sets.forEach((set, i) => {
+      div.innerHTML += `Set ${i + 1}: ${set.reps || set.segundos} reps - ${set.weight} kg<br>`;
+    });
+    exerciseListDiv.appendChild(div);
+  });
+
+  // Añadir botón de "Volver" al contenedor
+  addBackButton("🏠 Volver al inicio", showWorkouts);
+}
+
+// Mostrar ejercicios de un día
+function showExercises(workoutIndex, dayIndex) {
+  const day = workouts[workoutIndex].days[dayIndex];
+
+  // Limpiar el contenido previo
+  exerciseListDiv.innerHTML = `<h2>${day.name}</h2><h3>Ejercicios</h3>`;
+
+  day.exercises.forEach(ex => {
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerHTML = `
+      <strong>${ex.name}</strong><br>
+      Sets: ${ex.sets} - Objetivo: ${ex.target} ${ex.type === "reps" ? "reps" : "segundos"}
+    `;
+    exerciseListDiv.appendChild(div);
+  });
+
+  // Añadir un botón de "Volver" para regresar a los días del entrenamiento
+  addBackButton("🏠 Volver a días de entrenamiento", () => showDays(workoutIndex));
+
+  // Mostrar la lista de ejercicios y ocultar las otras secciones
+  exerciseListDiv.classList.remove("hidden");
+  dayListDiv.classList.add("hidden");
+}
+
+// Mostrar la lista de entrenamientos
+function showWorkouts() {
+  workoutListDiv.innerHTML = "<h2>Selecciona un Workout</h2>";
+
+  workouts.forEach((workout, i) => {
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerText = workout.name;
+    div.onclick = () => showDays(i);
+    workoutListDiv.appendChild(div);
+  });
+
+  // Mostrar la lista de entrenamientos y ocultar las otras
+  workoutListDiv.classList.remove("hidden");
+  dayListDiv.classList.add("hidden");
+  exerciseListDiv.classList.add("hidden");
+
+  // Limpiar los botones "Volver"
+  document.getElementById("back-button-container").innerHTML = "";
+}
+
+
 // Mostrar la lista de entrenamientos
 function showWorkouts() {
   workoutListDiv.innerHTML = "<h2>Selecciona un Workout</h2>";
@@ -43,10 +122,8 @@ function showDays(workoutIndex) {
   });
 
    // Botón para volver a los entrenamientos
-   const backBtn = document.createElement("button");
-   backBtn.innerText = "🏠 Volver a entrenamientos";
-   backBtn.onclick = () => showWorkouts();
-   dayListDiv.appendChild(backBtn);
+   addBackButton("🏠 Volver a días de entrenamiento", () => showDays(workoutIndex));
+
 
   // Remove 'hidden' class from day list and hide workout list
   dayListDiv.classList.remove("hidden");  // Show the day list
@@ -77,10 +154,8 @@ function showExercises(workoutIndex, dayIndex) {
     div.onclick = () => startWorkout(workoutIndex, dayIndex);
 
     // Botón para volver a los días de entrenamiento
-    const backBtn = document.createElement("button");
-    backBtn.innerText = "🏠 Volver a días de entrenamiento";
-    backBtn.onclick = () => showDays(workoutIndex);
-    exerciseListDiv.appendChild(backBtn);
+    addBackButton("🏠 Volver a días de entrenamiento", () => showDays(workoutIndex));
+
     
     // Show the exercise list, hide the other sections
     exerciseListDiv.classList.remove("hidden");
@@ -192,11 +267,7 @@ function showResultsSummary(workoutName, dayName, results) {
     exerciseListDiv.appendChild(div);
   });
 
-  // Botón para volver al inicio
-  const backBtn = document.createElement("button");
-  backBtn.innerText = "🏠 Volver al inicio";
-  backBtn.onclick = showWorkouts();
-  exerciseListDiv.appendChild(backBtn);
+  addBackButton("🏠 Volver al inicio", showWorkouts);
 }
 
 function showWorkoutHistory(workoutName, dayName) {
@@ -224,11 +295,8 @@ function showWorkoutHistory(workoutName, dayName) {
     });
   }
 
-    // Botón para volver al inicio
-    const backBtn = document.createElement("button");
-    backBtn.innerText = "🏠 Volver al inicio";
-    backBtn.onclick = showWorkouts();
-    exerciseListDiv.appendChild(backBtn);
+  addBackButton("🏠 Volver a días de entrenamiento", () => showDays(workoutIndex));
+
 }
 
 
