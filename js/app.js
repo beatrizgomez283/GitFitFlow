@@ -42,12 +42,12 @@ function showExercises(workoutIndex, dayIndex) {
     exerciseListDiv.appendChild(div);
   });
 
-  const backBtn = document.createElement("button");
-  backBtn.innerText = "⬅️ Volver";
-  backBtn.onclick = () => showDays(workoutIndex);
-  exerciseListDiv.appendChild(backBtn);
+ const startBtn = document.createElement("button");
+startBtn.innerText = "🏁 Empezar entrenamiento";
+startBtn.onclick = () => startWorkout(workoutIndex, dayIndex);
+dayListDiv.appendChild(startBtn);
 
-  exerciseListDiv.classList.remove("hidden");
+  
 }
 
 function startWorkout(workoutIndex, dayIndex) {
@@ -114,3 +114,46 @@ function startWorkout(workoutIndex, dayIndex) {
 
 
 showWorkouts();
+
+function saveWorkoutResult(workoutName, dayName, results) {
+  const date = new Date().toISOString().split("T")[0]; // formato YYYY-MM-DD
+  const key = `${date}_${workoutName}_${dayName}`;
+  localStorage.setItem(key, JSON.stringify(results));
+}
+
+function showResultsSummary(workoutName, dayName, results) {
+  exerciseListDiv.innerHTML = `<h2>✅ Entrenamiento guardado</h2><p>${workoutName} - ${dayName}</p>`;
+  results.forEach(ex => {
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerHTML = `<strong>${ex.name}</strong><br>`;
+    ex.sets.forEach((set, i) => {
+      div.innerHTML += `Set ${i + 1}: ${set.reps || set.segundos} reps - ${set.weight} kg<br>`;
+    });
+    exerciseListDiv.appendChild(div);
+  });
+
+  const backBtn = document.createElement("button");
+  backBtn.innerText = "🏠 Volver al inicio";
+  backBtn.onclick = showWorkouts;
+  exerciseListDiv.appendChild(backBtn);
+}
+
+function showResultsSummary(workoutName, dayName, results) {
+  exerciseListDiv.innerHTML = `<h2>✅ Entrenamiento guardado</h2><p>${workoutName} - ${dayName}</p>`;
+  results.forEach(ex => {
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerHTML = `<strong>${ex.name}</strong><br>`;
+    ex.sets.forEach((set, i) => {
+      div.innerHTML += `Set ${i + 1}: ${set.reps || set.segundos} reps - ${set.weight} kg<br>`;
+    });
+    exerciseListDiv.appendChild(div);
+  });
+
+  const backBtn = document.createElement("button");
+  backBtn.innerText = "🏠 Volver al inicio";
+  backBtn.onclick = showWorkouts;
+  exerciseListDiv.appendChild(backBtn);
+}
+
