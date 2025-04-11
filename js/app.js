@@ -48,22 +48,25 @@ function showDays(workoutIndex) {
 }
 
 // Show exercises for a specific day
-// Show exercises for a specific day
 function showExercises(workoutIndex, dayIndex) {
   const day = workouts[workoutIndex].days[dayIndex];
 
   // Clear previous content
   exerciseListDiv.innerHTML = `<h2>${day.name}</h2><h3>Ejercicios</h3>`;
 
-  day.exercises.forEach((ex, i) => {
+  // Botón para ver el historial
+  const historyBtn = document.createElement("button");
+  historyBtn.innerText = "Ver Historial de Resultados";
+  historyBtn.onclick = () => showWorkoutHistory(workouts[workoutIndex].name, day.name);
+  exerciseListDiv.appendChild(historyBtn);
+
+  day.exercises.forEach(ex => {
     const div = document.createElement("div");
     div.className = "card";
     div.innerHTML = `
       <strong>${ex.name}</strong><br>
       Sets: ${ex.sets} - Objetivo: ${ex.target} ${ex.type === "reps" ? "reps" : "segundos"}
     `;
-    // Add click event to start workout on the selected exercise
-    div.onclick = () => startWorkout(workoutIndex, dayIndex);
     exerciseListDiv.appendChild(div);
   });
 
@@ -143,8 +146,21 @@ function startWorkout(workoutIndex, dayIndex) {
 function saveWorkoutResult(workoutName, dayName, results) {
   const date = new Date().toISOString().split("T")[0]; // formato YYYY-MM-DD
   const key = `${date}_${workoutName}_${dayName}`;
+
+  // Recuperar historial de resultados almacenados
+  const historyKey = `history_${workoutName}_${dayName}`;
+  let history = JSON.parse(localStorage.getItem(historyKey)) || [];
+
+  // Agregar el nuevo resultado al historial
+  history.push({ date, results });
+
+  // Guardar el historial actualizado
+  localStorage.setItem(historyKey, JSON.stringify(history));
+
+  // Guardar el resultado actual de manera individual
   localStorage.setItem(key, JSON.stringify(results));
 }
+
 
 // Mostrar un resumen de los resultados guardados
 function showResultsSummary(workoutName, dayName, results) {
@@ -165,6 +181,33 @@ function showResultsSummary(workoutName, dayName, results) {
   backBtn.onclick = showWorkouts;
   exerciseListDiv.appendChild(backBtn);
 }
+
+function showWorkoutHistory(workoutName, dayName) {
+  const historyKey = `history_${workoutName}_${dayName}`;
+  const history = JSON.parse(localStorage.getItem(historyKey)) || [];
+
+  exerciseListDiv.innerHTML = `<h2>Historial de Entrenamientos - ${workoutName} - ${dayName}</h2>`;
+
+  if (history.length === 0) {
+    exerciseListDiv.innerHTML += "<p>No hay historial de entrenamientos.</p>";
+  } else {
+    history.forEach(item => {
+      const div = document.createElement("div");
+      div.className = "card";
+      div.innerHTML = `<strong>${item.date}</strong><br>`;
+
+      item.results.forEach(ex => {
+        div.innerHTML += `<strong>${ex.name}</strong><br>`;
+        ex.sets.forEach((set, i) => {
+          div.innerHTML += `Set ${i + 1}: ${set.reps || set.segundos} reps - ${set.weight} kg<br>`;
+        });
+      });
+
+      exerciseListDiv.appendChild(div);
+    });
+  }
+}
+
 
 // Mostrar la lista de entrenamientos cuando la página carga
 showWorkouts();
