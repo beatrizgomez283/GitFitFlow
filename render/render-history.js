@@ -1,10 +1,18 @@
-﻿import { workouts } from '../data/workouts.js';
-import { addBackButton } from '../utils/navigation.js';
+﻿export function showResultsSummary(workoutIndex, dayIndex) {
+    document.addEventListener('DOMContentLoaded', function() {
+  // Llamada a la función cuando el DOM esté listo
+        showResultsSummary(workoutIndex, dayIndex);
+    });
 
-const exerciseListDiv = document.getElementById('history-list');
 
-// Mostrar historial de entrenamientos
-export function showResultsSummary(workoutIndex, dayIndex) {
+  const exerciseListDiv = document.getElementById('history-list');
+  console.log(exerciseListDiv); // Verifica si el contenedor es encontrado
+
+  if (!exerciseListDiv) {
+    console.error("No se encuentra el elemento con id 'history-list'");
+    return;
+  }
+
   const workout = workouts[workoutIndex];
   const day = workout.days[dayIndex];
 
@@ -12,6 +20,9 @@ export function showResultsSummary(workoutIndex, dayIndex) {
 
   const historyKey = `history_${workout.name}_${day.name}`;
   const history = JSON.parse(localStorage.getItem(historyKey)) || [];
+    
+    console.log("Historial recuperado:", history);
+
 
   if (history.length === 0) {
     exerciseListDiv.innerHTML += "<p>No hay historial de entrenamientos.</p>";
