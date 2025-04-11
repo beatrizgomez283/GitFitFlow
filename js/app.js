@@ -1,6 +1,4 @@
 // app.js
-import { workouts } from './data.js';  // Si estás utilizando módulos
-
 
 function showExercises(workoutIndex, dayIndex) {
   const day = workouts[workoutIndex].days[dayIndex];
