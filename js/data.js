@@ -14,5 +14,3 @@ const workouts = [
   }
 ];
 
-// Exporta los datos
-export { workouts };
