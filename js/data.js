@@ -38,7 +38,5 @@ export const workouts = [
             ]
           }
         ]
-      },
-      // You can add more workouts here...
-    ];    
+      } 
 ];
