@@ -110,7 +110,7 @@ function showDays(workoutIndex) {
   });
 
    // Botón para volver a los entrenamientos
-   addBackButton("🏠 Volver a días de entrenamiento", () => showDays(workoutIndex));
+   addBackButton("🏠 Volver a workouts", () => showWorkouts());
 
   // Remove 'hidden' class from day list and hide workout list
   dayListDiv.classList.remove("hidden");  // Show the day list
