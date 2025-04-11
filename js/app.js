@@ -70,7 +70,7 @@ function showExercises(workoutIndex, dayIndex) {
 
 
   // Verificamos si ya existe un botón con el id "startWorkout"
-  let existingBtn = container.querySelector('#startWorkout');
+  let existingBtn = document.querySelector('#startWorkout');
   if (existingBtn) {
     existingBtn.remove(); // Si ya existe, lo eliminamos
   }
