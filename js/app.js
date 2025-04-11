@@ -52,9 +52,9 @@ function showExercises(workoutIndex, dayIndex) {
   // Botón para ver el historial
   const historyBtn = document.createElement("button");
   historyBtn.innerText = "Ver Historial de Resultados";
-  historyBtn.onclick = () => showWorkoutHistory(workouts[workoutIndex].name, day.name);
+  historyBtn.onclick = () => showWorkoutHistory(workouts[workoutIndex].name, day.name, workoutIndex, dayIndex);
   exerciseListDiv.appendChild(historyBtn);
-  
+
   day.exercises.forEach(ex => {
     const div = document.createElement("div");
     div.className = "card";
@@ -213,7 +213,7 @@ function saveWorkoutResult(workoutName, dayName, results) {
 
 
 
-function showWorkoutHistory(workoutName, dayName) {
+function showWorkoutHistory(workoutName, dayName, workoutIndex, dayIndex) {
   const historyKey = `history_${workoutName}_${dayName}`;
   const history = JSON.parse(localStorage.getItem(historyKey)) || [];
 
@@ -238,7 +238,7 @@ function showWorkoutHistory(workoutName, dayName) {
     });
   }
 
-  addBackButton("🏠 Volver a días de entrenamiento", () => showDays(workoutIndex));
+  addBackButton("🏠 Volver a días de entrenamiento", () => showExercises(workoutIndex, dayIndex));
 
 }
 
