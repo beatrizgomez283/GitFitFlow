@@ -79,9 +79,9 @@ function showExercises(workoutIndex, dayIndex) {
   startWorkoutBtn.id = "startWorkout";  // Le damos el id "startWorkout"
   startWorkoutBtn.innerText = "Empezar entreno";
   startWorkoutBtn.onclick = () => {
-    console.log("Botón de empezar entreno clickeado" + workoutIndex + " " + dayIndex);
+    console.log("Botón de empezar entreno clickeado", workoutIndex, dayIndex);
     startWorkout(workoutIndex, dayIndex);  // Llamamos a startWorkout al hacer clic
-  };  // Esto se ejecuta cuando haces clic en el botón
+  };   // Esto se ejecuta cuando haces clic en el botón
   // Añadimos el nuevo botón al contenedor
   dayListDiv.appendChild(startWorkoutBtn);
 }
@@ -199,6 +199,7 @@ function startWorkout(workoutIndex, dayIndex) {
 
   showExercise();
 }
+
 
 // Guardar los resultados del entrenamiento en localStorage
 function saveWorkoutResult(workoutName, dayName, results) {
