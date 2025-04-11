@@ -1,6 +1,6 @@
 
 // index.js
-import { workouts } from 'data/workouts.js';  // Asegúrate de tener la ruta correcta
+import { workouts } from '../data/workouts.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const workoutListDiv = document.getElementById('workout-list');
