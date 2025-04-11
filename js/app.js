@@ -64,6 +64,11 @@ function showExercises(workoutIndex, dayIndex) {
   // Mostrar la lista de ejercicios y ocultar las otras secciones
   exerciseListDiv.classList.remove("hidden");
   dayListDiv.classList.add("hidden");
+
+  const startBtn = document.createElement("button");
+  startBtn.innerText = "🏁 Empezar entrenamiento";
+  startBtn.onclick = () => startWorkout(workoutIndex, dayIndex);
+  dayListDiv.appendChild(startBtn);
 }
 
 // Mostrar la lista de entrenamientos
