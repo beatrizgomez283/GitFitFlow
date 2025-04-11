@@ -195,7 +195,7 @@ function showResultsSummary(workoutName, dayName, results) {
   // Botón para volver al inicio
   const backBtn = document.createElement("button");
   backBtn.innerText = "🏠 Volver al inicio";
-  backBtn.onclick = showWorkouts;
+  backBtn.onclick = showWorkouts();
   exerciseListDiv.appendChild(backBtn);
 }
 
@@ -227,7 +227,7 @@ function showWorkoutHistory(workoutName, dayName) {
     // Botón para volver al inicio
     const backBtn = document.createElement("button");
     backBtn.innerText = "🏠 Volver al inicio";
-    backBtn.onclick = showWorkouts;
+    backBtn.onclick = showWorkouts();
     exerciseListDiv.appendChild(backBtn);
 }
 
