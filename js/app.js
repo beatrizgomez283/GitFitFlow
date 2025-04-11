@@ -156,7 +156,6 @@ function showExercises(workoutIndex, dayIndex) {
     // Botón para volver a los días de entrenamiento
     addBackButton("🏠 Volver a días de entrenamiento", () => showDays(workoutIndex));
 
-    
     // Show the exercise list, hide the other sections
     exerciseListDiv.classList.remove("hidden");
     dayListDiv.classList.add("hidden");  // Hide the day list
