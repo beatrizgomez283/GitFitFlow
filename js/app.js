@@ -1,11 +1,55 @@
 // app.js
 
+
+// Referencias a los elementos del DOM
+const workoutListDiv = document.getElementById("workout-list");
+const dayListDiv = document.getElementById("day-list");
+const exerciseListDiv = document.getElementById("exercise-list");
+
+// Mostrar la lista de entrenamientos
+function showWorkouts() {
+  workoutListDiv.innerHTML = "<h2>Selecciona un Workout</h2>";
+
+  // Itera sobre cada entrenamiento y crea un botón para cada uno
+  workouts.forEach((workout, i) => {
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerText = workout.name;
+    div.onclick = () => showDays(i);  // Al hacer clic, muestra los días del entrenamiento
+    workoutListDiv.appendChild(div);
+  });
+
+  // Oculta la lista de días y ejercicios
+  dayListDiv.classList.add("hidden");
+  exerciseListDiv.classList.add("hidden");
+}
+
+// Mostrar los días del entrenamiento seleccionado
+function showDays(workoutIndex) {
+  const workout = workouts[workoutIndex];
+  
+  dayListDiv.innerHTML = `<h2>${workout.name}</h2><h3>Selecciona un día</h3>`;
+
+  // Crea un botón para cada día
+  workout.days.forEach((day, i) => {
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerText = day.name;
+    div.onclick = () => showExercises(workoutIndex, i);  // Al hacer clic, muestra los ejercicios del día
+    dayListDiv.appendChild(div);
+  });
+
+  dayListDiv.classList.remove("hidden");
+  exerciseListDiv.classList.add("hidden");
+}
+
+// Mostrar los ejercicios del día seleccionado
 function showExercises(workoutIndex, dayIndex) {
   const day = workouts[workoutIndex].days[dayIndex];
-  console.log(`Mostrando ejercicios para: ${day.name}`); // Depuración
-
-  exerciseListDiv.innerHTML = `<h2>${day.name}</h2><h3>Ejercicios</h3>`;
   
+  exerciseListDiv.innerHTML = `<h2>${day.name}</h2><h3>Ejercicios</h3>`;
+
+  // Crea un listado de los ejercicios
   day.exercises.forEach(ex => {
     const div = document.createElement("div");
     div.className = "card";
@@ -16,35 +60,25 @@ function showExercises(workoutIndex, dayIndex) {
     exerciseListDiv.appendChild(div);
   });
 
-  // Crear el botón solo una vez, si no existe ya
-  if (!document.getElementById("start-btn")) {
-    console.log("Creando el botón de inicio"); // Depuración
-    const startBtn = document.createElement("button");
-    startBtn.id = "start-btn";  // Asignamos un ID para no duplicar el botón
-    startBtn.innerText = "🏁 Empezar entrenamiento";
-    startBtn.onclick = () => startWorkout(workoutIndex, dayIndex);
-    exerciseListDiv.appendChild(startBtn);
-  }
+  // Botón para empezar el entrenamiento
+  const startBtn = document.createElement("button");
+  startBtn.innerText = "🏁 Empezar entrenamiento";
+  startBtn.onclick = () => startWorkout(workoutIndex, dayIndex);
+  exerciseListDiv.appendChild(startBtn);
 }
 
+// Empezar el entrenamiento y registrar los resultados
 function startWorkout(workoutIndex, dayIndex) {
   const workout = workouts[workoutIndex];
   const day = workout.days[dayIndex];
   let currentExercise = 0;
   const results = [];
 
-  console.log(`Iniciando entrenamiento para: ${workout.name} - ${day.name}`); // Depuración
+  exerciseListDiv.innerHTML = "";
 
-  // Ocultar el botón de inicio
-  const startBtn = document.getElementById("start-btn");
-  if (startBtn) {
-    startBtn.style.display = "none";
-  }
-
+  // Función para mostrar los ejercicios uno a uno
   function showExercise() {
     const ex = day.exercises[currentExercise];
-    console.log(`Mostrando ejercicio: ${ex.name}`); // Depuración
-
     const div = document.createElement("div");
     div.className = "card";
     div.innerHTML = `<h2>${ex.name}</h2><p>Introduce tus resultados</p>`;
@@ -52,6 +86,7 @@ function startWorkout(workoutIndex, dayIndex) {
     const form = document.createElement("form");
     const setsInputs = [];
 
+    // Crea los campos para introducir los resultados de los sets
     for (let i = 0; i < ex.sets; i++) {
       const setDiv = document.createElement("div");
       setDiv.innerHTML = `
@@ -64,11 +99,13 @@ function startWorkout(workoutIndex, dayIndex) {
       form.appendChild(setDiv);
     }
 
+    // Botón para pasar al siguiente ejercicio o finalizar
     const nextBtn = document.createElement("button");
     nextBtn.type = "submit";
     nextBtn.innerText = currentExercise < day.exercises.length - 1 ? "Siguiente" : "Finalizar";
     form.appendChild(nextBtn);
 
+    // Al enviar el formulario, guarda los resultados y pasa al siguiente ejercicio
     form.onsubmit = (e) => {
       e.preventDefault();
       const setResults = setsInputs.map(div => {
@@ -93,39 +130,36 @@ function startWorkout(workoutIndex, dayIndex) {
     div.appendChild(form);
     exerciseListDiv.appendChild(div);
   }
-  function showWorkouts() {
-    console.log(workouts);  // Verifica que workouts contiene los datos correctos
-    workoutListDiv.innerHTML = "<h2>Selecciona un Workout</h2>";
-    workouts.forEach((w, i) => {
-      const div = document.createElement("div");
-      div.className = "card";
-      div.innerText = w.name;
-      div.onclick = () => showDays(i);
-      workoutListDiv.appendChild(div);
-    });
-  
-    dayListDiv.classList.add("hidden");
-    exerciseListDiv.classList.add("hidden");
-  }
-
-  function showDays(workoutIndex) {
-    console.log(`Mostrando días para el workout: ${workouts[workoutIndex].name}`);
-    const workout = workouts[workoutIndex];
-    
-    dayListDiv.innerHTML = `<h2>${workout.name}</h2><h3>Selecciona un día</h3>`;
-    
-    workout.days.forEach((d, i) => {
-      const div = document.createElement("div");
-      div.className = "card";
-      div.innerText = d.name;
-      div.onclick = () => showExercises(workoutIndex, i);
-      dayListDiv.appendChild(div);
-    });
-  
-    // Asegúrate de que la lista de días sea visible
-    dayListDiv.classList.remove("hidden");
-    exerciseListDiv.classList.add("hidden");
-  }  
 
   showExercise();
 }
+
+// Guardar los resultados del entrenamiento en localStorage
+function saveWorkoutResult(workoutName, dayName, results) {
+  const date = new Date().toISOString().split("T")[0]; // formato YYYY-MM-DD
+  const key = `${date}_${workoutName}_${dayName}`;
+  localStorage.setItem(key, JSON.stringify(results));
+}
+
+// Mostrar un resumen de los resultados guardados
+function showResultsSummary(workoutName, dayName, results) {
+  exerciseListDiv.innerHTML = `<h2>✅ Entrenamiento guardado</h2><p>${workoutName} - ${dayName}</p>`;
+  results.forEach(ex => {
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerHTML = `<strong>${ex.name}</strong><br>`;
+    ex.sets.forEach((set, i) => {
+      div.innerHTML += `Set ${i + 1}: ${set.reps || set.segundos} reps - ${set.weight} kg<br>`;
+    });
+    exerciseListDiv.appendChild(div);
+  });
+
+  // Botón para volver al inicio
+  const backBtn = document.createElement("button");
+  backBtn.innerText = "🏠 Volver al inicio";
+  backBtn.onclick = showWorkouts;
+  exerciseListDiv.appendChild(backBtn);
+}
+
+// Mostrar la lista de entrenamientos cuando la página carga
+showWorkouts();
