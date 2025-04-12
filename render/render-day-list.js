@@ -1,42 +1,54 @@
 ﻿import { workouts } from '../data/workouts.js';
-import { showExercises } from './render-exercise-list.js';
 import { addBackButton } from '../utils/navigation.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const dayListDiv = document.getElementById('day-list');
 
-  workouts.forEach((workout, workoutIndex) => {
-    const workoutItem = document.createElement('div');
-    workoutItem.innerHTML = `<h3>${workout.name}</h3>`;
+  // Extraer workoutIndex de la URL
+  const params = new URLSearchParams(window.location.search);
+  const workoutIndex = parseInt(params.get('workoutIndex'), 10);
 
-    const weekList = document.createElement('div');
+  // Validar que workoutIndex sea válido
+  if (isNaN(workoutIndex) || workoutIndex < 0 || workoutIndex >= workouts.length) {
+    dayListDiv.innerHTML = '<p>Workout no encontrado.</p>';
+    return;
+  }
 
-    workout.weeks.forEach((week, weekIndex) => {
-      const weekItem = document.createElement('div');
-      weekItem.innerHTML = `<h4>${week.name}</h4>`;
+  // Obtener el workout específico
+  const workout = workouts[workoutIndex];
 
-      const dayList = document.createElement('ul');
+  // Renderizar el nombre del workout
+  const workoutTitle = document.createElement('h2');
+  workoutTitle.innerText = workout.name;
+  dayListDiv.appendChild(workoutTitle);
 
-      week.days.forEach((day, dayIndex) => {
-        const dayItem = document.createElement('li');
+  // Renderizar las semanas y días
+  workout.weeks.forEach((week, weekIndex) => {
+    const weekItem = document.createElement('div');
+    weekItem.className = 'week-container';
+    weekItem.innerHTML = `<h3>${week.name}</h3>`;
 
-        // Crear un botón con la clase "card"
-        const button = document.createElement('button');
-        button.className = 'card'; // Reutiliza la clase "card" para el estilo
-        button.innerText = day.name;
-        button.onclick = () => {
-          window.location.href = `exercise-list.html?workoutIndex=${workoutIndex}&weekIndex=${weekIndex}&dayIndex=${dayIndex}`;
-        };
+    const dayList = document.createElement('diasdasdasdv');
 
-        dayItem.appendChild(button);
-        dayList.appendChild(dayItem);
-      });
+    week.days.forEach((day, dayIndex) => {
+      const dayItem = document.createElement('div');
 
-      weekItem.appendChild(dayList);
-      weekList.appendChild(weekItem);
+      const button = document.createElement('button');
+      button.className = 'card';
+      button.innerText = day.name;
+      button.onclick = () => {
+        window.location.href = `exercise-list.html?workoutIndex=${workoutIndex}&weekIndex=${weekIndex}&dayIndex=${dayIndex}`;
+      };
+
+      dayItem.appendChild(button);
+      dayList.appendChild(dayItem);
     });
 
-    workoutItem.appendChild(weekList);
-    dayListDiv.appendChild(workoutItem);
+    weekItem.appendChild(dayList);
+    dayListDiv.appendChild(weekItem);
+  });
+
+  addBackButton('🏠 Volver al inicio', () => {
+    window.location.href = 'index.html';
   });
 });
