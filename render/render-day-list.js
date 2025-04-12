@@ -19,13 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
       week.days.forEach((day, dayIndex) => {
         const dayItem = document.createElement('li');
-        dayItem.className = 'card'; // Usa clase card para que sea un rectángulo blanco
 
-        dayItem.innerHTML = `
-          <a href="exercise-list.html?workoutIndex=${workoutIndex}&weekIndex=${weekIndex}&dayIndex=${dayIndex}">
-            ${day.name}
-          </a>
-        `;
+        // Crear un botón con la clase "card"
+        const button = document.createElement('button');
+        button.className = 'card'; // Reutiliza la clase "card" para el estilo
+        button.innerText = day.name;
+        button.onclick = () => {
+          window.location.href = `exercise-list.html?workoutIndex=${workoutIndex}&weekIndex=${weekIndex}&dayIndex=${dayIndex}`;
+        };
+
+        dayItem.appendChild(button);
         dayList.appendChild(dayItem);
       });
 

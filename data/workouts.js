@@ -15,7 +15,15 @@ export const workouts = [
                 url: ""
               },
               {
-                name: "Deadlift",
+                name: "Depth Drop + Vertical Jump",
+                sets: 4,
+                target: 5,
+                type: "reps",
+                description: "",
+                url: ""
+              }, 
+              {
+                name: "Eccentric Zercher Squat",
                 sets: 3,
                 target: 10,
                 type: "reps",

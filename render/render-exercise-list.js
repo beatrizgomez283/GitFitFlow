@@ -1,28 +1,19 @@
-﻿import { workouts } from '../data/workouts.js';
-import { showResultsSummary } from './render-history.js';
-import { addBackButton } from '../utils/navigation.js';
+﻿// Extraer parámetros de la URL
+const params = new URLSearchParams(window.location.search);
+const workoutIndex = parseInt(params.get('workoutIndex'), 10);
+const weekIndex = parseInt(params.get('weekIndex'), 10);
+const dayIndex = parseInt(params.get('dayIndex'), 10);
 
-const exerciseListDiv = document.getElementById('exercise-list');
+// Validar parámetros y mostrar ejercicios
+if (!isNaN(workoutIndex) && !isNaN(weekIndex) && !isNaN(dayIndex)) {
+  const week = workouts[workoutIndex]?.weeks[weekIndex];
+  const day = week?.days[dayIndex];
 
-// Mostrar ejercicios de un día
-export function showExercises(workoutIndex, dayIndex) {
-  const day = workouts[workoutIndex].days[dayIndex];
-
-  exerciseListDiv.innerHTML = `<h2>${day.name}</h2><h3>Ejercicios</h3>`;
-
-  const historyBtn = document.createElement("button");
-  historyBtn.innerText = "Ver Historial de Resultados";
-  historyBtn.onclick = () => showResultsSummary(workoutIndex, dayIndex);
-  exerciseListDiv.appendChild(historyBtn);
-
-  day.exercises.forEach(ex => {
-    const div = document.createElement("div");
-    div.className = "card";
-    div.innerHTML = `<strong>${ex.name}</strong><br>Sets: ${ex.sets} - Objetivo: ${ex.target} ${ex.type === "reps" ? "reps" : "segundos"}`;
-    exerciseListDiv.appendChild(div);
-  });
-
-  addBackButton("🏠 Volver a días de entrenamiento", () => window.location.href = "day-list.html");
-
-  exerciseListDiv.classList.remove("hidden");
+  if (day) {
+    showExercises(workoutIndex, dayIndex);
+  } else {
+    exerciseListDiv.innerHTML = '<p>No se encontraron ejercicios para este día.</p>';
+  }
+} else {
+  exerciseListDiv.innerHTML = '<p>Parámetros inválidos en la URL.</p>';
 }
