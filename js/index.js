@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       workoutList.appendChild(workoutItem);
     });
 
-    workoutItem.appendChild(dayList);
+    workoutItem.appendChild(workoutList);
     workoutListDiv.appendChild(workoutItem);
   });
 });
