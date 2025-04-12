@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     workout.days.forEach((day, dayIndex) => {
       const dayItem = document.createElement('li');
       //dayItem.innerHTML = `<a href="day-list.html?workout=${workoutIndex}&day=${dayIndex}">${day.name}</a>`;
-      dayItem.innerHTML = `<a href="day-list.html?workoutIndex=${workoutIndex}</a>`;
+      dayItem.innerHTML = `<a href="day-list.html?workoutIndex=${workoutIndex}&dayIndex={dayIndex}">${day.name}</a>`;
       dayList.appendChild(dayItem);
     });
 
