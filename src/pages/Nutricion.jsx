@@ -1,0 +1,1 @@
+export default function Nutricion() { return <h1 className='text-2xl font-bold'>📖 Nutrición</h1>; }

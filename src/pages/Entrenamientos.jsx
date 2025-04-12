@@ -1,0 +1,1 @@
+export default function Entrenamientos() { return <h1 className='text-2xl font-bold'>📅 Entrenamientos</h1>; }

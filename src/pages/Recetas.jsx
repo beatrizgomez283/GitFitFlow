@@ -1,0 +1,1 @@
+export default function Recetas() { return <h1 className='text-2xl font-bold'>🍽️ Recetas</h1>; }
