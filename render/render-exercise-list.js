@@ -1,4 +1,9 @@
 ﻿// Extraer parámetros de la URL
+
+import { workouts } from '../data/workouts.js';
+import { showExercises } from './render-exercise-list.js';
+import { addBackButton } from '../utils/navigation.js';
+
 const params = new URLSearchParams(window.location.search);
 const workoutIndex = parseInt(params.get('workoutIndex'), 10);
 const weekIndex = parseInt(params.get('weekIndex'), 10);
