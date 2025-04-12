@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         workoutIndex=${workoutIndex}>${workout.name}
         </a>
       `;
-      workoutList.appendChild(dayItem);
+      workoutList.appendChild(workoutList);
     });
 
     workoutItem.appendChild(dayList);
