@@ -2,23 +2,34 @@
 import { showExercises } from './render-exercise-list.js';
 import { addBackButton } from '../utils/navigation.js';
 
+document.addEventListener('DOMContentLoaded', () => {
+
 const dayListDiv = document.getElementById('day-list');
 
-// Mostrar los días del entrenamiento seleccionado
-export function showDays(workoutIndex) {
-  const workout = workouts[workoutIndex];
-  
-  dayListDiv.innerHTML = `<h2>${workout.name}</h2><h3>Selecciona un día</h3>`;
-  
-  workout.days.forEach((d, i) => {
-    const div = document.createElement("div");
-    div.className = "card";
-    div.innerText = d.name;
-    div.onclick = () => showExercises(workoutIndex, i);
-    dayListDiv.appendChild(div);
+  workouts.forEach((workout, workoutIndex) => {
+    const workoutItem = document.createElement('div');
+    workoutItem.innerHTML = `<h3>${workout.name}</h3>`;
+
+    const dayList = document.createElement('ul');
+
+    workout.days.forEach((day, dayIndex) => {
+    const dayItem = document.createElement('li');
+    dayItem.className = 'card'; // Usa clase card para que sea un rectángulo blanco
+
+    dayItem.innerHTML = 
+        `<a className=href="day-list.html?
+        workoutIndex=${workoutIndex}&dayIndex=${dayIndex}">${day.name}
+        </a>
+      `;
+      dayList.appendChild(dayItem);
+    });
+
+    workoutItem.appendChild(dayList);
+    workoutListDiv.appendChild(workoutItem);
   });
+});
 
-  addBackButton("🏠 Volver a workouts", () => window.location.href = "index.html");
 
-  dayListDiv.classList.remove("hidden");
-}
+
+
+

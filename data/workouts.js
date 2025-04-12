@@ -10,5 +10,17 @@ export const workouts = [
         ]
       }
     ]
+  },
+  {
+    name: "Workout 2",
+    days: [
+      {
+        name: "Day 1",
+        exercises: [
+          { name: "Squat2", sets: 3, target: 12, type: "reps" , description: "", url: ""},
+          { name: "Deadlift2", sets: 3, target: 10, type: "reps", description: "", url: "" }
+        ]
+      }
+    ]
   }
 ];
