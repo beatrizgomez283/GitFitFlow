@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const workoutList = document.createElement('ul');
 
-    workout.forEach((workout, workoutIndex) => {
+    workouts.forEach((workout, workoutIndex) => {
     const workoutItem = document.createElement('li');
     workoutItem.className = 'card'; // Usa clase card para que sea un rectángulo blanco
 
