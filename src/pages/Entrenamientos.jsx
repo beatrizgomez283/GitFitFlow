@@ -1,36 +1,52 @@
-// src/pages/Entrenamientos.jsx
 import { useState } from 'react';
-import PlanPreview from '@/components/PlanPreview';
-import PlanDetalle from '@/components/PlanDetalle';
-import { planes } from '@/data/planesEntrenamiento';
+import PlanPreview from '../components/PlanPreview';
+import PlanDetalle from '../components/PlanDetalle';
+import SesionDetalle from '../components/SesionDetalle';
+import { planes } from '../data/planesEntrenamiento';
 
 export default function Entrenamientos() {
-    const [planActivo, setPlanActivo] = useState(null);
+    const [planSeleccionado, setPlanSeleccionado] = useState(null);
+    const [sesionSeleccionada, setSesionSeleccionada] = useState(null);
+
+    const handleSeleccionarSesion = (sesion) => {
+        setSesionSeleccionada(sesion);
+    };
+
+    const handleVolverPlan = () => {
+        setSesionSeleccionada(null);
+    };
+
+    if (sesionSeleccionada) {
+        return <SesionDetalle sesion={sesionSeleccionada} onBack={handleVolverPlan} />;
+    }
+
+    if (planSeleccionado) {
+        return (
+            <PlanDetalle
+                plan={planSeleccionado}
+                onClose={() => setPlanSeleccionado(null)}
+                onSelectSesion={handleSeleccionarSesion} // 👈 pasamos la prop
+            />
+        );
+    }
+
+    const planActivo = planes[0];
 
     return (
-        <div className="space-y-6">
-            {planActivo ? (
-                <PlanDetalle plan={planActivo} onBack={() => setPlanActivo(null)} />
-            ) : (
-                <>
-                    <section>
-                        <h2 className="text-lg font-semibold mb-2">Entrenamiento activo</h2>
-                        {/* Aquí puedes mostrar el plan activo real, si hay uno */}
-                        {planes.length > 0 && (
-                            <PlanPreview plan={planes[0]} onClick={() => setPlanActivo(planes[0])} />
-                        )}
-                    </section>
+        <section className="space-y-6">
+            <div>
+                <h2 className="text-xl font-semibold mb-2">Entrenamiento activo</h2>
+                <PlanPreview plan={planActivo} onSelect={setPlanSeleccionado} />
+            </div>
 
-                    <section>
-                        <h2 className="text-lg font-semibold mb-2">Todos los planes</h2>
-                        <div className="space-y-4">
-                            {planes.map((plan, index) => (
-                                <PlanPreview key={index} plan={plan} onClick={() => setPlanActivo(plan)} />
-                            ))}
-                        </div>
-                    </section>
-                </>
-            )}
-        </div>
+            <div>
+                <h2 className="text-xl font-semibold mb-2">Todos los planes</h2>
+                <div className="space-y-4">
+                    {planes.map((plan) => (
+                        <PlanPreview key={plan.id} plan={plan} onSelect={setPlanSeleccionado} />
+                    ))}
+                </div>
+            </div>
+        </section>
     );
 }

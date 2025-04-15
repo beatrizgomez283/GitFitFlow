@@ -4,10 +4,13 @@ import SesionEntrenamientoCard from './SesionEntrenamientoCard';
 export default function PlanEntrenamientoCard({ plan }) {
     const [expandir, setExpandir] = useState(false);
 
-    const totalSeries = plan.sesiones.reduce(
-        (sum, s) => sum + s.ejercicios.reduce((a, e) => a + e.series.length, 0),
-        0
-    );
+    const totalSeries = Array.isArray(plan.sesiones)
+        ? plan.sesiones.reduce((sum, sesion) => {
+            const ejercicios = sesion.ejercicios || [];
+            return sum + ejercicios.reduce((s, e) => s + (e.series?.length || 0), 0);
+        }, 0)
+        : 0;
+
 
     return (
         <div className="bg-white p-4 rounded-xl shadow-md space-y-4">
