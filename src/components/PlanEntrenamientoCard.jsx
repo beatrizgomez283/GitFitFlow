@@ -1,44 +1,68 @@
-import { useState } from 'react';
-import SesionEntrenamientoCard from './SesionEntrenamientoCard';
+﻿import React from 'react';
 
-export default function PlanEntrenamientoCard({ plan }) {
-    const [expandir, setExpandir] = useState(false);
+export default function SesionEntrenamientoCard({ sesion }) {
+    if (!sesion) return null;
 
-    const totalSeries = Array.isArray(plan.sesiones)
-        ? plan.sesiones.reduce((sum, sesion) => {
-            const ejercicios = sesion.ejercicios || [];
-            return sum + ejercicios.reduce((s, e) => s + (e.series?.length || 0), 0);
-        }, 0)
-        : 0;
+    const sets = Array.isArray(sesion.sets) ? sesion.sets : [];
 
+    const totalEjercicios = sets.reduce((sum, set) => {
+        const ejercicios = Array.isArray(set.ejercicios) ? set.ejercicios : [];
+        return sum + ejercicios.length;
+    }, 0);
+
+    const totalSeries = sets.reduce((sum, set) => {
+        const ejercicios = Array.isArray(set.ejercicios) ? set.ejercicios : [];
+        return sum + ejercicios.reduce((s, e) => s + (e.series?.length || 0), 0);
+    }, 0);
 
     return (
-        <div className="bg-white p-4 rounded-xl shadow-md space-y-4">
-            <img
-                src={plan.imagen}
-                alt={plan.nombre}
-                className="w-full h-48 object-cover rounded-lg"
-            />
+        <div className="relative bg-white p-4 rounded-xl shadow space-y-4">
+            {/* Título */}
+            <h4 className="text-lg font-semibold text-gray-800">{sesion.nombre}</h4>
 
-            <div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-1">{plan.nombre}</h3>
-                <p className={`text-sm text-gray-600 ${expandir ? '' : 'line-clamp-3'}`}>{plan.descripcion}</p>
-                <button
-                    onClick={() => setExpandir(!expandir)}
-                    className="text-pink-600 text-sm font-medium mt-1"
-                >
-                    {expandir ? 'Mostrar menos' : 'Mostrar m�s'}
-                </button>
-            </div>
+            {/* Resumen */}
+            <div className="text-sm text-gray-600">{totalEjercicios} ejercicios · {totalSeries} series</div>
 
-            <div className="space-y-2">
-                {plan.sesiones.map((sesion, i) => (
-                    <SesionEntrenamientoCard key={i} sesion={sesion} />
+            {/* Sets */}
+            <div className="space-y-4">
+                {sets.map((set, idxSet) => (
+                    <div key={idxSet}>
+                        <div className="text-sm font-semibold text-gray-700 mb-2">
+                            Superserie {idxSet + 1} {set.rondas && `· ${set.rondas} rondas`}
+                        </div>
+
+                        <div className="space-y-2">
+                            {Array.isArray(set.ejercicios) && set.ejercicios.map((ejercicio, idxEj) => (
+                                <div key={idxEj} className="flex items-center justify-between bg-gray-50 p-2 rounded-md">
+                                    <div className="flex items-center space-x-2">
+                                        <img
+                                            src={ejercicio.media?.[0] || '/assets/default.jpg'}
+                                            alt={ejercicio.nombre}
+                                            className="w-10 h-10 object-cover rounded-md"
+                                        />
+                                        <div>
+                                            <div className="text-sm font-medium text-gray-800 line-clamp-1">{ejercicio.nombre}</div>
+                                            <div className="text-xs text-gray-500">
+                                                {(ejercicio.series?.[0]?.reps || ejercicio.series?.[0]?.tiempo || '-') +
+                                                    (ejercicio.series?.[0]?.peso ? ` · ${ejercicio.series[0].peso} kg` : '')}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="text-xs text-gray-500 font-semibold">
+                                        {String.fromCharCode(65 + idxEj)} {/* A, B, C... */}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 ))}
             </div>
 
-            <div className="text-sm text-gray-500">
-                {plan.sesiones.length} sesiones � {totalSeries} series
+            {/* Botón fijo (simulado aquí dentro) */}
+            <div className="sticky bottom-0 left-0 right-0 bg-white pt-4">
+                <button className="w-full bg-gray-900 text-white text-sm py-2 rounded-lg shadow">
+                    Iniciar sesión
+                </button>
             </div>
         </div>
     );

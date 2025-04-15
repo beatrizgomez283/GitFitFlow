@@ -1,14 +1,27 @@
 export default function SesionEntrenamientoCard({ sesion }) {
-    const totalSeries = sesion.sets.reduce((suma, set) => {
-        return suma + set.ejercicios.reduce((acc, ej) => acc + ej.series.length, 0);
+    if (!sesion) return null;
+
+    const sets = Array.isArray(sesion.sets) ? sesion.sets : [];
+
+    const totalEjercicios = sets.reduce((sum, set) => {
+        const ejercicios = Array.isArray(set.ejercicios) ? set.ejercicios : [];
+        return sum + ejercicios.length;
     }, 0);
 
-    const totalEjercicios = sesion.sets.reduce((suma, set) => suma + set.ejercicios.length, 0);
+    const totalSeries = sets.reduce((sum, set) => {
+        const ejercicios = Array.isArray(set.ejercicios) ? set.ejercicios : [];
+        return sum + ejercicios.reduce((s, e) => s + (Array.isArray(e.series) ? e.series.length : 0), 0);
+    }, 0);
 
     return (
-        <div className="p-3 bg-gray-50 rounded-xl shadow-sm">
-            <h4 className="text-base font-semibold text-gray-800">{sesion.nombre}</h4>
-            <p className="text-sm text-gray-500 mt-1">{totalEjercicios} ejercicios • {totalSeries} series</p>
+        <div className="border border-gray-200 p-4 rounded-lg bg-white">
+            <h4 className="font-semibold text-gray-800 mb-1">{sesion.nombre}</h4>
+            {sesion.descripcion && (
+                <p className="text-sm text-gray-600 mb-2">{sesion.descripcion}</p>
+            )}
+            <div className="text-sm text-gray-500">
+                {sets.length} sets · {totalEjercicios} ejercicios · {totalSeries} series
+            </div>
         </div>
     );
-} 
+}

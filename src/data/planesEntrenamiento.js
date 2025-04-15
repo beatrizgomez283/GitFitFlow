@@ -1,13 +1,13 @@
 export const planes = [
     {
         id: 'plan_basico_fuerza',
-        nombre: 'Plan B醩ico de Fuerza',
-        descripcion: 'Programa de 4 semanas enfocado en ganar fuerza con ejercicios b醩icos, ideal para principiantes o para retomar rutina tras una pausa. Incluye trabajo de tren inferior, superior y core, en sesiones alternadas.',
+        nombre: 'Plan B谩sico de Fuerza',
+        descripcion: 'Programa de 4 semanas enfocado en ganar fuerza con ejercicios b谩sicos, ideal para principiantes o para retomar rutina tras una pausa. Incluye trabajo de tren inferior, superior y core, en sesiones alternadas.',
         imagen: '/assets/planes/fuerza_basico.jpg',
         sesiones: [
             {
-                nombre: 'D韆 1 - Tren inferior',
-                descripcion: 'Enfocado en gl鷗eo, cu醖riceps e isquiosurales.',
+                nombre: 'D铆a 1 - Tren inferior',
+                descripcion: 'Enfocado en gl煤teo, cu谩driceps e isquiosurales.',
                 sets: [
                     {
                         titulo: 'Superserie A',
@@ -20,7 +20,7 @@ export const planes = [
                                     { semana: 3, reps: 8, peso: 50 },
                                     { semana: 4, reps: 6, peso: 55 }
                                 ],
-                                nota: 'Enf骳ate en la contracci髇 m醲ima del gl鷗eo.',
+                                nota: 'Enf贸cate en la contracci贸n m谩xima del gl煤teo.',
                                 descanso: 60,
                                 media: ['/assets/ejercicios/hip_thrust_1.jpg'],
                                 historico: []
@@ -37,21 +37,78 @@ export const planes = [
                                 descanso: 45,
                                 media: ['/assets/ejercicios/step_up_1.jpg'],
                                 historico: []
+                            },
+                            {
+                                nombre: 'Run 1 (Series Endurance)',
+                                descripcion: 'Sesi贸n centrada en repeticiones de carrera de media y larga duraci贸n.',
+                                sets: [
+                                    {
+                                        titulo: 'Set normal',
+                                        ejercicios: [
+                                            {
+                                                id: 'run_10min',
+                                                nombre: 'Correr',
+                                                tipo: 'tiempo',
+                                                series: [
+                                                    { duracion: '10 min', peso: '0 kg', descanso: '2 min' }
+                                                ],
+                                                descansoDespues: '6 min',
+                                                imagenes: ['correr_1.jpg'],
+                                                notas: 'Corre a un ritmo moderado que puedas mantener durante toda la duraci贸n.',
+                                                historial: []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        titulo: 'Set normal',
+                                        ejercicios: [
+                                            {
+                                                id: 'run_1000m',
+                                                nombre: 'Correr',
+                                                tipo: 'distancia',
+                                                series: [
+                                                    { repeticiones: '3', distancia: '1000 m', peso: '0 kg', descanso: '3 min' }
+                                                ],
+                                                descansoDespues: '6 min',
+                                                imagenes: ['correr_2.jpg'],
+                                                notas: 'Corre cada repetici贸n al 80% de esfuerzo m谩ximo.',
+                                                historial: []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        titulo: 'Set normal',
+                                        ejercicios: [
+                                            {
+                                                id: 'run_final',
+                                                nombre: 'Correr',
+                                                tipo: 'tiempo',
+                                                series: [
+                                                    { duracion: '10 min', peso: '0 kg', descanso: '2 min' }
+                                                ],
+                                                descansoDespues: '0 min',
+                                                imagenes: ['correr_3.jpg'],
+                                                notas: '脷ltima repetici贸n a ritmo c贸modo para volver a la calma.',
+                                                historial: []
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
                         ]
                     },
                     {
-                        titulo: 'B - Gl鷗eo aislado',
+                        titulo: 'B - Gl煤teo aislado',
                         ejercicios: [
                             {
-                                nombre: 'Patada de gl鷗eo en polea',
+                                nombre: 'Patada de gl煤teo en polea',
                                 series: [
                                     { semana: 1, reps: 15, peso: 5 },
                                     { semana: 2, reps: 12, peso: 7 },
                                     { semana: 3, reps: 12, peso: 9 },
                                     { semana: 4, reps: 10, peso: 10 }
                                 ],
-                                nota: 'Controla el movimiento exc閚trico.',
+                                nota: 'Controla el movimiento exc茅ntrico.',
                                 descanso: 30,
                                 media: ['/assets/ejercicios/patada_gluteo_1.jpg'],
                                 historico: []

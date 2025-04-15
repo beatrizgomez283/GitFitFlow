@@ -5,48 +5,48 @@ import SesionDetalle from '../components/SesionDetalle';
 import { planes } from '../data/planesEntrenamiento';
 
 export default function Entrenamientos() {
-    const [planSeleccionado, setPlanSeleccionado] = useState(null);
-    const [sesionSeleccionada, setSesionSeleccionada] = useState(null);
+  const [planSeleccionado, setPlanSeleccionado] = useState(null);
+  const [sesionSeleccionada, setSesionSeleccionada] = useState(null);
 
-    const handleSeleccionarSesion = (sesion) => {
-        setSesionSeleccionada(sesion);
-    };
+  const handleSeleccionarSesion = (sesion) => {
+    setSesionSeleccionada(sesion);
+  };
 
-    const handleVolverPlan = () => {
-        setSesionSeleccionada(null);
-    };
+  const handleVolverPlan = () => {
+    setSesionSeleccionada(null);
+  };
 
-    if (sesionSeleccionada) {
-        return <SesionDetalle sesion={sesionSeleccionada} onBack={handleVolverPlan} />;
-    }
+  if (sesionSeleccionada) {
+    return <SesionDetalle sesion={sesionSeleccionada} onBack={handleVolverPlan} />;
+  }
 
-    if (planSeleccionado) {
-        return (
-            <PlanDetalle
-                plan={planSeleccionado}
-                onClose={() => setPlanSeleccionado(null)}
-                onSelectSesion={handleSeleccionarSesion} // 👈 pasamos la prop
-            />
-        );
-    }
-
-    const planActivo = planes[0];
-
+  if (planSeleccionado) {
     return (
-        <section className="space-y-6">
-            <div>
-                <h2 className="text-xl font-semibold mb-2">Entrenamiento activo</h2>
-                <PlanPreview plan={planActivo} onSelect={setPlanSeleccionado} />
-            </div>
-
-            <div>
-                <h2 className="text-xl font-semibold mb-2">Todos los planes</h2>
-                <div className="space-y-4">
-                    {planes.map((plan) => (
-                        <PlanPreview key={plan.id} plan={plan} onSelect={setPlanSeleccionado} />
-                    ))}
-                </div>
-            </div>
-        </section>
+      <PlanDetalle
+        plan={planSeleccionado}
+        onClose={() => setPlanSeleccionado(null)}
+        onSelectSesion={handleSeleccionarSesion} // 👈 pasamos la prop
+      />
     );
+  }
+
+  const planActivo = planes[0];
+
+  return (
+    <section className="space-y-6">
+      <div>
+        <h2 className="text-xl font-semibold mb-2">Entrenamiento activo</h2>
+        <PlanPreview plan={planActivo} onSelect={setPlanSeleccionado} />
+      </div>
+
+      <div>
+        <h2 className="text-xl font-semibold mb-2">Todos los planes</h2>
+        <div className="space-y-4">
+          {planes.map((plan) => (
+            <PlanPreview key={plan.id} plan={plan} onSelect={setPlanSeleccionado} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
