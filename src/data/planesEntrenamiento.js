@@ -474,6 +474,7 @@ export const planes = [
             },
             {
                 "nombre": "D\u00eda 3 - Sprints and Core",
+                tipo: "core",
                 "sets": [
                     {
                         "titulo": "Sprint Intervals",
@@ -1006,19 +1007,19 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x20s"
+                                        "duracion": "3x20"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x20s"
+                                        "duracion": "3x20"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "3x30s"
+                                        "duracion": "3x30"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "3x30s"
+                                        "duracion": "3x30"
                                     }
                                 ],
                                 "descanso": 60,

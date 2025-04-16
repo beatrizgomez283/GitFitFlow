@@ -1,124 +1,63 @@
-﻿export default function SesionDetalle({ sesion, onBack }) {
-    console.log("Sesión recibida:", sesion);
+﻿import { useState } from 'react';
+
+export default function SesionDetalle({ sesion, onBack }) {
+    const [semanaSeleccionada, setSemanaSeleccionada] = useState(1);
 
     if (!sesion || !Array.isArray(sesion.sets)) {
         return <div className="p-4">Sesión no válida.</div>;
     }
 
     const renderEjercicio = (ejercicio, key) => {
-        if (Array.isArray(ejercicio.sets)) {
-            return (
-                <div key={key} className="p-3 bg-gray-100 rounded-md space-y-2">
-                    <div className="font-medium text-sm ">
-                        {ejercicio.url ? (
-                            <a
-                                href={ejercicio.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-blue-600 hover:underline flex items-center gap-1"
-                            >
-                                <span>{ejercicio.nombre}</span>
-                                <span role="img" aria-label="video">🎥</span>
-                            </a>
-                        ) : (
-                            ejercicio.nombre 
-                        )}
-
-                    </div>
-                    {ejercicio.descripcion && (
-                        <p className="text-xs text-gray-500">{ejercicio.descripcion}</p>
-                    )}
-                    {ejercicio.sets.map((subSet, i) => {
-                        const ejerciciosAnidados = Array.isArray(subSet.ejercicios)
-                            ? subSet.ejercicios
-                            : [];
-                        return (
-                            <div key={`${key}-set-${i}`} className="border-l-4 border-gray-300 pl-2 mt-2">
-                                <div className="text-sm font-medium text-gray-700 mb-1">
-                                    {subSet.titulo || `Set ${i + 1}`}
-                                </div>
-                                {ejerciciosAnidados.map((e, j) =>
-                                    renderEjercicio(e, `${key}-nested-${i}-${j}`)
-                                )}
-                            </div>
-                        );
-                    })}
-                </div>
-            );
-        }
-
         const series = Array.isArray(ejercicio.series) ? ejercicio.series : [];
+        const serieSemana = series.find(s => s.semana === semanaSeleccionada) || {};
+
+        const textoDetalle = [
+            serieSemana.reps && `Reps: ${serieSemana.reps}`,
+            serieSemana.duracion && `${serieSemana.duracion}`,
+            serieSemana.distancia && `${serieSemana.distancia}`,
+            serieSemana.peso && `${serieSemana.peso}`,
+            ejercicio.descanso && `${ejercicio.descanso}s`
+        ].filter(Boolean).join(' · ');
 
         return (
-            <div key={key} className="border p-3 rounded-lg bg-gray-50 space-y-2">
-                <div className="font-medium text-sm">
-                    {ejercicio.url ? (
-                        <a
-                            href={ejercicio.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-600 hover:underline flex items-center gap-1"
-                        >
-                            <span>{ejercicio.nombre}</span>
-                            <span role="img" aria-label="video">🎥</span>
-                        </a>
-                    ) : (
-                        ejercicio.nombre
+            <div key={key} className="bg-white rounded-xl p-4 shadow-sm space-y-2">
+                <div className="flex items-center gap-3">
+                    {Array.isArray(ejercicio.media) && ejercicio.media.length > 0 && (
+                        <img
+                            src={ejercicio.media[0]}
+                            alt={ejercicio.nombre}
+                            className="w-12 h-12 rounded-full object-cover"
+                        />
                     )}
+                    <div className="flex-1">
+                        <div className="font-semibold text-sm text-gray-900">
+                            {ejercicio.url ? (
+                                <a
+                                    href={ejercicio.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:underline text-blue-600 flex items-center gap-1"
+                                >
+                                    {ejercicio.nombre} <span>🎥</span>
+                                </a>
+                            ) : (
+                                ejercicio.nombre
+                            )}
+                        </div>
+                        <div className="text-xs text-gray-600">{textoDetalle}</div>
+                    </div>
                 </div>
 
-                <ul className="text-xs text-gray-600 space-y-1">
-                    {series.map((s, i) => (
-                        <li key={i} className="flex flex-col">
-                            {s.reps && <span>Reps: {s.reps}</span>}
-                            {s.duracion && <span>Duración: {s.duracion}</span>}
-                            {s.distancia && <span>Distancia: {s.distancia}</span>}
-                            {s.peso && <span>Peso: {s.peso}</span>}
-                            {s.descanso && <span>Descanso: {s.descanso}</span>}
-                        </li>
-                    ))}
-                </ul>
-
-                {ejercicio.notas && (
-                    <p className="text-xs italic text-gray-500">📝 {ejercicio.notas}</p>
-                )}
-                {ejercicio.nota && (
-                    <p className="text-xs italic text-gray-500">📝 {ejercicio.nota}</p>
-                )}
                 {ejercicio.descansoDespues && (
-                    <p className="text-xs text-gray-500">⏸️ Descanso después: {ejercicio.descansoDespues}</p>
-                )}
-                {Array.isArray(ejercicio.imagenes) && ejercicio.imagenes.length > 0 && (
-                    <div className="flex gap-2 mt-2">
-                        {ejercicio.imagenes.map((img, i) => (
-                            <img
-                                key={i}
-                                src={`/assets/ejercicios/${img}`}
-                                alt={`Imagen ${i + 1}`}
-                                className="w-20 h-20 object-cover rounded-md"
-                            />
-                        ))}
-                    </div>
-                )}
-                {Array.isArray(ejercicio.media) && ejercicio.media.length > 0 && (
-                    <div className="flex gap-2 mt-2">
-                        {ejercicio.media.map((img, i) => (
-                            <img
-                                key={i}
-                                src={img}
-                                alt={`Media ${i + 1}`}
-                                className="w-20 h-20 object-cover rounded-md"
-                            />
-                        ))}
+                    <div className="flex items-center gap-1 text-xs text-gray-500 pl-2">
+                        ⏱️ {ejercicio.descansoDespues} de descanso después de: ejercicio
                     </div>
                 )}
             </div>
         );
     };
 
-    // 👇 ESTE RETURN FALTABA
     return (
-
         <div className="p-4 space-y-6">
             <button
                 onClick={onBack}
@@ -127,28 +66,51 @@
                 ← Volver al plan
             </button>
 
+            {/* Selector de semana con estilo tipo píldora */}
+            <div className="space-y-2 mb-2">
+                <h3 className="text-sm font-medium text-gray-800">Semana</h3>
+                <div className="flex gap-2 overflow-x-auto pb-1">
+                    {[1, 2, 3, 4].map((semana) => (
+                        <button
+                            key={semana}
+                            onClick={() => setSemanaSeleccionada(semana)}
+                            className={`px-3 py-1 rounded-full border text-sm whitespace-nowrap transition ${semanaSeleccionada === semana
+                                    ? 'bg-pink-600 text-white'
+                                    : 'border-gray-300 text-gray-700'
+                                }`}
+                        >
+                            Semana {semana}
+                        </button>
+                    ))}
+                </div>
+            </div>
+
             <h2 className="text-xl font-semibold">{sesion.nombre}</h2>
             {sesion.descripcion && (
                 <p className="text-sm text-gray-600">{sesion.descripcion}</p>
             )}
 
-            {sesion.sets.map((set, idxSet) => {
-                const ejercicios = Array.isArray(set.ejercicios) ? set.ejercicios : [];
-                return (
-                    <div key={idxSet} className="space-y-2">
-                        <h4 className="text-md font-semibold text-gray-800 mt-4">
-                            {set.titulo || `Set ${idxSet + 1}`}
-                        </h4>
-                        {ejercicios.length > 0 ? (
-                            ejercicios.map((ejercicio, idxEj) =>
-                                renderEjercicio(ejercicio, `${idxSet}-${idxEj}`)
-                            )
-                        ) : (
-                            <div className="text-sm text-gray-400">No hay ejercicios.</div>
-                        )}
-                    </div>
-                );
-            })}
+            {sesion.sets.map((set, idxSet) => (
+                <div key={idxSet} className="space-y-3">
+                    <h4 className="text-md font-semibold text-gray-800">
+                        {set.titulo || `Set ${idxSet + 1}`}
+                    </h4>
+
+                    {Array.isArray(set.ejercicios) && set.ejercicios.length > 0 ? (
+                        set.ejercicios.map((ejercicio, idxEj) =>
+                            renderEjercicio(ejercicio, `${idxSet}-${idxEj}`)
+                        )
+                    ) : (
+                        <div className="text-sm text-gray-400">No hay ejercicios.</div>
+                    )}
+                </div>
+            ))}
+
+            <div className="mt-6">
+                <button className="w-full bg-gray-900 text-white py-3 rounded-xl text-sm font-medium shadow-md">
+                    Iniciar sesión
+                </button>
+            </div>
         </div>
     );
 }
