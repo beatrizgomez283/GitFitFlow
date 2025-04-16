@@ -1,4 +1,6 @@
 ﻿export default function SesionDetalle({ sesion, onBack }) {
+    console.log("Sesión recibida:", sesion);
+
     if (!sesion || !Array.isArray(sesion.sets)) {
         return <div className="p-4">Sesión no válida.</div>;
     }
@@ -7,7 +9,22 @@
         if (Array.isArray(ejercicio.sets)) {
             return (
                 <div key={key} className="p-3 bg-gray-100 rounded-md space-y-2">
-                    <div className="font-semibold text-sm text-gray-800">{ejercicio.nombre}</div>
+                    <div className="font-medium text-sm ">
+                        {ejercicio.url ? (
+                            <a
+                                href={ejercicio.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-600 hover:underline flex items-center gap-1"
+                            >
+                                <span>{ejercicio.nombre}</span>
+                                <span role="img" aria-label="video">🎥</span>
+                            </a>
+                        ) : (
+                            ejercicio.nombre 
+                        )}
+
+                    </div>
                     {ejercicio.descripcion && (
                         <p className="text-xs text-gray-500">{ejercicio.descripcion}</p>
                     )}
@@ -34,7 +51,21 @@
 
         return (
             <div key={key} className="border p-3 rounded-lg bg-gray-50 space-y-2">
-                <div className="font-medium text-sm">{ejercicio.nombre}</div>
+                <div className="font-medium text-sm">
+                    {ejercicio.url ? (
+                        <a
+                            href={ejercicio.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline flex items-center gap-1"
+                        >
+                            <span>{ejercicio.nombre}</span>
+                            <span role="img" aria-label="video">🎥</span>
+                        </a>
+                    ) : (
+                        ejercicio.nombre
+                    )}
+                </div>
 
                 <ul className="text-xs text-gray-600 space-y-1">
                     {series.map((s, i) => (
@@ -87,6 +118,7 @@
 
     // 👇 ESTE RETURN FALTABA
     return (
+
         <div className="p-4 space-y-6">
             <button
                 onClick={onBack}

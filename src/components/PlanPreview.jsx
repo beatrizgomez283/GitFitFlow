@@ -1,4 +1,8 @@
+﻿import { useState } from 'react';
+
 export default function PlanPreview({ plan, onSelect }) {
+    const [expandido, setExpandido] = useState(false);
+
     const totalSeries = Array.isArray(plan.sesiones)
         ? plan.sesiones.reduce(
             (sum, sesion) =>
@@ -19,10 +23,28 @@ export default function PlanPreview({ plan, onSelect }) {
                 alt={plan.nombre}
                 className="w-full h-40 object-cover rounded-xl mb-3"
             />
+
             <div className="font-bold text-lg text-gray-900 mb-1">{plan.nombre}</div>
-            <p className="text-sm text-gray-600 line-clamp-2 mb-2">{plan.descripcion}</p>
+
+            <div
+                className={`text-sm text-gray-600 mb-2 ${expandido ? '' : 'line-clamp-2'
+                    }`}
+            >
+                {plan.descripcion}
+            </div>
+
+            <button
+                className="text-xs text-blue-600 hover:underline mb-2"
+                onClick={(e) => {
+                    e.stopPropagation(); // 🛑 evita que se dispare onSelect al hacer click
+                    setExpandido(!expandido);
+                }}
+            >
+                {expandido ? 'Mostrar menos' : 'Mostrar más'}
+            </button>
+
             <div className="text-sm text-gray-500">
-                {plan.sesiones.length} sesiones � {totalSeries} series
+                {plan.sesiones.length} sesiones
             </div>
         </div>
     );

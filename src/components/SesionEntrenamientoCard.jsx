@@ -6,14 +6,10 @@
     }, 0);
 
     // Detectar tipo por nombre/descripción
-    const tipo = sesion.nombre?.toLowerCase().includes('tren inferior')
-        ? 'Tren inferior'
-        : sesion.nombre?.toLowerCase().includes('tren superior')
-            ? 'Tren superior'
-            : sesion.nombre?.toLowerCase().includes('core')
-                ? 'Core'
-                : sesion.nombre?.toLowerCase().includes('run') || sesion.descripcion?.toLowerCase().includes('carrera')
-                    ? 'Cardio'
+    const tipo = sesion.tipo =='core'? 'Core'
+        : sesion.tipo == 'upper_body' ? 'Tren superior'
+            : sesion.tipo == 'lower_body' ? 'Tren inferior'
+                : sesion.tipo == 'run' || sesion.tipo == 'carrera' ? 'Cardio'
                     : 'General';
 
     return (
