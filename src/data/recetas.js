@@ -22,11 +22,857 @@ import bowl_judias_negras_quinoa_maiz from '../assets/recetas/bowl_judias_negras
 import boniato_brocoli_manzana from '../assets/recetas/boniato_brocoli_manzana.jpg';
 import pimiento_relleno_vegano from '../assets/recetas/pimiento_relleno_vegano.jpg';
 import smoothie_platano_chocolate from '../assets/recetas/smoothie_platano_chocolate.jpg';
+import batido_proteinas_platano_chia from '../assets/recetas/batido_proteinas_platano_chia.jpg';
+import smoothie_frutas_bosque_chocolate from '../assets/recetas/smoothie_frutas_bosque_chocolate.jpg';
+import smoothie_naranja_frambuesa from '../assets/recetas/smoothie_naranja_frambuesa.jpg';
+import smoothie_coco_frutas_nueces from '../assets/recetas/smoothie_coco_frutas_nueces.jpg';
+import albaricoque_mango_leche_almendras_proteina from '../assets/recetas/albaricoque_mango_leche_almendras_proteina.jpg';
+import smoothie_platano_fresa from '../assets/recetas/smoothie_platano_fresa.jpg';
+import skyr_manzana_coco from '../assets/recetas/skyr_manzana_coco.jpg';
+import yogur_platano_anacardos from '../assets/recetas/yogur_platano_anacardos.jpg';
+import bol_yogur_cereales_chia_frutas_bosque from '../assets/recetas/bol_yogur_cereales_chia_frutas_bosque.jpg';
+import pudin_chia_yogur_fruta from '../assets/recetas/pudin_chia_yogur_fruta.jpg';
+import huevos_fritos_jamon from '../assets/recetas/huevos_fritos_jamon.jpg';
+import ensalada_pasta_pollo_verduras from '../assets/recetas/ensalada_pasta_pollo_verduras.jpg';
+import pavo_quinoa_judias_verdes from '../assets/recetas/pavo_quinoa_judias_verdes.jpg';
+import tostada_aguacate_salmon from '../assets/recetas/tostada_aguacate_salmon.jpg';
+import pollo_curry_arroz_verduras from '../assets/recetas/pollo_curry_arroz_verduras.jpg';
+import pan_centeno_hummus_jamon from '../assets/recetas/pan_centeno_hummus_jamon.jpg';
+import salteado_verduras_tofu from '../assets/recetas/salteado_verduras_tofu.jpg';
+import wrap_huevos_revueltos_aguacate from '../assets/recetas/wrap_huevos_revueltos_aguacate.jpg';
+import gachas_avena_platano_almendras_canela from '../assets/recetas/gachas_avena_platano_almendras_canela.jpg';
+import huevo_bagel_cottage_pavo from '../assets/recetas/huevo_bagel_cottage_pavo.jpg';
+import pizza_pitta_pollo from '../assets/recetas/pizza_pitta_pollo.jpg';
+import pulguita_aguacate_pollo_queso from '../assets/recetas/pulguita_aguacate_pollo_queso.jpg';
+import pollo_esparragos_arroz from '../assets/recetas/pollo_esparragos_arroz.jpg';
+import bagel_huevos_espinacas from '../assets/recetas/bagel_huevos_espinacas.jpg';
+import estofado_ternera_jengibre_patatas from '../assets/recetas/estofado_ternera_jengibre_patatas.jpg';
+import estofado_alubias from '../assets/recetas/estofado_alubias.jpg';
+import crema_calabaza_zanahorias from '../assets/recetas/crema_calabaza_zanahorias.jpg';
+import sopa_pollo_verduras from '../assets/recetas/sopa_pollo_verduras.jpg';
+import chili_carne_arroz_alubias from '../assets/recetas/chili_carne_arroz_alubias.jpg';
+import butter_chicken from '../assets/recetas/butter_chicken.jpg';
 
 
 
 
 const recetas = [
+    {
+        "id": "bagel_huevos_espinacas",
+        "nombre": "Bagel con huevos revueltos y espinacas",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 10,
+        "calorias": 444,
+        "proteina": 26,
+        "carbohidratos": 34,
+        "grasa": 22,
+        "tipo": "desayuno",
+        "nota": "Puedes añadir unas semillas de sésamo o levadura nutricional por encima si lo deseas.",
+        "ingredientes": [
+            "1 bagel (aprox. 70g)",
+            "2 huevos",
+            "1 cdta. de aceite de oliva",
+            "30g espinacas frescas",
+            "Sal y pimienta al gusto"
+        ],
+        "pasos": [
+            "Tostar el bagel si se desea.",
+            "Batir los huevos con una pizca de sal y pimienta.",
+            "Calentar el aceite en una sartén a fuego medio, añadir los huevos batidos y remover suavemente hasta que estén revueltos.",
+            "Añadir las espinacas frescas y dejar que se marchiten ligeramente.",
+            "Rellenar el bagel con los huevos revueltos y las espinacas."
+        ],
+        "imagen": bagel_huevos_espinacas
+    },
+    {
+        "id": "butter_chicken",
+        "nombre": "Butter chicken",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 60,
+        "calorias": 618,
+        "proteina": 58,
+        "carbohidratos": 66,
+        "grasa": 13,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "5g aceite de girasol (~1 cucharadita)",
+            "20g tomate concentrado (~1.5 cdas.)",
+            "50g cebolla amarilla (½ pza.)",
+            "65g arroz jazmín, crudo",
+            "75g yogur griego, 2% de grasa",
+            "230g pechuga de pollo, cruda",
+            "1/2 cdta. comino, molido",
+            "1/2 cdta. pimentón",
+            "1 diente de ajo, prensado",
+            "1/2 cdta. guindilla roja, fresca, picada",
+            "1 cda. jengibre, fresco, rallado",
+            "80ml pastilla de caldo (disuelta en agua)",
+            "1 cda. zumo de limón",
+            "1/2 cdta. garam masala"
+        ],
+        "pasos": [
+            "Comenzar por marinar el pollo. Primero, añadir el comino molido, pimentón, zumo de limón y el yogur a un recipiente grande. Cortar el pollo en trozos pequeños y añadirlo al recipiente con las especias. Dejar marinar durante al menos 15 minutos.",
+            "Mientras se marina el pollo, pelar y picar la cebolla. Calentar el aceite en una cacerola y añadir la cebolla con el ajo, jengibre y guindilla. Sofreír durante unos minutos.",
+            "Agregar el tomate concentrado, la garam masala y la pastilla de caldo disuelta en agua. Cocinar unos minutos más.",
+            "Añadir el pollo marinado y cocinar a fuego medio durante unos 20 minutos o hasta que esté completamente cocido.",
+            "Mientras tanto, preparar el arroz siguiendo las instrucciones del paquete.",
+            "Servir el pollo con la salsa acompañado del arroz jazmín."
+        ],
+        "imagen": butter_chicken
+    },
+    {
+        "id": "chili_carne_arroz_alubias",
+        "nombre": "Chili con carne con arroz y alubias negras",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 15,
+        "calorias": 617,
+        "proteina": 44,
+        "carbohidratos": 47,
+        "grasa": 28,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "20g aceite de oliva (~1 cucharada de)",
+            "40g arroz basmati, crudo",
+            "45g alubias negras, en conserva (¼ lata)",
+            "155g carne picada de vacuno, 3-7% de grasa, cruda",
+            "235g tomate troceado, en conserva (½ lata)",
+            "1-3 cdta. comino, molido",
+            "1-2 cdta. copos de guindilla"
+        ],
+        "pasos": [
+            "Lavar el arroz antes de cocinarlo. Verterlo en un cazo con agua y una pizca de sal y cocinar según las instrucciones del paquete.",
+            "Escurrir y lavar las alubias.",
+            "Freír la carne picada en una sartén con el aceite a fuego medio-alto hasta que se dore uniformemente. Condimentar con sal, pimienta, comino y copos de guindilla.",
+            "Añadir el tomate troceado y las alubias y dejar cocer a fuego bajo durante 10-15 minutos. Condimentar al gusto con más especias.",
+            "Servir el chili con carne con el arroz."
+        ],
+        "imagen": chili_carne_arroz_alubias
+    },
+    {
+        "id": "sopa_pollo_verduras",
+        "nombre": "Sopa de pollo y verduras",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 60,
+        "calorias": 618,
+        "proteina": 46,
+        "carbohidratos": 76,
+        "grasa": 13,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "10g aceite de oliva (~1.5 cdtas.)",
+            "145g puerro (1 pza.)",
+            "175g pechuga de pollo, cruda",
+            "195g patata, mediana (1 ½ pza.)",
+            "200g zanahorias (3 pzas.)",
+            "235g repollo (¼ cabeza)",
+            "1-2 cdta. hierbas provenzales",
+            "2-4 hojas de laurel"
+        ],
+        "pasos": [
+            "Lavar las verduras y pelar las patatas. Cortar las verduras en trozos.",
+            "Calentar una olla a fuego medio con el aceite y saltear las zanahorias y los puerros.",
+            "Añadir la col, las patatas, el pollo, las hierbas de Provenza y las hojas de laurel. Cubrir con agua y llevar a ebullición a fuego fuerte. A continuación, reducir a fuego lento y dejar cocer la sopa de 45 minutos a 1 hora, con la tapa ligeramente abierta. Salpimentar al gusto.",
+            "Cuando el pollo esté bien cocido, desmenuzarlo y servir la sopa en un plato hondo."
+        ],
+        "imagen": sopa_pollo_verduras
+    },
+    {
+        "id": "crema_calabaza_zanahorias",
+        "nombre": "Crema de calabaza con zanahorias",
+        "tiempo_prep": 10,
+        "tiempo_coccion": 35,
+        "calorias": 618,
+        "proteina": 12,
+        "carbohidratos": 100,
+        "grasa": 18,
+        "tipo": "comida",
+        "nota": "Para esta receta se necesita una batidora",
+        "ingredientes": [
+            "15g aceite de oliva (~1 cucharada de)",
+            "100g cebolla amarilla (1 ¼ pza.)",
+            "150g patata, mediana (1 pza.)",
+            "355g zanahorias (6 pzas.)",
+            "760g calabaza, crudos",
+            "250-500ml caldo, cualquier tipo, listo para usar",
+            "½-1 cdta. curry en polvo",
+            "½-1 cdta. nuez moscada, molida"
+        ],
+        "pasos": [
+            "Pelar y picar la cebolla. Lavar, pelar y cortar la patata, las zanahorias y la calabaza en dados.",
+            "Sofreír la cebolla junto con las especias durante 5 minutos a fuego medio con un poco de aceite en una cacerola.",
+            "Agregar las zanahorias y la patata y sofreír 3 minutos. A continuación, incorporar la calabaza y sofreír 3 minutos más.",
+            "Mezclar y salpimentar al gusto. Verter ahora el caldo de verduras o agua caliente, de modo que cubra todas las verduras.",
+            "Cocer 20 minutos a fuego medio, tapando la cazuela, de manera que esté siempre hirviendo suavemente, con pequeños borbotones.",
+            "Triturar las verduras con una batidora hasta conseguir la textura deseada.",
+            "Servir la crema de calabaza caliente en un plato hondo."
+        ],
+        "imagen": crema_calabaza_zanahorias
+    },
+    {
+        "id": "estofado_alubias",
+        "nombre": "Estofado de alubias",
+        "tiempo_prep": 10,
+        "tiempo_coccion": 20,
+        "calorias": 618,
+        "proteina": 16,
+        "carbohidratos": 89,
+        "grasa": 21,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "20g aceite de oliva (~1 cucharada de)",
+            "35g alubias rojas, en agua (¼ lata)",
+            "70g arroz, vaporizado, sin cocinar",
+            "90g cebolla amarilla (1 pza.)",
+            "220g calabacín (1 pza.)",
+            "305g tomate troceado, en conserva (¾ lata)",
+            "1-2 pzas. diente de ajo, prensado",
+            "½-1 cdta. copos de guindilla",
+            "½-1 cdta. pimentón"
+        ],
+        "pasos": [
+            "Lavar el arroz antes de cocinarlo, verterlo en un cazo con agua y una pizca de sal y cocinarlo según las instrucciones del paquete.",
+            "Lavar el calabacín y pelar la cebolla. Cortar el calabacín y la cebolla en dados y sofreír en una sartén con el aceite a fuego medio-alto.",
+            "Cuando la cebolla esté dorada, añadir las alubias rojas y el tomate troceado.",
+            "Condimentar con guindilla, ajo, pimentón, sal y pimienta y dejar cocer a fuego lento durante 10-15 minutos.",
+            "Servir el guiso con el arroz."
+        ],
+        "imagen": estofado_alubias
+    },
+    {
+        "id": "estofado_ternera_jengibre_patatas",
+        "nombre": "Estofado de ternera y jengibre con patatas",
+        "tiempo_prep": 10,
+        "tiempo_coccion": 45,
+        "calorias": 617,
+        "proteina": 44,
+        "carbohidratos": 58,
+        "grasa": 23,
+        "tipo": "comida",
+        "nota": "La carne debe estar a temperatura ambiente en el momento de cocinarla",
+        "ingredientes": [
+            "15g aceite de colza (~1 cucharada de)",
+            "25g tomate concentrado (~1.5 cdas.)",
+            "60g cebolla amarilla (¾ pza.)",
+            "115g pimiento verde (½ pza.)",
+            "160g espaldilla, magra, cruda",
+            "180g patata, mediana (1 ½ pza.)",
+            "245g tomates (3 pzas.)",
+            "1-2 pzas. diente de ajo, prensado",
+            "1-3 cda. zumo de limón",
+            "½-2 puñado cilantro, picado",
+            "1-2 cda. jengibre, fresco, rallado",
+            "150-300 ml pastilla de caldo disuelta en agua",
+            "½-2 cda. comino, molido"
+        ],
+        "pasos": [
+            "Nota: la carne de ternera debe estar a temperatura ambiente a la hora de cocinarla.",
+            "Pelar y cortar la cebolla en dados. Lavar y trocear el tomate, pimiento y las patatas. Cortar el filete de espaldilla en trozos más pequeños.",
+            "Calentar una sartén a fuego medio con la mitad del aceite y freír el filete hasta que se dore por ambos lados. Reservar tapado.",
+            "Añadir el resto del aceite a la sartén y freír la cebolla hasta que esté dorada, luego agregar el jengibre, ajo, comino, tomate concentrado, tomate triturado, caldo, pimiento, las patatas y la carne.",
+            "Reducir el fuego y cocinar todo a fuego bajo durante unos 40 minutos hasta que las patatas estén tiernas. Remover de vez en cuando y añadir agua si es necesario. Cuanto más tiempo se cocine la carne, más tierna estará.",
+            "Cubrir con un chorrito de limón y con el cilantro."
+        ],
+        "imagen": estofado_ternera_jengibre_patatas
+    },
+    {
+        "id": "pollo_esparragos_arroz",
+        "nombre": "Pollo, espárragos y arroz blanco",
+        "tiempo_prep": 5,
+        "tiempo_coccion": 15,
+        "calorias": 618,
+        "proteina": 55,
+        "carbohidratos": 48,
+        "grasa": 22,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "15g aceite de oliva (~1 cucharada de)",
+            "50g arroz basmati, crudo",
+            "60g tomates cherri (4 pzas.)",
+            "90g espárragos trigueros (4 tallos)",
+            "245g pechuga de pollo, cruda"
+        ],
+        "pasos": [
+            "Lavar el arroz antes de cocinarlo. Añadirlo a un cazo con agua y una pizca de sal y cocerlo según las instrucciones del paquete.",
+            "Salpimentar el pollo y cortarlo en trozos pequeños. Freírlo en una sartén con el aceite a fuego medio-alto durante aproximadamente 5-7 minutos, hasta que el centro ya no esté rosado.",
+            "Lavar los espárragos y quitarles los extremos duros. Llevar a ebullición otro cazo y añadir una pizca de sal. Verter los espárragos y cocer durante unos 4-5 minutos o hasta que estén tiernos.",
+            "Servir el pollo y los espárragos con el arroz."
+        ],
+        "imagen": pollo_esparragos_arroz
+    },
+    {
+        "id": "pulguita_aguacate_pollo_queso",
+        "nombre": "Pulguita de aguacate, pechuga de pollo en lonchas y queso",
+        "tiempo_prep": 5,
+        "tiempo_coccion": 0,
+        "calorias": 237,
+        "proteina": 14,
+        "carbohidratos": 29,
+        "grasa": 7,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "15g aguacate, fresco (¼ pza.)",
+            "20g queso fresco (cottage) 5% de grasa",
+            "25g pechuga de pollo, cocida y braseada, finas lonchas (2 lonchas)",
+            "65g pan de centeno, cualquier tipo (2 lonchas)"
+        ],
+        "pasos": [
+            "Tostar el panecillo al gusto.",
+            "Cubrir con el aguacate, pechuga de pollo en lonchas y el queso."
+        ],
+        "imagen": pulguita_aguacate_pollo_queso
+    },
+    {
+        "id": "pizza_pitta_pollo",
+        "nombre": "Pizza de pitta con pollo",
+        "tiempo_prep": 5,
+        "tiempo_coccion": 10,
+        "calorias": 618,
+        "proteina": 43,
+        "carbohidratos": 58,
+        "grasa": 23,
+        "tipo": "comida",
+        "nota": "Para esta receta se recomienda utilizar caldo de pollo",
+        "ingredientes": [
+            "10g aceite de oliva (~2 cdtas.)",
+            "30g tomate concentrado (~2 cdas.)",
+            "35g mozzarella rallada, 24-25% de grasa",
+            "120g pan de pita, integral (2 pzas.)",
+            "120g pechuga de pollo, cocida y braseada, finas lonchas (8 lonchas)"
+        ],
+        "pasos": [
+            "Precalentar el horno a 200°C (gas) o 180°C (ventilador).",
+            "Repartir uniformemente el tomate concentrado sobre el pan de pita y cubrirlo con el queso rallado y el jamón york.",
+            "Hornear la pizza durante unos 10 minutos hasta que el queso se haya derretido y la pizza empiece a dorarse. Cubrir con un chorrito de aceite y salpimentar al gusto antes de servir."
+        ],
+        "imagen": pizza_pitta_pollo
+    },
+    {
+        "id": "huevo_bagel_cottage_pavo",
+        "nombre": "Huevo y bagel con queso cottage y pechuga de pavo en lonchas",
+        "tiempo_prep": 5,
+        "tiempo_coccion": 10,
+        "calorias": 238,
+        "proteina": 13,
+        "carbohidratos": 27,
+        "grasa": 8,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "5g aceite de oliva (~1 cucharadita)",
+            "10g huevo entero (1 pza.)",
+            "10g queso cottage, bajo en grasa, sin lactosa",
+            "15g tomates (½ pza.)",
+            "25g pechuga de pavo, en lonchas (2 lonchas)",
+            "50g bagel natural (½ pza.)"
+        ],
+        "pasos": [
+            "OPCIÓN 1: Tortilla con el pavo.",
+            "OPCIÓN 2: Huevos cocidos y pechuga de pavo en el sandwich.",
+            "Lavar y cortar el tomate en rodajas.",
+            "Cortar el bagel por la mitad y tostarlo si se desea, luego untar la mantequilla y añadir el queso cottage, tomate y la pechuga de pavo en lonchas. Comer el huevo aparte."
+        ],
+        "imagen": huevo_bagel_cottage_pavo
+    },
+    {
+        "id": "pan_centeno_hummus_jamon",
+        "nombre": "Pan de centeno con hummus y jamón serrano",
+        "tiempo_prep": 5,
+        "tiempo_coccion": 0,
+        "calorias": 238,
+        "proteina": 13,
+        "carbohidratos": 24,
+        "grasa": 9,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "15g humus (~1 cucharada de)",
+            "30g jamón serrano (2 lonchas)",
+            "60g pan de centeno integral (1 loncha)"
+        ],
+        "pasos": [
+            "Untar el pan de centeno con el humus y añadir el jamón serrano."
+        ],
+        "imagen": pan_centeno_hummus_jamon
+    },
+    {
+        "id": "pollo_curry_arroz_verduras",
+        "nombre": "Pollo al curry con arroz y verduras",
+        "tiempo_prep": 10,
+        "tiempo_coccion": 15,
+        "calorias": 601,
+        "proteina": 46,
+        "carbohidratos": 61,
+        "grasa": 20,
+        "tipo": "comida",
+        "nota": "Para esta receta se recomienda utilizar caldo de pollo",
+        "ingredientes": [
+            "15g aceite de oliva (~3 cdtas.)",
+            "45g cebolla amarilla (1/2 pza.)",
+            "45g calabacín (1/3 pza.)",
+            "45g calabaza, crudos",
+            "45g zanahorias (1 pza.)",
+            "50g queso fresco batido, desnatado, Hacendado",
+            "60g arroz integral, crudo",
+            "170g pechuga de pollo, cruda",
+            "1/2-3 cdta. zumo de limón",
+            "1-3 pza. diente de ajo, prensado",
+            "1/2-2 pza. pastilla de caldo",
+            "1/2-3 cdta. curry en polvo"
+        ],
+        "pasos": [
+            "Pelar y picar la cebolla, calabacín, zanahoria y calabaza. Cortar el pollo en trozos pequeños.",
+            "Lavar el arroz antes de cocinarlo. Cocer el arroz según las instrucciones del paquete en una olla con agua y una pizca de sal.",
+            "Sofreír la verdura y el ajo en una sartén con el aceite a fuego medio hasta que quede blandita y reservar.",
+            "Saltear el pollo y añadir las verduras.",
+            "Añadir un poco de curry en polvo y desmenuzar el cubo de caldo. Sofreír unos minutos más.",
+            "Añadir el queso fresco y un poco más de curry en polvo. Dejar cocer todo a fuego bajo durante unos 10 minutos.",
+            "Condimentar el curry con un poco de zumo de limón y servir con el arroz y la verdura. ¡Que aproveche!"
+        ],
+        "imagen": pollo_curry_arroz_verduras
+    },
+    {
+        "id": "tostada_aguacate_salmon",
+        "nombre": "Tostada de aguacate con lonchas de salmón ahumado",
+        "tiempo_prep": 10,
+        "tiempo_coccion": 5,
+        "calorias": 238,
+        "proteina": 11,
+        "carbohidratos": 29,
+        "grasa": 8,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "20g aguacate, fresco (1/4 pza.)",
+            "35g salmón ahumado, en lonchas (1 loncha)",
+            "40g uvas",
+            "60g pan de centeno integral (1 loncha)",
+            "1-2 cdta. cebollino, fresco, picado",
+            "1-2 cdta. zumo de limón"
+        ],
+        "pasos": [
+            "Cortar el aguacate por la mitad y retirar el hueso. Con una cuchara, sacar la pulpa y machacarla en un bol con un tenedor.",
+            "Aliñar con el zumo de limón y el cebollino y salpimentar al gusto.",
+            "Tostar el pan.",
+            "Untar el pan con el aguacate, cubrir con las lonchas de salmón ahumado y servir. Lavar y comer las uvas de postre."
+        ],
+        "imagen": tostada_aguacate_salmon
+    },
+    {
+        "id": "pavo_quinoa_judias_verdes",
+        "nombre": "Pavo con quinoa y judías verdes",
+        "tiempo_prep": 5,
+        "tiempo_coccion": 20,
+        "calorias": 618,
+        "proteina": 32,
+        "carbohidratos": 72,
+        "grasa": 22,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "10g aceite de oliva (~1.5 cdtas.)",
+            "40g aguacate, fresco (1/4 pza.)",
+            "75g quinoa, cruda",
+            "80g pechuga de pavo, cruda",
+            "165g judías verdes",
+            "180g zanahorias (3 pzas.)"
+        ],
+        "pasos": [
+            "Lavar la quinoa antes de cocerla. Cocer la quinoa según las instrucciones del paquete en un cazo con agua y una pizca de sal.",
+            "Salpimentar el pavo. Freírlo en una sartén antiadherente con un chorrito de aceite a fuego medio-alto hasta que ya no esté rosado en el centro.",
+            "Poner a hervir otro cazo con agua y añadir una pizca de sal. Verter las judías verdes y las zanahorias al cazo y cocerlas durante unos 7-10 minutos o hasta que se puedan pinchar fácilmente un tenedor.",
+            "Pelar y cortar las zanahorias en rodajas.",
+            "Servir la quinoa con el pavo, las judías verdes y las zanahorias."
+        ],
+        "imagen": pavo_quinoa_judias_verdes
+    },
+    {
+        "id": "wrap_huevos_revueltos_aguacate",
+        "nombre": "Wrap de huevos revueltos y aguacate",
+        "tiempo_prep": 5,
+        "tiempo_coccion": 10,
+        "calorias": 238,
+        "proteina": 9,
+        "carbohidratos": 21,
+        "grasa": 13,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "10g lechuga iceberg (1 hoja)",
+            "10g pimiento rojo (1/2 pza.)",
+            "10g cebolla amarilla (1/4 pza.)",
+            "25g garbanzos en conserva (1/4 lata)",
+            "25g tortilla mexicana integral (para fajitas) (1 pza.)",
+            "35g huevo entero (1 pza.)",
+            "45g aguacate fresco (1/4 pza.)"
+        ],
+        "pasos": [
+            "Batir los huevos con un poco de sal y pimienta, luego verterlos en una sartén antiadherente y remover regularmente a fuego medio-alto hasta que hayan espesado y no quede huevo líquido visible.",
+            "Cortar el aguacate por la mitad y retirar el hueso. Utilizar una cuchara para sacar la pulpa y cortarla en dados.",
+            "Puedes cocinar el pimiento y la cebolla salteada en la sartén o meterlo crudo en el burrito.",
+            "Calentar la tortilla al gusto, añadir los huevos revueltos y el aguacate, enrollar y servir."
+        ],
+        "imagen": wrap_huevos_revueltos_aguacate
+    },
+    {
+        "id": "ensalada_pasta_pollo_verduras",
+        "nombre": "Ensalada de pasta y pollo con verduras salteadas",
+        "tiempo_prep": 5,
+        "tiempo_coccion": 20,
+        "calorias": 617,
+        "proteina": 43,
+        "carbohidratos": 62,
+        "grasa": 21,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "25g maíz en conserva (~2.5 cdas.)",
+            "65g pasta cruda",
+            "90g aguacate fresco (3/4 pza.)",
+            "135g mix de verduras congeladas",
+            "155g pechuga de pollo cruda"
+        ],
+        "pasos": [
+            "Cocer la pasta según las instrucciones del paquete en un cazo con agua y una pizca de sal. Cuando la pasta esté cocida al gusto, escurrirla con un colador y reservar.",
+            "Mientras tanto, salpimentar la pechuga de pollo. Freír por ambos lados en una sartén antiadherente a fuego medio-alto durante aproximadamente 10 minutos, hasta que el centro pierda su color rosado.",
+            "Una vez cocido el pollo, cortarlo en tiras y añadirlo a una ensaladera con la pasta.",
+            "Cortar el aguacate por la mitad y retirar el hueso. Con una cuchara, sacar la pulpa y cortarla en dados. Escurrir el maíz.",
+            "Incorporar el aguacate y el maíz a la pasta y el pollo. Salpimentar, mezclar y servir."
+        ],
+        "imagen": ensalada_pasta_pollo_verduras
+    },
+    {
+        "id": "huevos_fritos_jamon",
+        "nombre": "Huevos fritos con jamón serrano",
+        "tiempo_prep": 5,
+        "tiempo_coccion": 15,
+        "calorias": 618,
+        "proteina": 42,
+        "carbohidratos": 56,
+        "grasa": 24,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "5g aceite de oliva (~1 cucharadita)",
+            "45g huevo entero (1 pza.)",
+            "45g jamón serrano (3 lonchas)",
+            "65g queso fresco (cottage) 5% de grasa",
+            "110g brócoli (1/4 cabeza)",
+            "130g pan integral (3 lonchas)"
+        ],
+        "pasos": [
+            "En una sartén antiadherente caliente y con el aceite de oliva, cocinar los huevos a la plancha a fuego medio tapando la sartén.",
+            "(Opcional) En la misma sartén, saltear el jamón y tostar el pan.",
+            "Hervir o cocinar al vapor el brócoli. Puedes añadir otras verduras como coliflor, zanahoria, pimiento."
+        ],
+        "imagen": huevos_fritos_jamon
+    },
+    {
+        "id": "salteado_verduras_tofu",
+        "nombre": "Salteado rápido de verduras y tofu",
+        "tiempo_prep": 5,
+        "tiempo_coccion": 15,
+        "calorias": 618,
+        "proteina": 32,
+        "carbohidratos": 69,
+        "grasa": 23,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "10g aceite de oliva (~2 cdtas.)",
+            "170g tofu firme",
+            "240g boniato (1 pza.)",
+            "440g wok de verduras congeladas",
+            "1-2 cda. salsa de soja"
+        ],
+        "pasos": [
+            "Preparar el boniato al microondas (o como más te guste).",
+            "Escurrir el tofu y cortarlo en dados de aproximadamente 1×1 cm. Calentar una sartén con un chorrito de aceite a fuego medio-alto y freír el tofu hasta que esté crujiente y dorado.",
+            "Añadir la mezcla de verduras congeladas y cocinarlas hasta que se calienten. Salpimentar y condimentar con salsa de soja al gusto.",
+            "Servir el salteado con el boniato."
+        ],
+        "imagen": salteado_verduras_tofu
+    },
+    {
+        "id": "pudin_chia_yogur_fruta",
+        "nombre": "Pudín de chía con yogur y fruta",
+        "tiempo_prep": 15,
+        "tiempo_coccion": 0,
+        "calorias": 238,
+        "proteina": 12,
+        "carbohidratos": 29,
+        "grasa": 8,
+        "tipo": "desayuno",
+        "nota": "El pudín de chía debe refrigerarse durante al menos 15 minutos o, preferiblemente, toda la noche. Mejor yogur de cabra, más digestivo.",
+        "ingredientes": [
+            "15g semillas de chía (~1.5 cdas.)",
+            "50g plátano (1/2 pza.)",
+            "50g arándanos",
+            "50g naranja (1/2 pza.)",
+            "110g yogur griego, 2% de grasa",
+            "1/4-1 cdta. esencia de vainilla"
+        ],
+        "pasos": [
+            "Batir las semillas de chía con 200ml de agua (o leche del tipo que quieras), el yogur, una pizca de sal y el extracto de vainilla en un tarro. Tapar el recipiente y refrigerarlo durante al menos 15 minutos o toda la noche. Asegurarse de remover bien la mezcla para evitar que se formen grumos.",
+            "Pelar y cortar el plátano y la naranja en rodajas.",
+            "Servir el pudín de chía con la fruta."
+        ],
+        "imagen": pudin_chia_yogur_fruta
+    },
+    {
+        "id": "bol_yogur_cereales_chia_frutas_bosque",
+        "nombre": "Bol de yogur con cereales, chía y frutas del bosque",
+        "tiempo_prep": 10,
+        "tiempo_coccion": 0,
+        "calorias": 237,
+        "proteina": 18,
+        "carbohidratos": 25,
+        "grasa": 7,
+        "tipo": "desayuno",
+        "nota": "Puedes dejar las semillas de chía en un tupper pequeño con agua o la leche que más te guste para que suelte los mucílagos y saques todo el partido a estas súpersemillas.",
+        "ingredientes": [
+            "10g semillas de chía (~2 cdas.)",
+            "10g proteína en polvo de suero de leche, de sabor (1/3 medida)",
+            "10g frutas del bosque, congeladas (~1.5 cdas.)",
+            "30g cereales avena, Crunchy, Hacendado",
+            "95g yogur griego, 2% de grasa"
+        ],
+        "pasos": [
+            "Verter el yogur en un bol y mezclarlo con la proteína en polvo. Si queda muy poca cantidad o muy denso, añade leche del tipo que más te guste hasta conseguir la textura deseada.",
+            "Cubrir el yogur con los cereales, las frutas del bosque y las semillas de chía. ¡Que aproveche!"
+        ],
+        "imagen": bol_yogur_cereales_chia_frutas_bosque
+    },
+    {
+        "id": "gachas_avena_platano_almendras_canela",
+        "nombre": "Gachas de avena proteicas con plátano, almendras y canela",
+        "tiempo_prep": 5,
+        "tiempo_coccion": 10,
+        "calorias": 428,
+        "proteina": 32,
+        "carbohidratos": 38,
+        "grasa": 16,
+        "tipo": "desayuno",
+        "nota": "Utilizar al menos el doble de líquido que de avena. Para esta receta se puede utilizar proteína en polvo de cualquier sabor.",
+        "ingredientes": [
+            "20g proteína en polvo de suero de leche, de sabor (1 medida)",
+            "25g almendras enteras, con piel (~2.5 cdas.)",
+            "35g avena, sin gluten",
+            "55g claras de huevo, pasteurizadas (2 pzas.)",
+            "60g plátano (½ pza.)",
+            "1-3 cdta. canela"
+        ],
+        "pasos": [
+            "Añadir la avena, el agua y una pizca de sal a un cazo. Llevar todo a ebullición, luego reducir a fuego bajo y dejar que se cocine durante unos 3 minutos sin dejar de remover. Agregar más agua en caso de desear una consistencia más líquida.",
+            "Apagar el fuego e incorporar las claras de huevo y la proteína en polvo batiendo con un tenedor. Mezclar bien para evitar que se formen grumos.",
+            "Picar las almendras y pelar y cortar el plátano en rodajas. Añadirlos a la avena junto con la canela antes de servir."
+        ],
+        "imagen": gachas_avena_platano_almendras_canela
+    },
+    {
+        "id": "yogur_platano_anacardos",
+        "nombre": "Yogur con plátano y anacardos",
+        "tiempo_prep": 5,
+        "tiempo_coccion": 0,
+        "calorias": 237,
+        "proteina": 18,
+        "carbohidratos": 22,
+        "grasa": 8,
+        "tipo": "desayuno",
+        "nota": "Puede ser todo en un bol o en modo smoothie. Si no tienes crema de anacardos puede ser el mismo peso en anacardos o en crema de cacahuete.",
+        "ingredientes": [
+            "15g crema de anacardos (~1 cucharada de)",
+            "60g plátano (½ pza.)",
+            "140g yogur natural 0% Fage",
+            "1-2 cdta. canela"
+        ],
+        "pasos": [
+            "Pelar el plátano y cortarlo en trozos pequeños.",
+            "Añadir todos los ingredientes a una batidora. Triturar durante unos 30 segundos, o hasta obtener una consistencia uniforme y cremosa. En caso de desear una consistencia más líquida, añadir un poco de agua o cubitos de hielo y volver a batir.",
+            "Servir el smoothie en un vaso."
+        ],
+        "imagen": yogur_platano_anacardos
+    },
+    {
+        "id": "skyr_manzana_coco",
+        "nombre": "Skyr con manzana y coco rallado",
+        "tiempo_prep": 10,
+        "tiempo_coccion": 0,
+        "calorias": 233,
+        "proteina": 20,
+        "carbohidratos": 22,
+        "grasa": 7,
+        "tipo": "desayuno",
+        "nota": "",
+        "ingredientes": [
+            "15g crema de cacahuete (~3 cdas.)",
+            "135g manzana (1 pza.)",
+            "140g skyr natural 0,2% de grasa"
+        ],
+        "pasos": [
+            "Lavar y cortar la manzana en trozos más pequeños.",
+            "Verter el skyr en un bol y cubrirlo con la crema de cacahuete y la manzana troceada. También se puede comer la manzana aparte."
+        ],
+        "imagen": skyr_manzana_coco
+    },
+    {
+        "id": "smoothie_platano_fresa",
+        "nombre": "Smoothie de proteínas con plátano y fresa",
+        "tiempo_prep": 5,
+        "tiempo_coccion": 0,
+        "calorias": 238,
+        "proteina": 10,
+        "carbohidratos": 30,
+        "grasa": 8,
+        "tipo": "snack",
+        "nota": "Para esta receta se puede utilizar proteína en polvo de cualquier sabor.",
+        "ingredientes": [
+            "5g semillas de chía (~1.5 cdtas.)",
+            "5g aceite de coco (~1 cucharadita)",
+            "10g proteína en polvo de suero de leche, de sabor (1/3 medida)",
+            "85g fresas, congeladas",
+            "95g plátano (1 pza.)"
+        ],
+        "pasos": [
+            "Añadir todos los ingredientes y un poco de agua a una batidora.",
+            "Batir durante unos 30 segundos, o hasta obtener una consistencia uniforme y cremosa.",
+            "Si es necesario, añadir un poco más de agua o cubitos de hielo en caso de desear una consistencia más fina, y volver a batir.",
+            "Servir el smoothie en un vaso."
+        ],
+        "imagen": smoothie_platano_fresa
+    },
+    {
+        "id": albaricoque_mango_leche_almendras_proteina,
+        "nombre": "Smoothie de albaricoque, mango, leche de almendras y proteína",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 10,
+        "calorias": 237,
+        "proteina": 16,
+        "carbohidratos": 35,
+        "grasa": 3,
+        "tipo": "snack",
+        "nota": "puedes sustituir albaricoques por melocotón, pera, manzana. Puedes combinar varias frutas de las mencionadas y también puedes consumirlo por separado (leche y proteína en batido y fruta en trocitos :) )",
+        "ingredientes": [
+            "15g Clear Whey (cualquier sabor), Bodylab",
+            "115g Mango, congelado",
+            "135g Albaricoque",
+            "215g Bebida de almendras, Original Alpro"
+        ],
+        "pasos": [
+            "Lavar los albaricoques y cortarlos en rodajas y quitarles el hueso. Cortar los albaricoques en trozos más pequeños.",
+            "Añadir todos los ingredientes restantes a una batidora. Batir durante unos 30 segundos, o hasta obtener una consistencia uniforme y cremosa. Si es necesario, añadir un poco de agua o cubitos de hielo en caso de desear una consistencia más fina, y volver a batir.",
+            "Servir el smoothie en un vaso."
+        ],
+        "imagen": albaricoque_mango_leche_almendras_proteina
+    },
+    {
+        "id": "smoothie_coco_frutas_nueces",
+        "nombre": "Smoothie proteico de leche coco frutas y nueces",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 5,
+        "calorias": 238,
+        "proteina": 7,
+        "carbohidratos": 12,
+        "grasa": 18,
+        "tipo": "snack",
+        "nota": "",
+        "ingredientes": [
+            "10g crema de almendras, 100% almendras",
+            "20g semillas de chía (~1.5 cdas.)",
+            "35g frambuesas",
+            "55g arándanos",
+            "100g leche de coco, 6-7% de grasa, light"
+        ],
+        "pasos": [
+            "Añadir todos los ingredientes a una batidora.",
+            "Batir durante unos 30 segundos, o hasta obtener una consistencia uniforme y cremosa.",
+            "En caso de desear una consistencia más líquida, añadir un poco de agua o cubitos de hielo y volver a batir.",
+            "Servir el smoothie en un vaso."
+        ],
+        "imagen": smoothie_coco_frutas_nueces
+    },
+    {
+        "id": "smoothie_naranja_frambuesa",
+        "nombre": "Smoothie proteico de naranja y frambuesa",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 0,
+        "calorias": 238,
+        "proteina": 12,
+        "carbohidratos": 26,
+        "grasa": 9,
+        "tipo": "snack",
+        "nota": "",
+        "ingredientes": [
+            "5g de aceite de coco (~1.5 cdtas.)",
+            "35g de espinacas troceadas, congeladas",
+            "110g de frambuesas congeladas",
+            "130g de naranja (1 pza.)",
+            "130g de queso fresco batido desnatado, 0% de grasa"
+        ],
+        "pasos": [
+            "Añadir el zumo de naranja, las espinacas, frambuesas, el aceite de coco y queso fresco a una batidora.",
+            "Triturar durante unos 30 segundos, o hasta obtener una consistencia uniforme y cremosa.",
+            "Añadir un poco de agua o cubitos de hielo en caso de desear una consistencia más fina, y volver a triturar.",
+            "Servir el smoothie en un vaso."
+        ],
+        "imagen": smoothie_naranja_frambuesa
+    },
+    {
+        "id": "smoothie_frutas_bosque_chocolate",
+        "nombre": "Smoothie proteico de frutas del bosque con chocolate negro",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 0,
+        "calorias": 237,
+        "proteina": 14,
+        "carbohidratos": 26,
+        "grasa": 8,
+        "tipo": "Snack",
+        "nota": "",
+        "ingredientes": [
+            "10g de chocolate negro, 70% cacao",
+            "10g de miel (~1.5 cdtas.)",
+            "10g de proteína en polvo de suero de leche, de sabor (1/3 medida)",
+            "55g de arándanos",
+            "75g de frambuesas, congeladas",
+            "100g de leche entera (~100 ml)"
+        ],
+        "pasos": [
+            "Añadir todos los ingredientes a una batidora.",
+            "Triturar durante unos 30 segundos, o hasta obtener una consistencia uniforme y cremosa.",
+            "En caso de desear una consistencia más líquida, añadir un poco de agua o cubitos de hielo y volver a batir.",
+            "Servir el smoothie en un vaso."
+        ],
+        "imagen": smoothie_frutas_bosque_chocolate
+    },
+    {
+        "id": "batido_proteinas_platano_chia",
+        "nombre": "Batido de proteínas con plátano y semillas de chía",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 0,
+        "calorias": 237,
+        "proteina": 14,
+        "carbohidratos": 6,
+        "grasa": 18,
+        "tipo": "Snack",
+        "nota": "Para esta receta se necesita una batidora y se puede utilizar proteína en polvo de cualquier sabor.",
+        "ingredientes": [
+            "15g de aceite de coco (~2.5 cdtas.)",
+            "15g de semillas de chía (~1 cucharada)",
+            "15g de proteína en polvo de suero de leche, de sabor (2/3 medida)",
+            "15g de plátano (½ pieza)"
+        ],
+        "pasos": [
+            "Pelar el plátano.",
+            "Añadir todos los ingredientes a una batidora. Batir durante unos 30 segundos, o hasta obtener una consistencia uniforme y cremosa. Si es necesario, añadir un poco de agua o cubitos de hielo en caso de desear una consistencia más fina, y volver a batir.",
+            "Servir en un vaso."
+        ],
+        "imagen": batido_proteinas_platano_chia
+    },
     {
         "id": "smoothie_platano_chocolate",
         "nombre": "Smoothie de plátano y chocolate",
