@@ -8,7 +8,7 @@ import tostada_platano_crema_cacahuete from '../assets/recetas/tostada_platano_c
 import smoothie_arandanos_platano_yogur from '../assets/recetas/smoothie_arandanos_platano_yogur.jpg';
 import overnight_oats_cacao from '../assets/recetas/overnight_oats_cacao.jpg';
 import salmon_patata_boniato_brocoli from '../assets/recetas/salmon_patata_boniato_brocoli.jpg';
-import ensalada_espinacas_garbanzos_mozzarella from '../assets/recetas/ensalada_espinacas_garbanzos_mozzarella.jpg';
+import ensalada_espinacas_garbanzos_mozzarella from '../assets/recetas/ensalada_espinaca_garbanzos_mozzarella.jpg';
 import tortitas_sirope_sin_azucar from '../assets/recetas/tortitas_sirope_sin_azucar.jpg';
 import sopa_fideos_arroz_verduras from '../assets/recetas/sopa_fideos_arroz_verduras.jpg';
 import salteado_tofu_arroz_verdura from '../assets/recetas/salteado_tofu_arroz_verdura.jpg';
