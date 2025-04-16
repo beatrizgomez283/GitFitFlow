@@ -12,11 +12,11 @@ export default function SesionDetalle({ sesion, onBack }) {
         const serieSemana = series.find(s => s.semana === semanaSeleccionada) || {};
 
         const textoDetalle = [
-            serieSemana.reps && `Reps: ${serieSemana.reps}`,
+            serieSemana.reps && `${serieSemana.reps} reps`,
             serieSemana.duracion && `${serieSemana.duracion}`,
             serieSemana.distancia && `${serieSemana.distancia}`,
             serieSemana.peso && `${serieSemana.peso}`,
-            ejercicio.descanso && `${ejercicio.descanso}s`
+            ejercicio.descanso && `${ejercicio.descanso}s de descanso`
         ].filter(Boolean).join(' · ');
 
         return (
@@ -47,13 +47,13 @@ export default function SesionDetalle({ sesion, onBack }) {
                         <div className="text-xs text-gray-600">{textoDetalle}</div>
                     </div>
                 </div>
-
                 {ejercicio.descansoDespues && (
                     <div className="flex items-center gap-1 text-xs text-gray-500 pl-2">
                         ⏱️ {ejercicio.descansoDespues} de descanso después de: ejercicio
                     </div>
                 )}
             </div>
+
         );
     };
 
@@ -94,15 +94,19 @@ export default function SesionDetalle({ sesion, onBack }) {
                 <div key={idxSet} className="space-y-3">
                     <h4 className="text-md font-semibold text-gray-800">
                         {set.titulo || `Set ${idxSet + 1}`}
+                        < div className="text-xs text-gray-500">{set.ejercicios.length} rondas</div>
                     </h4>
 
                     {Array.isArray(set.ejercicios) && set.ejercicios.length > 0 ? (
                         set.ejercicios.map((ejercicio, idxEj) =>
                             renderEjercicio(ejercicio, `${idxSet}-${idxEj}`)
                         )
+
                     ) : (
                         <div className="text-sm text-gray-400">No hay ejercicios.</div>
                     )}
+                    < div className="text-xs text-gray-500">⏱️{sesion.descanso}s de descanso después de: {set.titulo}</div>
+
                 </div>
             ))}
 

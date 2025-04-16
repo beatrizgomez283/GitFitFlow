@@ -2,12 +2,14 @@ export const planes = [
     {
         "id": "mikayla_phase_1",
         "nombre": "Mikayla Phase 1",
-        "descripcion": "Programa de 4 semanas enfocado en fuerza y durabilidad para tren inferior, superior y core. Incluye superseries estrat\u00e9gicas y trabajo de potencia.",
+        "descripcion": "Programa de 4 semanas enfocado en fuerza y durabilidad para tren inferior, superior y core. Incluye superseries estratégicas y trabajo de potencia.",
         "imagen": "/assets/planes/mikayla_phase_1.jpg",
         "sesiones": [
             {
-                "nombre": "D\u00eda 1 - Lower Body Strength + Durability",
+                "nombre": "Día 1 - Lower Body Strength + Durability",
                 "descripcion": "",
+                "tipo": "lower_body",
+                "descanso": 60,
                 "sets": [
                     {
                         "titulo": "Superserie A",
@@ -17,24 +19,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "4x8"
+                                        "reps": "8",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "4x8"
+                                        "reps": "8",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "5x6"
+                                        "reps": "6",
+                                        "series": "5"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "5x6"
+                                        "reps": "6",
+                                        "series": "5"
                                     }
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/YWgmDUEzfJc?feature=share"
                             },
@@ -43,24 +48,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "4x5"
+                                        "reps": "5",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "4x5"
+                                        "reps": "5",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "5x5"
+                                        "reps": "5",
+                                        "series": "5"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "5x5"
+                                        "reps": "5",
+                                        "series": "5"
                                     }
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtu.be/rBVK2du-zTY"
                             }
@@ -74,24 +82,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x10"
+                                        "reps": "10",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x10"
+                                        "reps": "10",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "4x10"
+                                        "reps": "10",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "4x10"
+                                        "reps": "10",
+                                        "series": "4"
                                     }
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/uQ1GjPn0zsc"
                             },
@@ -100,24 +111,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x30-40s"
+                                        "reps": "30-40s",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x30-40s"
+                                        "reps": "30-40s",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "4x40s"
+                                        "reps": "40s",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "4x40s"
+                                        "reps": "40s",
+                                        "series": "4"
                                     }
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/nJbOX6bWtkU"
                             }
@@ -131,24 +145,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x8 each side"
+                                        "reps": "8 each side",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x8 each side"
+                                        "reps": "8 each side",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "3x10 each side"
+                                        "reps": "10 each side",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "3x10 each side"
+                                        "reps": "10 each side",
+                                        "series": "3"
                                     }
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/iIYBrGzA1JI"
                             },
@@ -157,24 +174,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x8 each side"
+                                        "reps": "8 each side",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x8 each side"
+                                        "reps": "8 each side",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "3x10 each side"
+                                        "reps": "10 each side",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "3x10 each side"
+                                        "reps": "10 each side",
+                                        "series": "3"
                                     }
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/Tm6IYejB_8M"
                             }
@@ -188,24 +208,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x10"
+                                        "reps": "10",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x10"
+                                        "reps": "10",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "3x12"
+                                        "reps": "12",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "3x12"
+                                        "reps": "12",
+                                        "series": "3"
                                     }
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/_Zn-eV5WgE0"
                             },
@@ -214,24 +237,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x15-20s each side"
+                                        "reps": "15-20s each side",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x15-20s each side"
+                                        "reps": "15-20s each side",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "3x20-30s each side"
+                                        "reps": "20-30s each side",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "3x20-30s each side"
+                                        "reps": "20-30s each side",
+                                        "series": "3"
                                     }
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/yG9kUU2uyfY"
                             }
@@ -240,7 +266,9 @@ export const planes = [
                 ]
             },
             {
-                "nombre": "D\u00eda 2 - Upper Body Strength + Durability",
+                "nombre": "Día 2 - Upper Body Strength + Durability",
+                "tipo": "uper_body",
+                "descanso": 60,
                 "sets": [
                     {
                         "titulo": "Superserie A",
@@ -250,24 +278,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "4x8"
+                                        "reps": "8",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "4x8"
+                                        "reps": "8",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "4x6"
+                                        "reps": "6",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "4x6"
+                                        "reps": "6",
+                                        "series": "4"
                                     }
                                 ],
                                 "descanso": 90,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/idP02t2oyBU"
                             },
@@ -276,24 +307,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "4x8"
+                                        "reps": "8",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "4x8"
+                                        "reps": "8",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "4xAMRAP"
+                                        "reps": "AMRAP",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "4xAMRAP"
+                                        "reps": "AMRAP",
+                                        "series": "4"
                                     }
                                 ],
                                 "descanso": 90,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/5XWeIk2S1pw"
                             }
@@ -307,24 +341,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x10 +10 sec hold"
+                                        "reps": "10 +10 sec hold",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x10 +10 sec hold"
+                                        "reps": "10 +10 sec hold",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "4x10 +15 sec hold"
+                                        "reps": "10 +15 sec hold",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "4x10 +15 sec hold"
+                                        "reps": "10 +15 sec hold",
+                                        "series": "4"
                                     }
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/MnVIJbHX-W4"
                             },
@@ -333,24 +370,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3xAMRAP"
+                                        "reps": "AMRAP",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3xAMRAP"
+                                        "reps": "AMRAP",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "4xAMRAP"
+                                        "reps": "AMRAP",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "4xAMRAP"
+                                        "reps": "AMRAP",
+                                        "series": "4"
                                     }
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/QlhMQHLsoBc"
                             }
@@ -364,24 +404,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x5 each"
+                                        "reps": "5 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x5 each"
+                                        "reps": "5 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "3x6 each"
+                                        "reps": "6 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "3x6 each"
+                                        "reps": "6 each",
+                                        "series": "3"
                                     }
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/ura1t7-FXHU"
                             },
@@ -390,24 +433,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x8 each"
+                                        "reps": "8 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x8 each"
+                                        "reps": "8 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "3x10 each"
+                                        "reps": "10 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "3x10 each"
+                                        "reps": "10 each",
+                                        "series": "3"
                                     }
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/b8mYkqXsktE"
                             }
@@ -421,24 +467,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x8 each"
+                                        "reps": "8 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x8 each"
+                                        "reps": "8 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "3x10 each"
+                                        "reps": "10 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "3x10 each"
+                                        "reps": "10 each",
+                                        "series": "3"
                                     }
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtu.be/t8Azu8rJLJs"
                             },
@@ -447,24 +496,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x8 each"
+                                        "reps": "8 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x8 each"
+                                        "reps": "8 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "3x10 each"
+                                        "reps": "10 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "3x10 each"
+                                        "reps": "10 each",
+                                        "series": "3"
                                     }
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/6aSnwWQ2HLE"
                             }
@@ -473,8 +525,9 @@ export const planes = [
                 ]
             },
             {
-                "nombre": "D\u00eda 3 - Sprints and Core",
-                tipo: "core",
+                "nombre": "Día 3 - Sprints and Core",
+                "tipo": "core",
+                "descanso": 60,
                 "sets": [
                     {
                         "titulo": "Sprint Intervals",
@@ -484,24 +537,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "8x10s on, 50s off"
+                                        "reps": "10s on, 50s off",
+                                        "series": "8"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "8x10s on, 50s off"
+                                        "reps": "10s on, 50s off",
+                                        "series": "8"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "10x10s on, 50s off"
+                                        "reps": "10s on, 50s off",
+                                        "series": "10"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "10x10s on, 50s off"
+                                        "reps": "10s on, 50s off",
+                                        "series": "10"
                                     }
                                 ],
                                 "descanso": 50,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": ""
                             }
@@ -515,24 +571,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x20s each"
+                                        "reps": "20s each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x20s each"
+                                        "reps": "20s each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "3x30s each"
+                                        "reps": "30s each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "3x30s each"
+                                        "reps": "30s each",
+                                        "series": "3"
                                     }
                                 ],
                                 "descanso": 30,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/8XRYnWm1leA"
                             },
@@ -541,24 +600,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x10 each"
+                                        "reps": "10 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x10 each"
+                                        "reps": "10 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "3x12 each"
+                                        "reps": "12 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "3x12 each"
+                                        "reps": "12 each",
+                                        "series": "3"
                                     }
                                 ],
                                 "descanso": 30,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/lKgnvHT_rJQ"
                             },
@@ -567,24 +629,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x35s"
+                                        "reps": "35s",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x35s"
+                                        "reps": "35s",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "3x45s"
+                                        "reps": "45s",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "3x45s"
+                                        "reps": "45s",
+                                        "series": "3"
                                     }
                                 ],
                                 "descanso": 30,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/QmxH_YYntPo"
                             },
@@ -593,24 +658,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x45s"
+                                        "reps": "45s",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x45s"
+                                        "reps": "45s",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "3x45-60s"
+                                        "reps": "45-60s",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "3x45-60s"
+                                        "reps": "45-60s",
+                                        "series": "3"
                                     }
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/AvDwSzVXUWE"
                             }
@@ -619,7 +687,9 @@ export const planes = [
                 ]
             },
             {
-                "nombre": "D\u00eda 4 - Dynamic Effort Lower Body",
+                "nombre": "Día 4 - Dynamic Effort Lower Body",
+                "tipo": "lower_body",
+                "descanso": 60,
                 "sets": [
                     {
                         "titulo": "Superserie A",
@@ -629,24 +699,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "4x6"
+                                        "reps": "6",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "4x6"
+                                        "reps": "6",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "5x5"
+                                        "reps": "5",
+                                        "series": "5"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "5x5"
+                                        "reps": "5",
+                                        "series": "5"
                                     }
                                 ],
                                 "descanso": 90,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/KMB9b0uH2rM"
                             },
@@ -655,24 +728,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "4x8"
+                                        "reps": "8",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "4x8"
+                                        "reps": "8",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "5x8"
+                                        "reps": "8",
+                                        "series": "5"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "5x8"
+                                        "reps": "8",
+                                        "series": "5"
                                     }
                                 ],
                                 "descanso": 90,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/OPL5rl-jyEQ"
                             }
@@ -686,24 +762,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x10"
+                                        "reps": "10",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x10"
+                                        "reps": "10",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "4x10"
+                                        "reps": "10",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "4x10"
+                                        "reps": "10",
+                                        "series": "4"
                                     }
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/37eO2eu28dE"
                             },
@@ -712,24 +791,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x10"
+                                        "reps": "10",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x10"
+                                        "reps": "10",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "4x12"
+                                        "reps": "12",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "4x12"
+                                        "reps": "12",
+                                        "series": "4"
                                     }
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtu.be/Ss4gsMnEDHo"
                             }
@@ -743,24 +825,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x6 each"
+                                        "reps": "6 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x6 each"
+                                        "reps": "6 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "3x8 each"
+                                        "reps": "8 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "3x8 each"
+                                        "reps": "8 each",
+                                        "series": "3"
                                     }
                                 ],
                                 "descanso": 75,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/Bjn15ZRvVoA"
                             },
@@ -769,24 +854,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x6 each"
+                                        "reps": "6 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x6 each"
+                                        "reps": "6 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "3x8-10 each"
+                                        "reps": "8-10 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "3x8-10 each"
+                                        "reps": "8-10 each",
+                                        "series": "3"
                                     }
                                 ],
                                 "descanso": 75,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/qlII9NfVntk"
                             }
@@ -800,24 +888,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x20 total"
+                                        "reps": "20 total",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x20 total"
+                                        "reps": "20 total",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "3x24 total"
+                                        "reps": "24 total",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "3x24 total"
+                                        "reps": "24 total",
+                                        "series": "3"
                                     }
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/M9s2bMz82ug"
                             }
@@ -831,24 +922,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x6-8 each"
+                                        "reps": "6-8 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x6-8 each"
+                                        "reps": "6-8 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "3x8-10 each"
+                                        "reps": "8-10 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "3x8-10 each"
+                                        "reps": "8-10 each",
+                                        "series": "3"
                                     }
                                 ],
                                 "descanso": 40,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/k4HW3xSl82o"
                             }
@@ -857,7 +951,9 @@ export const planes = [
                 ]
             },
             {
-                "nombre": "D\u00eda 5 - Dynamic Effort Upper Body",
+                "nombre": "Día 5 - Dynamic Effort Upper Body",
+                "tipo": "uper_body",
+                "descanso": 60,
                 "sets": [
                     {
                         "titulo": "Superserie A",
@@ -867,24 +963,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "4x8"
+                                        "reps": "8",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "4x8"
+                                        "reps": "8",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "5x6"
+                                        "reps": "6",
+                                        "series": "5"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "5x6"
+                                        "reps": "6",
+                                        "series": "5"
                                     }
                                 ],
                                 "descanso": 90,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/lzdmalWkNdI"
                             },
@@ -893,24 +992,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "4x6-8"
+                                        "reps": "6-8",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "4x6-8"
+                                        "reps": "6-8",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "5xAMRAP"
+                                        "reps": "AMRAP",
+                                        "series": "5"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "5xAMRAP"
+                                        "reps": "AMRAP",
+                                        "series": "5"
                                     }
                                 ],
                                 "descanso": 90,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/tKhuXx0Pk4g"
                             }
@@ -924,24 +1026,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x15 total"
+                                        "reps": "15 total",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x15 total"
+                                        "reps": "15 total",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "4x15 total"
+                                        "reps": "15 total",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "4x15 total"
+                                        "reps": "15 total",
+                                        "series": "4"
                                     }
                                 ],
                                 "descanso": 75,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/mujypvobSC4"
                             },
@@ -950,24 +1055,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x15"
+                                        "reps": "15",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x15"
+                                        "reps": "15",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "4x15"
+                                        "reps": "15",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "4x15"
+                                        "reps": "15",
+                                        "series": "4"
                                     }
                                 ],
                                 "descanso": 75,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/ilZHJamEHOk"
                             }
@@ -981,24 +1089,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x10"
+                                        "reps": "10",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x10"
+                                        "reps": "10",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "3x12"
+                                        "reps": "12",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "3x12"
+                                        "reps": "12",
+                                        "series": "3"
                                     }
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/Dud_8rwUDSY"
                             },
@@ -1007,24 +1118,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "duracion": "3x20"
+                                        "duracion": "20",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "duracion": "3x20"
+                                        "duracion": "20",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "duracion": "3x30"
+                                        "duracion": "30",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 4,
-                                        "duracion": "3x30"
+                                        "duracion": "30",
+                                        "series": "3"
                                     }
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/88bEs-UlTjc"
                             }
@@ -1038,24 +1152,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x8 each"
+                                        "reps": "8 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x8 each"
+                                        "reps": "8 each",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "4x10 each"
+                                        "reps": "10 each",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "4x10 each"
+                                        "reps": "10 each",
+                                        "series": "4"
                                     }
                                 ],
                                 "descanso": 75,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/pG0VBq03irY"
                             },
@@ -1064,24 +1181,27 @@ export const planes = [
                                 "series": [
                                     {
                                         "semana": 1,
-                                        "reps": "3x15"
+                                        "reps": "15",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 2,
-                                        "reps": "3x15"
+                                        "reps": "15",
+                                        "series": "3"
                                     },
                                     {
                                         "semana": 3,
-                                        "reps": "4x15"
+                                        "reps": "15",
+                                        "series": "4"
                                     },
                                     {
                                         "semana": 4,
-                                        "reps": "4x15"
+                                        "reps": "15",
+                                        "series": "4"
                                     }
                                 ],
                                 "descanso": 75,
                                 "nota": "",
-
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/bK-zhIdxs-A"
                             }

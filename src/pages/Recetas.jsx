@@ -12,7 +12,7 @@ export default function Recetas() {
         : recetas.filter(r => r.tipo === filtro);
 
     return (
-        <div className="max-w-md mx-auto px-4 py-6">
+        <div className="max-w-md mx-auto px-3 py-6">
             <h1 className="text-2xl font-bold mb-4 text-pink-600">Recetas 🍽️</h1>
 
             <div className="flex gap-2 overflow-x-auto pb-3 mb-4">
@@ -28,7 +28,7 @@ export default function Recetas() {
                 ))}
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3">
                 {recetasFiltradas.map((receta) => (
                     <Link
                         key={receta.id}
