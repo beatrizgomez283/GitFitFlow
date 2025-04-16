@@ -1,5 +1,5 @@
 ﻿import banana_bread_con_nueces from '../assets/recetas/banana_bread_con_nueces.jpg';
-import hummus_pan_zanahoria from '../assets/recetas/hummus_pan_zanahoria.jpg';
+import hummus_pan_centeno_zanahoria from '../assets/recetas/hummus_pan_centeno_zanahoria.jpg';
 import boniato_chipotle from '../assets/recetas/boniato_chipotle.jpg';
 import yogur_arandanos_kiwi_almendras from '../assets/recetas/yogur_arandanos_kiwi_almendras.jpg';
 import mugcake_chocolate from '../assets/recetas/mugcake_chocolate.jpg';
@@ -9,15 +9,16 @@ import smoothie_arandanos_platano_yogur from '../assets/recetas/smoothie_arandan
 import overnight_oats_cacao from '../assets/recetas/overnight_oats_cacao.jpg';
 import salmon_patata_boniato_brocoli from '../assets/recetas/salmon_patata_boniato_brocoli.jpg';
 import ensalada_espinacas_garbanzos_mozzarella from '../assets/recetas/ensalada_espinacas_garbanzos_mozzarella.jpg';
-import tortitas_sirope_sin_azucar from '../assets/recetas/tortitas_sirope_sin_azucar.PNG';
-import sopa_fideos_arroz_verduras from '../assets/recetas/sopa_fideos_arroz_verduras.PNG';
-import salteado_tofu_arroz_verdura from '../assets/recetas/salteado_tofu_arroz_verdura.PNG';
-import hamburguesa_vegetal_remolacha from '../assets/recetas/hamburguesa_vegetal_remolacha.PNG';
-import guiso_garbanzos_arroz_berenjena_coco from '../assets/recetas/guiso_garbanzos_arroz_berenjena_coco.PNG';
-import pollo_vegano_brocoli_arroz_pinones from '../assets/recetas/pollo_vegano_brocoli_arroz_pinones.PNG';
-import arroz_salteado_verduras_pollo from '../assets/recetas/arroz_salteado_verduras_pollo.PNG';
-import ensalada_tofu_lentejas_boniato_melocoton from '../assets/recetas/ensalada_tofu_lentejas_boniato_melocoton.PNG';
-import pollo_vegano_arroz from '../assets/recetas/pollo_vegano_arroz.PNG';
+import tortitas_sirope_sin_azucar from '../assets/recetas/tortitas_sirope_sin_azucar.jpg';
+import sopa_fideos_arroz_verduras from '../assets/recetas/sopa_fideos_arroz_verduras.jpg';
+import salteado_tofu_arroz_verdura from '../assets/recetas/salteado_tofu_arroz_verdura.jpg';
+import hamburguesa_vegetal_remolacha from '../assets/recetas/hamburguesa_vegetal_remolacha.jpg';
+import guiso_garbanzos_arroz_berenjena_coco from '../assets/recetas/guiso_garbanzos_arroz_berenjena_coco.jpg';
+import pollo_vegano_brocoli_arroz_pinones from '../assets/recetas/pollo_vegano_brocoli_arroz_pinones.jpg';
+import arroz_salteado_verduras_pollo from '../assets/recetas/arroz_salteado_verduras_pollo.jpg';
+import ensalada_tofu_lentejas_boniato_melocoton from '../assets/recetas/ensalada_tofu_lentejas_boniato_melocoton.jpg';
+import pollo_vegano_arroz from '../assets/recetas/pollo_vegano_arroz.jpg';
+import bowl_judias_negras_quinoa_maiz from '../assets/recetas/bowl_judias_negras_quinoa_maiz.jpg';
 
 
 const recetas = [
@@ -45,7 +46,7 @@ const recetas = [
             "Freír el pollo vegano con un chorrito de agua en una sartén a fuego medio-alto hasta que se caliente bien y se dore.",
             "Servir el pollo vegano y el arroz en un plato. Condimentar con sal, pimienta y cualquier otra especia o hierba al gusto y cubrir con las semillas de sésamo."
         ],
-        "imagen": "pollo_vegano_arroz"
+        "imagen": pollo_vegano_arroz
     },
     {
         "id": "ensalada_tofu_lentejas_boniato_melocoton",
@@ -77,7 +78,7 @@ const recetas = [
             "Lavar el melocotón, el pepino y los canónigos, y cortarlos en rodajas.",
             "Mezclar todos los ingredientes en un bol, espolvorear con levadura nutricional y servir."
         ],
-        "imagen": "ensalada_tofu_lentejas_boniato_melocoton"
+        "imagen": ensalada_tofu_lentejas_boniato_melocoton
     },
     {
         "id": "arroz_salteado_verduras_pollo",
@@ -105,7 +106,7 @@ const recetas = [
             "Saltear el pollo con un chorrito de agua en una sartén a fuego medio-alto hasta que se caliente bien y se dore. Puedes saltearlo al final con las verduras para que cojan el sabor.",
             "Servir el pollo, verduras y el arroz en un plato. Condimentar con sal, pimienta y cualquier otra especia o hierba al gusto y cubrir con las semillas de sésamo."
         ],
-        "imagen": "arroz_salteado_verduras_pollo"
+        "imagen": arroz_salteado_verduras_pollo
     },
     {
         "id": "hummus_pan_centeno_zanahoria",
@@ -132,7 +133,7 @@ const recetas = [
             "Lavar y cortar las zanahorias en bastones.",
             "Tostar el pan y servirlo con el hummus casero y los bastones de zanahoria."
         ],
-        "imagen": "hummus_pan_centeno_zanahoria"
+        "imagen": hummus_pan_centeno_zanahoria
     },
     {
         "id": "pollo_vegano_brocoli_arroz_pinones",
@@ -157,7 +158,7 @@ const recetas = [
             "Enjuagar el brócoli y cortarlo en ramitos pequeños y el tallo en trozos finos, según tu gusto. Hervir durante aproximadamente 3 minutos o hasta que esté tierno. Salpimentar.",
             "Servir el arroz con el pollo vegano y el brócoli. Cubrir con los piñones y salpimentar."
         ],
-        "imagen": "pollo_vegano_brocoli_arroz_pinones"
+        "imagen": pollo_vegano_brocoli_arroz_pinones
     },
     {
         "id": "guiso_garbanzos_arroz_berenjena_coco",
@@ -186,7 +187,7 @@ const recetas = [
             "Agregar los garbanzos, la leche de coco y agua suficiente para cubrir todos los ingredientes. Llevar a ebullición. Dejar cocer a fuego medio-bajo sin tapar durante unos 10-12 minutos hasta que las verduras estén tiernas.",
             "Salpimentar el guiso al gusto y servir."
         ],
-        "imagen": "guiso_garbanzos_arroz_berenjena_coco"
+        "imagen": guiso_garbanzos_arroz_berenjena_coco
     },
     {
         "id": "bowl_judias_negras_quinoa_maiz",
@@ -214,7 +215,7 @@ const recetas = [
             "Lavar y picar el pimiento. Calentar una sartén a fuego medio, cubrirla con el spray para cocinar y añadir los pimientos. Cocer hasta que estén tiernos y añadir las judías y el maíz congelado. Sazonar con guindilla en polvo, sal y pimienta y cocinar hasta que se caliente.",
             "Lavar y picar el cilantro. Mezclar la quinoa con la mezcla de judías y el aceite y servir en un bol. Adornar con el cilantro fresco."
         ],
-        "imagen": "bowl_judias_negras_quinoa_maiz"
+        "imagen": bowl_judias_negras_quinoa_maiz
     },
     {
         "id": "hamburguesa_vegetal_remolacha",
@@ -246,7 +247,7 @@ const recetas = [
             "Lavar la lechuga, el tomate y el pepino, y cortar el tomate y el pepino en rodajas.",
             "Servir las hamburguesas de remolacha sobre la lechuga y cubrir con el tomate y el pepino."
         ],
-        "imagen": "hamburguesa_vegetal_remolacha"
+        "imagen": hamburguesa_vegetal_remolacha
     },
     {
         "id": "salteado_tofu_arroz_verdura",
@@ -278,7 +279,7 @@ const recetas = [
             "Freír el tofu en una sartén con un chorrito de agua a fuego medio-alto hasta que el tofu quede crujiente y dorado. Luego añadir las verduras y rehogarlas hasta que queden blandas.",
             "Servir el arroz con el tofu y las verduras."
         ],
-        "imagen": "salteado_tofu_arroz_verdura"
+        "imagen": salteado_tofu_arroz_verdura
     },
     {
         "id": "sopa_fideos_arroz_verduras",
@@ -310,7 +311,7 @@ const recetas = [
             "Una vez que el caldo haya hervido, reducir a fuego bajo y añadir la col rizada, las setas y los fideos de arroz. Cocer a fuego lento hasta que los fideos de arroz estén cocidos según el tiempo indicado en el paquete.",
             "Cubrir la sopa de fideos con el tofu, la cebolleta, la sriracha y zumo de lima al gusto."
         ],
-        "imagen": "sopa_fideos_arroz_verduras"
+        "imagen": sopa_fideos_arroz_verduras
     },
     {
         "id": "tortitas_sirope_sin_azucar",
@@ -338,7 +339,7 @@ const recetas = [
             "Calentar un chorrito de aceite en una sartén a fuego medio y verter unas 2-3 cucharadas de masa por cada tortita. Freír la masa durante aproximadamente 1.5 minutos, hasta que aparezcan burbujas en la superficie. Darle la vuelta a la tortita y cocinarla del otro lado durante unos minutos hasta que empiece a dorarse. Repetir el proceso con el resto de la masa.",
             "Servir las tortitas con el sirope sin azúcar."
         ],
-        "imagen": "tortitas_sirope_sin_azucar"
+        "imagen": tortitas_sirope_sin_azucar
     },
     {
         "id": "ensalada_espinacas_garbanzos_mozzarella",
