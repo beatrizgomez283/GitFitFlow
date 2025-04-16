@@ -8,27 +8,35 @@ export default function Entrenamientos() {
   const [planSeleccionado, setPlanSeleccionado] = useState(null);
   const [sesionSeleccionada, setSesionSeleccionada] = useState(null);
 
-  const handleSeleccionarSesion = (sesion) => {
-    setSesionSeleccionada(sesion);
-  };
+    const handleSeleccionarSesion = (sesion) => {
+        console.log('Sesión seleccionada:', sesion); // para debug
+        setSesionSeleccionada(sesion);
+    };
+
 
   const handleVolverPlan = () => {
     setSesionSeleccionada(null);
   };
 
-  if (sesionSeleccionada) {
-    return <SesionDetalle sesion={sesionSeleccionada} onBack={handleVolverPlan} />;
-  }
+    if (sesionSeleccionada) {
+        return (
+            <SesionDetalle
+                sesion={sesionSeleccionada}
+                onBack={handleVolverPlan}
+            />
+        );
+    }
 
-  if (planSeleccionado) {
-    return (
-      <PlanDetalle
-        plan={planSeleccionado}
-        onClose={() => setPlanSeleccionado(null)}
-        onSelectSesion={handleSeleccionarSesion} // 👈 pasamos la prop
-      />
-    );
-  }
+
+    if (planSeleccionado) {
+        return (
+            <PlanDetalle
+                plan={planSeleccionado}
+                onClose={() => setPlanSeleccionado(null)}
+                onSelectSesion={handleSeleccionarSesion} // 👈 esto es necesario
+            />
+        );
+    }
 
   const planActivo = planes[0];
 
