@@ -19,9 +19,102 @@ import arroz_salteado_verduras_pollo from '../assets/recetas/arroz_salteado_verd
 import ensalada_tofu_lentejas_boniato_melocoton from '../assets/recetas/ensalada_tofu_lentejas_boniato_melocoton.jpg';
 import pollo_vegano_arroz from '../assets/recetas/pollo_vegano_arroz.jpg';
 import bowl_judias_negras_quinoa_maiz from '../assets/recetas/bowl_judias_negras_quinoa_maiz.jpg';
+import boniato_brocoli_manzana from '../assets/recetas/boniato_brocoli_manzana.jpg';
+import pimiento_relleno_vegano from '../assets/recetas/pimiento_relleno_vegano.jpg';
+import smoothie_platano_chocolate from '../assets/recetas/smoothie_platano_chocolate.jpg';
+
+
 
 
 const recetas = [
+    {
+        "id": "smoothie_platano_chocolate",
+        "nombre": "Smoothie de plátano y chocolate",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 0,
+        "calorias": 238,
+        "proteina": 17,
+        "carbohidratos": 24,
+        "grasa": 8,
+        "tipo": "Snack",
+        "nota": "Para esta receta se recomienda utilizar proteína en polvo sabor chocolate y se necesita una batidora.",
+        "ingredientes": [
+            "15g de proteína en polvo de suero de leche, de sabor",
+            "15g de crema de cacahuete (~2.5 cdtas.)",
+            "60 ml de leche desnatada (0% grasa)",
+            "85g de plátano (1 pieza)",
+            "1-2 cdtas. de cacao en polvo",
+            "1-2 cdtas. de canela"
+        ],
+        "pasos": [
+            "Pelar el plátano y cortarlo en trozos.",
+            "Añadir todos los ingredientes a una batidora. Batir durante unos 30 segundos, o hasta obtener una consistencia uniforme y cremosa. Para crear una consistencia más fina, agregar un chorrito de agua o cubitos de hielo.",
+            "Servir el smoothie en un vaso."
+        ],
+        "imagen": smoothie_platano_chocolate
+    },
+    {
+        "id": "pimiento_relleno_vegano",
+        "nombre": "Pimiento relleno vegano",
+        "tiempoPrep": 15,
+        "tiempoCoccion": 40,
+        "calorias": 617,
+        "proteina": 45,
+        "carbohidratos": 60,
+        "grasa": 21,
+        "tipo": "Comida",
+        "nota": "",
+        "ingredientes": [
+            "10g de aceite de oliva",
+            "10g de almendras enteras, con piel",
+            "40g de cebolla morada (1/2 pieza)",
+            "60g de quinoa cruda",
+            "65g de salsa de tomate",
+            "155g de tiras originales de pollo a base de plantas, Heura",
+            "260g de pimiento rojo (1 1/2 piezas)"
+        ],
+        "pasos": [
+            "NOTA: Puedes hacer el relleno con el pimiento todo en modo salteado :)",
+            "Precalentar el horno a 200ºC (gas) o 180ºC (ventilador).",
+            "Lavar el pimiento, cortarle la corona y retirar las semillas. Colocarlo boca abajo en una bandeja de horno forrada con papel de encerado.",
+            "Poner a hervir un cazo con agua y añadir una pizca de sal. Cocer la quinoa según las instrucciones del paquete.",
+            "Pelar y cortar la cebolla en dados. Calentar una sartén con un chorrito de agua a fuego medio y freír la cebolla y el pollo vegano hasta que estén dorados.",
+            "Picar las almendras. En un bol mezclar la quinoa, el pollo vegano, las almendras y la salsa de tomate y salpimentar.",
+            "Sacar el pimiento del horno, y rellenarlo con la mezcla de quinoa y pollo vegano. Cubrirlo con papel de aluminio y hornearlo durante 15–20 minutos más, o hasta que esté tierno."
+        ],
+        "imagen": pimiento_relleno_vegano
+    },
+    {
+        "id": "boniato_brocoli_manzana",
+        "nombre": "Boniato con brócoli y manzana",
+        "tiempoPrep": 15,
+        "tiempoCoccion": 40,
+        "calorias": 618,
+        "proteina": 33,
+        "carbohidratos": 80,
+        "grasa": 17,
+        "tipo": "Comida",
+        "nota": "Un plato completo y saciante con carbohidratos complejos, proteínas magras y fibra. Perfecto para un almuerzo nutritivo.",
+        "ingredientes": [
+            "10 g de aceite de oliva (~1.5 cucharaditas)",
+            "25 g de cebolla amarilla (1/4 pieza)",
+            "35 g de mozzarella light (8–9% de grasa)",
+            "50 g de carne picada de pollo (3–6% de grasa)",
+            "75 g de pan integral (2 rebanadas)",
+            "75 g de manzana (1/2 pieza)",
+            "155 g de brócoli (1/2 cabeza)",
+            "205 g de boniato (1 pieza)"
+        ],
+        "pasos": [
+            "Precalentar el horno a 200 °C (gas) o 180 °C (ventilador).",
+            "Lavar la manzana y pelar la cebolla. Cortar la manzana y la cebolla en dados.",
+            "Pelar o lavar los boniatos, cortarlos a dados y distribuirlos sobre una bandeja de horno forrada con papel pergamino. Añadir un poco de aceite, sal, pimienta y otras especias o hierbas al gusto. Hornear durante unos 30–40 minutos, hasta que estén tiernos y dorados.",
+            "Mientras tanto, lavar el brócoli y cortarlo en ramilletes más pequeños. También se puede picar el tallo en trozos pequeños. Hervir agua con una pizca de sal en un cazo. Añadir el brócoli y hervir durante aproximadamente 3 minutos, o hasta que esté tierno.",
+            "Calentar una sartén antiadherente a fuego medio-alto y freír el pollo hasta que esté crujiente y dorado.",
+            "Cuando el boniato esté cocido, mezclar todos los ingredientes y salpimentar."
+        ],
+        "imagen": boniato_brocoli_manzana
+    },
     {
         "id": "pollo_vegano_arroz",
         "nombre": "Pollo vegano con arroz",
