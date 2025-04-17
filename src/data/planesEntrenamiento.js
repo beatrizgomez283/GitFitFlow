@@ -721,7 +721,7 @@ export const planes = [
                                 "descanso": 90,
                                 "nota": "",
                                 "historico": [],
-                                "url": "https://youtube.com/shorts/KMB9b0uH2rM"
+                                "url": "https://youtube.com/shorts/37eO2eu28dE"
                             },
                             {
                                 "nombre": "Banded Assisted Vertical Jumps",
@@ -750,7 +750,7 @@ export const planes = [
                                 "descanso": 90,
                                 "nota": "",
                                 "historico": [],
-                                "url": "https://youtube.com/shorts/OPL5rl-jyEQ"
+                                "url": "https://youtu.be/Ss4gsMnEDHo"
                             }
                         ]
                     },
@@ -784,7 +784,7 @@ export const planes = [
                                 "descanso": 60,
                                 "nota": "",
                                 "historico": [],
-                                "url": "https://youtube.com/shorts/37eO2eu28dE"
+                                "url": "https://www.youtube.com/shorts/KMB9b0uH2rM"
                             },
                             {
                                 "nombre": "Hip Banded KB Swing",
@@ -813,7 +813,7 @@ export const planes = [
                                 "descanso": 60,
                                 "nota": "",
                                 "historico": [],
-                                "url": "https://youtu.be/Ss4gsMnEDHo"
+                                "url": "https://youtube.com/shorts/k4HW3xSl82o"
                             }
                         ]
                     },
@@ -847,7 +847,7 @@ export const planes = [
                                 "descanso": 75,
                                 "nota": "",
                                 "historico": [],
-                                "url": "https://youtube.com/shorts/Bjn15ZRvVoA"
+                                "url": "https://youtube.com/shorts/qlII9NfVntk"
                             },
                             {
                                 "nombre": "Alt KB Drop Split Squat",
@@ -876,7 +876,7 @@ export const planes = [
                                 "descanso": 75,
                                 "nota": "",
                                 "historico": [],
-                                "url": "https://youtube.com/shorts/qlII9NfVntk"
+                                "url": "https://youtube.com/shorts/M9s2bMz82ug"
                             }
                         ]
                     },
@@ -910,7 +910,7 @@ export const planes = [
                                 "descanso": 60,
                                 "nota": "",
                                 "historico": [],
-                                "url": "https://youtube.com/shorts/M9s2bMz82ug"
+                                "url": "https://youtube.com/shorts/OPL5rl-jyEQ"
                             }
                         ]
                     },
@@ -944,7 +944,7 @@ export const planes = [
                                 "descanso": 40,
                                 "nota": "",
                                 "historico": [],
-                                "url": "https://youtube.com/shorts/k4HW3xSl82o"
+                                "url": "https://www.youtube.com/shorts/Bjn15ZRvVoA"
                             }
                         ]
                     }

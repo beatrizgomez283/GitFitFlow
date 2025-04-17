@@ -67,7 +67,21 @@ import ensalada_caprese_mozzarella_pollo from '../assets/recetas/ensalada_capres
 import atun_arroz_aguacate_pepino from '../assets/recetas/atun_arroz_aguacate_pepino.jpg';
 import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
 
-
+/*
+import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
+import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
+import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
+import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
+import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
+import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
+import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
+import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
+import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
+import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
+import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
+import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
+import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
+*/
 
 
 
