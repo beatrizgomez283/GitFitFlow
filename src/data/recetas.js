@@ -52,11 +52,449 @@ import crema_calabaza_zanahorias from '../assets/recetas/crema_calabaza_zanahori
 import sopa_pollo_verduras from '../assets/recetas/sopa_pollo_verduras.jpg';
 import chili_carne_arroz_alubias from '../assets/recetas/chili_carne_arroz_alubias.jpg';
 import butter_chicken from '../assets/recetas/butter_chicken.jpg';
+import crema_calabacin_picatostes_tofu from '../assets/recetas/crema_calabacin_picatostes_tofu.jpg';
+import sopa_thai_coco_pollo from '../assets/recetas/sopa_thai_coco_pollo.jpg';
+import estofado_otonio_calabaza_lentejas from '../assets/recetas/estofado_otonio_calabaza_lentejas.jpg';
+import sopa_pollo_fideos_laurel from '../assets/recetas/sopa_pollo_fideos_laurel.jpg';
+import dhal_lentejas_boniato from '../assets/recetas/dhal_lentejas_boniato.jpg';
+import sopa_zanahoria_jengibre from '../assets/recetas/sopa_zanahoria_jengibre.jpg';
+import guiso_garbanzos_arroz_berenjena from '../assets/recetas/guiso_garbanzos_arroz_berenjena.jpg';
+import sopa_tailandesa_tallarines from '../assets/recetas/sopa_tailandesa_tallarines.jpg';
+import guiso_arroz_tomate_pollo_guisantes from '../assets/recetas/guiso_arroz_tomate_pollo_guisantes.jpg';
+import bowl_mexicano_mango_chile from '../assets/recetas/bowl_mexicano_mango_chile.jpg';
+import buddha_bowl_pollo_humus from '../assets/recetas/buddha_bowl_pollo_humus.jpg';
+import ensalada_caprese_mozzarella_pollo from '../assets/recetas/ensalada_caprese_mozzarella_pollo.jpg';
+import atun_arroz_aguacate_pepino from '../assets/recetas/atun_arroz_aguacate_pepino.jpg';
+import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
+
 
 
 
 
 const recetas = [
+    {
+        "id": "ensalada_pollo_bulgur",
+        "nombre": "Ensalada de pollo y bulgur",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 20,
+        "calorias": 618,
+        "proteina": 30,
+        "carbohidratos": 74,
+        "grasa": 22,
+        "tipo": "comida",
+        "nota": "El bulgur puedes sustituirlo por cuscús :)",
+        "ingredientes": [
+            "15g aceite de oliva (~1 cucharada de)",
+            "25g ajetes (1 pza.)",
+            "80g bulgur fino, crudo",
+            "95g pechuga de pollo, cruda",
+            "155g pimiento rojo (1 pza.)"
+        ],
+        "pasos": [
+            "Cocer el bulgur según las instrucciones del paquete en un cazo con agua y una pizca de sal.",
+            "Salpimentar el pollo y cortarlo en trozos más pequeños. Freír el pollo en un sartén con el aceite a fuego medio-alto durante aproximadamente 5-7 minutos, hasta que el centro pierda su color rosado.",
+            "Lavar y picar el pimiento y cortar los ajetes en aros.",
+            "Mezclar todos los ingredientes, salpimentar y condimentar con cualquier otra hierba o especia al gusto, y servir."
+        ],
+        "imagen": ensalada_pollo_bulgur
+    },
+    {
+        "id": "atun_arroz_aguacate_pepino",
+        "nombre": "Atún con arroz, aguacate y pepino",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 20,
+        "calorias": 238,
+        "proteina": 12,
+        "carbohidratos": 30,
+        "grasa": 7,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "10g cebolla morada (1/4 pza.)",
+            "20g tomates (1/2 pza.)",
+            "20g pepino (1/4 pza.)",
+            "35g atún en agua, en lata (1/2 lata)",
+            "35g aguacate fresco (1/4 pza.)",
+            "35g arroz integral, crudo"
+        ],
+        "pasos": [
+            "Lavar el arroz antes de cocinarlo. Verterlo en un cazo con agua y una pizca de sal y cocinarlo según las instrucciones del paquete.",
+            "Escurrir el atún. Lavar el pepino y cortarlo en rodajas. Cortar el aguacate por la mitad y retirar el hueso. Con una cuchara, sacar la pulpa y cortarla en dados.",
+            "Servir el arroz con el atún, pepino y el aguacate. Sazonar con sal, pimienta y otras especias o hierbas al gusto."
+        ],
+        "imagen": atun_arroz_aguacate_pepino
+    },  
+    {
+        "id": "ensalada_caprese_mozzarella_pollo",
+        "nombre": "Ensalada caprese de mozzarella y pollo",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 20,
+        "calorias": 238,
+        "proteina": 17,
+        "carbohidratos": 25,
+        "grasa": 8,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "5g aceite de oliva (~0.5 cdtas.)",
+            "10g mozzarella fresca, 18% de grasa",
+            "15g lechuga (2 hojas)",
+            "35g tomates (1/2 pza.)",
+            "65g pechuga de pollo cruda",
+            "70g gnocchi de patatas",
+            "1 puñado de albahaca fresca",
+            "1-2 cdtas. vinagre balsámico"
+        ],
+        "pasos": [
+            "Cocer la pasta según las instrucciones del paquete en un cazo con agua y una pizca de sal.",
+            "Salpimentar la pechuga de pollo. Freír por ambos lados en una sartén con el aceite a fuego medio-alto durante aproximadamente 10 minutos, hasta que el centro pierda su color rosado. Reservar y cortar transversalmente.",
+            "Lavar la lechuga y los tomates y cortarlos en dados. Montar la lechuga, pasta, el tomate, pollo y la mozzarella en una fuente de servir.",
+            "Salpimentar al gusto y aderezar con vinagre balsámico. Cubrir con albahaca y servir."
+        ],
+        "imagen": ensalada_caprese_mozzarella_pollo
+    },
+    {
+        "id": "buddha_bowl_pollo_humus",
+        "nombre": "Buddha bowl con pollo y humus",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 30,
+        "calorias": 618,
+        "proteina": 45,
+        "carbohidratos": 58,
+        "grasa": 22,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "25g humus (~1.5 cdas.)",
+            "65g aguacate fresco (1/2 pza.)",
+            "80g lechuga (8 hojas)",
+            "120g zanahorias (2 pzas.)",
+            "185g pechuga de pollo cruda",
+            "235g boniato (1 pza.)",
+            "2-3 cdas. vinagre balsámico",
+            "1-2 segundos de spray para cocinar",
+            "1-2 pzas. diente de ajo prensado"
+        ],
+        "pasos": [
+            "Poner un cazo con agua a hervir y añadir una pizca de sal. Lavar o pelar los boniatos. Añadirlos al agua y hervirlos durante 15-30 minutos, hasta que estén tiernos o se puedan pinchar fácilmente con un tenedor.",
+            "Sofreír el ajo en una sartén con spray de cocina a fuego medio-alto. Salpimentar la pechuga de pollo. Freír por ambos lados en el sartén durante aproximadamente 10 minutos, hasta que el centro pierda su color rosado. Cortarla transversalmente cuando esté lista.",
+            "Lavar la lechuga y colocarla en el fondo de un bol.",
+            "Pelar las zanahorias, rallarlas y añadirlas al bol.",
+            "Cortar el aguacate por la mitad y retirar el hueso. Con una cuchara, sacar la pulpa y cortarla en dados. Añadir el aguacate al bol junto con el pollo, boniato y el humus. Aliñar con el vinagre balsámico y salpimentar."
+        ],
+        "imagen": buddha_bowl_pollo_humus
+    },
+    {
+        "id": "bowl_mexicano_mango_chile",
+        "nombre": "Bowl mexicano de mango con chile",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 0,
+        "calorias": 238,
+        "proteina": 17,
+        "carbohidratos": 27,
+        "grasa": 6,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "20g aguacate fresco (1/4 pza.)",
+            "55g cebolla morada (1/2 pza.)",
+            "70g trozos de pechuga de pollo cocidas, lista para comer",
+            "140g mango (1/2 pza.)",
+            "1/4-1/2 cdta. cayena, molida",
+            "1/2-1 cda. salsa picante"
+        ],
+        "pasos": [
+            "Cortar el aguacate por la mitad y quitarle el hueso. Utilizar una cuchara para sacar la pulpa y cortarla en dados. Pelar y cortar en dados la cebolla y el mango.",
+            "Añadir todos los ingredientes a un bol, agregar la salsa de pimienta picante y la guindilla en polvo, mezcla bien y servir."
+        ],
+        "imagen": bowl_mexicano_mango_chile
+    },
+    
+    {
+        "id": "guiso_arroz_tomate_pollo_guisantes",
+        "nombre": "Guiso de arroz con tomate, pollo y guisantes",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 20,
+        "calorias": 618,
+        "proteina": 45,
+        "carbohidratos": 74,
+        "grasa": 15,
+        "tipo": "comida",
+        "nota": "Añadir la cantidad de agua recomendada en el envase del arroz",
+        "ingredientes": [
+            "10g aceite de oliva (~1.5 cdtas.)",
+            "75g arroz integral, crudo",
+            "75g guisantes, congelados",
+            "135g trozos de pechuga de pollo cocidas, lista para comer",
+            "150g tomate triturado",
+            "1/2-1 pastilla de caldo"
+        ],
+        "pasos": [
+            "Añadir el arroz, el puré de tomate y la pastilla de caldo a una olla con suficiente agua y llevar a ebullición.",
+            "Cuando el arroz esté casi hecho, añadir los guisantes y el pollo, remover bien y cocer a fuego lento otros 5 minutos.",
+            "Condimentar con las especias o hierbas al gusto y servir."
+        ],
+        "imagen": guiso_arroz_tomate_pollo_guisantes
+    }   ,
+    {
+        "id": "guiso_garbanzos_arroz_berenjena",
+        "nombre": "Guiso de garbanzos, arroz, berenjena y leche de coco",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 20,
+        "calorias": 618,
+        "proteina": 46,
+        "carbohidratos": 61,
+        "grasa": 20,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "40g arroz basmati, crudo",
+            "45g cebolla amarilla (1/2 pza.)",
+            "60g garbanzos en conserva (1/4 lata)",
+            "65g soja texturizada Hacendado",
+            "100g leche de coco (15-18% de grasa) (~100 ml)",
+            "120g champiñones blancos (6 pzas.)",
+            "135g berenjena (1/4 pza.)"
+        ],
+        "pasos": [
+            "Cocer el arroz.",
+            "Pelar la cebolla. Picar la cebolla, la berenjena y los champiñones a dados. Escurrir los garbanzos.",
+            "Freír la cebolla en una sartén hasta que esté tierna y dorada. Añadir los champiñones y freír a fuego medio-alto hasta que estén dorados.",
+            "Añadir la berenjena y el arroz y freír otros 5 minutos.",
+            "Agregar los garbanzos, la leche de coco y agua suficiente para cubrir todos los ingredientes. Llevar a ebullición. Dejar cocer a fuego medio-bajo sin tapar durante unos 10-12 minutos hasta que las verduras estén tiernas.",
+            "Salpimentar el guiso al gusto y servir."
+        ],
+        "imagen": guiso_garbanzos_arroz_berenjena
+    } ,
+    {
+        "id": "sopa_tailandesa_tallarines",
+        "nombre": "Sopa tailandesa con curry y tallarines de arroz",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 10,
+        "calorias": 617,
+        "proteina": 30,
+        "carbohidratos": 74,
+        "grasa": 22,
+        "tipo": "comida",
+        "nota": "Puedes ajustar la cantidad de curry al gusto si prefieres un sabor más o menos picante",
+        "ingredientes": [
+            "5g aceite de oliva (~1 cucharadita)",
+            "30g brotes de soja",
+            "30g ajetes (1 1/2 pza.)",
+            "80g noodles de arroz, crudos",
+            "100g brócoli (1/4 cabeza)",
+            "100g leche de coco light (6-7% de grasa) (~100 ml)",
+            "105g tofu firme",
+            "200ml caldo de verduras listo para usar",
+            "1-2 cdas. curry en polvo",
+            "1/2 puñado de cilantro, picado"
+        ],
+        "pasos": [
+            "Lavar los ajetes y los brotes de soja.",
+            "Cortar los ajetes en rodajas y el tofu en dados.",
+            "Freír los ajetes y el tofu en un cazo hasta que el tofu empiece a dorarse. A continuación, añadir el curry y saltear durante unos segundos.",
+            "Añadir la leche de coco y el caldo de verduras. Llevar el contenido a ebullición y dejar cocer a fuego bajo durante unos 5 minutos.",
+            "Añadir los noodles de arroz a la sopa y cocerlos durante el tiempo indicado en el paquete.",
+            "Salpimentar la sopa y verterla en un bol. Añadir el resto de ingredientes por encima."
+        ],
+        "imagen": sopa_tailandesa_tallarines
+    },
+    {
+        "id": "sopa_zanahoria_jengibre",
+        "nombre": "Sopa de zanahoria y jengibre",
+        "tiempoPrep": 15,
+        "tiempoCoccion": 30,
+        "calorias": 618,
+        "proteina": 23,
+        "carbohidratos": 84,
+        "grasa": 20,
+        "tipo": "comida",
+        "nota": "Para esta receta se necesita una licuadora de pie o de mano",
+        "ingredientes": [
+            "25g pipas de calabaza (~2.5 cdas.)",
+            "70g leche de coco light (6-7% de grasa) (~70 ml)",
+            "100g pan integral (2 lonchas)",
+            "100g cebolla amarilla (1 1/4 pza.)",
+            "125g chirivía, cruda (1 pza.)",
+            "155g zanahorias (3 pzas.)",
+            "1 1/2 cdas. jengibre fresco rallado",
+            "1 cdta. copos de guindilla",
+            "1 cdta. cúrcuma molida",
+            "1 cdta. vinagre de manzana",
+            "1 cdta. pimentón",
+            "1/2 cubito de pastilla de caldo (disuelta en agua)"
+        ],
+        "pasos": [
+            "Poner una olla con agua a hervir y añadir una pizca de sal.",
+            "Pelar o lavar las zanahorias y la chirivía, trocearlas junto con la cebolla y añadir a la olla. Cocer durante 15-30 minutos, hasta que estén blandas.",
+            "Triturar todo con una batidora de mano hasta obtener una textura cremosa.",
+            "Añadir la leche de coco, el jengibre, la cúrcuma, el pimentón, los copos de guindilla, el vinagre de manzana y la pastilla de caldo disuelta. Mezclar bien y calentar 5 minutos más a fuego medio-bajo.",
+            "Servir caliente con las pipas de calabaza por encima y acompañar con el pan integral."
+        ],
+        "imagen": sopa_zanahoria_jengibre
+    },
+    {
+        "id": "dhal_lentejas_boniato",
+        "nombre": "Dhal de lentejas con boniato",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 35,
+        "calorias": 618,
+        "proteina": 44,
+        "carbohidratos": 58,
+        "grasa": 23,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "5g aceite de oliva (~1 cucharadita)",
+            "10g almendras enteras con piel (~1.5 cdas.)",
+            "35g espinacas",
+            "55g lentejas rojas, crudas",
+            "60g cebolla morada (3/4 pza.)",
+            "90g huevo entero (2 pzas.)",
+            "105g boniato (1/2 pza.)",
+            "115g claras de huevo pasteurizadas (4 pzas.)",
+            "1 pizca comino molido",
+            "1 diente de ajo prensado",
+            "1 cdta. jengibre fresco rallado",
+            "1 pastilla de caldo",
+            "1 pizca cúrcuma molida"
+        ],
+        "pasos": [
+            "Pelar y picar la cebolla y los boniatos.",
+            "Calentar el aceite en una sartén grande y añadir la cebolla. Freír a fuego bajo hasta que esté translúcida.",
+            "Añadir el ajo y el jengibre y cocinar durante 1 minuto aproximadamente, luego añadir una pizca de sal, pimienta, comino y cúrcuma y cocinar durante otro minuto sin dejar de remover.",
+            "Llevar la sartén a fuego medio y añadir el boniato y las lentejas, removiendo con frecuencia. Cubrir los ingredientes con agua y añadir la pastilla de caldo y dejar cocer a fuego bajo durante unos 20 minutos o hasta que el boniato y las lentejas estén suaves. Añadir más especias o agua si es necesario.",
+            "Añade el huevo hasta que cuaje, o añádelo cocido previamente cortado en trocitos.",
+            "Por último, añadir las espinacas y picar algunas almendras para cubrir el dhal de lentejas. También se pueden comer aparte."
+        ],
+        "imagen": dhal_lentejas_boniato
+    },
+    {
+        "id": "sopa_pollo_fideos_laurel",
+        "nombre": "Sopa de con pollo con fideos, romero y laurel",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 30,
+        "calorias": 618,
+        "proteina": 45,
+        "carbohidratos": 62,
+        "grasa": 21,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "15g aceite de oliva (~1 cucharada de)",
+            "65g pasta, cruda",
+            "70g apio (2 ½ tallos)",
+            "100g zanahorias (2 pzas.)",
+            "175g pechuga de pollo, cruda",
+            "200-300 ml caldo, cualquier tipo, listo para usar",
+            "1-2 hoja de laurel",
+            "1-2 cdta. perejil, fresco",
+            "1-2 cdta. tomillo, seco"
+        ],
+        "pasos": [
+            "Lavar y picar el apio y las zanahorias.",
+            "En una olla grande, agregar el aceite y cocinar el apio y las zanahorias hasta que estén tiernos. Cortar la pechuga de pollo en dados y salpimentar. Añadir a la olla y cocinar hasta que el centro pierda su color rosa.",
+            "Añadir el caldo, la pasta, las especias y salpimentar. Dejar cocer a fuego bajo durante 15 minutos, hasta que la pasta esté tierna. Añadir más agua o caldo si es necesario.",
+            "Servir en un bol y decorar con perejil. ¡Que aproveche!"
+        ],
+        "imagen": sopa_pollo_fideos_laurel
+    },
+    {
+        "id": "estofado_otonio_calabaza_lentejas",
+        "nombre": "Estofado de otoño con calabaza y lentejas",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 20,
+        "calorias": 601,
+        "proteina": 24,
+        "carbohidratos": 80,
+        "grasa": 22,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "10g aceite de oliva (~2.5 cdtas.)",
+            "15g anacardos, naturales (~2 cdas.)",
+            "40g espinacas",
+            "45g ajetes (2 ½ pzas.)",
+            "55g lentejas rojas, crudas",
+            "485g calabaza moscada, crudos (½ pza.)",
+            "1-2 cdta. jengibre, fresco, rallado",
+            "½-1 cubito pastilla de caldo",
+            "¼-½ cdta. cardamomo",
+            "1 puñado de cilantro, picado"
+        ],
+        "pasos": [
+            "Lavar y cortar los ajetes. Pelar y cortar la calabaza por la mitad y retirar las semillas con una cuchara. Cortar la calabaza en dados. Lavar las espinacas. Picar los anacardos.",
+            "Calentar una cacerola con un chorrito de aceite a fuego medio y los ajetes junto con la calabaza y el jengibre. Cocinar unos 5 minutos removiendo hasta que los ajetes y la calabaza estén dorados.",
+            "Lavar las lentejas. Incorporar las lentejas y la pastilla de caldo. Cubrir los ingredientes con agua. Condimentar con sal, pimienta y cardamomo. Llevar a ebullición, luego reducir el fuego a medio y dejar cocer a fuego lento durante unos 15 minutos hasta que las lentejas y la calabaza estén tiernas. Agregar más agua si es necesario.",
+            "Añadir las espinacas y el cilantro. Servir el guiso en un bol y cubrir con los anacardos picados."
+        ],
+        "imagen": estofado_otonio_calabaza_lentejas
+    },
+    {
+        "id": "sopa_thai_coco_pollo",
+        "nombre": "Sopa thai de coco con pollo",
+        "tiempoPrep": 15,
+        "tiempoCoccion": 30,
+        "calorias": 618,
+        "proteina": 45,
+        "carbohidratos": 75,
+        "grasa": 14,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "25g ajetes (1 pza.)",
+            "130g leche de coco, 6-7% de grasa, light (~130 ml)",
+            "155g puerro (1 pza.)",
+            "170g pechuga de pollo, cruda",
+            "255g calabaza, crudos",
+            "310g patata, mediana (2 ½ pzas.)",
+            "1 puñado de cilantro, picado",
+            "1-2 cdta. jengibre, fresco, rallado",
+            "1-2 cdta. guindilla roja, fresca, picada",
+            "1-2 cdta. zumo de lima",
+            "½-1 cda. salsa de soja"
+        ],
+        "pasos": [
+            "Pelar y cortar las patatas y la calabaza en dados. Lavar y cortar los puerros y los ajetes en rodajas. Cortar el pollo en dados.",
+            "Calentar una olla a fuego medio-alto y añadir los puerros, el jengibre y los ajetes. Sofreír durante unos minutos hasta que empiecen a dorarse.",
+            "Añadir las patatas, la calabaza y la leche de coco a la olla. Agregar suficiente agua para cubrir las verduras. Llevar a ebullición y luego cocer durante unos 15-20 minutos o hasta que las verduras estén tiernas.",
+            "Mientras tanto, freír el pollo con un chorrito de agua en una sartén a fuego medio-alto hasta que esté dorado y cocido, pero no seco.",
+            "Sazonar la sopa con salsa de soja y zumo de lima y decorar con el chile y cilantro. Añadir el pollo en la sopa o servirlo aparte."
+        ],
+        "imagen": sopa_thai_coco_pollo
+    },
+    {
+        "id": "crema_calabacin_picatostes_tofu",
+        "nombre": "Crema de calabacín simple con picatostes de tofu",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 35,
+        "calorias": 618,
+        "proteina": 42,
+        "carbohidratos": 30,
+        "grasa": 37,
+        "tipo": "cena",
+        "nota": "Para esta receta se necesita una batidora",
+        "ingredientes": [
+            "10g aceite de oliva (~2 cdtas.)",
+            "45g puerro (¼ pza.)",
+            "60g leche de coco, 15-18% de grasa (~60 ml)",
+            "70g patata, mediana (½ pza.)",
+            "200g tofu, firme",
+            "350g calabacín (1 2/3 pza.)",
+            "250-500 ml caldo, cualquier tipo, listo para usar"
+        ],
+        "pasos": [
+            "Lavar, pelar y cortar el puerro, la patata y los calabacines en dados.",
+            "Sofreír el puerro durante 5 minutos a fuego medio con un poco de aceite en una cacerola.",
+            "Agregar la patata y sofreír 3 minutos. A continuación, incorporar los calabacines y sofreír 3 minutos más.",
+            "Mezclar y salpimentar al gusto. Verter ahora el caldo de verduras o agua caliente, de modo que cubra todas las verduras.",
+            "Cocer 20 minutos a fuego medio, tapando la cazuela, de manera que esté siempre hirviendo suavemente, con pequeños borbotones. Luego añadir la leche de coco.",
+            "Mientras tanto, escurrir el tofu y cortarlo en dados de aproximadamente 1×1cm. Calentar una sartén antiadherente a fuego medio-alto y freír el tofu hasta que esté crujiente y dorado.",
+            "Triturar las verduras con una batidora hasta conseguir la textura deseada.",
+            "Servir la crema de calabacín caliente en un plato hondo con los picatostes de tofu por encima."
+        ],
+        "imagen": crema_calabacin_picatostes_tofu
+    },
     {
         "id": "bagel_huevos_espinacas",
         "nombre": "Bagel con huevos revueltos y espinacas",

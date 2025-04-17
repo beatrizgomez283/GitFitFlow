@@ -16,11 +16,7 @@ export default function App() {
                 <header className="bg-white shadow-md sticky top-0 z-10">
                     <nav className="max-w-md mx-auto flex justify-between items-center px-4 py-3">
                         <Link to="/" className="font-bold text-lg text-pink-600">GitFitFlow</Link>
-                        <div className="flex gap-3 text-sm">
-                            <Link to="/entrenamientos" className="text-gray-700 hover:text-pink-600">Entrenos</Link>
-                            <Link to="/recetas" className="text-gray-700 hover:text-pink-600">Recetas</Link>
-                            <Link to="/nutricion" className="text-gray-700 hover:text-pink-600">Nutri</Link>
-                        </div>
+                       
                     </nav>
                 </header>
 
