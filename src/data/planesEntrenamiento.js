@@ -689,10 +689,10 @@ export const planes = [
             {
                 "nombre": "Día 4 - Dynamic Effort Lower Body",
                 "tipo": "lower_body",
-                "descanso": 60,
                 "sets": [
                     {
                         "titulo": "Superserie A",
+                        descanso: 0,
                         "ejercicios": [
                             {
                                 "nombre": "BB Pause Back Squats",
@@ -718,7 +718,7 @@ export const planes = [
                                         "series": "5"
                                     }
                                 ],
-                                "descanso": 90,
+                                "descanso": 0,
                                 "nota": "",
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/37eO2eu28dE"
@@ -756,6 +756,7 @@ export const planes = [
                     },
                     {
                         "titulo": "Superserie B",
+                        descanso: 0,
                         "ejercicios": [
                             {
                                 "nombre": "BB RDL",
@@ -781,7 +782,7 @@ export const planes = [
                                         "series": "4"
                                     }
                                 ],
-                                "descanso": 60,
+                                "descanso": 0,
                                 "nota": "",
                                 "historico": [],
                                 "url": "https://www.youtube.com/shorts/KMB9b0uH2rM"
@@ -810,7 +811,7 @@ export const planes = [
                                         "series": "4"
                                     }
                                 ],
-                                "descanso": 60,
+                                "descanso": 90,
                                 "nota": "",
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/k4HW3xSl82o"
@@ -819,6 +820,7 @@ export const planes = [
                     },
                     {
                         "titulo": "Superserie C",
+                        descanso: 0,
                         "ejercicios": [
                             {
                                 "nombre": "Glider Speed Reverse Lunge",
@@ -844,7 +846,7 @@ export const planes = [
                                         "series": "3"
                                     }
                                 ],
-                                "descanso": 75,
+                                "descanso": 0,
                                 "nota": "",
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/qlII9NfVntk"
@@ -882,6 +884,7 @@ export const planes = [
                     },
                     {
                         "titulo": "Superserie D",
+                        descanso: 0,
                         "ejercicios": [
                             {
                                 "nombre": "Marching Walking Lunges",
@@ -916,6 +919,7 @@ export const planes = [
                     },
                     {
                         "titulo": "Finisher",
+                        descanso: 0,
                         "ejercicios": [
                             {
                                 "nombre": "SL Ball Slams",
@@ -952,11 +956,11 @@ export const planes = [
             },
             {
                 "nombre": "Día 5 - Dynamic Effort Upper Body",
-                "tipo": "uper_body",
-                "descanso": 60,
+                "tipo": "upper_body",
                 "sets": [
                     {
                         "titulo": "Superserie A",
+                        descanso: 0,
                         "ejercicios": [
                             {
                                 "nombre": "Pin BB Bent Over Row",
@@ -982,10 +986,10 @@ export const planes = [
                                         "series": "5"
                                     }
                                 ],
-                                "descanso": 90,
+                                "descanso": 0,
                                 "nota": "",
                                 "historico": [],
-                                "url": "https://youtube.com/shorts/lzdmalWkNdI"
+                                "url": "https://youtube.com/shorts/pG0VBq03irY"
                             },
                             {
                                 "nombre": "Hands Off Push Ups",
@@ -1014,12 +1018,13 @@ export const planes = [
                                 "descanso": 90,
                                 "nota": "",
                                 "historico": [],
-                                "url": "https://youtube.com/shorts/tKhuXx0Pk4g"
+                                "url": "https://youtube.com/shorts/mujypvobSC4"
                             }
                         ]
                     },
                     {
                         "titulo": "Superserie B",
+                        descanso: 0,
                         "ejercicios": [
                             {
                                 "nombre": "2-1-1 Chest Press",
@@ -1045,10 +1050,10 @@ export const planes = [
                                         "series": "4"
                                     }
                                 ],
-                                "descanso": 75,
+                                "descanso": 0,
                                 "nota": "",
                                 "historico": [],
-                                "url": "https://youtube.com/shorts/mujypvobSC4"
+                                "url": "https://youtube.com/shorts/bK-zhIdxs-A"
                             },
                             {
                                 "nombre": "2-1-1 Gorilla Rows",
@@ -1083,6 +1088,7 @@ export const planes = [
                     },
                     {
                         "titulo": "Superserie C",
+                        descanso: 0,
                         "ejercicios": [
                             {
                                 "nombre": "DB Push Press",
@@ -1108,7 +1114,7 @@ export const planes = [
                                         "series": "3"
                                     }
                                 ],
-                                "descanso": 60,
+                                "descanso": 0,
                                 "nota": "",
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/Dud_8rwUDSY"
@@ -1137,7 +1143,7 @@ export const planes = [
                                         "series": "3"
                                     }
                                 ],
-                                "descanso": 60,
+                                "descanso": 0,
                                 "nota": "",
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/88bEs-UlTjc"
@@ -1146,6 +1152,7 @@ export const planes = [
                     },
                     {
                         "titulo": "Superserie D",
+                        descanso: 0,
                         "ejercicios": [
                             {
                                 "nombre": "Half Kneeling DB Snatch",
@@ -1171,10 +1178,10 @@ export const planes = [
                                         "series": "4"
                                     }
                                 ],
-                                "descanso": 75,
+                                "descanso": 0,
                                 "nota": "",
                                 "historico": [],
-                                "url": "https://youtube.com/shorts/pG0VBq03irY"
+                                "url": "https://youtube.com/shorts/lzdmalWkNdI"
                             },
                             {
                                 "nombre": "Half Kneeling Cable Face Pulls",
@@ -1203,7 +1210,7 @@ export const planes = [
                                 "descanso": 75,
                                 "nota": "",
                                 "historico": [],
-                                "url": "https://youtube.com/shorts/bK-zhIdxs-A"
+                                "url": "https://youtube.com/shorts/tKhuXx0Pk4g"
                             }
                         ]
                     }

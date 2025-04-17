@@ -23,7 +23,6 @@ import boniato_brocoli_manzana from '../assets/recetas/boniato_brocoli_manzana.j
 import pimiento_relleno_vegano from '../assets/recetas/pimiento_relleno_vegano.jpg';
 import smoothie_platano_chocolate from '../assets/recetas/smoothie_platano_chocolate.jpg';
 import batido_proteinas_platano_chia from '../assets/recetas/batido_proteinas_platano_chia.jpg';
-import smoothie_frutas_bosque_chocolate from '../assets/recetas/smoothie_frutas_bosque_chocolate.jpg';
 import smoothie_naranja_frambuesa from '../assets/recetas/smoothie_naranja_frambuesa.jpg';
 import smoothie_coco_frutas_nueces from '../assets/recetas/smoothie_coco_frutas_nueces.jpg';
 import albaricoque_mango_leche_almendras_proteina from '../assets/recetas/albaricoque_mango_leche_almendras_proteina.jpg';
@@ -66,26 +65,921 @@ import buddha_bowl_pollo_humus from '../assets/recetas/buddha_bowl_pollo_humus.j
 import ensalada_caprese_mozzarella_pollo from '../assets/recetas/ensalada_caprese_mozzarella_pollo.jpg';
 import atun_arroz_aguacate_pepino from '../assets/recetas/atun_arroz_aguacate_pepino.jpg';
 import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
+import ensalada_quinoa_aguacate_alubias from '../assets/recetas/ensalada_quinoa_aguacate_alubias.jpg';
+import ensalada_pasta_pesto_pollo_vegano from '../assets/recetas/ensalada_pasta_pesto_pollo_vegano.jpg';
+import ensalada_vegana_quinoa_fresas from '../assets/recetas/ensalada_vegana_quinoa_fresas.jpg';
+import bol_pollo_humus from '../assets/recetas/bol_pollo_humus.jpg';
+import ensalada_tofu_verduras_asadas from '../assets/recetas/ensalada_tofu_verduras_asadas.jpg';
+import ensalada_thai_tofu from '../assets/recetas/ensalada_thai_tofu.jpg';
+import ensalada_lentejas_vegana from '../assets/recetas/ensalada_lentejas_vegana.jpg';
+import ensalada_fria_lentejas from '../assets/recetas/ensalada_fria_lentejas.jpg';
+import atun_ensalada_verano from '../assets/recetas/atun_ensalada_verano.jpg';
+import smoothie_platano_pera from '../assets/recetas/smoothie_platano_pera.jpg';
+import smoothie_frutas_bosque_chocolate from '../assets/recetas/smoothie_frutas_bosque_chocolate.jpg';
+import batido_proteinas_dátiles_coco from '../assets/recetas/batido_proteinas_dátiles_coco.jpg';
+import bowl_smoothie_espirulina from '../assets/recetas/bowl_smoothie_espirulina.jpg';
+import smoothie_manzana_platano_cacahuete from '../assets/recetas/smoothie_manzana_platano_cacahuete.jpg';
+import batido_proteinas_naranja_arandanos from '../assets/recetas/batido_proteinas_naranja_arandanos.jpg';
+import ensalada_pasta_atun_queso_feta from '../assets/recetas/ensalada_pasta_atun_queso_feta.jpg';
+import salmon_patatas_ensalada from '../assets/recetas/salmon_patatas_ensalada.jpg';
+import atun_ensalada_arroz from '../assets/recetas/atun_ensalada_arroz.jpg';
+import merluza_esparragos_patata from '../assets/recetas/merluza_esparragos_patata.jpg';
+import ensalada_asiatica_mango_gambas from '../assets/recetas/ensalada_asiatica_mango_gambas.jpg';
+import espaguetis_gambas_pesto from '../assets/recetas/espaguetis_gambas_pesto.jpg';
+import ensalada_pasta_atun_feta from '../assets/recetas/ensalada_pasta_atun_feta.jpg';
+import pasta_salmon_miel_lima from '../assets/recetas/pasta_salmon_miel_lima.jpg';
+import pan_centeno_aguacate_gambas from '../assets/recetas/pan_centeno_aguacate_gambas.jpg';
+import espaguetis_gambas_verduras from '../assets/recetas/espaguetis_gambas_verduras.jpg';
+import palitos_pescado_brocoli from '../assets/recetas/palitos_pescado_brocoli.jpg';
+import pescado_horno_pimenton_arce from '../assets/recetas/pescado_horno_pimenton_arce.jpg';
+import lenguado_pisto from '../assets/recetas/lenguado_pisto.jpg';
+import salmon_ensalada_patata from '../assets/recetas/salmon_ensalada_patata.jpg';
+import boniato_salmon_quark from '../assets/recetas/boniato_salmon_quark.jpg';
+/*import espaguetis_gambas_verduras from '../assets/recetas/espaguetis_gambas_verduras.jpg';
+import espaguetis_gambas_verduras from '../assets/recetas/espaguetis_gambas_verduras.jpg';
+import espaguetis_gambas_verduras from '../assets/recetas/espaguetis_gambas_verduras.jpg';
+import espaguetis_gambas_verduras from '../assets/recetas/espaguetis_gambas_verduras.jpg';
+import espaguetis_gambas_verduras from '../assets/recetas/espaguetis_gambas_verduras.jpg';
+import espaguetis_gambas_verduras from '../assets/recetas/espaguetis_gambas_verduras.jpg';
+import espaguetis_gambas_verduras from '../assets/recetas/espaguetis_gambas_verduras.jpg';
 
-/*
-import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
-import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
-import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
-import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
-import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
-import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
-import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
-import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
-import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
-import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
-import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
-import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
-import ensalada_pollo_bulgur from '../assets/recetas/ensalada_pollo_bulgur.jpg';
 */
 
 
 
 const recetas = [
+
+    {
+        "id": "boniato_salmon_quark",
+        "nombre": "Boniato al horno con salmón y quark",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 40,
+        "calorias": 618,
+        "proteina": 48,
+        "carbohidratos": 57,
+        "grasa": 21,
+        "tipo": "comida",
+        "ingredientes": [
+            "5g aceite de oliva (~1.5 cdtas.)",
+            "75g cebolla amarilla (3/4 pza.)",
+            "75g tomates cherri (5 pzas.)",
+            "75g zanahorias (1 pza.)",
+            "100g salmón ahumado, en lonchas (4 lonchas)",
+            "150g espinacas",
+            "165g boniato (1 pza.)",
+            "175g quark, natural, 0.2% de grasa",
+            "1-2 tallo/brote eneldo, fresco",
+            "1-2 cda. zumo de lima"
+        ],
+        "pasos": [
+            "Poner una olla con agua a hervir y añadir una pizca de sal. Lavar o pelar los boniatos. En una olla, calentar agua con una pizca de sal. Añadir los boniatos al agua y hervirlos durante 15-30 minutos, hasta que estén blandos. Pinchar con la punta de un cuchillo o un tenedor; si el utensilio entra y sale sin dificultad, los boniatos están listos.",
+            "Mientras tanto, precalentar el horno a 200°C (gas) o 180°C (ventilador). Cortar el salmón ahumado en pequeñas tiras.",
+            "Verter el quark en un bol pequeño, añadir el zumo de lima y el eneldo y salpimentar.",
+            "Utilizar un cuchillo para hacer una incisión en el boniato a lo largo, con cuidado de no atravesar completamente el boniato.",
+            "Colocar el boniato en una bandeja de horno con papel pergamino, rociar con el aceite de oliva, salpimentar y hornear durante 15 minutos.",
+            "Cubrir los boniatos con el quark y el salmón ahumado y servir en un plato."
+        ],
+        "imagen": boniato_salmon_quark
+    },
+    {
+        "id": "salmon_ensalada_patata",
+        "nombre": "Salmón al horno con eneldo y ensalada de patatas",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 35,
+        "calorias": 618,
+        "proteina": 45,
+        "carbohidratos": 40,
+        "grasa": 31,
+        "tipo": "comida",
+        "ingredientes": [
+            "10g pipas de girasol, peladas, secas (~2.5 cdtas.)",
+            "95g lechuga romana (10 hojas)",
+            "145g patata, mediana (1 pza.)",
+            "180g tomates cherri (12 pzas.)",
+            "195g filete de salmón, del Atlántico, de granja, crudo",
+            "1/2-1 cda. zumo de limón",
+            "1/2-1 puñado eneldo, picado"
+        ],
+        "pasos": [
+            "Precalentar el horno a 180°C (ventilador). Colocar el salmón en una fuente de horno cubierta con papel encerado. Salpimentar al gusto. Hornear durante unos 15-20 minutos, o hasta que el pescado comience a dorarse y esté bien cocido, pero no seco.",
+            "Poner un cazo con agua a hervir y añadir una pizca de sal. Lavar o pelar las patatas y cortarlas por la mitad. Añadirlas al agua y hervirlas durante 15 minutos, hasta que estén tiernas o se puedan pinchar fácilmente con un tenedor.",
+            "Lavar la lechuga y cortarla en trozos más pequeños y lavar los tomates cherri y cortarlos por la mitad.",
+            "Escurrir las patatas y añadirlas a un bol aparte. Cubrirlas con el eneldo. Añadir los tomates cherri y la lechuga a la ensalada y mezclar bien.",
+            "Servir la ensalada con el salmón y las pipas de girasol. Aliñar con un poco de zumo de limón al gusto."
+        ],
+        "imagen": salmon_ensalada_patata
+    },
+    {
+        "id": "lenguado_pisto",
+        "nombre": "Lenguado con pisto",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 20,
+        "calorias": 618,
+        "proteina": 45,
+        "carbohidratos": 60,
+        "grasa": 21,
+        "tipo": "comida",
+        "ingredientes": [
+            "15g aceite de oliva (~3 cdtas.)",
+            "50g arroz blanco, crudo",
+            "60g tomates (1 pza.)",
+            "60g cebolla amarilla (¾ pza.)",
+            "100g calabacín (2/3 pza.)",
+            "125g berenjena (¼ pza.)",
+            "135g tomate troceado, en conserva (¼ lata)",
+            "280g pescado, lenguado o solla, fresco, sin piel, crudo",
+            "1-2 dientes de ajo, prensado",
+            "1-2 pizca romero, seco",
+            "1-2 rodajas de limón, frescas"
+        ],
+        "pasos": [
+            "Lavar el calabacín, tomate y la berenjena. Pelar la cebolla. Cortar la verdura en dados.",
+            "Lavar el arroz antes de cocinarlo. Verterlo en un cazo con agua y una pizca de sal y cocerlo según las instrucciones del paquete.",
+            "Calentar la mitad del aceite en una sartén a fuego medio y añadir el ajo y la cebolla. Cocinar la cebolla y el ajo hasta que estén translúcidos y luego añadir el resto de las verduras. Cocinarlas durante unos 5 minutos. Añadir el tomate troceado y cocinar a fuego lento durante unos 10 minutos. Condimentar con sal, pimienta y romero.",
+            "Salpimentar el pescado. Poner el lenguado en una sartén con el aceite restante a fuego medio y saltear por ambos lados durante unos minutos, o hasta que el pescado se dore y se desmenuce fácilmente.",
+            "Servir el lenguado con el pisto y el arroz, y cubrirlo con un poco de limón recién exprimido."
+        ],
+        "imagen": lenguado_pisto
+    },
+    {
+        "id": "pescado_horno_pimenton_arce",
+        "nombre": "Pescado al horno con verduras al pimentón y sirope de arce",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 45,
+        "calorias": 618,
+        "proteina": 59,
+        "carbohidratos": 60,
+        "grasa": 15,
+        "tipo": "comida",
+        "ingredientes": [
+            "10g aceite de oliva (~2 cdtas.)",
+            "15g sirope de arce (~2.5 cdtas.)",
+            "90g judías verdes",
+            "90g berenjena (¼ pza.)",
+            "115g tomates cherri (8 pzas.)",
+            "195g patata, mediana (1½ pza.)",
+            "260g tilapia, sin piel, cruda",
+            "3 tallos/brotes romero, seco",
+            "1-2 cdta. pimentón"
+        ],
+        "pasos": [
+            "Precalentar el horno a 200 °C (gas) o 180 °C (ventilador) y forrar una bandeja de horno con papel encerado.",
+            "Pelar o lavar las patatas, cortarlas a dados y distribuirlas sobre una bandeja de horno forrada con papel encerado. Añadir un poco de aceite, romero y salpimentar. Hornear durante unos 30 minutos, hasta que estén tiernas y doradas.",
+            "Sazonar la tilapia por todos los lados con pimentón, sal y pimienta. Reservar.",
+            "Lavar y cortar la berenjena en dados. Lavar las judías verdes y los tomates y cortar los tomates por la mitad. Añadir todas las verduras y el pescado a las patatas en la bandeja después de unos 25 minutos y pintarlas con el sirope de arce.",
+            "Hornear durante 20 minutos más hasta que el pescado esté opaco y se desmenuce fácilmente.",
+            "Servir las verduras y el pescado juntos."
+        ],
+        "imagen": pescado_horno_pimenton_arce
+    },
+    {
+        "id": "palitos_pescado_brocoli",
+        "nombre": "Palitos de pescado con brócoli en la freidora de aire",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 10,
+        "calorias": 618,
+        "proteina": 60,
+        "carbohidratos": 60,
+        "grasa": 14,
+        "tipo": "comida",
+        "nota": "Para esta receta se necesita una freidora de aire",
+        "ingredientes": [
+            "30g harina de trigo",
+            "45g pan rallado",
+            "125g huevo, entero (2 pzas.)",
+            "140g brócoli (¼ cabeza)",
+            "185g filete de bacalao, sin piel, crudo",
+            "1-2 segundo spray para cocinar",
+            "1-2 pizca estragón, fresco",
+            "1-2 cdta. cebolla en polvo",
+            "1-2 cdta. ajo en polvo"
+        ],
+        "pasos": [
+            "Mezclar la harina con el ajo y cebolla en polvo, estragón y salpimentar. Añadir la harina y el panko por separado a dos platos hondos. Batir el huevo en otro plato hondo.",
+            "Cortar el pescado en tiras. Rebozar el pescado en la harina y sacudir bien para eliminar el exceso. Pasarlo por el huevo, luego por el panko. Repetir el proceso con el resto del pescado.",
+            "Precalentar la freidora a 190 °C y cubrir la cesta con el spray de cocina. Añadir los palitos de pescado a la cesta y cocinarlos durante 8–10 minutos, hasta que estén crujientes y el pescado se pueda desmenuzar fácilmente.",
+            "Mientras tanto, lavar el brócoli y cortarlo en floretes más pequeños y cortar el tallo en rodajas finas. Hervir agua en un cazo con una pizca de sal. Añadir el brócoli y hervir durante aproximadamente 3 minutos, o hasta que esté tierno.",
+            "Servir los palitos de pescado con el brócoli."
+        ],
+        "imagen": palitos_pescado_brocoli
+    },
+    {
+        "id": "espaguetis_gambas_verduras",
+        "nombre": "Spaguetis integrales con gambas y verduras",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 15,
+        "calorias": 617,
+        "proteina": 45,
+        "carbohidratos": 61,
+        "grasa": 21,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "15g aceite de oliva (~1 cucharada de)",
+            "65g pasta, trigo integral, cruda",
+            "75g guisantes, congelados",
+            "75g judías verdes, congeladas",
+            "115g tomates (1 ½ pza.)",
+            "190g gambas, cocidas, congeladas",
+            "1-2 cda. zumo de limón",
+            "1-2 pizca guindilla roja, fresca, picada"
+        ],
+        "pasos": [
+            "NOTA: Puedes sustituir las gambas por atún en mismas cantidades.",
+            "Cocer la pasta según las instrucciones del paquete en una olla con agua y una pizca de sal.",
+            "Hervir agua en un cazo. Añadir las judías verdes y los guisantes, cocer durante unos 3 minutos y escurrir con un colador.",
+            "Para descongelar las gambas, colocarlas en un colador y verter sobre ellas el agua caliente de los guisantes y las judías verdes.",
+            "Lavar y cortar los tomates en dados.",
+            "Servir la pasta con las gambas y las verduras y mezclar con la guindilla. Aliñar con un chorrito de aceite de oliva y el zumo de limón antes de servir."
+        ],
+        "imagen": espaguetis_gambas_verduras
+    },
+    {
+        "id": "pan_centeno_aguacate_gambas",
+        "nombre": "Pan de centeno con aguacate y gambas",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 0,
+        "calorias": 237,
+        "proteina": 12,
+        "carbohidratos": 29,
+        "grasa": 8,
+        "tipo": "comida",
+        "nota": "↑ Vitamina A",
+        "ingredientes": [
+            "40g aguacate, fresco (¼ pza.)",
+            "45g gambas, cocidas y peladas, descongeladas",
+            "50g tomates cherri (3 pzas.)",
+            "50g pan de centeno integral (1 loncha)",
+            "65g zanahorias (1 pza.)",
+            "½-1 cdta. de zumo de limón"
+        ],
+        "pasos": [
+            "Cortar el aguacate por la mitad y retirar el hueso. Con una cuchara, sacar la pulpa. Lavar el tomate y, a continuación, cortar el tomate y el aguacate en rodajas finas.",
+            "Colocar el aguacate, el tomate y las gambas sobre el pan de centeno. Tostar el pan antes, si se desea. Salpimentar y condimentar con zumo de limón al gusto.",
+            "Lavar o pelar las zanahorias y cortarlas en bastones. Servir el pan de centeno y comer las zanahorias aparte."
+        ],
+        "imagen": pan_centeno_aguacate_gambas
+    },
+    {
+        "id": "pasta_salmon_miel_lima",
+        "nombre": "Pasta con salmón",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 10,
+        "calorias": 618,
+        "proteina": 32,
+        "carbohidratos": 73,
+        "grasa": 21,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "10g aceite de oliva (~1.5 cdtas.)",
+            "15g miel (~2.5 cdtas.)",
+            "65g queso fresco batido, desnatado, 0% de grasa",
+            "85g filete de salmón, del Atlántico, de granja, crudo",
+            "90g espaguetis, trigo integral, crudos",
+            "1-3 cda. de zumo de lima",
+            "1-2 cdta. de piel de lima rallada",
+            "1/2-2 cubitos de pastilla de caldo"
+        ],
+        "pasos": [
+            "Cocer la pasta según las instrucciones del paquete en una olla con agua y una pizca de sal.",
+            "Cortar el salmón en dados. Mezclar en un cazo el queso fresco, aceite, la pastilla de caldo desmenuzada, miel, ralladura de lima y el zumo de lima y llevar la salsa a ebullición.",
+            "Añadir el salmón y cocinar durante un minuto. Servir con la pasta y salpimentar al gusto antes de servir."
+        ],
+        "imagen": pasta_salmon_miel_lima
+    },
+    {
+        "id": "ensalada_pasta_atun_feta",
+        "nombre": "Ensalada de pasta con atún y queso feta",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 15,
+        "calorias": 618,
+        "proteina": 31,
+        "carbohidratos": 75,
+        "grasa": 21,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "5g aceite de oliva (~1.5 cdtas.)",
+            "35g atún en agua, en lata (½ lata)",
+            "40g queso feta, 25% de grasa, pasteurizado",
+            "60g lechuga romana (6 hojas)",
+            "90g pasta de trigo integral, cruda",
+            "140g judías verdes, congeladas",
+            "1-2 cdas. de zumo de limón"
+        ],
+        "pasos": [
+            "Cocer la pasta según las instrucciones del paquete en una olla con agua y una pizca de sal.",
+            "Hervir agua en un cazo con una pizca de sal. Añadir las judías verdes y cocinarlas durante aproximadamente 3 minutos, o hasta que se puedan pinchar fácilmente con un tenedor.",
+            "Lavar la lechuga y cortarla en tiras. Mezclarla con la pasta, las judías verdes y el aceite de oliva en un bol de ensalada. Condimentar con sal, pimienta y zumo de limón.",
+            "Escurrir el atún. Cubrir con el queso feta y el atún."
+        ],
+        "imagen": ensalada_pasta_atun_feta
+    },
+    {
+        "id": "espaguetis_gambas_pesto",
+        "nombre": "Espaguetis con gambas y pesto",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 10,
+        "calorias": 618,
+        "proteina": 46,
+        "carbohidratos": 67,
+        "grasa": 18,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "30g pesto de albahaca (~2 cdas.)",
+            "100g espaguetis, trigo integral, crudos",
+            "205g gambas, cocidas, congeladas",
+            "1 cda. de zumo de limón"
+        ],
+        "pasos": [
+            "Descongelar las gambas.",
+            "Cocer los espaguetis según las instrucciones del paquete en una olla con agua y una pizca de sal.",
+            "Escurrir la pasta y añadirla a un plato hondo junto con el pesto y las gambas. Mezclar bien y rociar con un chorrito de zumo de limón antes de servir."
+        ],
+        "imagen": espaguetis_gambas_pesto
+    },
+    {
+        "id": "ensalada_asiatica_mango_gambas",
+        "nombre": "Ensalada asiática de verano con mango y gambas",
+        "tiempoPrep": 15,
+        "tiempoCoccion": 10,
+        "calorias": 618,
+        "proteina": 39,
+        "carbohidratos": 62,
+        "grasa": 23,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "15g aceite de oliva (~2.5 cdtas.)",
+            "15g semillas de sésamo (~1.5 cdas.)",
+            "65g ensalada mixta, prelavada y lista para comer",
+            "120g cebolla morada (1 ¼ pza.)",
+            "140g col lombarda (1/8 cabeza)",
+            "145g tomates cherri (10 pzas.)",
+            "190g gambas, crudas, congeladas",
+            "220g mango (1 pza.)",
+            "1/3-1 puñado de cilantro, picado",
+            "1 cdta. de guindilla roja, fresca, picada",
+            "3-5 hojas de menta, fresca",
+            "1-2 cda. de salsa de soja",
+            "1-2 cda. de zumo de lima"
+        ],
+        "pasos": [
+            "Lavar las verduras. Cortar la col lombarda y los tomates cherri en rodajas. Pelar y cortar la cebolla. Pelar y cortar el mango en dados.",
+            "Calentar una sartén antiadherente a fuego medio y freír las gambas unos minutos hasta que se pongan rosadas y ya no estén translúcidas. No cocinarlas demasiado para que no queden chiclosas. Salpimentar al gusto.",
+            "Mezclar la guindilla, salsa de soja, el aceite de sésamo y el zumo de lima para hacer el aliño. Incorporar las verduras, la fruta y las gambas a un bol grande y agregar el aliño.",
+            "Servir la ensalada y adornarla con menta, cilantro y semillas de sésamo."
+        ],
+        "imagen": ensalada_asiatica_mango_gambas
+    },
+    {
+        "id": "merluza_esparragos_patata",
+        "nombre": "Merluza y espárragos con patatas cocidas y almendras",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 30,
+        "calorias": 618,
+        "proteina": 44,
+        "carbohidratos": 59,
+        "grasa": 22,
+        "tipo": "comida",
+        "nota": "También puedes hacer las patatas al microondas 5-10'.",
+        "ingredientes": [
+            "5g aceite de oliva (~1.5 cdtas.)",
+            "20g almendras enteras, con piel (~2.5 cdas.)",
+            "55g pan de centeno integral (1 loncha)",
+            "110g espárragos trigueros (6 tallos)",
+            "120g zanahorias (2 pzas.)",
+            "125g patata, mediana (1 pza.)",
+            "170g merluza, cruda",
+            "1-2 cdta. de zumo de limón"
+        ],
+        "pasos": [
+            "Poner un cazo con agua a hervir y añadir una pizca de sal. Lavar o pelar las patatas. Añadirlas al agua y hervirlas durante 15-30 minutos, hasta que estén tiernas o se puedan pinchar fácilmente con un tenedor. Condimentar con sal, pimienta y otras especias o hierbas al gusto.",
+            "Mientras tanto, retirar los extremos de los espárragos y saltearlos en una plancha con un chorrito de aceite de oliva. Mismo procedimiento con la merluza. Condimentar con sal, pimienta y un poco de zumo de limón.",
+            "Servir el pescado y los espárragos con las patatas. Comer las almendras aparte o picarlas y servirlas sobre el pescado y las verduras."
+        ],
+        "imagen": merluza_esparragos_patata
+    },
+    {
+        "id": "atun_ensalada_arroz",
+        "nombre": "Atún marinado con ensalada de arroz",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 30,
+        "calorias": 618,
+        "proteina": 31,
+        "carbohidratos": 73,
+        "grasa": 22,
+        "tipo": "comida",
+        "nota": "Si dejas hecho el arroz de días atrás te saltas el primer paso :)",
+        "ingredientes": [
+            "10g aceite de oliva (~2 cdtas.)",
+            "35g queso cottage, 4% de grasa (~2.5 cdas.)",
+            "45g aguacate, fresco (¼ pza.)",
+            "50g lechuga (5 hojas)",
+            "60g atún, fresco, crudo",
+            "70g pepino (¼ pza.)",
+            "70g tomate (1 pza.)",
+            "85g arroz basmati, crudo",
+            "1-3 tallo/brote de eneldo fresco",
+            "1 cdta. de zumo de limón"
+        ],
+        "pasos": [
+            "Poner un cazo con agua a hervir y añadir una pizca de sal. Lavar el arroz con agua fría antes de cocerlo.",
+            "Mientras tanto, lavar la verdura. Cortar el tomate y el pepino en dados y cortar la lechuga en trozos pequeños. Mezclar las verduras en un bol con el queso cottage. Salpimentar al gusto.",
+            "Cuando el arroz esté listo, cocinar el atún a la plancha unos minutos por cada lado en una sartén a fuego medio-alto hasta que el centro del pescado esté opaco y se desmenuce fácilmente.",
+            "Servir el pescado y la ensalada con el arroz en un plato. Exprimir un chorrito de zumo de limón sobre el pescado y la ensalada."
+        ],
+        "imagen": atun_ensalada_arroz
+    },
+    {
+        "id": "salmon_patatas_ensalada",
+        "nombre": "Salmón con patatas y ensalada de tomate, pepino y lechuga",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 30,
+        "calorias": 618,
+        "proteina": 31,
+        "carbohidratos": 74,
+        "grasa": 21,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "5g aceite de oliva (~1 cucharadita)",
+            "55g lechuga (5 hojas)",
+            "95g tomate (1 pza.)",
+            "95g pepino (¼ pza.)",
+            "110g filete de salmón, del Atlántico, de granja, crudo",
+            "390g patata, mediana (3 pzas.)",
+            "1 cdta. de zumo de limón",
+            "1-3 tallo/brote de eneldo fresco"
+        ],
+        "pasos": [
+            "Poner una olla con agua a hervir y añadir una pizca de sal. Lavar o pelar las patatas. Añadir las patatas al agua y hervirlas durante 15-30 minutos, hasta que estén blandas. Pinchar con la punta de un cuchillo o un tenedor; si el utensilio entra y sale sin dificultad, las patatas están listas.",
+            "Mientras tanto, lavar la verdura. Cortar el tomate y el pepino en dados y cortar la lechuga en trozos pequeños. Mezclar las verduras. Salpimentar.",
+            "Cuando las patatas estén casi listas, freír el salmón unos minutos por cada lado en una sartén a fuego medio-alto hasta que el centro del pescado esté opaco y se desmenuce fácilmente.",
+            "Servir el pescado, las patatas y la ensalada en un plato. Cubrir las patatas con la margarina y el eneldo, y exprimir un chorrito de zumo de limón sobre el pescado y la ensalada."
+        ],
+        "imagen": salmon_patatas_ensalada
+    },
+    {
+        "id": "ensalada_pasta_atun_queso_feta",
+        "nombre": "Ensalada de pasta con atún y queso feta",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 15,
+        "calorias": 618,
+        "proteina": 31,
+        "carbohidratos": 75,
+        "grasa": 21,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "5g aceite de oliva (~1.5 cdtas.)",
+            "35g atún, en agua, en lata (½ lata)",
+            "40g queso feta, 25% de grasa, pasteurizado",
+            "60g lechuga romana (6 hojas)",
+            "90g pasta de trigo integral, cruda",
+            "140g judías verdes, congeladas",
+            "1-2 cda. de zumo de limón"
+        ],
+        "pasos": [
+            "Cocer la pasta según las instrucciones del paquete en una olla con agua y una pizca de sal.",
+            "Hervir agua en un cazo con una pizca de sal. Añadir las judías verdes y cocinarlas durante aproximadamente 3 minutos, o hasta que se puedan pinchar fácilmente con un tenedor.",
+            "Lavar la lechuga y cortarla en tiras. Mezclarla con la pasta, las judías verdes y el aceite de oliva en un bol de ensalada. Condimentar con sal, pimienta y zumo de limón.",
+            "Escurrir el atún. Cubrir con el queso feta y el atún."
+        ],
+        "imagen": ensalada_pasta_atun_queso_feta
+    },
+    {
+        "id": "batido_proteinas_naranja_arandanos",
+        "nombre": "Batido de proteínas, naranja y arándanos",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 0,
+        "calorias": 238,
+        "proteina": 16,
+        "carbohidratos": 24,
+        "grasa": 9,
+        "tipo": "snack",
+        "nota": "",
+        "ingredientes": [
+            "10g coco rallado, sin endulzar (~2 cdas.)",
+            "20g proteína en polvo vegana, con sabor (1 medida)",
+            "65g arándanos",
+            "120g naranja (1 pza.)"
+        ],
+        "pasos": [
+            "Lavar los arándanos y pelar la naranja.",
+            "Mezclar la proteína en polvo y el coco con la cantidad de agua sugerida en el envase. (Siempre puedes añadir más agua o algunos cubitos de hielo para adaptar la consistencia al gusto).",
+            "Comer la naranja y los arándanos aparte."
+        ],
+        "imagen": batido_proteinas_naranja_arandanos
+    },
+    {
+        "id": "smoothie_manzana_platano_cacahuete",
+        "nombre": "Smoothie de manzana, plátano y crema de cacahuete",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 0,
+        "calorias": 237,
+        "proteina": 12,
+        "carbohidratos": 28,
+        "grasa": 8,
+        "tipo": "snack",
+        "nota": "Para esta receta se necesita una batidora",
+        "ingredientes": [
+            "10g proteína en polvo de suero de leche, de sabor (1/3 medida)",
+            "15g crema de cacahuete (~1 cucharada)",
+            "75g plátano (1/2 pza.)",
+            "80g manzana (1/2 pza.)"
+        ],
+        "pasos": [
+            "Pelar el plátano.",
+            "Lavar la manzana, retirar el corazón y cortarla en rodajas.",
+            "Añadir todos los ingredientes con un poco de agua a una batidora. Triturar durante unos 30 segundos, o hasta obtener una consistencia uniforme y cremosa. Si es necesario, añadir un poco más de agua o cubitos de hielo en caso de desear una consistencia más fina, y volver a licuar.",
+            "Servir el smoothie en un vaso."
+        ],
+        "imagen": smoothie_manzana_platano_cacahuete
+    },
+    {
+        "id": "bowl_smoothie_espirulina",
+        "nombre": "Bowl de smoothie verde con espirulina",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 0,
+        "calorias": 237,
+        "proteina": 19,
+        "carbohidratos": 20,
+        "grasa": 9,
+        "tipo": "snack",
+        "nota": "Para esta receta se necesita una batidora",
+        "ingredientes": [
+            "5g espirulina en polvo (~2 cdtas.)",
+            "20g proteína en polvo de suero de leche, de sabor (2/3 medida)",
+            "30g espinacas troceadas, congeladas (~3 cdas.)",
+            "35g frambuesas congeladas",
+            "40g aguacate fresco (1/4 pza.)",
+            "65g plátano (1/2 pza.)"
+        ],
+        "pasos": [
+            "Pelar el plátano y reservar un poco para la cobertura. Cortar el aguacate por la mitad y retirar el hueso. Con una cuchara, sacar la pulpa y añadirla a una batidora.",
+            "Agregar el resto de ingredientes a la batidora. Triturar durante unos 30 segundos, o hasta obtener una consistencia uniforme y cremosa. Si es necesario, añadir un poco de agua o cubitos de hielo en caso de desear una consistencia más fina, y volver a triturar.",
+            "Servir el smoothie en un bol y cubrir con el plátano restante."
+        ],
+        "imagen": bowl_smoothie_espirulina
+    },
+    {
+        "id": "batido_proteinas_dátiles_coco",
+        "nombre": "Batido de proteínas, dátiles, plátano y chips de coco",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 0,
+        "calorias": 238,
+        "proteina": 17,
+        "carbohidratos": 24,
+        "grasa": 8,
+        "tipo": "snack",
+        "nota": "",
+        "ingredientes": [
+            "10g chips de coco (Bio/Organic Alesto, Lidl)",
+            "20g dátiles deshidratados, cualquier tipo (2 pzas.)",
+            "20g proteína en polvo de suero de leche, de sabor (2/3 medida)",
+            "40g plátano (1/2 pza.)"
+        ],
+        "pasos": [
+            "Mezclar la proteína en polvo con la cantidad de agua sugerida en el paquete. (Siempre se puede añadir más agua o algunos cubitos de hielo para adaptar la consistencia al gusto).",
+            "Comer los dátiles, el plátano y los chips de coco aparte."
+        ],
+        "imagen": batido_proteinas_dátiles_coco
+    },
+    {
+        "id": "smoothie_frutas_bosque_chocolate",
+        "nombre": "Smoothie proteico de frutas del bosque con chocolate negro",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 0,
+        "calorias": 238,
+        "proteina": 13,
+        "carbohidratos": 29,
+        "grasa": 8,
+        "tipo": "snack",
+        "nota": "Para esta receta se necesita una batidora y se recomienda utilizar proteína en polvo sabor a chocolate o vainilla",
+        "ingredientes": [
+            "5g chocolate negro 70% cacao",
+            "10g proteína en polvo de suero de leche, de sabor (1/3 medida)",
+            "15g miel (~2 cdtas.)",
+            "55g arándanos",
+            "70g frambuesas congeladas",
+            "95g leche entera (~95 ml)"
+        ],
+        "pasos": [
+            "Añadir todos los ingredientes a una batidora. Triturar durante unos 30 segundos, o hasta obtener una consistencia uniforme y cremosa. En caso de desear una consistencia más líquida, añadir un poco de agua o cubitos de hielo y volver a batir.",
+            "Servir el smoothie en un vaso."
+        ],
+        "imagen": smoothie_frutas_bosque_chocolate
+    },
+    {
+        "id": "smoothie_platano_pera",
+        "nombre": "Smoothie de plátano y pera",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 0,
+        "calorias": 237,
+        "proteina": 17,
+        "carbohidratos": 23,
+        "grasa": 8,
+        "tipo": "snack",
+        "nota": "Para esta receta se necesita una batidora",
+        "ingredientes": [
+            "10g aceite de coco (~1.5 cdtas.)",
+            "45g pera (1 pza.)",
+            "55g plátano (1/2 pza.)",
+            "160g yogur natural 0% (Fage)"
+        ],
+        "pasos": [
+            "Pelar y cortar el plátano y la pera en rodajas.",
+            "Añadir todos los ingredientes a una batidora. Batir durante unos 30 segundos, o hasta obtener una consistencia uniforme y cremosa. Si es necesario, añadir un poco de agua o cubitos de hielo en caso de desear una consistencia más fina, y volver a batir.",
+            "Servir el smoothie en un vaso."
+        ],
+        "imagen": smoothie_platano_pera
+    },
+    {
+        "id": "atun_ensalada_verano",
+        "nombre": "Pollo asado con ensalada de verano",
+        "tiempoPrep": 15,
+        "tiempoCoccion": 15,
+        "calorias": 618,
+        "proteina": 51,
+        "carbohidratos": 59,
+        "grasa": 19,
+        "tipo": "comida",
+        "nota": "Puedes dejar marinando el atún toda la noche o un día entero. Además, puedes sellarlo en la sartén si lo deseas o comerlo simplemente marinado si estaba congelado previamente",
+        "ingredientes": [
+            "5g aceite de oliva (~1 cucharadita)",
+            "30g miel (~1.5 cdas.)",
+            "60g atún fresco crudo",
+            "80g lechuga (8 hojas)",
+            "80g cebolla morada (3/4 pza.)",
+            "115g queso cottage 0% m.g.",
+            "115g huevo entero (2 pzas.)",
+            "145g espárragos trigueros (7 tallos)",
+            "180g sandía",
+            "1-2 cda. salsa de soja",
+            "1-2 cda. zumo de limón"
+        ],
+        "pasos": [
+            "Mezclar el aceite de oliva, la miel, salsa de soja y el zumo de limón en un recipiente. Salpimentar al gusto.",
+            "Añadir el atún en tacos al recipiente de la salsa y deja marinar mientras se prepara la ensalada.",
+            "Lavar los espárragos y cortar los extremos duros. Lavar y picar la lechuga. Pelar y picar la cebolla. Pelar y cortar la sandía en trozos medianos.",
+            "Mezclar las verduras y la sandía en una ensaladera.",
+            "Añadir el atún marinado o sellado en la sartén según tu gusto."
+        ],
+        "imagen": atun_ensalada_verano
+    },
+    {
+        "id": "ensalada_fria_lentejas",
+        "nombre": "Ensalada fría de lentejas",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 20,
+        "calorias": 618,
+        "proteina": 36,
+        "carbohidratos": 71,
+        "grasa": 20,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "5g aceite de oliva (~1 cucharadita)",
+            "45g espinacas",
+            "45g tomates (1/2 pza.)",
+            "50g rulo de queso de cabra, 22% de grasa",
+            "60g lechuga (6 hojas)",
+            "70g rábano (6 pzas.)",
+            "75g lentejas rojas crudas",
+            "75g pimiento rojo (1/2 pza.)",
+            "90g zanahorias (2 pzas.)",
+            "90g remolacha cocida (2 pzas.)",
+            "1/3-1 cdta. cúrcuma molida",
+            "1-3 cdta. mostaza de Dijon",
+            "1-5 cda. vinagre de manzana"
+        ],
+        "pasos": [
+            "Lavar las lentejas antes de cocinarlas. Verterlas en un cazo con agua y una pizca de sal y cocinarlas según las instrucciones del paquete.",
+            "Lavar y cortar la verdura en rodajas y añadirlas a un bol.",
+            "Incorporar las lentejas al bol.",
+            "Preparar el aliño mezclando el aceite de oliva, vinagre de manzana y la mostaza.",
+            "Aliñar la ensalada con el aliño, salpimentar al gusto y condimentar con cúrcuma antes de servir."
+        ],
+        "imagen": ensalada_fria_lentejas
+    },
+    {
+        "id": "ensalada_lentejas_vegana",
+        "nombre": "Ensalada de lentejas con carne desmenuzada vegana",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 30,
+        "calorias": 617,
+        "proteina": 37,
+        "carbohidratos": 57,
+        "grasa": 26,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "15g semillas de granada (~1.5 cdas.)",
+            "30g espinacas",
+            "40g pepino (1/4 pza.)",
+            "40g zanahorias (1 pza.)",
+            "40g remolacha cocida (1 pza.)",
+            "40g tomates cherri (3 pzas.)",
+            "45g lentejas beluga crudas",
+            "80g boniato (1/2 pza.)",
+            "145g Beyond Beef (carne picada vegana, Beyond Meat)",
+            "1/2 puñado perejil picado"
+        ],
+        "pasos": [
+            "Poner a hervir un cazo con agua y añadir una pizca de sal. Cocer las lentejas beluga según las instrucciones del paquete.",
+            "Mientras tanto, poner a hervir otro cazo con agua y añadir una pizca de sal. Pelar el boniato, cortarlo en dados y cocerlo durante 12 minutos o hasta que esté tierno.",
+            "Calentar una sartén con un chorrito de aceite y freír las tiras vegetales a fuego medio-alto durante unos 6-7 minutos o hasta que se calienten.",
+            "Lavar las espinacas y cortarlas en trozos grandes. Mezclar las espinacas, lentejas, el boniato y perejil en un bol grande. Salpimentar y condimentar con otras especias o hierbas al gusto.",
+            "Cubrir con la carne vegetal y la granada."
+        ],
+        "imagen": ensalada_lentejas_vegana
+    },
+    {
+        "id": "ensalada_thai_tofu",
+        "nombre": "Ensalada Thai vegana con tofu ahumado",
+        "tiempoPrep": 15,
+        "tiempoCoccion": 0,
+        "calorias": 618,
+        "proteina": 41,
+        "carbohidratos": 59,
+        "grasa": 24,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "20g crema de cacahuete (~1 cda.)",
+            "25g ajetes (1 1/2 pza.)",
+            "35g col lombarda (1/8 cabeza)",
+            "45g noodles de arroz, crudos",
+            "60g mango (1/2 pza.)",
+            "60g pimiento rojo (1/2 pza.)",
+            "180g tofu ahumado (Kylmäsavu, Jalotofu)",
+            "1/4-1/2 cdta. copos de guindilla",
+            "1/2-1 puñado de menta picada",
+            "1-2 cda. zumo de lima",
+            "1/2-1 cdta. jengibre fresco rallado",
+            "1-2 cda. salsa de soja",
+            "1/2-1 puñado de cilantro picado"
+        ],
+        "pasos": [
+            "Colocar los fideos de arroz en un bol y verter agua hirviendo sobre ellos. Dejarlos reposar durante al menos 10-15 minutos para que absorban el agua.",
+            "Mientras tanto, lavar el pimiento, la col lombarda y los ajetes. Trocear el pimiento y la col y cortar los ajetes en rodajas.",
+            "Pelar el mango. Cortar el mango y el tofu en dados.",
+            "Para el aderezo, mezclar la crema de cacahuete, la salsa de soja, el zumo de lima, jengibre y los copos de guindilla.",
+            "Mezclar la menta y el cilantro con el resto de los ingredientes en un bol y servir."
+        ],
+        "imagen": ensalada_thai_tofu
+    },
+    {
+        "id": "ensalada_tofu_verduras_asadas",
+        "nombre": "Ensalada de tofu y verduras asadas",
+        "tiempoPrep": 15,
+        "tiempoCoccion": 25,
+        "calorias": 618,
+        "proteina": 46,
+        "carbohidratos": 54,
+        "grasa": 24,
+        "tipo": "comida",
+        "nota": "Los tiempos de cocción se pueden reducir a 10' si eliges cocinar las verduras a la plancha o al vapor en el microondas",
+        "ingredientes": [
+            "25g espinacas",
+            "35g quinoa cruda",
+            "95g zanahorias (2 pzas.)",
+            "230g calabaza moscada cruda (1/4 pza.)",
+            "315g tofu firme",
+            "15ml zumo de lima",
+            "1-2 cdta. cilantro picado"
+        ],
+        "pasos": [
+            "Precalentar el horno a 200°C (gas) o 180°C (ventilador).",
+            "Pelar y cortar la calabaza y las zanahorias en trozos pequeños. Lavar y picar finamente las espinacas.",
+            "Colocar la calabaza y las zanahorias en una bandeja de horno y salpimentar. Hornear durante 15 a 20 minutos, hasta que estén doradas y tiernas.",
+            "Escurrir y cortar el tofu en dados (de aproximadamente 1×1cm).",
+            "Mientras las verduras están en el horno, lavar el arroz antes de cocinarlo, verterlo en un cazo con agua y una pizca de sal y cocinarlo según las instrucciones del paquete. A continuación, dejar que se enfríe.",
+            "Calentar una sartén a fuego medio. Añadir las espinacas y dejar que se marchiten.",
+            "Retirar las espinacas de la sartén y freír el tofu a fuego medio-alto hasta que esté crujiente y dorado.",
+            "Mezclar todos los ingredientes en un bol grande y rociar con el zumo de lima y añadir el cilantro picado. Salpimentar y servir."
+        ],
+        "imagen": ensalada_tofu_verduras_asadas
+    },
+    {
+        "id": "bol_pollo_humus",
+        "nombre": "Bol con pollo y humus",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 30,
+        "calorias": 618,
+        "proteina": 30,
+        "carbohidratos": 74,
+        "grasa": 22,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "25g humus (~2 cdas.)",
+            "65g aguacate fresco (1/2 pza.)",
+            "80g lechuga (8 hojas)",
+            "100g pechuga de pollo cruda",
+            "120g zanahorias (2 pzas.)",
+            "330g boniato (1 1/2 pza.)",
+            "1-2 dientes de ajo prensado",
+            "2-3 cdas. vinagre balsámico",
+            "1-2 segundos spray para cocinar"
+        ],
+        "pasos": [
+            "Poner un cazo con agua a hervir y añadir una pizca de sal. Lavar o pelar los boniatos. Añadirlos al agua y hervirlos durante 15-30 minutos, hasta que estén tiernos o se puedan pinchar fácilmente con un tenedor.",
+            "Sofreír el ajo en una sartén con spray de cocina a fuego medio-alto. Salpimentar la pechuga de pollo. Freír por ambos lados en el sartén durante aproximadamente 10 minutos, hasta que el centro pierda su color rosado. Cortarla transversalmente cuando esté lista.",
+            "Lavar la lechuga y colocarla en el fondo de un bol.",
+            "Pelar las zanahorias, rallarlas y añadirlas al bol.",
+            "Cortar el aguacate por la mitad y retirar el hueso. Con una cuchara, sacar la pulpa y cortarla en dados. Añadir el aguacate al bol junto con el pollo, boniato y el humus. Aliñar con el vinagre balsámico y salpimentar."
+        ],
+        "imagen": bol_pollo_humus
+    },
+    {
+        "id": "ensalada_vegana_quinoa_fresas",
+        "nombre": "Ensalada vegana de quinoa con fresas",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 25,
+        "calorias": 618,
+        "proteina": 40,
+        "carbohidratos": 60,
+        "grasa": 23,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "20g pipas de calabaza (~2.5 cdas.)",
+            "30g espinacas",
+            "40g edamames cocidos y pelados, congelados",
+            "60g tempeh (el Granero integral)",
+            "70g quinoa cruda",
+            "75g pepino (1/4 pza.)",
+            "80g fresas",
+            "95g brócoli (1/4 cabeza)",
+            "1-2 cda. zumo de limón"
+        ],
+        "pasos": [
+            "Lavar la quinoa antes de cocinarla. Verterla en un cazo con agua y una pizca de sal y cocinarla según las instrucciones del paquete.",
+            "Lavar el pepino, brócoli, las fresas y las espinacas. Cortar el pepino y las fresas en rodajas y el brócoli en ramilletes más pequeños. Calentar un cazo con agua y una pizca de sal y hervir el brócoli durante unos 3 minutos. Añadir el edamame durante el último minuto.",
+            "Calentar una sartén con un chorrito de agua a fuego medio-alto y freír el tempeh hasta que se dore y se caliente.",
+            "Mezclar todos los ingredientes en un bol, salpimentar, cubrir con las semillas de calabaza y aliñar con el zumo de limón antes de servir."
+        ],
+        "imagen": ensalada_vegana_quinoa_fresas
+    },
+    {
+        "id": "ensalada_pasta_pesto_pollo_vegano",
+        "nombre": "Ensalada de pasta al pesto con pollo vegano",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 15,
+        "calorias": 618,
+        "proteina": 60,
+        "carbohidratos": 60,
+        "grasa": 14,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "10g pesto verde vegano (~2 cdtas.)",
+            "55g lechuga (5 hojas)",
+            "70g pasta de trigo integral cruda",
+            "115g tomates cherri (8 pzas.)",
+            "250g Tiras Originales de pollo a base de plantas Heura"
+        ],
+        "pasos": [
+            "Cocer la pasta según las instrucciones del paquete en una olla con agua y una pizca de sal. Una vez cocida, escurrirla y lavarla con agua fría y luego mezclarla con el pesto.",
+            "Mientras tanto, freír la carne vegana en una sartén con un chorrito de agua a fuego medio-alto hasta que se dore.",
+            "Lavar las verduras y cortar los tomates en cuartos.",
+            "Mezclar todos los ingredientes en un recipiente, salpimentar y servir."
+        ],
+        "imagen": ensalada_pasta_pesto_pollo_vegano
+    },
+    {
+        "id": "ensalada_quinoa_aguacate_alubias",
+        "nombre": "Ensalada de quinoa con aguacate y alubias negras",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 15,
+        "calorias": 618,
+        "proteina": 43,
+        "carbohidratos": 72,
+        "grasa": 17,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "40g espinacas",
+            "50g aguacate fresco (1/4 pza.)",
+            "60g quinoa cruda",
+            "70g seitan Strips Traditional Sweet Earth",
+            "100g pepino (1/4 pza.)",
+            "100g pimiento rojo (1/2 pza.)",
+            "195g alubias negras en conserva (3/4 lata)",
+            "1-2 cdta. zumo de lima"
+        ],
+        "pasos": [
+            "Lavar la quinoa antes de cocinarla. Verterla en un cazo con agua y una pizca de sal y cocinarla según las instrucciones del paquete.",
+            "Lavar el pepino, el pimiento y las espinacas y cortar en trozos pequeños. Lavar y escurrir las alubias negras. Cortar el aguacate por la mitad y retirar el hueso. Sacar la pulpa con una cuchara y cortarla en dados.",
+            "Saltear el seitán en taquitos o lonchas (al gusto).",
+            "Una vez que la quinoa se haya enfriado, combinar todos los ingredientes en un plato, condimentar con zumo de lima y salpimentar."
+        ],
+        "imagen": ensalada_quinoa_aguacate_alubias
+    },
     {
         "id": "ensalada_pollo_bulgur",
         "nombre": "Ensalada de pollo y bulgur",

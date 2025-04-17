@@ -64,11 +64,7 @@ export default function SesionDetalle({ sesion, onBack }) {
                         )}
                     </div>
                 </div>
-                {ejercicio.descansoDespues && (
-                    <div className="flex items-center gap-1 text-xs text-gray-500 pl-2">
-                        ⏱️ {ejercicio.descansoDespues} de descanso después de: ejercicio
-                    </div>
-                )}
+
             </div>
         );
     };
@@ -110,6 +106,7 @@ export default function SesionDetalle({ sesion, onBack }) {
                 <div key={idxSet} className="space-y-3">
                     <h4 className="text-md font-semibold text-gray-800">
                         {set.titulo || `Set ${idxSet + 1}`}
+                        
                         <div className="text-xs text-gray-500">{set.ejercicios.length} rondas</div>
                     </h4>
 
@@ -120,10 +117,13 @@ export default function SesionDetalle({ sesion, onBack }) {
                     ) : (
                         <div className="text-sm text-gray-400">No hay ejercicios.</div>
                     )}
-
-                    <div className="text-xs text-gray-500">
-                        ⏱️ {sesion.descanso}s de descanso después de: {set.titulo}
-                    </div>
+                    {(set.descanso>0) &&
+                        (<div className="flex items-center gap-1 text-xs text-gray-500 pl-2">
+                            ⏱️ {set.descanso} de descanso después de:   {set.titulo}
+                        </div>
+                        )
+                    }
+                  
                 </div>
             ))}
 
