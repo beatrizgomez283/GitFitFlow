@@ -135,8 +135,20 @@ export default function SesionDetalle({ sesion, onBack }) {
 
             {/* Modal de ejercicio activo */}
             {ejercicioActivo && (
-                <div className="fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center p-4">
-                    <div className="bg-white rounded-3xl shadow-lg w-full max-w-md max-h-[90vh] overflow-y-auto p-5 relative">
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center p-4"
+                    onClick={() => {
+                        if (ejercicioActivo?.nombre) {
+                            localStorage.setItem(`nota_${ejercicioActivo.nombre}`, notaPersonal);
+                        }
+                        setEjercicioActivo(null);
+                    }}
+                >
+                    <div
+                        className="bg-white rounded-3xl shadow-lg w-full max-w-md max-h-[90vh] overflow-y-auto p-5 relative"
+                        onClick={(e) => e.stopPropagation()} // 👈 evita que el clic dentro cierre el modal
+                    >
+
                         <button
                             onClick={() => {
                                 if (ejercicioActivo?.nombre) {
