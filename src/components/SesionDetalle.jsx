@@ -4,6 +4,8 @@ export default function SesionDetalle({ sesion, onBack }) {
     const [semanaSeleccionada, setSemanaSeleccionada] = useState(1);
     const [ejercicioActivo, setEjercicioActivo] = useState(null);
     const [notaPersonal, setNotaPersonal] = useState('');
+    const numSemanas = sesion.sets[0].ejercicios[0].series.length;
+    const semanas = Array.from({ length: numSemanas }, (_, i) => ` ${i + 1}`);
 
     if (!sesion || !Array.isArray(sesion.sets)) {
         return <div className="p-4">Sesión no válida.</div>;
@@ -82,7 +84,8 @@ export default function SesionDetalle({ sesion, onBack }) {
             <div className="space-y-2 mb-2">
                 <h3 className="text-sm font-medium text-gray-800">Semana</h3>
                 <div className="flex gap-2 overflow-x-auto pb-1">
-                    {[1, 2, 3, 4].map((semana) => (
+                    {
+                        semanas.map((semana) => (
                         <button
                             key={semana}
                             onClick={() => setSemanaSeleccionada(semana)}
