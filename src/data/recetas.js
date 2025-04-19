@@ -95,20 +95,376 @@ import pescado_horno_pimenton_arce from '../assets/recetas/pescado_horno_pimento
 import lenguado_pisto from '../assets/recetas/lenguado_pisto.jpg';
 import salmon_ensalada_patata from '../assets/recetas/salmon_ensalada_patata.jpg';
 import boniato_salmon_quark from '../assets/recetas/boniato_salmon_quark.jpg';
-/*import espaguetis_gambas_verduras from '../assets/recetas/espaguetis_gambas_verduras.jpg';
-import espaguetis_gambas_verduras from '../assets/recetas/espaguetis_gambas_verduras.jpg';
-import espaguetis_gambas_verduras from '../assets/recetas/espaguetis_gambas_verduras.jpg';
-import espaguetis_gambas_verduras from '../assets/recetas/espaguetis_gambas_verduras.jpg';
-import espaguetis_gambas_verduras from '../assets/recetas/espaguetis_gambas_verduras.jpg';
-import espaguetis_gambas_verduras from '../assets/recetas/espaguetis_gambas_verduras.jpg';
-import espaguetis_gambas_verduras from '../assets/recetas/espaguetis_gambas_verduras.jpg';
-
-*/
-
+import pollo_vegano_limon_pasta from '../assets/recetas/pollo_vegano_limon_pasta.jpg';
+import pasta_bolonesa_pavo from '../assets/recetas/pasta_bolonesa_pavo.jpg';
+import noquis_carne_tomate from '../assets/recetas/noquis_carne_tomate.jpg';
+import ensalada_pasta_caprese from '../assets/recetas/ensalada_pasta_caprese.jpg';
+import pasta_salmon_lima from '../assets/recetas/pasta_salmon_lima.jpg';
+import ñoquis_salsa_cremosa_pollo from '../assets/recetas/ñoquis_salsa_cremosa_pollo.jpg';
+import pasta_pollo_vegano_verduras from '../assets/recetas/pasta_pollo_vegano_verduras.jpg';
+import pasta_carbonara_setas from '../assets/recetas/pasta_carbonara_setas.jpg';
+import spaghetti_aglio_olio_tofu from '../assets/recetas/spaghetti_aglio_olio_tofu.jpg';
+import fideos_tofu_anacardos from '../assets/recetas/fideos_tofu_anacardos.jpg';
+import fideos_pollo_verduras from '../assets/recetas/fideos_pollo_verduras.jpg';
+import salteado_noodles_pollo from '../assets/recetas/salteado_noodles_pollo.jpg';
 
 
 const recetas = [
 
+    {
+        "id": "noquis_salsa_cremosa_pollo",
+        "nombre": "Ñoquis con salsa cremosa de pollo",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 15,
+        "calorias": 618,
+        "proteina": 38,
+        "carbohidratos": 67,
+        "grasa": 20,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "250g ñoquis, frescos",
+            "60g queso crema light",
+            "110g pechuga de pollo, cruda",
+            "50g espinacas frescas",
+            "5g aceite de oliva (~1 cdta.)",
+            "10g parmesano rallado"
+        ],
+        "pasos": [
+            "Cocer los ñoquis en abundante agua con sal siguiendo las instrucciones del paquete. Reservar un poco del agua de cocción.",
+            "Salpimentar el pollo y dorarlo en una sartén con el aceite a fuego medio-alto hasta que esté hecho. Cortar en tiras.",
+            "Añadir las espinacas a la sartén y cocinar hasta que se ablanden.",
+            "Incorporar el queso crema y un chorrito del agua de cocción para formar una salsa cremosa.",
+            "Agregar los ñoquis escurridos y el pollo. Mezclar todo bien.",
+            "Servir con el parmesano por encima."
+        ],
+        "imagen": noquis_salsa_cremosa_pollo
+    },
+    {
+        "id": "salteado_noodles_pollo",
+        "nombre": "Salteado fácil de noodles con pollo",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 20,
+        "calorias": 618,
+        "proteina": 59,
+        "carbohidratos": 59,
+        "grasa": 15,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "10g aceite de sésamo (~2 cdtas.)",
+            "70g fideos chinos al huevo",
+            "150g hongos cremini/de París (8 pzas.)",
+            "170g pechuga de pollo, cruda",
+            "360g brócoli (1 cabeza)",
+            "1-2 cdas. salsa de soja"
+        ],
+        "pasos": [
+            "Cocer los noodles según las instrucciones del paquete en un cazo con agua y una pizca de sal.",
+            "Lavar el brócoli y los hongos. Cortar el brócoli en floretes más pequeños y el tallo en rodajas finas. Cortar los hongos en tiras.",
+            "Salpimentar la pechuga de pollo. Freírla por ambos lados en una sartén grande con el aceite a fuego medio-alto durante aproximadamente 10 minutos, hasta que el centro pierda su color rosado. Luego, cortar el pollo en tiras.",
+            "Añadir las verduras a la sartén y freírlas unos minutos hasta que estén tiernas. Condimentar con salsa de soja y pimienta.",
+            "Incorporar el pollo y los noodles a la sartén con las verduras, mezclar bien y servir."
+        ],
+        "imagen": salteado_noodles_pollo
+    },
+    {
+        "id": "fideos_pollo_verduras",
+        "nombre": "Fideos de arroz con pollo y verduras salteadas",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 15,
+        "calorias": 618,
+        "proteina": 28,
+        "carbohidratos": 77,
+        "grasa": 21,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "10g miel (~1.5 cdtas.)",
+            "20g aceite de sésamo (~1 cda.)",
+            "30g ajetes (1 1/2 pza.)",
+            "50g pimiento verde (1/2 pza.)",
+            "50g pimiento rojo (1/2 pza.)",
+            "50g zanahorias (1 pza.)",
+            "50g cebolla amarilla (1/2 pza.)",
+            "60g noodles de arroz, crudos",
+            "105g pechuga de pollo, cruda",
+            "1-2 cdtas. salsa de soja, sin gluten"
+        ],
+        "pasos": [
+            "Cocer la pasta según las instrucciones del paquete en una olla con agua y una pizca de sal.",
+            "Salpimentar el pollo y cortarlo en trozos pequeños. Freír el pollo en una sartén con aceite de sésamo a fuego medio-alto durante aproximadamente 5-7 minutos, hasta que ya no esté rosa por dentro.",
+            "Lavar las verduras. Cortar el pimiento en rodajas y los ajetes en rodajas delgadas.",
+            "Freír las verduras en la salsa hoisin y la miel durante 4-5 minutos a fuego alto.",
+            "Mezclar todo y servir."
+        ],
+        "imagen": fideos_pollo_verduras
+    },
+    {
+        "id": "fideos_tofu_anacardos",
+        "nombre": "Fideos chinos con tofu y anacardos",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 15,
+        "calorias": 618,
+        "proteina": 36,
+        "carbohidratos": 75,
+        "grasa": 19,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "10g anacardos, naturales",
+            "40g puerro (1/4 pza.)",
+            "40g cebolla amarilla (1/2 pza.)",
+            "40g pimiento rojo (1/2 pza.)",
+            "50g huevo, entero (1 pza.)",
+            "65g noodles de arroz, crudos",
+            "85g zanahorias (1 pza.)",
+            "125g tofu, firme",
+            "150g brócoli (1/4 cabeza)",
+            "1-2 cdas. salsa de soja"
+        ],
+        "pasos": [
+            "Cocer los fideos según las instrucciones del paquete en un cazo con agua y una pizca de sal.",
+            "Lavar el brócoli y cortarlo en floretes más pequeños. También se puede picar el tallo en trozos pequeños.",
+            "Lavar y trocear el resto de verduras al gusto.",
+            "Escurrir el tofu y cortarlo en dados de 1×1 cm aproximadamente.",
+            "Calentar una sartén honda o un wok con un chorrito de agua a fuego medio-alto y freír el brócoli hasta que esté tierno. Añadir las demás verduras a continuación y cocinar durante 5' más.",
+            "Añadir el tofu y la salsa de soja y cocinar hasta que se caliente.",
+            "Añadir los fideos con los huevos y freír unos minutos más.",
+            "Servir en un bol y cubrir con los anacardos."
+        ],
+        "imagen": fideos_tofu_anacardos
+    },
+    {
+        "id": "spaghetti_aglio_olio_tofu",
+        "nombre": "Spaghetti aglio e olio con tofu",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 15,
+        "calorias": 618,
+        "proteina": 45,
+        "carbohidratos": 58,
+        "grasa": 23,
+        "tipo": "comida",
+        "nota": "Puedes sustituir el tofu por pollo (el 80% de la cantidad indicada de tofu equivale a la misma proporción en pollo) → si tienes 180g de tofu = 150g de pollo",
+        "ingredientes": [
+            "5g aceite de oliva (~1 cucharadita)",
+            "70g pasta, cruda",
+            "210g tofu, firme",
+            "3-5 dientes de ajo, entero",
+            "1/2-1 cdta. copos de guindilla",
+            "1/2 puñado de perejil, picado"
+        ],
+        "pasos": [
+            "Cocer la pasta 1 minuto menos de lo indicado en las instrucciones del paquete en un cazo con agua y una pizca de sal.",
+            "Mientras tanto, pelar y laminar los ajos.",
+            "Calentar una sartén a fuego medio-alto y freír el ajo hasta que esté ligeramente dorado. Sazonar con copos de guindilla y un poco de perejil. Añadir el tofu hasta que esté dorado.",
+            "Pasar la pasta a la sartén con un poco de agua de la cocción de la pasta y mezclar con el ajo. Bajar el fuego y cocer un par de minutos más. Añadir un poco más de agua de la pasta si se desea una salsa más cremosa.",
+            "Servir la pasta en un plato y cubrir con más perejil y aceite de oliva."
+        ],
+        "imagen": spaghetti_aglio_olio_tofu
+    },
+    {
+        "id": "pasta_carbonara_setas",
+        "nombre": "Carbonara de setas",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 20,
+        "calorias": 617,
+        "proteina": 48,
+        "carbohidratos": 62,
+        "grasa": 19,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "10g aceite de oliva",
+            "20g parmesano, 28-30% de grasa",
+            "65g pechuga de pollo, cruda",
+            "75g pasta, cruda",
+            "150g queso cottage, light, 2% de grasa",
+            "170g champiñones blancos",
+            "1-2 dientes de ajo, prensado",
+            "1-2 cdtas. chalotas, picadas",
+            "1/2-2 puñados de perejil, fresco"
+        ],
+        "pasos": [
+            "Limpiar los champiñones y cortarlos en trozos más pequeños junto con la pechuga de pollo. Freír los champiñones, las chalotas y el ajo en una sartén a fuego medio con el aceite hasta que se ablanden y empiecen a dorarse. Añadir el pollo y dorar todo junto. Sazonar con sal y pimienta.",
+            "Cocer la pasta según las instrucciones del paquete en una olla con agua y una pizca de sal.",
+            "Añadir la pasta a la sartén junto con parte del agua de la pasta. Sofreír unos minutos y retirar del fuego. Añadir el resto de ingredientes para que se integren con la pasta. Fuera del fuego, añadir los quesos y remover.",
+            "Servir en un bol y ¡Que aproveche!"
+        ],
+        "imagen": pasta_carbonara_setas
+    },
+    {
+        "id": "pasta_pollo_vegano_verduras",
+        "nombre": "Pasta integral con pollo vegano y verduras",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 15,
+        "calorias": 618,
+        "proteina": 34,
+        "carbohidratos": 73,
+        "grasa": 20,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "60g mozzarella rallada, Violife",
+            "75g pasta, trigo integral, cruda",
+            "110g Tiras Originales de pollo a base de plantas, Heura",
+            "125g mix de verduras, congeladas"
+        ],
+        "pasos": [
+            "Cocer la pasta según las instrucciones del paquete en una olla con agua ligeramente salada.",
+            "Freír el pollo vegano y las verduras en una sartén a fuego medio-alto hasta que se doren y se calienten. Salpimentar.",
+            "Servir la pasta con el pollo vegano y las verduras y cubrir con el queso vegano."
+        ],
+        "imagen": pasta_pollo_vegano_verduras
+    },
+    {
+        "id": "pasta_salmon_lima",
+        "nombre": "Pasta con salmón y lima",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 10,
+        "calorias": 617,
+        "proteina": 44,
+        "carbohidratos": 62,
+        "grasa": 21,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "10g aceite de oliva (~1.5 cdtas.)",
+            "15g miel (~2.5 cdtas.)",
+            "70g espaguetis, trigo integral, crudos",
+            "80g gambas, crudas, congeladas",
+            "80g queso fresco batido, desnatado, 0% de grasa",
+            "85g filete de salmón, del Atlántico, de granja, crudo",
+            "1-3 cda. zumo de lima",
+            "1-2 cdta. piel de lima, rallada",
+            "1/2-2 cubitos de pastilla de caldo"
+        ],
+        "pasos": [
+            "Cocer la pasta según las instrucciones del paquete en una olla con agua y una pizca de sal.",
+            "Cortar el salmón en dados. Mezclar en un cazo el queso fresco, aceite, la pastilla de caldo desmenuzada, miel, ralladura de lima y el zumo de lima y llevar la salsa a ebullición.",
+            "Añadir el salmón y las gambas previamente salteadas y cocinar durante un minuto. Servir con la pasta y salpimentar al gusto antes de servir."
+        ],
+        "imagen": pasta_salmon_lima
+    },
+    {
+        "id": "ensalada_pasta_caprese",
+        "nombre": "Ensalada caliente de pasta caprese",
+        "tiempoPrep": 5,
+        "tiempoCoccion": 10,
+        "calorias": 618,
+        "proteina": 45,
+        "carbohidratos": 56,
+        "grasa": 23,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "10g tomates deshidratados, sin aceite (2 pzas.)",
+            "10g levadura nutricional, hojuelas (~2.5 cdas.)",
+            "25g tomate concentrado (~1.5 cdas.)",
+            "30g rúcula",
+            "45g cebolla morada (1/2 pza.)",
+            "55g pasta, cruda",
+            "65g mozzarella fresca, 18% de grasa",
+            "100g tofu, ahumado",
+            "1/2-1 cdta. condimento italiano",
+            "1/2-2 puñados de albahaca, picada"
+        ],
+        "pasos": [
+            "Cocer la pasta según las instrucciones del paquete en una olla con agua y una pizca de sal. Reservar un poco del agua de la cocción.",
+            "Pelar y cortar las cebollas en dados. Cortar la mozzarella y los tomates secos en dados. Lavar la rúcula.",
+            "Calentar una sartén con un chorrito de agua a fuego medio. Saltear brevemente la cebolla con el tomate concentrado y luego desglasar la sartén con un poco del agua de la pasta. Llevar el líquido a ebullición y sazonar con las hierbas italianas, sal y pimienta.",
+            "Cocinar a la plancha el tofu condimentado al gusto.",
+            "Añadir la pasta, rúcula, los tomates y la mozzarella y dejar que se cocine a fuego bajo durante 1 minuto más. Adornar con la albahaca y la levadura nutricional y servir."
+        ],
+        "imagen": ensalada_pasta_caprese
+    },
+    {
+        "id": "noquis_carne_tomate",
+        "nombre": "Ñoquis con salsa de tomate y carne picada",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 10,
+        "calorias": 618,
+        "proteina": 46,
+        "carbohidratos": 61,
+        "grasa": 20,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "25g levadura nutricional, hojuelas",
+            "110g carne picada de vacuno, 3-7% de grasa, cruda",
+            "120g gnocchi de patatas",
+            "155g espinacas",
+            "235g tomate frito/salsa de tomate para pasta (~210 ml)",
+            "1-2 cdta. pasta de miso",
+            "1-2 dientes de ajo, prensado",
+            "1/2-1 cdta. mostaza"
+        ],
+        "pasos": [
+            "Cortar cebolla y ajo muy picado.",
+            "En una sartén, saltear la cebolla y el ajo con la carne durante 8-10 minutos.",
+            "En la misma sartén, saltear los gnocchis junto con el seitan otros 3 minutos hasta que queden dorados.",
+            "Añadir el tomate frito junto con las especias al gusto, tapar y dejar cocinar a fuego lento durante 5 minutos."
+        ],
+        "imagen": noquis_carne_tomate
+    },
+    {
+        "id": "pasta_bolonesa_pavo",
+        "nombre": "Pasta boloñesa con carne picada de pavo",
+        "tiempoPrep": 15,
+        "tiempoCoccion": 35,
+        "calorias": 618,
+        "proteina": 52,
+        "carbohidratos": 60,
+        "grasa": 18,
+        "tipo": "comida",
+        "nota": "",
+        "ingredientes": [
+            "10g aceite de oliva (~1.5 cdtas.)",
+            "40g cebolla amarilla (1/2 pza.)",
+            "65g espaguetis de trigo integral, crudos",
+            "85g calabacín (1/3 pza.)",
+            "170g carne de pavo picada, máx. 5% de grasa, cruda",
+            "305g tomate troceado en conserva (3/4 lata)",
+            "1 cdta. diente de ajo prensado",
+            "3 hojas albahaca fresca"
+        ],
+        "pasos": [
+            "Pelar y picar la cebolla. Picar la albahaca. Calentar una sartén con un chorrito de aceite a fuego medio y sofreír la cebolla y el ajo.",
+            "Añadir la carne picada de pavo y cocinarla junto con la cebolla y el ajo durante aproximadamente 15 minutos, hasta que esté bien hecha.",
+            "Verter el tomate troceado. Llevar a ebullición, y a continuación, bajar el fuego, tapar y cocer a fuego lento durante 15 minutos, removiendo de vez en cuando.",
+            "Mientras tanto, cocer los espaguetis según las instrucciones del paquete en una olla con agua y una pizca de sal.",
+            "Pelar y cortar en espiral el calabacín, haciendo hebras largas y finas para hacer calabacetis, y añadirlas a un escurridor.",
+            "El calor del agua hirviendo es suficiente para cocer los calabacetis sin que se ablanden demasiado.",
+            "Mezclar los espaguetis, los calabacetis y la salsa de carne. Condimentar con albahaca fresca, y salpimentar antes de servir."
+        ],
+        "imagen": pasta_bolonesa_pavo
+    },
+    {
+        "id": "pollo_vegano_limon_pasta",
+        "nombre": "Pollo vegano al limón con brócoli y pasta integral",
+        "tiempoPrep": 10,
+        "tiempoCoccion": 15,
+        "calorias": 618,
+        "proteina": 49,
+        "carbohidratos": 60,
+        "grasa": 19,
+        "tipo": "comida",
+        "nota": "puedes sustituir la Heura por hamburguesa vegana en trocitos (misma cantidad :) )",
+        "ingredientes": [
+            "50g hummus",
+            "70g pasta de trigo integral, cruda",
+            "145g Tiras Originales de pollo a base de plantas (Heura)",
+            "200g brócoli (1/2 cabeza)",
+            "1/2-1 cdta. zumo de limón"
+        ],
+        "pasos": [
+            "Cocer la pasta según las instrucciones del paquete en una olla con agua y una pizca de sal.",
+            "Mientras tanto, lavar el brócoli y cortarlo en floretes más pequeños y cortar el tallo en dados. Verter aproximadamente 1-2 cm de agua a una olla y colocar en ella un colador. Calentar el agua a fuego alto hasta que hierva, acomodar el brócoli en el colador y tapar. Dejar que se cocine al vapor durante 5-7 minutos o hasta que los floretes se puedan pinchar fácilmente con un tenedor.",
+            "Freír el pollo vegano en una sartén con un chorrito de agua a fuego medio-alto hasta que se dore y se caliente.",
+            "Mezclar todos los ingredientes, salpimentar y condimentar con especias y hierbas al gusto. Aliñar con un chorrito de limón y cubrir con el hummus."
+        ],
+        "imagen": pollo_vegano_limon_pasta
+    },
     {
         "id": "boniato_salmon_quark",
         "nombre": "Boniato al horno con salmón y quark",

@@ -1,6 +1,5 @@
 ﻿import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Layout from './Layout';
 import Inicio from './pages/Inicio'; // ejemplo de página
 import { Home, Dumbbell, Soup, Apple, User } from 'lucide-react';
 import Entrenamientos from './pages/Entrenamientos';
