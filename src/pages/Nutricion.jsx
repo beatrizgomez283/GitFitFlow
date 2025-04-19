@@ -49,7 +49,11 @@ export default function Nutricion() {
                         <img src={receta.imagen} alt={receta.nombre} className="w-full h-40 object-cover" />
                         <h3 className="font-bold text-sm text-black mb-2 mt-2 px-2">{receta.nombre}</h3>
                         <div className="flex justify-between text-xs text-gray-500 mb-2">
-                            <span className="ml-2">{receta.tiempoPrep} min</span>
+                            <span className="ml-2">Semanas: {receta.semana} </span>
+                            <span className="ml-2">{receta.comida} </span>
+                        </div>
+                        <div className="flex justify-between text-xs text-gray-500 mb-2">
+                            <span className="ml-2">{receta.dia} </span>
                             <span className="mr-2">{receta.calorias} kcal</span>
                         </div>
                     </div>

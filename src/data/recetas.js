@@ -138,7 +138,7 @@ const recetas = [
             "Agregar los ñoquis escurridos y el pollo. Mezclar todo bien.",
             "Servir con el parmesano por encima."
         ],
-        "imagen": noquis_salsa_cremosa_pollo
+        "imagen": ñoquis_salsa_cremosa_pollo
     },
     {
         "id": "salteado_noodles_pollo",
