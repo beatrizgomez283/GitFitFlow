@@ -67,7 +67,7 @@ export default function Nutricion() {
             )}
 
             {/* Botones de filtros separados por fila */}
-            <div className="flex gap-2 overflow-x-auto pb-2 mb-2">
+            <div className="flex gap-2 overflow-x-auto pb-1 mb-2">
                 {semanas.map((semana) => (
                     <button
                         key={semana}
@@ -79,7 +79,7 @@ export default function Nutricion() {
                 ))}
             </div>
 
-            <div className="flex gap-2 overflow-x-auto pb-2 mb-2">
+            <div className="flex gap-2 overflow-x-auto pb-1 mb-2">
                 {comidas.map((comida) => (
                     <button
                         key={comida}
@@ -91,7 +91,7 @@ export default function Nutricion() {
                 ))}
             </div>
 
-            <div className="flex gap-2 overflow-x-auto pb-2 mb-4">
+            <div className="flex gap-2 overflow-x-auto pb-1 mb-4">
                 {dias.map((dia) => (
                     <button
                         key={dia}
@@ -113,7 +113,7 @@ export default function Nutricion() {
                         <h3 className="font-bold text-sm text-black mb-2 mt-2 px-2">{receta.nombre}</h3>
                         <div className="flex justify-between text-xs text-gray-500 mb-2">
                             <span className="ml-2">Semanas: {receta.semana}</span>
-                            <span className="ml-2">{receta.comida}</span>
+                            <span className="mr-2">{receta.comida}</span>
                         </div>
                         <div className="flex justify-between text-xs text-gray-500 mb-2">
                             <span className="ml-2">{receta.dia.join(', ')}</span>
