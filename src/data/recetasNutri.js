@@ -7,7 +7,7 @@ export const recetasNutri = [
     {
         "id": "pasta_verduras_ternera",
         "nombre": "Pasta con verduras y carne",
-        "dia": ["lunes", "miércoles"],
+        "dia": ["L", "X"],
         "tiempoPrep": 10,
         "tiempoCoccion": 15,
         "ingredientes": [
@@ -22,7 +22,6 @@ export const recetasNutri = [
         "nota": "Puedes cambiar los macarrones por espaguetis integrales, y la carne por filetes de pavo.",
         "semana": "1 y 3",
         "comida": "Comida",
-        "tipo": "comida",
         "calorias": 420.9,
         "proteina": 37.1,
         "carbohidratos": 38.1,
@@ -38,7 +37,7 @@ export const recetasNutri = [
     {
         "id": "calamares_arroz_brocoli",
         "nombre": "Calamares con arroz y brócoli",
-        "dia": ["lunes", "miércoles"],
+        "dia": ["L", "X"],
         "tiempoPrep": 5,
         "tiempoCoccion": 10,
         "ingredientes": [
@@ -50,7 +49,6 @@ export const recetasNutri = [
         "nota": "PUEDES CAMBIAR EL ARROZ POR 4-5 PATATAS BABY MICROONDAS (200G)",
         "semana": "1 y 3",
         "comida": "Cena",
-        "tipo": "cena",
         "calorias": 425.8,
         "proteina": 38.4,
         "carbohidratos": 35.9,
@@ -66,7 +64,7 @@ export const recetasNutri = [
     {
         "id": "atun_pan_aguacate_feta",
         "nombre": "Atún con pan integral, aguacate o queso feta",
-        "dia": ["viernes"],
+        "dia": ["V"],
         "tiempoPrep": 5,
         "tiempoCoccion": 0,
         "ingredientes": [
@@ -78,7 +76,6 @@ export const recetasNutri = [
         "nota": "Puedes usar aguacate o queso feta como fuente de grasa saludable.",
         "semana": "1 y 3",
         "comida": "Cena",
-        "tipo": "cena",
         "calorias": 410,
         "proteina": 35,
         "carbohidratos": 20,

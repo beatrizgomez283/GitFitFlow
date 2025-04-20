@@ -3,14 +3,31 @@ import { recetasNutri } from '../data/recetasNutri';
 
 const semanas = ['1 y 3', '2 y 4'];
 const comidas = ['Desayuno', 'Comida', 'Cena'];
+const dias = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
 
 export default function Nutricion() {
-    const [semanaSeleccionada, setSemanaSeleccionada] = useState('1 y 3');
-    const [comidaSeleccionada, setComidaSeleccionada] = useState('Desayuno');
+    const [semanaSeleccionada, setSemanaSeleccionada] = useState(null);
+    const [comidaSeleccionada, setComidaSeleccionada] = useState(null);
+    const [diaSeleccionado, setDiaSeleccionado] = useState(null);
 
-    const recetasFiltradas = recetasNutri.filter(
-        (r) => r.semana === semanaSeleccionada && r.comida === comidaSeleccionada
-    );
+    const toggleSemana = (semana) => {
+        setSemanaSeleccionada((prev) => (prev === semana ? null : semana));
+    };
+
+    const toggleComida = (comida) => {
+        setComidaSeleccionada((prev) => (prev === comida ? null : comida));
+    };
+
+    const toggleDia = (dia) => {
+        setDiaSeleccionado((prev) => (prev === dia ? null : dia));
+    };
+
+    const recetasFiltradas = recetasNutri.filter((r) => {
+        const coincideSemana = semanaSeleccionada ? r.semana === semanaSeleccionada : true;
+        const coincideComida = comidaSeleccionada ? r.comida === comidaSeleccionada : true;
+        const coincideDia = diaSeleccionado ? r.dia.includes(diaSeleccionado) : true;
+        return coincideSemana && coincideComida && coincideDia;
+    });
 
     return (
         <div className="max-w-md mx-auto px-3 py-6">
@@ -20,7 +37,7 @@ export default function Nutricion() {
                 {semanas.map((semana) => (
                     <button
                         key={semana}
-                        onClick={() => setSemanaSeleccionada(semana)}
+                        onClick={() => toggleSemana(semana)}
                         className={`px-3 py-1 rounded-full border text-sm whitespace-nowrap ${semanaSeleccionada === semana ? 'bg-pink-600 text-white' : 'border-gray-300 text-gray-700'}`}
                     >
                         Semana {semana}
@@ -32,10 +49,22 @@ export default function Nutricion() {
                 {comidas.map((comida) => (
                     <button
                         key={comida}
-                        onClick={() => setComidaSeleccionada(comida)}
+                        onClick={() => toggleComida(comida)}
                         className={`px-3 py-1 rounded-full border text-sm whitespace-nowrap ${comidaSeleccionada === comida ? 'bg-pink-600 text-white' : 'border-gray-300 text-gray-700'}`}
                     >
                         {comida}
+                    </button>
+                ))}
+            </div>
+
+            <div className="flex gap-2 overflow-x-auto pb-3 mb-4">
+                {dias.map((dia) => (
+                    <button
+                        key={dia}
+                        onClick={() => toggleDia(dia)}
+                        className={`px-3 py-1 rounded-full border text-sm whitespace-nowrap ${diaSeleccionado === dia ? 'bg-pink-600 text-white' : 'border-gray-300 text-gray-700'}`}
+                    >
+                        {dia}
                     </button>
                 ))}
             </div>
@@ -49,11 +78,11 @@ export default function Nutricion() {
                         <img src={receta.imagen} alt={receta.nombre} className="w-full h-40 object-cover" />
                         <h3 className="font-bold text-sm text-black mb-2 mt-2 px-2">{receta.nombre}</h3>
                         <div className="flex justify-between text-xs text-gray-500 mb-2">
-                            <span className="ml-2">Semanas: {receta.semana} </span>
-                            <span className="ml-2">{receta.comida} </span>
+                            <span className="ml-2">Semanas: {receta.semana}</span>
+                            <span className="ml-2">{receta.comida}</span>
                         </div>
                         <div className="flex justify-between text-xs text-gray-500 mb-2">
-                            <span className="ml-2">{receta.dia} </span>
+                            <span className="ml-2">{receta.dia.join(', ')}</span>
                             <span className="mr-2">{receta.calorias} kcal</span>
                         </div>
                     </div>
