@@ -7,6 +7,23 @@ import Recetas from './pages/Recetas';
 import Nutricion from './pages/Nutricion';
 import DetalleReceta from './pages/DetalleReceta'; // 👈 añade esta línea
 import Tu from './pages/Tu';
+import { useLocation, useNavigate } from 'react-router-dom';
+import SesionEjecutar from './components/SesionEjecutar';
+
+function RutaSesionEjecutar() {
+    const { state } = useLocation();
+    const navigate = useNavigate();
+
+    if (!state?.sesion) return <p>No hay sesión activa</p>;
+
+    return (
+        <SesionEjecutar
+            sesion={state.sesion}
+            onFinish={() => navigate(-1)} // vuelve atrás al terminar
+        />
+    );
+}
+
 
 export default function App() {
     return (
@@ -27,6 +44,8 @@ export default function App() {
                         <Route path="/recetas/:id" element={<DetalleReceta />} /> {/* 👈 esta línea */}
                         <Route path="/nutricion" element={<Nutricion />} />
                         <Route path="/perfil" element={<Tu />} />
+                        <Route path="/ejecutar" element={<RutaSesionEjecutar />} />
+
                     </Routes>
                 </main>
 

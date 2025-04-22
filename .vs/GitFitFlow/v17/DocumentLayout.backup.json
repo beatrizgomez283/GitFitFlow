@@ -3,48 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\data\\planesEntrenamiento.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\data\\planesEntrenamiento.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\components\\SesionDetalle.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\SesionDetalle.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\components\\SesionEntrenamientoCard.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\SesionEntrenamientoCard.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\data\\planesEntrenamiento.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\data\\planesEntrenamiento.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\components\\PlanDetalle.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\PlanDetalle.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\components\\PlanPreview.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\PlanPreview.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\data\\recetasNutri.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\data\\recetasNutri.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\components\\PlanEntrenamientoCard.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\PlanEntrenamientoCard.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\PlanDetalle.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PlanDetalle.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\pages\\Entrenamientos.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Entrenamientos.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\pages\\Nutricion.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Nutricion.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\data\\recetas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\data\\recetas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\public\\_redirects||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:public\\_redirects||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\pages\\Recetas.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Recetas.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\App.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\App.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\components\\PlanEntrenamientoCard.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\PlanEntrenamientoCard.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\public\\_redirects||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:public\\_redirects||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\Layout.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -66,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,54 +74,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PlanPreview.jsx",
-              "DocumentMoniker": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\components\\PlanPreview.jsx",
-              "RelativeDocumentMoniker": "src\\components\\PlanPreview.jsx",
-              "ToolTip": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\components\\PlanPreview.jsx",
-              "RelativeToolTip": "src\\components\\PlanPreview.jsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-04-14T15:36:48.49Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SesionEntrenamientoCard.jsx",
-              "DocumentMoniker": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\components\\SesionEntrenamientoCard.jsx",
-              "RelativeDocumentMoniker": "src\\components\\SesionEntrenamientoCard.jsx",
-              "ToolTip": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\components\\SesionEntrenamientoCard.jsx",
-              "RelativeToolTip": "src\\components\\SesionEntrenamientoCard.jsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-04-15T15:49:41.871Z",
+              "DocumentIndex": 0,
+              "Title": "index.css",
+              "DocumentMoniker": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\index.css",
+              "RelativeDocumentMoniker": "src\\index.css",
+              "ToolTip": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\index.css",
+              "RelativeToolTip": "src\\index.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-22T07:57:01.584Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "PlanDetalle.jsx",
-              "DocumentMoniker": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\components\\PlanDetalle.jsx",
-              "RelativeDocumentMoniker": "src\\components\\PlanDetalle.jsx",
-              "ToolTip": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\components\\PlanDetalle.jsx",
-              "RelativeToolTip": "src\\components\\PlanDetalle.jsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-04-14T15:47:32.432Z",
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-22T07:55:59.713Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "planesEntrenamiento.js",
               "DocumentMoniker": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\data\\planesEntrenamiento.js",
               "RelativeDocumentMoniker": "src\\data\\planesEntrenamiento.js",
               "ToolTip": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\data\\planesEntrenamiento.js",
               "RelativeToolTip": "src\\data\\planesEntrenamiento.js",
-              "ViewState": "AgIAACgEAAAAAAAAAADgvzAEAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAJYEAAAAAAAAAAAAAMoEAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-04-15T11:54:15.263Z",
+              "WhenOpened": "2025-04-21T19:46:39.207Z",
               "EditorCaption": ""
             },
             {
@@ -136,14 +119,66 @@
               "RelativeDocumentMoniker": "src\\components\\SesionDetalle.jsx",
               "ToolTip": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\components\\SesionDetalle.jsx",
               "RelativeToolTip": "src\\components\\SesionDetalle.jsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAAAM8AAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2025-04-14T17:12:32.999Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "recetas.js",
+              "DocumentMoniker": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\data\\recetas.js",
+              "RelativeDocumentMoniker": "src\\data\\recetas.js",
+              "ToolTip": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\data\\recetas.js",
+              "RelativeToolTip": "src\\data\\recetas.js",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAHIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-19T09:56:48.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "recetasNutri.js",
+              "DocumentMoniker": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\data\\recetasNutri.js",
+              "RelativeDocumentMoniker": "src\\data\\recetasNutri.js",
+              "ToolTip": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\data\\recetasNutri.js",
+              "RelativeToolTip": "src\\data\\recetasNutri.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-18T19:58:23.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "Nutricion.jsx",
+              "DocumentMoniker": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\pages\\Nutricion.jsx",
+              "RelativeDocumentMoniker": "src\\pages\\Nutricion.jsx",
+              "ToolTip": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\pages\\Nutricion.jsx",
+              "RelativeToolTip": "src\\pages\\Nutricion.jsx",
+              "ViewState": "AgIAAH8AAAAAAAAAAADwv6MAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-04-18T19:46:28.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Recetas.jsx",
+              "DocumentMoniker": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\pages\\Recetas.jsx",
+              "RelativeDocumentMoniker": "src\\pages\\Recetas.jsx",
+              "ToolTip": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\pages\\Recetas.jsx",
+              "RelativeToolTip": "src\\pages\\Recetas.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-04-16T19:53:42.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "PlanEntrenamientoCard.jsx",
               "DocumentMoniker": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\components\\PlanEntrenamientoCard.jsx",
               "RelativeDocumentMoniker": "src\\components\\PlanEntrenamientoCard.jsx",
@@ -156,57 +191,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PlanDetalle.jsx",
-              "DocumentMoniker": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\PlanDetalle.jsx",
-              "RelativeDocumentMoniker": "PlanDetalle.jsx",
-              "ToolTip": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\PlanDetalle.jsx",
-              "RelativeToolTip": "PlanDetalle.jsx",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBYAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-04-14T15:46:44.11Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Entrenamientos.jsx",
-              "DocumentMoniker": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\pages\\Entrenamientos.jsx",
-              "RelativeDocumentMoniker": "src\\pages\\Entrenamientos.jsx",
-              "ToolTip": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\pages\\Entrenamientos.jsx",
-              "RelativeToolTip": "src\\pages\\Entrenamientos.jsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-04-14T15:34:10.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "recetas.js",
-              "DocumentMoniker": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\data\\recetas.js",
-              "RelativeDocumentMoniker": "src\\data\\recetas.js",
-              "ToolTip": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\data\\recetas.js",
-              "RelativeToolTip": "src\\data\\recetas.js",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAADYAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-04-15T11:57:29.057Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "App.jsx",
-              "DocumentMoniker": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\App.jsx",
-              "RelativeDocumentMoniker": "src\\App.jsx",
-              "ToolTip": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\App.jsx",
-              "RelativeToolTip": "src\\App.jsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-04-14T15:10:24.929Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 9,
               "Title": "_redirects",
               "DocumentMoniker": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\public\\_redirects",
@@ -215,11 +199,12 @@
               "RelativeToolTip": "public\\_redirects",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-04-15T08:12:01.47Z"
+              "WhenOpened": "2025-04-15T08:12:01.47Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "Tu.jsx",
               "DocumentMoniker": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\pages\\Tu.jsx",
               "RelativeDocumentMoniker": "src\\pages\\Tu.jsx",
@@ -227,11 +212,12 @@
               "RelativeToolTip": "src\\pages\\Tu.jsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-04-14T15:15:08.056Z"
+              "WhenOpened": "2025-04-14T15:15:08.056Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "Layout.jsx",
               "DocumentMoniker": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\Layout.jsx",
               "RelativeDocumentMoniker": "src\\Layout.jsx",
@@ -239,11 +225,12 @@
               "RelativeToolTip": "src\\Layout.jsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-04-14T15:08:36.308Z"
+              "WhenOpened": "2025-04-14T15:08:36.308Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "BottomNavbar.jsx",
               "DocumentMoniker": "C:\\Users\\beatriz.gcarrero\\source\\repos\\beatrizgomez283\\GitFitFlow\\src\\components\\BottomNavbar.jsx",
               "RelativeDocumentMoniker": "src\\components\\BottomNavbar.jsx",
@@ -251,7 +238,8 @@
               "RelativeToolTip": "src\\components\\BottomNavbar.jsx",
               "ViewState": "AgIAAAIAAAAAAAAAAAAgwCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-04-14T15:06:56.496Z"
+              "WhenOpened": "2025-04-14T15:06:56.496Z",
+              "EditorCaption": ""
             }
           ]
         }
