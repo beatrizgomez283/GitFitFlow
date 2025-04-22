@@ -24,16 +24,24 @@ export default function SesionEjecutar({ sesion, onFinish }) {
     );
 
     useEffect(() => {
+        const historial = JSON.parse(localStorage.getItem('historico_global') || '[]');
+        const entradaAnterior = historial
+            .slice()
+            .reverse()
+            .find(e => e.sesionNombre.trim().toLowerCase() === sesion.nombre.trim().toLowerCase());
+        console.log('👉 Última sesión encontrada:', entradaAnterior);
+
         const inicial = {};
         sesion.sets.forEach((set, idxSet) => {
             const rondas = rondasPorSet[idxSet];
             inicial[idxSet] = [];
             for (let r = 0; r < rondas; r++) {
                 inicial[idxSet][r] = set.ejercicios.map((ej, idxEj) => {
-                    const ultima = ej.historico?.[ej.historico.length - 1] || {};
+                    const ult = entradaAnterior?.ejercicios?.find(e => e.nombre === ej.nombre)?.series?.[r] || {};
                     return {
-                        reps: ultima.reps || '',
-                        peso: ultima.peso || '',
+                        reps: ult.reps || '',
+                        peso: ult.peso || '',
+                        nota: ult.nota || '',
                         done: false
                     };
                 });
@@ -76,22 +84,46 @@ export default function SesionEjecutar({ sesion, onFinish }) {
 
     const handleCompletar = () => {
         const hoy = dayjs().format('YYYY-MM-DD');
+        const entrada = {
+            fecha: hoy,
+            planId: sesion.planId || 'sin_id',
+            sesionNombre: sesion.nombre,
+            ejercicios: []
+        };
+
         sesion.sets.forEach((set, idxSet) => {
             set.ejercicios.forEach((ejercicio, idxEj) => {
-                const historico = ejercicio.historico || [];
-                const nuevos = data[idxSet].flatMap((ronda) => ronda[idxEj]);
-                nuevos.forEach(e => {
-                    if (e.done) historico.push({ fecha: hoy, reps: e.reps, peso: e.peso, nota: '' });
-                });
-                ejercicio.historico = historico;
+                const series = data[idxSet]
+                    .map((ronda) => {
+                        const registro = ronda[idxEj];
+                        return registro.done ? {
+                            reps: registro.reps || '',
+                            peso: registro.peso || '',
+                            nota: registro.nota || ''
+                        } : null;
+                    })
+                    .filter(Boolean); // elimina nulls
+
+                if (series.length > 0) {
+                    entrada.ejercicios.push({
+                        nombre: ejercicio.nombre,
+                        series
+                    });
+                }
             });
         });
+
+        const historico = JSON.parse(localStorage.getItem('historico_global') || '[]');
+        historico.push(entrada);
+        localStorage.setItem('historico_global', JSON.stringify(historico));
+
         setMensaje('✅ Sesión guardada correctamente');
         setTimeout(() => {
             setMensaje('');
             onFinish();
         }, 1500);
     };
+
 
     return (
         <div className="p-4 space-y-6 relative">
@@ -107,7 +139,6 @@ export default function SesionEjecutar({ sesion, onFinish }) {
             <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
                 <div className="h-full bg-green-500" style={{ width: `${progreso}%` }}></div>
             </div>
-
             {sesion.sets.map((set, idxSet) => (
                 <div key={idxSet} className="bg-white rounded-xl shadow-md shadow-white p-4 space-y-4">
                     <div>
