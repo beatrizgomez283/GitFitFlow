@@ -161,12 +161,20 @@ export default function SesionEjecutar({ sesion, onFinish }) {
                                     </div>
                                 </div>
                                 {ej.url && (
-                                    <img
-                                        src={getYoutubeThumbnail(ej.url)}
-                                        alt={ej.nombre}
-                                        className="w-14 h-14 rounded-lg object-cover"
-                                    />
+                                    <a
+                                        href={ej.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="shrink-0"
+                                    >
+                                        <img
+                                            src={getYoutubeThumbnail(ej.url)}
+                                            alt={ej.nombre}
+                                            className="w-14 h-14 rounded-lg object-cover transition hover:brightness-90"
+                                        />
+                                    </a>
                                 )}
+
                             </div>
                         ))}
                     </div>

@@ -30,12 +30,12 @@ export const planes = [
                                     {
                                         "semana": 3,
                                         "reps": "6",
-                                        "series": "5"
+                                        "n_series": "5"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "6",
-                                        "series": "5"
+                                        "n_series": "5"
                                     }
                                 ],
                                 
@@ -59,12 +59,12 @@ export const planes = [
                                     {
                                         "semana": 3,
                                         "reps": "5",
-                                        "series": "5"
+                                        "n_series": "5"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "5",
-                                        "series": "5"
+                                        "n_series": "5"
                                     }
                                 ],
                                 "descanso": 60,
@@ -716,12 +716,12 @@ export const planes = [
                                     {
                                         "semana": 3,
                                         "reps": "5",
-                                        "series": "5"
+                                        "n_series": "5"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "5",
-                                        "series": "5"
+                                        "n_series": "5"
                                     }
                                 ],
                                 "descanso": 0,
@@ -745,12 +745,12 @@ export const planes = [
                                     {
                                         "semana": 3,
                                         "reps": "8",
-                                        "series": "5"
+                                        "n_series": "5"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "8",
-                                        "series": "5"
+                                        "n_series": "5"
                                     }
                                 ],
                                 "descanso": 90,
@@ -984,12 +984,12 @@ export const planes = [
                                     {
                                         "semana": 3,
                                         "reps": "6",
-                                        "series": "5"
+                                        "n_series": "5"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "6",
-                                        "series": "5"
+                                        "n_series": "5"
                                     }
                                 ],
                                 "descanso": 0,
@@ -1013,12 +1013,12 @@ export const planes = [
                                     {
                                         "semana": 3,
                                         "reps": "AMRAP",
-                                        "series": "5"
+                                        "n_series": "5"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "AMRAP",
-                                        "series": "5"
+                                        "n_series": "5"
                                     }
                                 ],
                                 "descanso": 90,

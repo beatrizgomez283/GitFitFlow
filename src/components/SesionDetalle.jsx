@@ -128,7 +128,7 @@ export default function SesionDetalle({ sesion, onBack }) {
                 <div key={idxSet} className="space-y-3">
                     <h4 className="text-md font-semibold text-gray-800">
                         {set.titulo || `Set ${idxSet + 1}`}
-                        <div className="text-xs text-gray-500">{set.ejercicios.length} rondas</div>
+                        <div className="text-xs text-gray-500">{set.ejercicios[0].series[semanaSeleccionada-1].n_series} rondas</div>
                     </h4>
 
                     {Array.isArray(set.ejercicios) && set.ejercicios.length > 0 ? (
