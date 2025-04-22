@@ -29,17 +29,31 @@ export default function SesionDetalle({ sesion, onBack }) {
             setNotaPersonal(guardada || '');
         }
     }, [ejercicioActivo]);
+    useEffect(() => {
+        if (ejercicioActivo) {
+            document.body.style.overflow = 'hidden'; // 🛑 bloquea el scroll
+        } else {
+            document.body.style.overflow = ''; // ✅ lo restablece al cerrar
+        }
+
+        // Limpieza por si se desmonta inesperadamente
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [ejercicioActivo]);
+
 
     const renderEjercicio = (ejercicio, key) => {
         const series = Array.isArray(ejercicio.series) ? ejercicio.series : [];
-        const serieSemana = series.find(s => s.semana === semanaSeleccionada) || {};
-        console.log("serieSemana.reps: " + serieSemana.reps);
+        const serieSemana = series.find(s => Number(s.semana) === Number(semanaSeleccionada)) || {};
+
         const textoDetalle = [
-            serieSemana.reps && `${serieSemana.reps} reps`,
-            serieSemana.duracion && `${serieSemana.duracion}`,
-            serieSemana.distancia && `${serieSemana.distancia}`,
-            serieSemana.peso && `${serieSemana.peso}`,
-            ejercicio.descanso && `${ejercicio.descanso}s de descanso`
+            serieSemana.n_series && `${serieSemana.n_series} series`,
+            serieSemana.reps && `Reps: ${serieSemana.reps}`,
+            serieSemana.duracion && `Duración: ${serieSemana.duracion}`,
+            serieSemana.distancia && `Distancia: ${serieSemana.distancia}`,
+            serieSemana.peso && `Peso: ${serieSemana.peso}`,
+            ejercicio.descanso && `${ejercicio.descanso}s descanso`
         ].filter(Boolean).join(' · ');
 
         const notaGuardada = localStorage.getItem(`nota_${ejercicio.nombre}`) || '';
@@ -185,13 +199,14 @@ export default function SesionDetalle({ sesion, onBack }) {
                             {ejercicioActivo.nota || ejercicioActivo.notas || 'Sin nota.'}
                         </p>
 
-                        <div className="text-sm text-gray-500 mb-1">Tu nota</div>
+                        <div className="text-base text-gray-500 mb-1">Tu nota</div>
                         <textarea
                             rows={4}
                             value={notaPersonal}
                             onChange={(e) => setNotaPersonal(e.target.value)}
                             placeholder="Escribe una nota. Sólo tú puedes verla."
-                            className="w-full border rounded-lg px-3 py-2 text-sm text-gray-700 placeholder-gray-400"
+                            className="w-full border rounded-lg px-3 py-2 text-base text-gray-700 placeholder-gray-400"
+                            inputMode="text"
                         />
                     </div>
                 </div>

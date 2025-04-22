@@ -20,12 +20,12 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "8",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "8",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 3,
@@ -49,12 +49,12 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "5",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "5",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 3,
@@ -84,22 +84,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "10",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "10",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "10",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "10",
-                                        "series": "4"
+                                        "n_series": "4"
                                     }
                                 ],
                                 "descanso": 60,
@@ -113,22 +113,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "30-40s",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "30-40s",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "40s",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "40s",
-                                        "series": "4"
+                                        "n_series": "4"
                                     }
                                 ],
                                 "descanso": 60,
@@ -148,22 +148,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "8 each side",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "8 each side",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "10 each side",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "10 each side",
-                                        "series": "3"
+                                        "n_series": "3"
                                     }
                                 ],
                                 
@@ -178,22 +178,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "8 each side",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "8 each side",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "10 each side",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "10 each side",
-                                        "series": "3"
+                                        "n_series": "3"
                                     }
                                 ],
                                 
@@ -212,22 +212,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "10",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "10",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "12",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "12",
-                                        "series": "3"
+                                        "n_series": "3"
                                     }
                                 ],
                                 
@@ -241,22 +241,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "15-20s each side",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "15-20s each side",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "20-30s each side",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "20-30s each side",
-                                        "series": "3"
+                                        "n_series": "3"
                                     }
                                 ],
                                 
@@ -282,22 +282,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "8",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "8",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "6",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "6",
-                                        "series": "4"
+                                        "n_series": "4"
                                     }
                                 ],
                                 
@@ -311,22 +311,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "8",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "8",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "AMRAP",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "AMRAP",
-                                        "series": "4"
+                                        "n_series": "4"
                                     }
                                 ],
                                 "descanso": 90,
@@ -346,22 +346,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "10 +10 sec hold",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "10 +10 sec hold",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "10 +15 sec hold",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "10 +15 sec hold",
-                                        "series": "4"
+                                        "n_series": "4"
                                     }
                                 ],
                                 
@@ -375,22 +375,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "AMRAP",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "AMRAP",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "AMRAP",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "AMRAP",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     
                                 ],
@@ -411,22 +411,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "5 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "5 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "6 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "6 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     }
                                 ],
                                 
@@ -440,22 +440,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "8 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "8 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "10 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "10 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     }
                                 ],
                                 "descanso": 60,
@@ -474,22 +474,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "8 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "8 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "10 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "10 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     }
                                 ],
                                 
@@ -503,22 +503,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "8 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "8 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "10 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "10 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     }
                                 ],
                                 "descanso": 60,
@@ -578,22 +578,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "20s each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "20s each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "30s each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "30s each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     }
                                 ],
                                 "descanso": 30,
@@ -607,22 +607,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "10 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "10 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "12 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "12 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     }
                                 ],
                                 "descanso": 30,
@@ -636,22 +636,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "35s",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "35s",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "45s",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "45s",
-                                        "series": "3"
+                                        "n_series": "3"
                                     }
                                 ],
                                 "descanso": 30,
@@ -665,22 +665,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "45s",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "45s",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "45-60s",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "45-60s",
-                                        "series": "3"
+                                        "n_series": "3"
                                     }
                                 ],
                                 "descanso": 60,
@@ -706,12 +706,12 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "6",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "6",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 3,
@@ -735,12 +735,12 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "8",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "8",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 3,
@@ -770,22 +770,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "10",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "10",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "10",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "10",
-                                        "series": "4"
+                                        "n_series": "4"
                                     }
                                 ],
                                 "descanso": 0,
@@ -799,22 +799,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "10",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "10",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "12",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "12",
-                                        "series": "4"
+                                        "n_series": "4"
                                     }
                                 ],
                                 "descanso": 90,
@@ -834,22 +834,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "6 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "6 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "8 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "8 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     }
                                 ],
                                 "descanso": 0,
@@ -863,22 +863,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "6 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "6 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "8-10 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "8-10 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     }
                                 ],
                                 "descanso": 75,
@@ -898,22 +898,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "20 total",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "20 total",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "24 total",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "24 total",
-                                        "series": "3"
+                                        "n_series": "3"
                                     }
                                 ],
                                 "descanso": 60,
@@ -933,22 +933,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "6-8 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "6-8 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "8-10 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "8-10 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     }
                                 ],
                                 "descanso": 40,
@@ -974,12 +974,12 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "8",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "8",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 3,
@@ -1003,12 +1003,12 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "6-8",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "6-8",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 3,
@@ -1038,22 +1038,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "15 total",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "15 total",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "15 total",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "15 total",
-                                        "series": "4"
+                                        "n_series": "4"
                                     }
                                 ],
                                 "descanso": 0,
@@ -1067,22 +1067,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "15",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "15",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "15",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "15",
-                                        "series": "4"
+                                        "n_series": "4"
                                     }
                                 ],
                                 "descanso": 75,
@@ -1102,22 +1102,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "10",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "10",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "12",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "12",
-                                        "series": "3"
+                                        "n_series": "3"
                                     }
                                 ],
                                 "descanso": 0,
@@ -1131,22 +1131,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "duracion": "20",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "duracion": "20",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "duracion": "30",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 4,
                                         "duracion": "30",
-                                        "series": "3"
+                                        "n_series": "3"
                                     }
                                 ],
                                 "descanso": 0,
@@ -1166,22 +1166,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "8 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "8 each",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "10 each",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "10 each",
-                                        "series": "4"
+                                        "n_series": "4"
                                     }
                                 ],
                                 "descanso": 0,
@@ -1195,22 +1195,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "15",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "15",
-                                        "series": "3"
+                                        "n_series": "3"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "15",
-                                        "series": "4"
+                                        "n_series": "4"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "15",
-                                        "series": "4"
+                                        "n_series": "4"
                                     }
                                 ],
                                 "descanso": 75,
