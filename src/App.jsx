@@ -9,20 +9,22 @@ import DetalleReceta from './pages/DetalleReceta'; // 👈 añade esta línea
 import Tu from './pages/Tu';
 import { useLocation, useNavigate } from 'react-router-dom';
 import SesionEjecutar from './components/SesionEjecutar';
+import { useState } from 'react';
 
 function RutaSesionEjecutar() {
     const { state } = useLocation();
-    const navigate = useNavigate();
 
     if (!state?.sesion) return <p>No hay sesión activa</p>;
 
     return (
         <SesionEjecutar
             sesion={state.sesion}
-            onFinish={() => navigate(-1)} // vuelve atrás al terminar
+            onFinish={() => window.history.back()}
+            onBack={() => window.history.back()}
         />
     );
 }
+
 
 
 export default function App() {

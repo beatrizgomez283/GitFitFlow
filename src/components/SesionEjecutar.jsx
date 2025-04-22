@@ -126,6 +126,8 @@ export default function SesionEjecutar({ sesion, onFinish }) {
 
 
     return (
+  
+
         <div className="p-4 space-y-6 relative">
             {mensaje && <div className="text-sm text-green-600 font-medium">{mensaje}</div>}
 
