@@ -205,7 +205,7 @@ export default function SesionDetalle({ sesion, onBack }) {
                             value={notaPersonal}
                             onChange={(e) => setNotaPersonal(e.target.value)}
                             placeholder="Escribe una nota. Sólo tú puedes verla."
-                            className="w-full border rounded-lg px-3 py-2 text-base text-gray-700 placeholder-gray-400"
+                            className="w-full border rounded-lg px-3 py-2 text-[16px] sm:text-base text-gray-700 placeholder-gray-400"
                             inputMode="text"
                         />
                     </div>
