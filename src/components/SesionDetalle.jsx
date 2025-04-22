@@ -33,7 +33,7 @@ export default function SesionDetalle({ sesion, onBack }) {
     const renderEjercicio = (ejercicio, key) => {
         const series = Array.isArray(ejercicio.series) ? ejercicio.series : [];
         const serieSemana = series.find(s => s.semana === semanaSeleccionada) || {};
-
+        console.log("serieSemana.reps: " + serieSemana.reps);
         const textoDetalle = [
             serieSemana.reps && `${serieSemana.reps} reps`,
             serieSemana.duracion && `${serieSemana.duracion}`,

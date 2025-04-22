@@ -9,10 +9,10 @@ export const planes = [
                 "nombre": "Día 1 - Lower Body Strength + Durability",
                 "descripcion": "",
                 "tipo": "lower_body",
-                "descanso": 60,
                 "sets": [
                     {
                         "titulo": "Superserie A",
+                        "descanso": 60,
                         "ejercicios": [
                             {
                                 "nombre": "Pause Trap Bar Deadlift",
@@ -38,7 +38,7 @@ export const planes = [
                                         "series": "5"
                                     }
                                 ],
-                                "descanso": 60,
+                                
                                 "nota": "",
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/YWgmDUEzfJc?feature=share"
@@ -76,6 +76,7 @@ export const planes = [
                     },
                     {
                         "titulo": "Superserie B",
+                        "descanso": 60,
                         "ejercicios": [
                             {
                                 "nombre": "Eccentric Zercher Squat",
@@ -139,6 +140,7 @@ export const planes = [
                     },
                     {
                         "titulo": "Superserie C",
+                        "descanso": 60,
                         "ejercicios": [
                             {
                                 "nombre": "RNT Split Squat",
@@ -164,13 +166,14 @@ export const planes = [
                                         "series": "3"
                                     }
                                 ],
-                                "descanso": 60,
+                                
                                 "nota": "",
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/iIYBrGzA1JI"
                             },
                             {
                                 "nombre": "DB Lateral Lunge",
+                                "descanso": 60,
                                 "series": [
                                     {
                                         "semana": 1,
@@ -193,7 +196,7 @@ export const planes = [
                                         "series": "3"
                                     }
                                 ],
-                                "descanso": 60,
+                                
                                 "nota": "",
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/Tm6IYejB_8M"
@@ -227,7 +230,7 @@ export const planes = [
                                         "series": "3"
                                     }
                                 ],
-                                "descanso": 60,
+                                
                                 "nota": "",
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/_Zn-eV5WgE0"
@@ -256,7 +259,7 @@ export const planes = [
                                         "series": "3"
                                     }
                                 ],
-                                "descanso": 60,
+                                
                                 "nota": "",
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/yG9kUU2uyfY"
@@ -268,10 +271,10 @@ export const planes = [
             {
                 "nombre": "Día 2 - Upper Body Strength + Durability",
                 "tipo": "uper_body",
-                "descanso": 60,
                 "sets": [
                     {
                         "titulo": "Superserie A",
+                        
                         "ejercicios": [
                             {
                                 "nombre": "Eccentric BB Floor Press",
@@ -297,7 +300,7 @@ export const planes = [
                                         "series": "4"
                                     }
                                 ],
-                                "descanso": 90,
+                                
                                 "nota": "",
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/idP02t2oyBU"
@@ -335,6 +338,7 @@ export const planes = [
                     },
                     {
                         "titulo": "Superserie B",
+                        
                         "ejercicios": [
                             {
                                 "nombre": "Lat Pulldown + Isometric Hold",
@@ -360,7 +364,7 @@ export const planes = [
                                         "series": "4"
                                     }
                                 ],
-                                "descanso": 60,
+                                
                                 "nota": "",
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/MnVIJbHX-W4"
@@ -387,9 +391,10 @@ export const planes = [
                                         "semana": 4,
                                         "reps": "AMRAP",
                                         "series": "4"
-                                    }
+                                    },
+                                    
                                 ],
-                                "descanso": 60,
+                                descanso: 60,
                                 "nota": "",
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/QlhMQHLsoBc"
@@ -398,6 +403,7 @@ export const planes = [
                     },
                     {
                         "titulo": "Superserie C",
+                        
                         "ejercicios": [
                             {
                                 "nombre": "Tall Kneeling BANA Landmine Push Press",
@@ -423,7 +429,7 @@ export const planes = [
                                         "series": "3"
                                     }
                                 ],
-                                "descanso": 60,
+                                
                                 "nota": "",
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/ura1t7-FXHU"
@@ -486,7 +492,7 @@ export const planes = [
                                         "series": "3"
                                     }
                                 ],
-                                "descanso": 60,
+                                
                                 "nota": "",
                                 "historico": [],
                                 "url": "https://youtu.be/t8Azu8rJLJs"
