@@ -1221,7 +1221,86 @@ export const planes = [
                         ]
                     }
                 ]
+            },
+            {
+                "nombre": "Día 6 - Run 2 (Interval)",
+                "tipo": "running",
+                "sets": [
+                    {
+                        "titulo": "Intervalos Largos",
+                        "descanso": 60,
+                        "ejercicios": [
+                            {
+                                "nombre": "Correr",
+                                "distancia": "1 Km",
+                                "series": [
+                                    {
+                                        "semana": 1,
+                                        "reps": "1 Km",
+                                        "n_series": "3"
+                                    },
+                                    {
+                                        "semana": 2,
+                                        "reps": "1 Km",
+                                        "n_series": "3"
+                                    },
+                                    {
+                                        "semana": 3,
+                                        "reps": "1 Km",
+                                        "n_series": "3"
+                                    },
+                                    {
+                                        "semana": 4,
+                                        "reps": "1 Km",
+                                        "n_series": "3"
+                                    }
+                                ],
+                                "descanso": 60,
+                                "nota": "",
+                                "historico": [],
+                                "url": ""
+                            }
+                        ]
+                    },
+                    {
+                        "titulo": "Intervalos Cortos",
+                        "descanso": 60,
+                        "ejercicios": [
+                            {
+                                "nombre": "Correr",
+                                "distancia": "250 m",
+                                "series": [
+                                    {
+                                        "semana": 1,
+                                        "reps": "250 m",
+                                        "n_series": "6"
+                                    },
+                                    {
+                                        "semana": 2,
+                                        "reps": "250 m",
+                                        "n_series": "6"
+                                    },
+                                    {
+                                        "semana": 3,
+                                        "reps": "250 m",
+                                        "n_series": "6"
+                                    },
+                                    {
+                                        "semana": 4,
+                                        "reps": "250 m",
+                                        "n_series": "6"
+                                    }
+                                ],
+                                "descanso": 60,
+                                "nota": "",
+                                "historico": [],
+                                "url": ""
+                            }
+                        ]
+                    }
+                ]
             }
+
         ]
     }
 ];
