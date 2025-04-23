@@ -140,7 +140,7 @@ export default function SesionDetalle({ sesion, onBack }) {
                     )}
 
                     <div className="text-xs text-gray-500">
-                        ⏱️ {sesion.descanso}s de descanso después de: {set.titulo}
+                        ⏱️ {set.descanso}s de descanso después de: {set.titulo}
                     </div>
                 </div>
             ))}

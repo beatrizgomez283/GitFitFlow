@@ -55,7 +55,7 @@ export default function SesionEjecutar({ sesion, onFinish }) {
         if (temporizador && temporizador > 0) {
             timer = setTimeout(() => setTemporizador(temporizador - 1), 1000);
         } else if (temporizador === 0) {
-            new Audio('/sounds/beep.mp3').play();
+            new Audio('./../assets/sounds/Beep-mp3.mp3').play();
             setParpadeo(true);
             setTimeout(() => {
                 setParpadeo(false);
