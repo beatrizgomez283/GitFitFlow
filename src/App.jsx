@@ -19,6 +19,7 @@ function RutaSesionEjecutar() {
     return (
         <SesionEjecutar
             sesion={state.sesion}
+            semanaActual={state.semanaSeleccionada}
             onFinish={() => window.history.back()}
             onBack={() => window.history.back()}
         />

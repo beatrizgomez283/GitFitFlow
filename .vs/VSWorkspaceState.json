@@ -3,12 +3,13 @@
     "",
     "\\public",
     "\\src",
+    "\\src\\app",
     "\\src\\assets",
-    "\\src\\assets\\nutri",
+    "\\src\\assets\\sounds",
     "\\src\\components",
     "\\src\\data",
     "\\src\\pages"
   ],
-  "SelectedNode": "\\src\\index.css",
+  "SelectedNode": "\\src\\assets\\sounds",
   "PreviewInSolutionExplorer": false
 }

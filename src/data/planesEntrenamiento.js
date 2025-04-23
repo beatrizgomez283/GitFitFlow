@@ -1250,7 +1250,7 @@ export const planes = [
                                         "n_series": "3"
                                     },
                                     {
-                                        "semana": 4,
+                                        "semana": 4,    
                                         "reps": "1 Km",
                                         "n_series": "3"
                                     }

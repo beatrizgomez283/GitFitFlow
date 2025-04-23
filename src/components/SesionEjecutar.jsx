@@ -1,7 +1,7 @@
 ﻿import { useEffect, useState } from 'react';
 import dayjs from 'dayjs';
 
-export default function SesionEjecutar({ sesion, onFinish }) {
+export default function SesionEjecutar({ sesion, semanaActual, onFinish }) {
     const [progreso, setProgreso] = useState(0);
     const [data, setData] = useState({});
     const [completadas, setCompletadas] = useState(0);
@@ -14,9 +14,13 @@ export default function SesionEjecutar({ sesion, onFinish }) {
         const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{11})/);
         return match ? `https://img.youtube.com/vi/${match[1]}/hqdefault.jpg` : null;
     };
-
     const rondasPorSet = sesion.sets.map(set =>
-        Math.max(...(set.ejercicios?.map(ej => ej.series?.length || 1) || [1]))
+        Math.max(
+            ...(set.ejercicios?.map(ej => {
+                const serieSemana = ej.series?.find(s => s.semana === semanaActual);
+                return parseInt(serieSemana?.n_series) || 1;
+            }) || [1])
+        )
     );
 
     const totalSeries = rondasPorSet.reduce((acc, rondas, idx) =>
@@ -30,6 +34,7 @@ export default function SesionEjecutar({ sesion, onFinish }) {
             .reverse()
             .find(e => e.sesionNombre.trim().toLowerCase() === sesion.nombre.trim().toLowerCase());
         console.log('👉 Última sesión encontrada:', entradaAnterior);
+        console.log('👉 semana seleccionada:', semanaActual);
 
         const inicial = {};
         sesion.sets.forEach((set, idxSet) => {
@@ -55,7 +60,7 @@ export default function SesionEjecutar({ sesion, onFinish }) {
         if (temporizador && temporizador > 0) {
             timer = setTimeout(() => setTemporizador(temporizador - 1), 1000);
         } else if (temporizador === 0) {
-            new Audio('./../assets/sounds/Beep-mp3.mp3').play();
+            new Audio('/assets/sounds/Beep-mp3.mp3').play();
             setParpadeo(true);
             setTimeout(() => {
                 setParpadeo(false);

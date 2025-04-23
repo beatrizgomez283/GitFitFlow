@@ -12,7 +12,11 @@ export default function SesionDetalle({ sesion, onBack }) {
     }
 
     const iniciarSesion = () => {
-        navigate('/ejecutar', { state: { sesion } });
+        navigate('/ejecutar', {
+            state: {
+                sesion, semanaSeleccionada
+            }
+        });
     };
 
     const getYoutubeThumbnail = (url) => {
