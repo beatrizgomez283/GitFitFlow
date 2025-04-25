@@ -6,6 +6,8 @@ export default function SesionDetalle({ sesion, onBack }) {
     const [ejercicioActivo, setEjercicioActivo] = useState(null);
     const [notaPersonal, setNotaPersonal] = useState('');
     const navigate = useNavigate();
+    const [refrescoNotas, setRefrescoNotas] = useState(0);
+
 
     if (!sesion || !Array.isArray(sesion.sets)) {
         return <div className="p-4">Sesión no válida.</div>;
@@ -82,7 +84,9 @@ export default function SesionDetalle({ sesion, onBack }) {
                         <div className="font-semibold text-sm text-gray-900">{ejercicio.nombre}</div>
                         <div className="text-xs text-gray-600">{textoDetalle}</div>
                         {notaGuardada && (
-                            <div className="text-xs text-gray-400 italic line-clamp-1 mt-1">“{notaGuardada}”</div>
+                            <div className="text-xs text-pink-600 italic mt-1 line-clamp-1">
+                                “{notaGuardada}”
+                            </div>
                         )}
                     </div>
                 </div>
@@ -94,6 +98,7 @@ export default function SesionDetalle({ sesion, onBack }) {
             </div>
         );
     };
+
 
     return (
         <div className="p-4 space-y-6">
@@ -201,6 +206,7 @@ export default function SesionDetalle({ sesion, onBack }) {
                                     setNotaPersonal(e.target.value);
                                     localStorage.setItem(`nota_${ejercicioActivo.nombre}`, e.target.value);
                                 }}
+
                             />
                         </div>
 
@@ -209,6 +215,7 @@ export default function SesionDetalle({ sesion, onBack }) {
                                 localStorage.setItem(`nota_${ejercicioActivo.nombre}`, notaPersonal);
                                 setEjercicioActivo(null);
                             }}
+                            
                             className="w-full bg-pink-600 hover:bg-pink-700 text-white font-medium py-2 rounded-lg transition"
                         >
                             Guardar y cerrar

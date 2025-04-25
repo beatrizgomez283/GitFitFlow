@@ -12,7 +12,12 @@ export default function PlanDetalle({ plan, onClose, onSelectSesion }) {
                 <button onClick={onClose} className="text-gray-500 hover:text-gray-700">✕</button>
             </div>
 
-            <PlanEntrenamientoCard plan={plan} />
+            <PlanEntrenamientoCard plan={plan}
+                onClose={() => { 
+                    setRefrescoNotas(prev => prev + 1); // fuerza rerender
+                    setEjercicioActivo(null);}
+                    }
+                />
 
             {plan.sesiones?.length > 0 && (
                 <div className="space-y-2">

@@ -5,3 +5,16 @@
 textarea {
     font-size: 16px !important;
 }
+
+@layer utilities {
+    .animate-fade-in {
+        @apply transition-opacity duration-300 opacity-0;
+        animation: fadeIn 0.3s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+}
