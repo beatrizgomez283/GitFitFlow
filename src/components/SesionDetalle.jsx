@@ -1,7 +1,7 @@
 ﻿import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
-export default function SesionDetalle({ sesion, onBack }) {
+export default function SesionDetalle({ sesion, planId, onBack}) {
     const [semanaSeleccionada, setSemanaSeleccionada] = useState(1);
     const [ejercicioActivo, setEjercicioActivo] = useState(null);
     const [notaPersonal, setNotaPersonal] = useState('');
@@ -16,7 +16,10 @@ export default function SesionDetalle({ sesion, onBack }) {
     const iniciarSesion = () => {
         navigate('/ejecutar', {
             state: {
-                sesion, semanaSeleccionada
+                sesion,
+                planId,
+                semanaSeleccionada,
+                from: location.pathname // 👈 GUARDA de dónde venías
             }
         });
     };

@@ -27,8 +27,8 @@ export default function PlanDetalle({ plan, onClose, onSelectSesion }) {
                             key={index}
                             className="cursor-pointer"
                             onClick={() => {
-                                onSelectSesion({ ...sesion, planId: plan.id });
-                                onClose();
+                                onSelectSesion(sesion, plan);
+                                //onClose();
                             }}   
                         >
                             <SesionEntrenamientoCard sesion={sesion} />

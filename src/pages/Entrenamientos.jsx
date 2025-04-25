@@ -8,10 +8,11 @@ export default function Entrenamientos() {
   const [planSeleccionado, setPlanSeleccionado] = useState(null);
   const [sesionSeleccionada, setSesionSeleccionada] = useState(null);
 
-    const handleSeleccionarSesion = (sesion) => {
-        console.log('Sesión seleccionada:', sesion); // para debug
+    const handleSeleccionarSesion = (sesion, plan) => {
         setSesionSeleccionada(sesion);
+        setPlanSeleccionado(plan); // asegúrate de mantener el plan seleccionado
     };
+
 
 
   const handleVolverPlan = () => {
@@ -22,6 +23,7 @@ export default function Entrenamientos() {
         return (
             <SesionDetalle
                 sesion={sesionSeleccionada}
+                planId={planSeleccionado?.id}
                 onBack={handleVolverPlan}
             />
         );

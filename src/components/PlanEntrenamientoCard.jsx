@@ -2,7 +2,7 @@
 
 export default function SesionEntrenamientoCard({ sesion }) {
     if (!sesion) return null;
-
+    console.log("PlanEntrenamientoCard: ", planId);
     const sets = Array.isArray(sesion.sets) ? sesion.sets : [];
 
     const totalEjercicios = sets.reduce((sum, set) => {
@@ -58,12 +58,7 @@ export default function SesionEntrenamientoCard({ sesion }) {
                 ))}
             </div>
 
-            {/* Botón fijo (simulado aquí dentro) */}
-            <div className="sticky bottom-0 left-0 right-0 bg-white pt-4">
-                <button className="w-full bg-gray-900 text-white text-sm py-2 rounded-lg shadow">
-                    Iniciar sesión
-                </button>
-            </div>
+       
         </div>
     );
 }

@@ -47,7 +47,7 @@ export default function App() {
                         <Route path="/recetas/:id" element={<DetalleReceta />} /> {/* 👈 esta línea */}
                         <Route path="/nutricion" element={<Nutricion />} />
                         <Route path="/perfil" element={<Tu />} />
-                        <Route path="/ejecutar" element={<RutaSesionEjecutar />} />
+                        <Route path="/ejecutar" element={<SesionEjecutar />} />
 
                     </Routes>
                 </main>

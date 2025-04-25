@@ -1,15 +1,30 @@
 ﻿import { useEffect, useState } from 'react';
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import dayjs from 'dayjs';
 
-export default function SesionEjecutar({ sesion, semanaActual , planId}) {
+export default function SesionEjecutar({ semanaActual, onFinish }) {
     const [progreso, setProgreso] = useState(0);
     const [data, setData] = useState({});
     const [completadas, setCompletadas] = useState(0);
     const [mensaje, setMensaje] = useState('');
     const [temporizador, setTemporizador] = useState(null);
     const [parpadeo, setParpadeo] = useState(false);
+
+    const { state } = useLocation();
     const navigate = useNavigate();
+
+    const { sesion, planId } = state || {};
+
+    console.log(state);
+
+    if (!sesion || !planId) {
+        return <div className="p-4 text-red-600">❌ Datos de sesión no disponibles.</div>;
+    }
+
+    useEffect(() => {
+        console.log('🧪 location.state', location.state);
+    }, []);
+
 
     const getYoutubeThumbnail = (url) => {
         if (!url) return null;
@@ -35,8 +50,6 @@ export default function SesionEjecutar({ sesion, semanaActual , planId}) {
             .slice()
             .reverse()
             .find(e => e.sesionNombre.trim().toLowerCase() === sesion.nombre.trim().toLowerCase());
-        console.log('👉 Última sesión encontrada:', entradaAnterior);
-        console.log('👉 semana seleccionada:', semanaActual);
 
         const inicial = {};
         sesion.sets.forEach((set, idxSet) => {
@@ -137,11 +150,11 @@ export default function SesionEjecutar({ sesion, semanaActual , planId}) {
 
         <div className="p-4 space-y-6 relative">
             <button
-                onClick={() => navigate(`/entreno/${planId}`)}
-                className="mb-4 text-sm text-blue-500 hover:underline"
+                onClick={() => navigate(`/entreno/${planId}/sesion/${sesion.id}`)}
             >
                 ← Volver a la sesión
             </button>
+
 
             {mensaje && <div className="text-sm text-green-600 font-medium">{mensaje}</div>}
 
