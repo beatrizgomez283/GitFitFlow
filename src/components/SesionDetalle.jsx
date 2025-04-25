@@ -157,6 +157,67 @@ export default function SesionDetalle({ sesion, onBack }) {
                     Iniciar sesión
                 </button>
             </div>
+            {ejercicioActivo && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm px-4">
+                    <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-6 relative space-y-4 animate-fade-in">
+                        {/* Botón de cerrar */}
+                        <button
+                            onClick={() => {
+                                localStorage.setItem(`nota_${ejercicioActivo.nombre}`, notaPersonal);
+                                setEjercicioActivo(null);
+                            }}
+                            className="absolute top-3 right-4 text-gray-400 hover:text-gray-700 text-xl"
+                        >
+                            &times;
+                        </button>
+
+                        <h2 className="text-lg font-semibold text-gray-900">{ejercicioActivo.nombre}</h2>
+
+                        {/* Video */}
+                        {getYoutubeEmbed(ejercicioActivo.url) && (
+                            <div className="aspect-video w-full overflow-hidden rounded-lg border border-gray-200">
+                                <iframe
+                                    src={getYoutubeEmbed(ejercicioActivo.url)}
+                                    title="Video del ejercicio"
+                                    className="w-full h-full"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                />
+                            </div>
+                        )}
+
+                        {/* Nota personal */}
+                        <div>
+                            <label htmlFor="nota" className="block text-sm font-medium text-gray-700 mb-1">
+                                Nota personal
+                            </label>
+                            <textarea
+                                id="nota"
+                                className="w-full p-3 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-600 focus:outline-none resize-none"
+                                rows={4}
+                                placeholder="Escribe aquí tu nota sobre este ejercicio..."
+                                value={notaPersonal}
+                                onChange={(e) => {
+                                    setNotaPersonal(e.target.value);
+                                    localStorage.setItem(`nota_${ejercicioActivo.nombre}`, e.target.value);
+                                }}
+                            />
+                        </div>
+
+                        <button
+                            onClick={() => {
+                                localStorage.setItem(`nota_${ejercicioActivo.nombre}`, notaPersonal);
+                                setEjercicioActivo(null);
+                            }}
+                            className="w-full bg-pink-600 hover:bg-pink-700 text-white font-medium py-2 rounded-lg transition"
+                        >
+                            Guardar y cerrar
+                        </button>
+                    </div>
+                </div>
+            )}
+
+
         </div>
     );
 }

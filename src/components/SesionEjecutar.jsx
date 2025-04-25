@@ -1,13 +1,15 @@
 ﻿import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from "react-router-dom";
 import dayjs from 'dayjs';
 
-export default function SesionEjecutar({ sesion, semanaActual, onFinish }) {
+export default function SesionEjecutar({ sesion, semanaActual , planId}) {
     const [progreso, setProgreso] = useState(0);
     const [data, setData] = useState({});
     const [completadas, setCompletadas] = useState(0);
     const [mensaje, setMensaje] = useState('');
     const [temporizador, setTemporizador] = useState(null);
     const [parpadeo, setParpadeo] = useState(false);
+    const navigate = useNavigate();
 
     const getYoutubeThumbnail = (url) => {
         if (!url) return null;
@@ -134,6 +136,13 @@ export default function SesionEjecutar({ sesion, semanaActual, onFinish }) {
   
 
         <div className="p-4 space-y-6 relative">
+            <button
+                onClick={() => navigate(`/entreno/${planId}`)}
+                className="mb-4 text-sm text-blue-500 hover:underline"
+            >
+                ← Volver a la sesión
+            </button>
+
             {mensaje && <div className="text-sm text-green-600 font-medium">{mensaje}</div>}
 
             {temporizador !== null && (
