@@ -1,28 +1,28 @@
-﻿import { useEffect, useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+﻿// src/components/SesionDetalle.jsx
 
-export default function SesionDetalle({ sesion, planId, onBack}) {
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+export default function SesionDetalle({ sesion, planId, onBack, onStart }) {
     const [semanaSeleccionada, setSemanaSeleccionada] = useState(1);
     const [ejercicioActivo, setEjercicioActivo] = useState(null);
     const [notaPersonal, setNotaPersonal] = useState('');
-    const navigate = useNavigate();
-    const [refrescoNotas, setRefrescoNotas] = useState(0);
 
+    const navigate = useNavigate();
 
     if (!sesion || !Array.isArray(sesion.sets)) {
-        return <div className="p-4">Sesión no válida.</div>;
+        return <div className="p-4">❌ Sesión no válida.</div>;
     }
 
-    const iniciarSesion = () => {
-        navigate('/ejecutar', {
-            state: {
-                sesion,
-                planId,
-                semanaSeleccionada,
-                from: location.pathname // 👈 GUARDA de dónde venías
-            }
-        });
+    const handleSeleccionarSesion = (sesion) => {
+        setSesionSeleccionada(sesion);
+        setModoVista('sesion');
     };
+
+    const iniciarSesion = () => {
+        onStart(semanaSeleccionada); // 👈 simplemente llamas la función que te pasó Entrenamientos.jsx
+    };
+
 
     const getYoutubeThumbnail = (url) => {
         if (!url) return null;
@@ -55,15 +55,13 @@ export default function SesionDetalle({ sesion, planId, onBack}) {
     }, [ejercicioActivo]);
 
     const renderEjercicio = (ejercicio, key) => {
-        const series = Array.isArray(ejercicio.series) ? ejercicio.series : [];
-        const serieSemana = series.find(s => Number(s.semana) === Number(semanaSeleccionada)) || {};
+        const serieSemana = ejercicio.series?.find(s => Number(s.semana) === Number(semanaSeleccionada)) || {};
 
-        const textoDetalle = [
+        const detalles = [
             serieSemana.n_series && `${serieSemana.n_series} series`,
             serieSemana.reps && `Reps: ${serieSemana.reps}`,
             serieSemana.duracion && `Duración: ${serieSemana.duracion}`,
             serieSemana.distancia && `Distancia: ${serieSemana.distancia}`,
-            serieSemana.peso && `Peso: ${serieSemana.peso}`,
             ejercicio.descanso && `${ejercicio.descanso}s descanso`
         ].filter(Boolean).join(' · ');
 
@@ -85,7 +83,7 @@ export default function SesionDetalle({ sesion, planId, onBack}) {
                     )}
                     <div className="flex-1">
                         <div className="font-semibold text-sm text-gray-900">{ejercicio.nombre}</div>
-                        <div className="text-xs text-gray-600">{textoDetalle}</div>
+                        <div className="text-xs text-gray-600">{detalles}</div>
                         {notaGuardada && (
                             <div className="text-xs text-pink-600 italic mt-1 line-clamp-1">
                                 “{notaGuardada}”
@@ -93,27 +91,19 @@ export default function SesionDetalle({ sesion, planId, onBack}) {
                         )}
                     </div>
                 </div>
-                {ejercicio.descansoDespues && (
-                    <div className="flex items-center gap-1 text-xs text-gray-500 pl-2">
-                        ⏱️ {ejercicio.descansoDespues} de descanso después de: ejercicio
-                    </div>
-                )}
             </div>
         );
     };
 
-
     return (
         <div className="p-4 space-y-6">
-            <button
-                onClick={onBack}
-                className="text-sm text-blue-600 underline hover:text-blue-800"
-            >
+            {/* Botón volver */}
+            <button onClick={onBack} className="text-sm text-blue-600 underline hover:text-blue-800">
                 ← Volver al plan
             </button>
 
             {/* Selector de semana */}
-            <div className="space-y-2 mb-2">
+            <div className="space-y-2 mb-4">
                 <h3 className="text-sm font-medium text-gray-800">Semana</h3>
                 <div className="flex gap-2 overflow-x-auto pb-1">
                     {[1, 2, 3, 4].map((semana) => (
@@ -121,8 +111,8 @@ export default function SesionDetalle({ sesion, planId, onBack}) {
                             key={semana}
                             onClick={() => setSemanaSeleccionada(semana)}
                             className={`px-3 py-1 rounded-full border text-sm whitespace-nowrap transition ${semanaSeleccionada === semana
-                                    ? 'bg-pink-600 text-white'
-                                    : 'border-gray-300 text-gray-700'
+                                ? 'bg-pink-600 text-white'
+                                : 'border-gray-300 text-gray-700'
                                 }`}
                         >
                             Semana {semana}
@@ -131,32 +121,44 @@ export default function SesionDetalle({ sesion, planId, onBack}) {
                 </div>
             </div>
 
+            {/* Nombre de la sesión */}
             <h2 className="text-xl font-semibold">{sesion.nombre}</h2>
             {sesion.descripcion && (
                 <p className="text-sm text-gray-600">{sesion.descripcion}</p>
             )}
 
+            {/* Sets de la sesión */}
             {sesion.sets.map((set, idxSet) => (
                 <div key={idxSet} className="space-y-3">
                     <h4 className="text-md font-semibold text-gray-800">
                         {set.titulo || `Set ${idxSet + 1}`}
-                        <div className="text-xs text-gray-500">{set.ejercicios[0].series[semanaSeleccionada-1].n_series} rondas</div>
                     </h4>
+
+                    {/* Info del set */}
+                    {set.ejercicios?.[0]?.series?.[semanaSeleccionada - 1]?.n_series && (
+                        <div className="text-xs text-gray-500">
+                            {set.ejercicios[0].series[semanaSeleccionada - 1].n_series} rondas
+                        </div>
+                    )}
 
                     {Array.isArray(set.ejercicios) && set.ejercicios.length > 0 ? (
                         set.ejercicios.map((ejercicio, idxEj) =>
                             renderEjercicio(ejercicio, `${idxSet}-${idxEj}`)
                         )
                     ) : (
-                        <div className="text-sm text-gray-400">No hay ejercicios.</div>
+                        <div className="text-sm text-gray-400">No hay ejercicios en este set.</div>
                     )}
 
-                    <div className="text-xs text-gray-500">
-                        ⏱️ {set.descanso}s de descanso después de: {set.titulo}
-                    </div>
+                    {/* Descanso después del set */}
+                    {set.descanso && (
+                        <div className="text-xs text-gray-500">
+                            ⏱️ {set.descanso}s de descanso después de este set
+                        </div>
+                    )}
                 </div>
             ))}
 
+            {/* Botón iniciar sesión */}
             <div className="mt-6">
                 <button
                     onClick={iniciarSesion}
@@ -165,10 +167,12 @@ export default function SesionDetalle({ sesion, planId, onBack}) {
                     Iniciar sesión
                 </button>
             </div>
+
+            {/* Modal de nota personal */}
             {ejercicioActivo && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm px-4">
                     <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-6 relative space-y-4 animate-fade-in">
-                        {/* Botón de cerrar */}
+                        {/* Botón cerrar */}
                         <button
                             onClick={() => {
                                 localStorage.setItem(`nota_${ejercicioActivo.nombre}`, notaPersonal);
@@ -181,7 +185,7 @@ export default function SesionDetalle({ sesion, planId, onBack}) {
 
                         <h2 className="text-lg font-semibold text-gray-900">{ejercicioActivo.nombre}</h2>
 
-                        {/* Video */}
+                        {/* Video embed */}
                         {getYoutubeEmbed(ejercicioActivo.url) && (
                             <div className="aspect-video w-full overflow-hidden rounded-lg border border-gray-200">
                                 <iframe
@@ -194,7 +198,7 @@ export default function SesionDetalle({ sesion, planId, onBack}) {
                             </div>
                         )}
 
-                        {/* Nota personal */}
+                        {/* Nota */}
                         <div>
                             <label htmlFor="nota" className="block text-sm font-medium text-gray-700 mb-1">
                                 Nota personal
@@ -209,7 +213,6 @@ export default function SesionDetalle({ sesion, planId, onBack}) {
                                     setNotaPersonal(e.target.value);
                                     localStorage.setItem(`nota_${ejercicioActivo.nombre}`, e.target.value);
                                 }}
-
                             />
                         </div>
 
@@ -218,7 +221,6 @@ export default function SesionDetalle({ sesion, planId, onBack}) {
                                 localStorage.setItem(`nota_${ejercicioActivo.nombre}`, notaPersonal);
                                 setEjercicioActivo(null);
                             }}
-                            
                             className="w-full bg-pink-600 hover:bg-pink-700 text-white font-medium py-2 rounded-lg transition"
                         >
                             Guardar y cerrar
@@ -226,8 +228,6 @@ export default function SesionDetalle({ sesion, planId, onBack}) {
                     </div>
                 </div>
             )}
-
-
         </div>
     );
 }

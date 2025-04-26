@@ -1,8 +1,11 @@
-﻿import { useEffect, useState } from 'react';
+﻿// src/components/SesionEjecutar.jsx
+
+import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from "react-router-dom";
 import dayjs from 'dayjs';
 
-export default function SesionEjecutar({ onFinish }) {
+export default function SesionEjecutar({ sesion, planId, semanaSeleccionada, onFinish }) {
+    // ya recibes las props bien desde Entrenamientos.jsx
     const [progreso, setProgreso] = useState(0);
     const [data, setData] = useState({});
     const [completadas, setCompletadas] = useState(0);
@@ -13,24 +16,20 @@ export default function SesionEjecutar({ onFinish }) {
     const { state } = useLocation();
     const navigate = useNavigate();
 
-    const { sesion, planId, semanaSeleccionada } = state || {};
-
-    console.log("semanaActualInput: ", semanaSeleccionada  , ", sesion: ", sesion, "planId: ", planId);
-
     if (!sesion || !planId) {
         return <div className="p-4 text-red-600">❌ Datos de sesión no disponibles.</div>;
     }
-
 
     const getYoutubeThumbnail = (url) => {
         if (!url) return null;
         const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{11})/);
         return match ? `https://img.youtube.com/vi/${match[1]}/hqdefault.jpg` : null;
     };
+
     const rondasPorSet = sesion.sets.map(set =>
         Math.max(
             ...(set.ejercicios?.map(ej => {
-                const serieSemana = ej.series?.find(s => s.semana === semanaSeleccionada);
+                const serieSemana = ej.series?.find(s => Number(s.semana) === Number(semanaSeleccionada));
                 return parseInt(serieSemana?.n_series) || 1;
             }) || [1])
         )
@@ -86,6 +85,7 @@ export default function SesionEjecutar({ onFinish }) {
         const registro = actualizado[idxSet][idxRonda][idxEj];
         registro.done = !registro.done;
         setData(actualizado);
+
         const todas = Object.values(actualizado).flat().flat().filter(e => e.done).length;
         setCompletadas(todas);
         setProgreso(Math.round((todas / totalSeries) * 100));
@@ -102,7 +102,7 @@ export default function SesionEjecutar({ onFinish }) {
         const hoy = dayjs().format('YYYY-MM-DD');
         const entrada = {
             fecha: hoy,
-            planId: sesion.planId || 'sin_id',
+            planId: planId,
             sesionNombre: sesion.nombre,
             ejercicios: []
         };
@@ -118,7 +118,7 @@ export default function SesionEjecutar({ onFinish }) {
                             nota: registro.nota || ''
                         } : null;
                     })
-                    .filter(Boolean); // elimina nulls
+                    .filter(Boolean);
 
                 if (series.length > 0) {
                     entrada.ejercicios.push({
@@ -136,15 +136,16 @@ export default function SesionEjecutar({ onFinish }) {
         setMensaje('✅ Sesión guardada correctamente');
         setTimeout(() => {
             setMensaje('');
-            onFinish();
+            navigate(-1); // Vuelve a SesionDetalle correctamente
         }, 1500);
     };
 
-
     return (
         <div className="p-4 space-y-6 relative">
+            {/* Botón volver */}
             <button
-                onClick={() => navigate(`/entreno/${planId}/sesion/${sesion.id}`)}
+                onClick={onFinish}
+                className="mb-4 text-sm text-blue-500 hover:underline"
             >
                 ← Volver a la sesión
             </button>
@@ -161,68 +162,15 @@ export default function SesionEjecutar({ onFinish }) {
             <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
                 <div className="h-full bg-green-500" style={{ width: `${progreso}%` }}></div>
             </div>
+
             {sesion.sets.map((set, idxSet) => (
-                <div key={idxSet} className="bg-white rounded-xl shadow-md shadow-white p-4 space-y-4">
+                <div key={idxSet} className="bg-white rounded-xl shadow-md p-4 space-y-4">
                     <div>
                         <h3 className="text-md font-bold text-gray-800 mb-1">{set.titulo || `Set ${idxSet + 1}`}</h3>
                         <p className="text-xs text-gray-500">{rondasPorSet[idxSet]} rondas</p>
                     </div>
 
-                    <div className="space-y-2">
-                        {set.ejercicios.map((ej, idxEj) => {
-                            const serieSemana = ej.series?.find(s => Number(s.semana) === Number(semanaSeleccionada)); // 👈 AQUÍ
-
-                            return (
-                                <div key={idxEj} className="flex items-center justify-between gap-2">
-                                    <div className="flex-1">
-                                        <div className="text-sm font-semibold text-gray-800 flex items-center gap-2">
-                                            <span className="bg-gray-200 rounded-full w-6 h-6 flex items-center justify-center text-xs">
-                                                {String.fromCharCode(65 + idxEj)}
-                                            </span>
-                                            {ej.nombre}
-                                        </div>
-                                        <div className="text-xs text-gray-500">
-                                            {serieSemana ? (
-                                                <>
-                                                    {serieSemana.n_series ? `${serieSemana.n_series} series · ` : ''}
-                                                    {serieSemana.reps ? `${serieSemana.reps} reps · ` : ''}
-                                                    {ej.descanso ? `${ej.descanso}s descanso` : ''}
-                                                </>
-                                            ) : (
-                                                '-'
-                                            )}
-                                        </div>
-                                    </div>
-
-                                    {ej.url && (
-                                        <a
-                                            href={ej.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="shrink-0"
-                                        >
-                                            <img
-                                                src={getYoutubeThumbnail(ej.url)}
-                                                alt={ej.nombre}
-                                                className="w-14 h-14 rounded-lg object-cover transition hover:brightness-90"
-                                            />
-                                        </a>
-                                    )}
-                                </div>
-                            );
-                        })}
-
-                    </div>
-
-                    <hr className="my-2 border-t border-gray-200" />
-
-                    {Array.from({
-                        length: Math.max(...set.ejercicios.map(ej => {
-                            const serieSemana = ej.series?.find(s => Number(s.semana) === Number(semanaSeleccionada));
-                            return parseInt(serieSemana?.n_series) || 1;
-                        }))
-                    }).map((_, idxRonda) => {
-
+                    {Array.from({ length: rondasPorSet[idxSet] }).map((_, idxRonda) => {
                         const totalEjercicios = set.ejercicios.length;
                         const hechos = data[idxSet]?.[idxRonda]?.filter(e => e.done).length || 0;
 
@@ -236,11 +184,9 @@ export default function SesionEjecutar({ onFinish }) {
                                 </div>
                                 <hr className="border-t border-gray-200" />
 
-                                {/* Aquí pintas todos los ejercicios para esta ronda */}
                                 {set.ejercicios.map((ej, idxEj) => {
                                     const entrada = data[idxSet]?.[idxRonda]?.[idxEj] || {};
                                     const serieSemana = ej.series?.find(s => Number(s.semana) === Number(semanaSeleccionada));
-                                    const repsAsignadas = serieSemana?.reps || '-';
 
                                     return (
                                         <div key={idxEj} className="grid grid-cols-6 items-center gap-2 text-sm">
@@ -248,7 +194,7 @@ export default function SesionEjecutar({ onFinish }) {
                                             <input
                                                 className="border p-1 rounded col-span-1"
                                                 value={entrada.reps}
-                                                placeholder={repsAsignadas}
+                                                placeholder={serieSemana?.reps || '-'}
                                                 onChange={(e) => {
                                                     const nuevo = { ...data };
                                                     nuevo[idxSet][idxRonda][idxEj].reps = e.target.value;
@@ -279,10 +225,10 @@ export default function SesionEjecutar({ onFinish }) {
                             </div>
                         );
                     })}
-
                 </div>
             ))}
 
+            {/* Botón completar */}
             <button
                 onClick={handleCompletar}
                 className="w-full bg-gray-900 text-white py-3 rounded-xl text-sm font-medium shadow-md"
