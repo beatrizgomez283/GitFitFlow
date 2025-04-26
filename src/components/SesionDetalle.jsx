@@ -132,27 +132,25 @@ export default function SesionDetalle({ sesion, planId, onBack, onStart }) {
                 <div key={idxSet} className="space-y-3">
                     <h4 className="text-md font-semibold text-gray-800">
                         {set.titulo || `Set ${idxSet + 1}`}
+                        {set.ejercicios[0]?.series?.[semanaSeleccionada - 1]?.n_series && (
+                            <div className="text-xs text-gray-500">
+                                {set.ejercicios[0].series[semanaSeleccionada - 1].n_series} rondas
+                            </div>
+                        )}
                     </h4>
-
-                    {/* Info del set */}
-                    {set.ejercicios?.[0]?.series?.[semanaSeleccionada - 1]?.n_series && (
-                        <div className="text-xs text-gray-500">
-                            {set.ejercicios[0].series[semanaSeleccionada - 1].n_series} rondas
-                        </div>
-                    )}
 
                     {Array.isArray(set.ejercicios) && set.ejercicios.length > 0 ? (
                         set.ejercicios.map((ejercicio, idxEj) =>
                             renderEjercicio(ejercicio, `${idxSet}-${idxEj}`)
                         )
                     ) : (
-                        <div className="text-sm text-gray-400">No hay ejercicios en este set.</div>
+                        <div className="text-sm text-gray-400">No hay ejercicios.</div>
                     )}
 
-                    {/* Descanso después del set */}
+                    {/* ⏱️ Mostrar descanso al final del set */}
                     {set.descanso && (
-                        <div className="text-xs text-gray-500">
-                            ⏱️ {set.descanso}s de descanso después de este set
+                        <div className="text-xs text-gray-500 mt-1">
+                            ⏱️ {set.descanso}s de descanso después de: {set.titulo || `Set ${idxSet + 1}`}
                         </div>
                     )}
                 </div>
