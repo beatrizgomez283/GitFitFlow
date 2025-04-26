@@ -5,13 +5,14 @@ import { useLocation, useNavigate } from "react-router-dom";
 import dayjs from 'dayjs';
 
 export default function SesionEjecutar({ sesion, planId, semanaSeleccionada, onFinish }) {
-    // ya recibes las props bien desde Entrenamientos.jsx
     const [progreso, setProgreso] = useState(0);
     const [data, setData] = useState({});
     const [completadas, setCompletadas] = useState(0);
     const [mensaje, setMensaje] = useState('');
     const [temporizador, setTemporizador] = useState(null);
     const [parpadeo, setParpadeo] = useState(false);
+    const [historialActivo, setHistorialActivo] = useState(null);
+
 
     const { state } = useLocation();
     const navigate = useNavigate();
@@ -40,45 +41,56 @@ export default function SesionEjecutar({ sesion, planId, semanaSeleccionada, onF
     );
 
     useEffect(() => {
+        if (historialActivo) {
+            document.body.style.overflow = 'hidden'; // bloquea el scroll
+        } else {
+            document.body.style.overflow = ''; // lo libera
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [historialActivo]);
+
+    useEffect(() => {
         const historial = JSON.parse(localStorage.getItem('historico_global') || '[]');
         const entradaAnterior = historial
             .slice()
             .reverse()
-            .find(e => e.sesionNombre.trim().toLowerCase() === sesion.nombre.trim().toLowerCase());
+            .find(h => h.sesionNombre.trim().toLowerCase() === sesion.nombre.trim().toLowerCase());
 
         const inicial = {};
+
         sesion.sets.forEach((set, idxSet) => {
             const rondas = rondasPorSet[idxSet];
             inicial[idxSet] = [];
+
             for (let r = 0; r < rondas; r++) {
                 inicial[idxSet][r] = set.ejercicios.map((ej, idxEj) => {
-                    const ult = entradaAnterior?.ejercicios?.find(e => e.nombre === ej.nombre)?.series?.[r] || {};
+                    let reps = '';
+                    let peso = '';
+
+                    if (entradaAnterior) {
+                        const ejercicioAnterior = entradaAnterior.ejercicios.find(e => e.nombre === ej.nombre);
+                        const serieAnterior = ejercicioAnterior?.series?.find(s => s.ronda === r + 1);
+
+                        reps = serieAnterior?.reps || '';
+                        peso = serieAnterior?.peso || '';
+                    }
+
                     return {
-                        reps: ult.reps || '',
-                        peso: ult.peso || '',
-                        nota: ult.nota || '',
+                        reps,
+                        peso,
+                        nota: '',
                         done: false
                     };
                 });
             }
         });
+
         setData(inicial);
     }, [sesion]);
 
-    useEffect(() => {
-        let timer;
-        if (temporizador && temporizador > 0) {
-            timer = setTimeout(() => setTemporizador(temporizador - 1), 1000);
-        } else if (temporizador === 0) {
-            new Audio('/assets/sounds/Beep-mp3.mp3').play();
-            setParpadeo(true);
-            setTimeout(() => {
-                setParpadeo(false);
-                setTemporizador(null);
-            }, 1500);
-        }
-        return () => clearTimeout(timer);
-    }, [temporizador]);
+
 
     const handleCheck = (idxSet, idxRonda, idxEj, descanso) => {
         const actualizado = { ...data };
@@ -109,16 +121,19 @@ export default function SesionEjecutar({ sesion, planId, semanaSeleccionada, onF
 
         sesion.sets.forEach((set, idxSet) => {
             set.ejercicios.forEach((ejercicio, idxEj) => {
-                const series = data[idxSet]
-                    .map((ronda) => {
-                        const registro = ronda[idxEj];
-                        return registro.done ? {
-                            reps: registro.reps || '',
-                            peso: registro.peso || '',
-                            nota: registro.nota || ''
-                        } : null;
-                    })
-                    .filter(Boolean);
+            const series = data[idxSet]
+                .map((ronda, idxRonda) => {
+                    const registro = ronda[idxEj];
+                    return registro.done ? {
+                        ronda: idxRonda + 1,    // 👈 Guardamos la ronda
+                        reps: registro.reps || '',
+                        peso: registro.peso || '',
+                        nota: registro.nota || ''
+                    } : null;
+                })
+                .filter(Boolean);
+
+
 
                 if (series.length > 0) {
                     entrada.ejercicios.push({
@@ -136,13 +151,12 @@ export default function SesionEjecutar({ sesion, planId, semanaSeleccionada, onF
         setMensaje('✅ Sesión guardada correctamente');
         setTimeout(() => {
             setMensaje('');
-            navigate(-1); // Vuelve a SesionDetalle correctamente
+            onFinish(); // 👈 no navigate, solo volvemos limpio
         }, 1500);
     };
 
     return (
         <div className="p-4 space-y-6 relative">
-            {/* Botón volver */}
             <button
                 onClick={onFinish}
                 className="mb-4 text-sm text-blue-500 hover:underline"
@@ -165,11 +179,48 @@ export default function SesionEjecutar({ sesion, planId, semanaSeleccionada, onF
 
             {sesion.sets.map((set, idxSet) => (
                 <div key={idxSet} className="bg-white rounded-xl shadow-md p-4 space-y-4">
+
+                    {/* 1. Nombre del set */}
                     <div>
                         <h3 className="text-md font-bold text-gray-800 mb-1">{set.titulo || `Set ${idxSet + 1}`}</h3>
                         <p className="text-xs text-gray-500">{rondasPorSet[idxSet]} rondas</p>
                     </div>
 
+                    {/* 2. Listado de ejercicios al principio */}
+                    <div className="space-y-3">
+                        {set.ejercicios.map((ej, idxEj) => {
+                            const serieSemana = ej.series?.find(s => Number(s.semana) === Number(semanaSeleccionada));
+                            return (
+                                <div key={idxEj} className="flex items-center gap-3">
+                                    {ej.url && (
+                                        <img
+                                            src={getYoutubeThumbnail(ej.url)}
+                                            alt={ej.nombre}
+                                            className="w-16 h-16 rounded-lg object-cover"
+                                        />
+                                    )}
+                                    <div className="flex-1">
+                                        <div className="font-semibold text-sm">{ej.nombre}</div>
+                                        <div className="text-xs text-gray-600">
+                                            {serieSemana?.n_series ? `${serieSemana.n_series} series · ` : ''}
+                                            {serieSemana?.reps ? `${serieSemana.reps} reps · ` : ''}
+                                            {serieSemana?.duracion ? `Duración: ${serieSemana.duracion} · ` : ''}
+                                            {ej.descanso ? `${ej.descanso}s descanso` : ''}
+                                        </div>
+                                        {/* Botón para abrir el historial */}
+                                        <button
+                                            className="text-blue-500 text-xs underline mt-1"
+                                            onClick={() => setHistorialActivo(ej.nombre)}
+                                        >
+                                            Ver histórico
+                                        </button>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                    {/* 3. Inputs por ronda */}
                     {Array.from({ length: rondasPorSet[idxSet] }).map((_, idxRonda) => {
                         const totalEjercicios = set.ejercicios.length;
                         const hechos = data[idxSet]?.[idxRonda]?.filter(e => e.done).length || 0;
@@ -182,19 +233,19 @@ export default function SesionEjecutar({ sesion, planId, semanaSeleccionada, onF
                                     </h4>
                                     <span className="text-xs text-green-600 font-medium">{hechos} / {totalEjercicios}</span>
                                 </div>
+
                                 <hr className="border-t border-gray-200" />
 
+                                {/* Inputs */}
                                 {set.ejercicios.map((ej, idxEj) => {
                                     const entrada = data[idxSet]?.[idxRonda]?.[idxEj] || {};
-                                    const serieSemana = ej.series?.find(s => Number(s.semana) === Number(semanaSeleccionada));
-
                                     return (
                                         <div key={idxEj} className="grid grid-cols-6 items-center gap-2 text-sm">
                                             <span className="col-span-1">{String.fromCharCode(65 + idxEj)}</span>
                                             <input
                                                 className="border p-1 rounded col-span-1"
                                                 value={entrada.reps}
-                                                placeholder={serieSemana?.reps || '-'}
+                                                placeholder="-"
                                                 onChange={(e) => {
                                                     const nuevo = { ...data };
                                                     nuevo[idxSet][idxRonda][idxEj].reps = e.target.value;
@@ -220,15 +271,60 @@ export default function SesionEjecutar({ sesion, planId, semanaSeleccionada, onF
                                                 onChange={() => handleCheck(idxSet, idxRonda, idxEj, ej.descanso)}
                                             />
                                         </div>
+
                                     );
                                 })}
                             </div>
+
                         );
                     })}
-                </div>
-            ))}
 
-            {/* Botón completar */}
+                    {/* 4. Descanso entre sets */}
+                    {set.descanso && (
+                        <div className="text-xs text-gray-500 text-center mt-2">
+                            ⏱️ Descanso entre sets: {set.descanso} segundos
+                        </div>
+                    )}
+                </div>
+
+            ))}
+            {historialActivo && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm px-4">
+                    <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-6 relative space-y-4 animate-fade-in">
+                        {/* Botón de cerrar */}
+                        <button
+                            onClick={() => setHistorialActivo(null)}
+                            className="absolute top-3 right-4 text-gray-400 hover:text-gray-700 text-xl"
+                        >
+                            &times;
+                        </button>
+
+                        <h2 className="text-lg font-semibold text-gray-900">Histórico de {historialActivo}</h2>
+
+                        {/* Listado de entradas del historial */}
+                        <div className="space-y-2 max-h-80 overflow-y-auto">
+                            {JSON.parse(localStorage.getItem('historico_global') || '[]')
+                                .filter(h => h.ejercicios.some(e => e.nombre === historialActivo))
+                                .sort((a, b) => new Date(b.fecha) - new Date(a.fecha)) // más reciente primero
+                                .map((h, idx) => {
+                                    const ejercicio = h.ejercicios.find(e => e.nombre === historialActivo);
+                                    return (
+                                        <div key={idx} className="border-b border-gray-200 pb-2">
+                                            <div className="text-sm font-medium">{h.fecha}</div>
+                                            {ejercicio.series.map((serie, idxSerie) => (
+                                                <div key={idxSerie} className="text-xs text-gray-600 ml-2">
+                                                    Ronda {serie.ronda}: {serie.reps} reps · {serie.peso} kg
+                                                </div>
+                                            ))}
+                                        </div>
+                                    );
+                                })}
+                        </div>
+                    </div>
+                </div>
+            )}
+
+
             <button
                 onClick={handleCompletar}
                 className="w-full bg-gray-900 text-white py-3 rounded-xl text-sm font-medium shadow-md"
@@ -236,5 +332,6 @@ export default function SesionEjecutar({ sesion, planId, semanaSeleccionada, onF
                 Completar sesión
             </button>
         </div>
+
     );
 }
