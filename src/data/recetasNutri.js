@@ -4,9 +4,104 @@ import salteado_pollo_quinoa from '../assets/nutri/salteado_pollo_quinoa.jpg';
 import atun_pan_aguacate_feta from '../assets/nutri/atun_pan_aguacate_feta.jpg';
 import huevos_rotos_jamon from '../assets/nutri/huevos_rotos_jamon.jpg';
 import pavo_gnocchis from '../assets/nutri/pavo_gnocchis.jpg';
+import ensalada_espinacas_garbanzos_mozzarella from '../assets/nutri/ensalada_espinacas_garbanzos_mozzarella.jpg';
+import bowl_verduritas_quinoa_garbanzos from '../assets/nutri/bowl_verduritas_quinoa_garbanzos.jpg';
+import salmon_patata_brocoli from '../assets/nutri/salmon_patata_brocoli.jpg';
 
 
 export const recetasNutri = [
+    {
+        "id": "salmon_patata_brocoli",
+        "nombre": "Salmón a la plancha con patata/boniato y brócoli",
+        "dia": ["L", "X"],
+        "tiempoPrep": 5,
+        "tiempoCoccion": 10,
+        "ingredientes": [
+            "1 lomo de salmón fresco (~120g)",
+            "4 patatas o boniatos baby (~200g)",
+            "1 cucharada de aceite de oliva virgen extra",
+            "Brócoli (~100g)"
+        ],
+        "nota": "Puedes cambiar las patatas por 4 cucharadas de arroz o cuscús cocido.",
+        "semana": "2 y 4",
+        "comida": "Cena",
+        "calorias": 474,
+        "proteina": 29,
+        "carbohidratos": 34,
+        "grasa": 24,
+        "pasos": [
+            "Cocina las patatas o boniatos baby en el microondas según las instrucciones.",
+            "Cocina el lomo de salmón a la plancha con una cucharada de AOVE.",
+            "Cocina el brócoli al vapor o en microondas.",
+            "Sirve el salmón acompañado del brócoli y las patatas o boniatos."
+        ],
+        "imagen": salmon_patata_brocoli
+    },
+    {
+        "id": "bowl_verduritas_quinoa_garbanzos",
+        "nombre": "Bowl templado de verduras, quinoa y garbanzos",
+        "dia": ["L", "X"],
+        "tiempoPrep": 10,
+        "tiempoCoccion": 5,
+        "ingredientes": [
+            "1/2 calabacín",
+            "Tiras de pimiento rojo",
+            "Rúcula (~30g)",
+            "1 bote de quinoa microondas (125g)",
+            "2 cucharadas de cottage (~40g)",
+            "1/4 bote grande de garbanzos cocidos (~100g)",
+            "1/2 aguacate",
+            "Vinagre, sal y perejil al gusto"
+        ],
+        "nota": "Puedes variar el aliño o añadir más rúcula si deseas.",
+        "semana": "2 y 4",
+        "comida": "Comida",
+        "calorias": 575,
+        "proteina": 24,
+        "carbohidratos": 63,
+        "grasa": 22,
+        "pasos": [
+            "Saltea el calabacín y las tiras de pimiento rojo.",
+            "Calienta la quinoa en el microondas siguiendo las instrucciones.",
+            "Enjuaga los garbanzos cocidos.",
+            "Monta el bowl con rúcula en la base, quinoa, verduras salteadas y garbanzos.",
+            "Añade el cottage y medio aguacate en rodajas.",
+            "Aliña con vinagre, sal y perejil al gusto antes de servir."
+        ],
+        "imagen": bowl_verduritas_quinoa_garbanzos
+    },
+    {
+      id: "ensalada_espinacas_garbanzos_mozzarella",
+      nombre: "Ensalada de espinacas, garbanzos, tomate y mozzarella",
+      tiempoPrep: 10,
+      tiempoCoccion: 0,
+      calorias: 527,
+      proteina: 27,
+      carbohidratos: 39,
+      grasa: 24,
+      semana: "2 y 4", // Modificar si quieres
+      comida: "Comida", // Modificar si quieres
+      dia: ["L", "X"], // Modificar si quieres
+      nota: "Ingredientes de Mercadona (Hacendado).",
+      ingredientes: [
+        "200g garbanzos cocidos (1/2 bote grande)",
+        "Espinacas frescas (~50g)",
+        "1 perla de mozzarella fresca light (~50g)",
+        "1 tomate mediano (~120g)",
+        "Cebolla morada al gusto (~20g)",
+        "6-8 aceitunas negras (~20g)",
+        "1 cucharadita de aceite de oliva virgen extra (AOVE) (~5g)"
+      ],
+      pasos: [
+        "Escurrir y enjuagar los garbanzos cocidos.",
+        "Lavar las espinacas y el tomate.",
+        "Cortar la perla de mozzarella en trozos.",
+        "Picar el tomate y la cebolla morada.",
+        "En un bol grande, mezclar las espinacas, garbanzos, tomate, cebolla, aceitunas y mozzarella.",
+        "Aliñar con 1 cucharadita de AOVE justo antes de servir."
+      ],
+      imagen: ensalada_espinacas_garbanzos_mozzarella
+    },
     {
         "id": "pasta_verduras_ternera",
         "nombre": "Pasta con verduras y carne",
@@ -25,10 +120,10 @@ export const recetasNutri = [
         "nota": "PUEDES CAMBIAR LA PASTA POR 6 CDAS CUSCUS / 3 TORTILLAS MEXICANAS DE MAIZ PEQUEÑAS",
         "semana": "1 y 3",
         "comida": "Comida",
-        "calorias": 420.9,
-        "proteina": 37.1,
-        "carbohidratos": 38.1,
-        "grasa": 13.3,
+        "calorias": 450,
+        "proteina": 34,
+        "carbohidratos": 43,
+        "grasa": 15,
         "pasos": [
             "Cocina los macarrones en agua con sal hasta que estén al dente.",
             "Saltea la carne picada con cebolla roja y pimiento rojo.",
@@ -52,10 +147,10 @@ export const recetasNutri = [
         "nota": "PUEDES CAMBIAR EL ARROZ POR 4-5 PATATAS BABY MICROONDAS (200G)",
         "semana": "1 y 3",
         "comida": "Cena",
-        "calorias": 425.8,
-        "proteina": 38.4,
-        "carbohidratos": 35.9,
-        "grasa": 14.3,
+        "calorias": 450,
+        "proteina": 39,
+        "carbohidratos": 45,
+        "grasa": 13,
         "pasos": [
             "Saltea los calamares con ajo y perejil en una sartén con AOVE.",
             "Cocina el brócoli al vapor o salteado.",
@@ -79,10 +174,10 @@ export const recetasNutri = [
         "nota": "Puedes usar aguacate o queso feta como fuente de grasa saludable.",
         "semana": "1 y 3",
         "comida": "Cena",
-        "calorias": 410,
+        "calorias": 420,
         "proteina": 35,
-        "carbohidratos": 20,
-        "grasa": 22,
+        "carbohidratos": 24,
+        "grasa": 18,
         "pasos": [
             "Tuesta el pan integral si lo deseas.",
             "Escurre el atún y repártelo sobre el pan.",
@@ -107,10 +202,10 @@ export const recetasNutri = [
         "nota": "Puedes cambiar la quinoa por 4-5 tortas de maíz.",
         "semana": "1 y 3",
         "comida": "Comida",
-        "calorias": 336.0,
-        "proteina": 39.0,
-        "carbohidratos": 31.5,
-        "grasa": 6.0,
+        "calorias": 395,
+        "proteina": 42,
+        "carbohidratos": 32,
+        "grasa": 10,
         "pasos": [
             "Cocina la quinoa según las instrucciones del envase o caliéntala si es precocida.",
             "Saltea los solomillos de pollo troceados con pimiento rojo.",
@@ -137,10 +232,10 @@ export const recetasNutri = [
         "nota": "Puedes alternar entre patatas y boniatos, así como entre vinagre de manzana y zumo de limón.",
         "semana": "1 y 3",
         "comida": "Cena",
-        "calorias": 360,
-        "proteina": 25,
-        "carbohidratos": 22,
-        "grasa": 20,
+        "calorias": 400,
+        "proteina": 29,
+        "carbohidratos": 35,
+        "grasa": 16,
         "pasos": [
             "Cocina las patatas o boniatos baby en el microondas hasta que estén tiernos.",
             "Fríe o cocina los huevos a tu gusto.",
@@ -165,10 +260,10 @@ export const recetasNutri = [
         "nota": "Puedes usar caldo de verduras, pollo o carne según prefieras.",
         "semana": "1 y 3",
         "comida": "Cena",
-        "calorias": 450,
-        "proteina": 40,
-        "carbohidratos": 30,
-        "grasa": 20,
+        "calorias": 470,
+        "proteina": 48,
+        "carbohidratos": 52,
+        "grasa": 7,
         "pasos": [
             "Cocina los gnocchis según instrucciones del paquete.",
             "A la vez, saltea los filetes de pavo y el calabacín en una sartén con especias.",
