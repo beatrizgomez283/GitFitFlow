@@ -2,7 +2,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import dayjs from 'dayjs';
 
-export default function SesionEjecutar({ semanaActual, onFinish }) {
+export default function SesionEjecutar({ onFinish }) {
     const [progreso, setProgreso] = useState(0);
     const [data, setData] = useState({});
     const [completadas, setCompletadas] = useState(0);
@@ -13,17 +13,13 @@ export default function SesionEjecutar({ semanaActual, onFinish }) {
     const { state } = useLocation();
     const navigate = useNavigate();
 
-    const { sesion, planId } = state || {};
+    const { sesion, planId, semanaSeleccionada } = state || {};
 
-    console.log(state);
+    console.log("semanaActualInput: ", semanaSeleccionada  , ", sesion: ", sesion, "planId: ", planId);
 
     if (!sesion || !planId) {
         return <div className="p-4 text-red-600">❌ Datos de sesión no disponibles.</div>;
     }
-
-    useEffect(() => {
-        console.log('🧪 location.state', location.state);
-    }, []);
 
 
     const getYoutubeThumbnail = (url) => {
@@ -34,7 +30,7 @@ export default function SesionEjecutar({ semanaActual, onFinish }) {
     const rondasPorSet = sesion.sets.map(set =>
         Math.max(
             ...(set.ejercicios?.map(ej => {
-                const serieSemana = ej.series?.find(s => s.semana === semanaActual);
+                const serieSemana = ej.series?.find(s => s.semana === semanaSeleccionada);
                 return parseInt(serieSemana?.n_series) || 1;
             }) || [1])
         )
@@ -146,15 +142,12 @@ export default function SesionEjecutar({ semanaActual, onFinish }) {
 
 
     return (
-  
-
         <div className="p-4 space-y-6 relative">
             <button
                 onClick={() => navigate(`/entreno/${planId}/sesion/${sesion.id}`)}
             >
                 ← Volver a la sesión
             </button>
-
 
             {mensaje && <div className="text-sm text-green-600 font-medium">{mensaje}</div>}
 
@@ -176,61 +169,86 @@ export default function SesionEjecutar({ semanaActual, onFinish }) {
                     </div>
 
                     <div className="space-y-2">
-                        {set.ejercicios.map((ej, idxEj) => (
-                            <div key={idxEj} className="flex items-center justify-between gap-2">
-                                <div className="flex-1">
-                                    <div className="text-sm font-semibold text-gray-800 flex items-center gap-2">
-                                        <span className="bg-gray-200 rounded-full w-6 h-6 flex items-center justify-center text-xs">
-                                            {String.fromCharCode(65 + idxEj)}
-                                        </span>
-                                        {ej.nombre}
-                                    </div>
-                                    <div className="text-xs text-gray-500">
-                                        Asignados: {ej.series?.[0]?.reps || '-'} · {ej.descanso || '-'}s descanso
-                                    </div>
-                                </div>
-                                {ej.url && (
-                                    <a
-                                        href={ej.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="shrink-0"
-                                    >
-                                        <img
-                                            src={getYoutubeThumbnail(ej.url)}
-                                            alt={ej.nombre}
-                                            className="w-14 h-14 rounded-lg object-cover transition hover:brightness-90"
-                                        />
-                                    </a>
-                                )}
+                        {set.ejercicios.map((ej, idxEj) => {
+                            const serieSemana = ej.series?.find(s => Number(s.semana) === Number(semanaSeleccionada)); // 👈 AQUÍ
 
-                            </div>
-                        ))}
+                            return (
+                                <div key={idxEj} className="flex items-center justify-between gap-2">
+                                    <div className="flex-1">
+                                        <div className="text-sm font-semibold text-gray-800 flex items-center gap-2">
+                                            <span className="bg-gray-200 rounded-full w-6 h-6 flex items-center justify-center text-xs">
+                                                {String.fromCharCode(65 + idxEj)}
+                                            </span>
+                                            {ej.nombre}
+                                        </div>
+                                        <div className="text-xs text-gray-500">
+                                            {serieSemana ? (
+                                                <>
+                                                    {serieSemana.n_series ? `${serieSemana.n_series} series · ` : ''}
+                                                    {serieSemana.reps ? `${serieSemana.reps} reps · ` : ''}
+                                                    {ej.descanso ? `${ej.descanso}s descanso` : ''}
+                                                </>
+                                            ) : (
+                                                '-'
+                                            )}
+                                        </div>
+                                    </div>
+
+                                    {ej.url && (
+                                        <a
+                                            href={ej.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="shrink-0"
+                                        >
+                                            <img
+                                                src={getYoutubeThumbnail(ej.url)}
+                                                alt={ej.nombre}
+                                                className="w-14 h-14 rounded-lg object-cover transition hover:brightness-90"
+                                            />
+                                        </a>
+                                    )}
+                                </div>
+                            );
+                        })}
+
                     </div>
 
                     <hr className="my-2 border-t border-gray-200" />
 
-                    {Array.from({ length: rondasPorSet[idxSet] }).map((_, idxRonda) => {
-                        const totalEj = set.ejercicios.length;
+                    {Array.from({
+                        length: Math.max(...set.ejercicios.map(ej => {
+                            const serieSemana = ej.series?.find(s => Number(s.semana) === Number(semanaSeleccionada));
+                            return parseInt(serieSemana?.n_series) || 1;
+                        }))
+                    }).map((_, idxRonda) => {
+
+                        const totalEjercicios = set.ejercicios.length;
                         const hechos = data[idxSet]?.[idxRonda]?.filter(e => e.done).length || 0;
 
                         return (
-                            <div key={idxRonda} className={`rounded-lg p-3 space-y-2 transition ${hechos === totalEj ? 'bg-green-50 border border-green-200' : 'bg-gray-50'}`}>
+                            <div key={idxRonda} className={`rounded-lg p-3 space-y-2 transition ${hechos === totalEjercicios ? 'bg-green-50 border border-green-200' : 'bg-gray-50'}`}>
                                 <div className="flex items-center justify-between">
                                     <h4 className="text-sm font-semibold text-gray-700">
-                                        Ronda {idxRonda + 1} {hechos === totalEj && <span className="text-green-500 ml-2">✅</span>}
+                                        Ronda {idxRonda + 1} {hechos === totalEjercicios && <span className="text-green-500 ml-2">✅</span>}
                                     </h4>
-                                    <span className="text-xs text-green-600 font-medium">{hechos} / {totalEj}</span>
+                                    <span className="text-xs text-green-600 font-medium">{hechos} / {totalEjercicios}</span>
                                 </div>
                                 <hr className="border-t border-gray-200" />
+
+                                {/* Aquí pintas todos los ejercicios para esta ronda */}
                                 {set.ejercicios.map((ej, idxEj) => {
                                     const entrada = data[idxSet]?.[idxRonda]?.[idxEj] || {};
+                                    const serieSemana = ej.series?.find(s => Number(s.semana) === Number(semanaSeleccionada));
+                                    const repsAsignadas = serieSemana?.reps || '-';
+
                                     return (
-                                        <div key={idxEj + '-input'} className="grid grid-cols-6 items-center gap-2 text-sm">
+                                        <div key={idxEj} className="grid grid-cols-6 items-center gap-2 text-sm">
                                             <span className="col-span-1">{String.fromCharCode(65 + idxEj)}</span>
                                             <input
                                                 className="border p-1 rounded col-span-1"
                                                 value={entrada.reps}
+                                                placeholder={repsAsignadas}
                                                 onChange={(e) => {
                                                     const nuevo = { ...data };
                                                     nuevo[idxSet][idxRonda][idxEj].reps = e.target.value;
@@ -261,6 +279,7 @@ export default function SesionEjecutar({ semanaActual, onFinish }) {
                             </div>
                         );
                     })}
+
                 </div>
             ))}
 

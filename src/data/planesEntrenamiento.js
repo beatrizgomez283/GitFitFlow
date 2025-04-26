@@ -1149,7 +1149,7 @@ export const planes = [
                                         "n_series": "3"
                                     }
                                 ],
-                                "descanso": 0,
+                                "descanso": 60,
                                 "nota": "",
                                 "historico": [],
                                 "url": "https://youtube.com/shorts/88bEs-UlTjc"
