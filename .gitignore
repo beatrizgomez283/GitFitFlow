@@ -1,6 +1,60 @@
 ﻿################################################################################
 # Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
 ################################################################################
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-.\vs
-.vs
+# Build
+dist/
+build/
+
+# Vite
+.vite/
+
+# Local env files
+.env
+.env.* 
+!.env.example
+
+# VS Code
+.vscode/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Coverage
+coverage/
+
+# Optional
+*.local
+*.cache
+
+# Storybook
+out/
+storybook-static/
+
+# Others
+.idea/
+*.iml
+
+# Git backups
+*.orig
+
+# Git conflict
+*.rej
