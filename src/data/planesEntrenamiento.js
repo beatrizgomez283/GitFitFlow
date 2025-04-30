@@ -40,7 +40,7 @@ export const planes = [
                                 ],
                                 
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtube.com/shorts/YWgmDUEzfJc?feature=share"
                             },
                             {
@@ -69,7 +69,7 @@ export const planes = [
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtu.be/rBVK2du-zTY"
                             }
                         ]
@@ -104,7 +104,7 @@ export const planes = [
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtube.com/shorts/uQ1GjPn0zsc"
                             },
                             {
@@ -133,7 +133,7 @@ export const planes = [
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtube.com/shorts/nJbOX6bWtkU"
                             }
                         ]
@@ -168,7 +168,7 @@ export const planes = [
                                 ],
                                 
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtube.com/shorts/iIYBrGzA1JI"
                             },
                             {
@@ -198,7 +198,7 @@ export const planes = [
                                 ],
                                 
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtube.com/shorts/Tm6IYejB_8M"
                             }
                         ]
@@ -232,7 +232,7 @@ export const planes = [
                                 ],
                                 
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtube.com/shorts/_Zn-eV5WgE0"
                             },
                             {
@@ -261,7 +261,7 @@ export const planes = [
                                 ],
                                 
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtube.com/shorts/yG9kUU2uyfY"
                             }
                         ]
@@ -302,7 +302,7 @@ export const planes = [
                                 ],
                                 
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtube.com/shorts/idP02t2oyBU"
                             },
                             {
@@ -331,8 +331,8 @@ export const planes = [
                                 ],
                                 "descanso": 90,
                                 "nota": "",
-                                "historico": [],
-                                "url": "https://youtube.com/shorts/5XWeIk2S1pw"
+                                
+                                "url": "https://www.youtube.com/shorts/ura1t7-FXHU"
                             }
                         ]
                     },
@@ -366,8 +366,8 @@ export const planes = [
                                 ],
                                 
                                 "nota": "",
-                                "historico": [],
-                                "url": "https://youtube.com/shorts/MnVIJbHX-W4"
+                                
+                                "url": "https://www.youtube.com/shorts/5XWeIk2S1pw"
                             },
                             {
                                 "nombre": "Eccentric Push Up",
@@ -396,8 +396,8 @@ export const planes = [
                                 ],
                                 descanso: 60,
                                 "nota": "",
-                                "historico": [],
-                                "url": "https://youtube.com/shorts/QlhMQHLsoBc"
+                                
+                                "url": "https://www.youtube.com/shorts/b8mYkqXsktE"
                             }
                         ]
                     },
@@ -431,8 +431,8 @@ export const planes = [
                                 ],
                                 
                                 "nota": "",
-                                "historico": [],
-                                "url": "https://youtube.com/shorts/ura1t7-FXHU"
+                                
+                                "url": "https://youtube.com/shorts/QlhMQHLsoBc"
                             },
                             {
                                 "nombre": "Half Kneeling Alt Lateral Raises",
@@ -460,8 +460,8 @@ export const planes = [
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-                                "historico": [],
-                                "url": "https://youtube.com/shorts/b8mYkqXsktE"
+                                
+                                "url": "https://www.youtube.com/shorts/6aSnwWQ2HLE"
                             }
                         ]
                     },
@@ -494,7 +494,7 @@ export const planes = [
                                 ],
                                 
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtu.be/t8Azu8rJLJs"
                             },
                             {
@@ -523,8 +523,8 @@ export const planes = [
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-                                "historico": [],
-                                "url": "https://youtube.com/shorts/6aSnwWQ2HLE"
+                                
+                                "url": "https://youtube.com/shorts/MnVIJbHX-W4"
                             }
                         ]
                     }
@@ -564,7 +564,7 @@ export const planes = [
                                 ],
                                 "descanso": 50,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": ""
                             }
                         ]
@@ -598,7 +598,7 @@ export const planes = [
                                 ],
                                 "descanso": 30,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtube.com/shorts/8XRYnWm1leA"
                             },
                             {
@@ -627,8 +627,8 @@ export const planes = [
                                 ],
                                 "descanso": 30,
                                 "nota": "",
-                                "historico": [],
-                                "url": "https://youtube.com/shorts/lKgnvHT_rJQ"
+                                
+                                "url": "https://youtube.com/shorts/QmxH_YYntPo"
                             },
                             {
                                 "nombre": "Banded Pause Front Rack Marches",
@@ -656,8 +656,8 @@ export const planes = [
                                 ],
                                 "descanso": 30,
                                 "nota": "",
-                                "historico": [],
-                                "url": "https://youtube.com/shorts/QmxH_YYntPo"
+                                
+                                "url": "https://youtube.com/shorts/lKgnvHT_rJQ"
                             },
                             {
                                 "nombre": "Heavy Farmers Carry",
@@ -685,7 +685,7 @@ export const planes = [
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtube.com/shorts/AvDwSzVXUWE"
                             }
                         ]
@@ -726,7 +726,7 @@ export const planes = [
                                 ],
                                 "descanso": 0,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtube.com/shorts/37eO2eu28dE"
                             },
                             {
@@ -755,7 +755,7 @@ export const planes = [
                                 ],
                                 "descanso": 90,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtu.be/Ss4gsMnEDHo"
                             }
                         ]
@@ -790,7 +790,7 @@ export const planes = [
                                 ],
                                 "descanso": 0,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://www.youtube.com/shorts/KMB9b0uH2rM"
                             },
                             {
@@ -819,7 +819,7 @@ export const planes = [
                                 ],
                                 "descanso": 90,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtube.com/shorts/k4HW3xSl82o"
                             }
                         ]
@@ -854,7 +854,7 @@ export const planes = [
                                 ],
                                 "descanso": 0,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtube.com/shorts/qlII9NfVntk"
                             },
                             {
@@ -883,7 +883,7 @@ export const planes = [
                                 ],
                                 "descanso": 75,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtube.com/shorts/M9s2bMz82ug"
                             }
                         ]
@@ -918,7 +918,7 @@ export const planes = [
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtube.com/shorts/OPL5rl-jyEQ"
                             }
                         ]
@@ -953,7 +953,7 @@ export const planes = [
                                 ],
                                 "descanso": 40,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://www.youtube.com/shorts/Bjn15ZRvVoA"
                             }
                         ]
@@ -994,7 +994,7 @@ export const planes = [
                                 ],
                                 "descanso": 0,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtube.com/shorts/pG0VBq03irY"
                             },
                             {
@@ -1023,7 +1023,7 @@ export const planes = [
                                 ],
                                 "descanso": 90,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtube.com/shorts/mujypvobSC4"
                             }
                         ]
@@ -1058,7 +1058,7 @@ export const planes = [
                                 ],
                                 "descanso": 0,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtube.com/shorts/bK-zhIdxs-A"
                             },
                             {
@@ -1087,7 +1087,7 @@ export const planes = [
                                 ],
                                 "descanso": 75,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtube.com/shorts/ilZHJamEHOk"
                             }
                         ]
@@ -1122,7 +1122,7 @@ export const planes = [
                                 ],
                                 "descanso": 0,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtube.com/shorts/Dud_8rwUDSY"
                             },
                             {
@@ -1151,7 +1151,7 @@ export const planes = [
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtube.com/shorts/88bEs-UlTjc"
                             }
                         ]
@@ -1186,7 +1186,7 @@ export const planes = [
                                 ],
                                 "descanso": 0,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtube.com/shorts/lzdmalWkNdI"
                             },
                             {
@@ -1215,7 +1215,7 @@ export const planes = [
                                 ],
                                 "descanso": 75,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": "https://youtube.com/shorts/tKhuXx0Pk4g"
                             }
                         ]
@@ -1257,7 +1257,7 @@ export const planes = [
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": ""
                             }
                         ]
@@ -1293,7 +1293,7 @@ export const planes = [
                                 ],
                                 "descanso": 60,
                                 "nota": "",
-                                "historico": [],
+                                
                                 "url": ""
                             }
                         ]

@@ -7,9 +7,40 @@ import pavo_gnocchis from '../assets/nutri/pavo_gnocchis.jpg';
 import ensalada_espinacas_garbanzos_mozzarella from '../assets/nutri/ensalada_espinacas_garbanzos_mozzarella.jpg';
 import bowl_verduritas_quinoa_garbanzos from '../assets/nutri/bowl_verduritas_quinoa_garbanzos.jpg';
 import salmon_patata_brocoli from '../assets/nutri/salmon_patata_brocoli.jpg';
+import tostas_maiz_salmon_aguacate from '../assets/nutri/tostas_maiz_salmon_aguacate.jpg';
 
 
 export const recetasNutri = [
+    {
+        "id": "tostas_maiz_salmon_aguacate",
+        "nombre": "Tostas de maíz con salmón ahumado y aguacate",
+        "dia": ["L", "X"],
+        "tiempoPrep": 5,
+        "tiempoCoccion": 0,
+        "ingredientes": [
+            "4-5 tortitas de maíz (~40g)",
+            "50g de salmón ahumado bajo en sal",
+            "1/2 aguacate (~75g)",
+            "Ensalada de rúcula, tomate en rodajas y remolacha en tiras",
+            "2 cucharadas de cottage (~40g)",
+            "Zumo de limón para aliñar"
+        ],
+        "nota": "Puedes ajustar el número de tortitas según el hambre o cambiar el cottage por más aguacate.",
+        "semana": "2 y 4",
+        "comida": "Cena",
+        "calorias": 431,
+        "proteina": 20,
+        "carbohidratos": 38,
+        "grasa": 21,
+        "pasos": [
+            "Coloca las tortitas de maíz en un plato.",
+            "Reparte el salmón ahumado sobre las tortitas.",
+            "Añade rodajas de aguacate por encima.",
+            "Sirve acompañado de la ensalada aliñada con limón.",
+            "Añade el cottage por encima o al lado como acompañamiento."
+        ],
+        "imagen": tostas_maiz_salmon_aguacate
+    },
     {
         "id": "salmon_patata_brocoli",
         "nombre": "Salmón a la plancha con patata/boniato y brócoli",
