@@ -544,22 +544,22 @@ export const planes = [
                                     {
                                         "semana": 1,
                                         "reps": "10s on, 50s off",
-                                        "series": "8"
+                                        "n_series": "8"
                                     },
                                     {
                                         "semana": 2,
                                         "reps": "10s on, 50s off",
-                                        "series": "8"
+                                        "n_series": "8"
                                     },
                                     {
                                         "semana": 3,
                                         "reps": "10s on, 50s off",
-                                        "series": "10"
+                                        "n_series": "10"
                                     },
                                     {
                                         "semana": 4,
                                         "reps": "10s on, 50s off",
-                                        "series": "10"
+                                        "n_series": "10"
                                     }
                                 ],
                                 "descanso": 50,
