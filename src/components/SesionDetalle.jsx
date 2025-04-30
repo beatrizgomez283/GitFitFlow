@@ -148,7 +148,7 @@ export default function SesionDetalle({ sesion, planId, onBack, onStart }) {
                     )}
 
                     {/* ⏱️ Mostrar descanso al final del set */}
-                    {set.descanso && (
+                    {set.titulo  && (
                         <div className="text-xs text-gray-500 mt-1">
                             ⏱️ {set.descanso}s de descanso después de: {set.titulo || `Set ${idxSet + 1}`}
                         </div>

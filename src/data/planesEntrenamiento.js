@@ -966,7 +966,7 @@ export const planes = [
                 "sets": [
                     {
                         "titulo": "Superserie A",
-                        descanso: 0,
+                        "descanso": 0,
                         "ejercicios": [
                             {
                                 "nombre": "Pin BB Bent Over Row",
@@ -992,9 +992,8 @@ export const planes = [
                                         "n_series": "5"
                                     }
                                 ],
-                                "descanso": 0,
+                                "descanso": 10,
                                 "nota": "",
-                                
                                 "url": "https://youtube.com/shorts/pG0VBq03irY"
                             },
                             {
@@ -1294,6 +1293,170 @@ export const planes = [
                                 "descanso": 60,
                                 "nota": "",
                                 
+                                "url": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+
+        ]
+    }
+    ,
+    {
+        "id": "run_and_lift_2",
+        "nombre": "Run And Lift 2",
+        "descripcion": "Programa de 4 semanas enfocado en fuerza y durabilidad para tren inferior, superior y core. Incluye superseries estratégicas y trabajo de potencia.",
+        "imagen": "/assets/planes/mikayla_phase_1.jpg",
+        "sesiones": [
+            {
+                "nombre": "Run 1 (Series Endurance)",
+                "tipo": "cardio",
+                "sets": [
+                    {
+                        "titulo": "Correr",
+                        descanso: 0,
+                        "ejercicios": [
+                            {
+                                "nombre": "Correr - Warmup",
+                                "series": [
+                                    {
+                                        "semana": 1,
+                                        "reps": "10 min",
+                                        "n_series": "1"
+                                    },
+                                    {
+                                        "semana": 2,
+                                        "reps": "10 min",
+                                        "n_series": "1"
+                                    },
+                                    {
+                                        "semana": 3,
+                                        "reps": "10 min",
+                                        "n_series": "1"
+                                    },
+                                    {
+                                        "semana": 4,
+                                        "reps": "10 min",
+                                        "n_series": "1"
+                                    }
+                                ],
+                                "descanso": 6 * 60,
+                                "nota": "",
+                                "url": ""
+                            }
+                        ]
+                    },
+                    {
+                        "titulo": "Correr",
+                        descanso: 0,
+                        "ejercicios": [
+                            {
+                                "nombre": "Correr",
+                                "series": [
+                                    {
+                                        "semana": 1,
+                                        "reps": "1000m",
+                                        "n_series": "3"
+                                    },
+                                    {
+                                        "semana": 2,
+                                        "reps": "1000m",
+                                        "n_series": "3"
+                                    },
+                                    {
+                                        "semana": 3,
+                                        "reps": "1000m",
+                                        "n_series": "3"
+                                    },
+                                    {
+                                        "semana": 4,
+                                        "reps": "1000m",
+                                        "n_series": "3"
+                                    }
+                                ],
+                                "descanso": 3 * 60,
+                                "nota": "",
+
+                                "url": "https://youtube.com/shorts/mujypvobSC4"
+                            },
+                        ]
+                    }
+                    
+                ]
+            },
+            {
+                "nombre": "Día 6 - Run 2 (Interval)",
+                "tipo": "running",
+                "sets": [
+                    {
+                        "titulo": "Intervalos Largos",
+                        "descanso": 60,
+                        "ejercicios": [
+                            {
+                                "nombre": "Correr",
+                                "distancia": "1 Km",
+                                "series": [
+                                    {
+                                        "semana": 1,
+                                        "reps": "1 Km",
+                                        "n_series": "3"
+                                    },
+                                    {
+                                        "semana": 2,
+                                        "reps": "1 Km",
+                                        "n_series": "3"
+                                    },
+                                    {
+                                        "semana": 3,
+                                        "reps": "1 Km",
+                                        "n_series": "3"
+                                    },
+                                    {
+                                        "semana": 4,
+                                        "reps": "1 Km",
+                                        "n_series": "3"
+                                    }
+                                ],
+                                "descanso": 60,
+                                "nota": "",
+
+                                "url": ""
+                            }
+                        ]
+                    },
+                    {
+                        "titulo": "Intervalos Cortos",
+                        "descanso": 60,
+                        "ejercicios": [
+                            {
+                                "nombre": "Correr",
+                                "distancia": "250 m",
+                                "series": [
+                                    {
+                                        "semana": 1,
+                                        "reps": "250 m",
+                                        "n_series": "6"
+                                    },
+                                    {
+                                        "semana": 2,
+                                        "reps": "250 m",
+                                        "n_series": "6"
+                                    },
+                                    {
+                                        "semana": 3,
+                                        "reps": "250 m",
+                                        "n_series": "6"
+                                    },
+                                    {
+                                        "semana": 4,
+                                        "reps": "250 m",
+                                        "n_series": "6"
+                                    }
+                                ],
+                                "descanso": 60,
+                                "nota": "",
+
                                 "url": ""
                             }
                         ]
